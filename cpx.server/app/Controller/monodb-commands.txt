@@ -1,0 +1,30 @@
+
+To run the instance of mongodb:
+mogod
+
+To get the shell :
+mongo    // @shell simply execute 'help' to get all rhe commands
+
+To get the count of entries :
+db.realprop.count({})     //where realprop is a collection
+
+To see all entries : 
+db.realprop.find();
+
+To see particular entry :
+db.realprop.find({'id' : 'res49894'})
+
+To export :
+mongoexport --db properties --collection realprop --out traffic.bson  // properties is the db name.
+
+To import :
+mongoimport --db properties --collection realprop --file traffic.bson
+
+To drop db :
+db.dropDatabase()
+
+To update @ shell : 
+db.realprop.update({'id' : '5067'},{$set:{'listedprice' : '9999999'}})
+
+To delete from collection @ shell :
+db.realprop.remove({'id' : '5067'})

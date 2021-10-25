@@ -1,0 +1,1 @@
+<?php echo $this->element('admin/endorsement_list'); ?>

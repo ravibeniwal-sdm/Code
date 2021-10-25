@@ -1,0 +1,173 @@
+{
+"id": "98c0ea31-8a21-4b8a-861a-06c520f75a30",
+"gradestatus": 2,
+"modifiedon": "2016-01-19-05:30:52",
+"status": "current",
+"headline": "One Whitsundays - Zero deposit funding",
+"name": "",
+"authority": "sale",
+"auction_date": "",
+"type": "residential",
+"category": "Apartment",
+"contact": [
+{
+"type": "listingAgent",
+"id": "1",
+"name": "Anthony Aoun",
+"telephoneType": "",
+"telephone": "",
+"email": "centralpropertyexchange@cpx.net.au"
+}
+],
+"cpxprice": 375500,
+"listedprice": 375500,
+"viewprice": "",
+"saving": 0,
+"marketrent": "",
+"beds": "1",
+"bath": "1",
+"externalLink": "http:\/\/propzero.com.au\/",
+"videoLink": "",
+"cars": 1,
+"IsHouseLandPackage": "no",
+"landarea": "14",
+"areaunit": "squareMeter",
+"buildingarea": "55",
+"date_created": "",
+"featured": true,
+"latest": false,
+"smsf": true,
+"sold": false,
+"deposit": "",
+"domacom": "",
+"grade": "B",
+"score": 205,
+"gradelabel": "Filter by grade: B - a score equal or above 155",
+"address": [
+{
+"display": "yes",
+"LotNumber": null,
+"subNumber": "Lot 1",
+"StreetNumber": "",
+"street": "Shingley Drive",
+"suburb": {
+"display": "yes",
+"text": "Cannonvale"
+},
+"state": "Queensland",
+"country": "AU",
+"postcode": "4802"
+}
+],
+"coords": {
+"latitude": -20.2701249,
+"longitude": 148.7088184
+},
+"offline": false,
+"images": [
+{
+"id": 0,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/5c7471a9-333f-4d73-a184-aafa57b5ba7c\/images\/image (1)4.jpg"
+},
+{
+"id": 1,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/5c7471a9-333f-4d73-a184-aafa57b5ba7c\/images\/image (1)1.jpg"
+},
+{
+"id": 2,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/5c7471a9-333f-4d73-a184-aafa57b5ba7c\/images\/image (1)7.jpg"
+},
+{
+"id": 3,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/5c7471a9-333f-4d73-a184-aafa57b5ba7c\/images\/image (1)5.jpg"
+},
+{
+"id": 4,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/5c7471a9-333f-4d73-a184-aafa57b5ba7c\/images\/image (1)6.jpg"
+},
+{
+"id": 5,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/5c7471a9-333f-4d73-a184-aafa57b5ba7c\/images\/image (1)8.jpg"
+},
+{
+"id": 6,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/5c7471a9-333f-4d73-a184-aafa57b5ba7c\/images\/image (1)2.jpg"
+}
+],
+"documents": [
+{
+"id": 0,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/5c7471a9-333f-4d73-a184-aafa57b5ba7c\/documents\/Completecontract-09092014[1].pdf"
+},
+{
+"id": 1,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/5c7471a9-333f-4d73-a184-aafa57b5ba7c\/documents\/DisclosureStatementcomplete09092014[1].pdf"
+},
+{
+"id": 2,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/5c7471a9-333f-4d73-a184-aafa57b5ba7c\/documents\/One-Whitsundays-Marketing-Brochure[1].pdf"
+},
+{
+"id": 3,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/5c7471a9-333f-4d73-a184-aafa57b5ba7c\/documents\/ONE-Newsletter.pdf"
+}
+],
+"features": {
+"bedrooms": "1",
+"bathrooms": "1",
+"garages": "1",
+"carports": "0",
+"secureParking": "yes",
+"airConditioning": "yes",
+"builtInRobes": "yes",
+"dishwasher": "yes"
+},
+"idealFor": [],
+"estimate": [],
+"contract": [],
+"sale_summary": [],
+"history": [],
+"how_to_buy": [],
+"loan_cal": [],
+"invest_cal": [],
+"support_info": [],
+"floorplans": [],
+"inspectionTimes": [],
+"ipr": [
+{
+"url": "http:\/\/cdn.cpx.net.au\/reports\/independent\/ipr\/download\/094341ea-839c-4c00-9d85-68a86f872a94",
+"propertyGrade": [
+{
+"name": "Historical growth rate",
+"value": 2
+},
+{
+"name": "Price risk",
+"value": 3
+},
+{
+"name": "Demographics",
+"value": 3
+},
+{
+"name": "Internal floor plan flow",
+"value": 3
+},
+{
+"name": "Street scape\/traffic flow",
+"value": 5
+},
+{
+"name": "Parking",
+"value": 5
+},
+{
+"name": "Outdoor space",
+"value": 4
+}
+]
+}
+],
+"description": "The One Whitsunday Resort, Spa and Conference Centre, One, by definition, conjures something singular rare, extraordinary. Unlike any other resort at Airlie Beach, the magical gateway to the Whitsundays on the doorstep of the Great Barrier Reef, One Whitsundays Resort, Spa and Conference Centre has been bestowed its title for good reason. While there are other resorts at Airlie Beach, there is only five star One Sundays.\n\nThe boutique resort complex comprises only 75 strata titled apartments of 1,2 and 3 bedrooms that entail spectacular views, spacious areas, quality finished and a focus on indoor-outdoor living.\n\nFor the investor they have a choice to rent it out on the normal rental market or they can enter their apartment into the Mantra servicing pool and holiday in their apartment for 4 weeks of the year.",
+"observation": "This is a new 1 bedroom unit and comments relate, where relevant, to the market completion of the property. The unit area totals 69sqm comprising 55sqm of living area and 14sqm of balcony. This is an average size for a 1 bedroom apartment. There is a single car space in a secure car parking area. The floor plan is above average and the apartment is well appointed and stylish. The apartment is located in a tourist focused holiday sea-side destination area. The property is a modern design and is being marketed as a prestige development. This property would appeal to investors looking for a holiday rental property or to professional couples. The One Whitsunday Resort, Spa and Conference Centre development has a number of high quality design features including pool, bbq, tennis court, games room and gymnasium."
+}

@@ -1,0 +1,127 @@
+{
+"id": "being-graded",
+"gradestatus": 1,
+"modifiedon": "2016-01-19-12:31:08",
+"status": "current",
+"headline": "538 North - Great investment",
+"name": "",
+"authority": "sale",
+"auction_date": "",
+"type": "residential",
+"category": "Apartment",
+"contact": [
+{
+"type": "listingAgent",
+"id": "1",
+"name": "",
+"telephoneType": "",
+"telephone": "",
+"email": "contact@centralpropertyexchange.com"
+}
+],
+"cpxprice": 375000,
+"listedprice": 375000,
+"viewprice": "",
+"saving": 0,
+"marketrent": "",
+"beds": "1",
+"bath": "1",
+"externalLink": "",
+"videoLink": "",
+"cars": 1,
+"IsHouseLandPackage": "no",
+"landarea": "9",
+"areaunit": "squareMeter",
+"buildingarea": "50",
+"date_created": "",
+"featured": false,
+"latest": true,
+"smsf": true,
+"sold": false,
+"deposit": "",
+"domacom": "",
+"grade": "",
+"score":"" ,
+"gradelabel": "",
+"address": [
+{
+"display": "yes",
+"LotNumber": null,
+"subNumber": "1.15",
+"StreetNumber": "538",
+"street": "North Rd",
+"suburb": {
+"display": "yes",
+"text": "Ormond"
+},
+"state": "VIC",
+"country": "AU",
+"postcode": "3204"
+}
+],
+"coords": {
+"latitude": null,
+"longitude": null
+},
+"offline": false,
+"images": [
+{
+"id": 0,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/3501ae34-e3da-4484-83a0-b384cb0bf374\/images\/image31.jpg"
+},
+{
+"id": 1,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/3501ae34-e3da-4484-83a0-b384cb0bf374\/images\/image3.jpg"
+},
+{
+"id": 2,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/3501ae34-e3da-4484-83a0-b384cb0bf374\/images\/image32.jpg"
+}
+],
+"documents": [
+{
+"id": 0,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/3501ae34-e3da-4484-83a0-b384cb0bf374\/documents\/NorthRdOrmondCOS[1].pdf"
+},
+{
+"id": 1,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/3501ae34-e3da-4484-83a0-b384cb0bf374\/documents\/Brochure-538North[1].pdf"
+},
+{
+"id": 2,
+"url": "https:\/\/propertycompass.s3.amazonaws.com\/properties\/3501ae34-e3da-4484-83a0-b384cb0bf374\/documents\/Inclusions[1].pdf"
+}
+],
+"features": {
+"bedrooms": "1",
+"bathrooms": "1",
+"garages": "0",
+"carports": "1",
+"secureParking": "yes",
+"airConditioning": "yes",
+"balcony": "yes",
+"livingAreas": "yes",
+"builtInRobes": "yes",
+"dishwasher": "yes",
+"floorboards": "yes",
+"otherFeatures": "Car space in car staker"
+},
+"idealFor": {
+"firstHomeBuyer": "yes",
+"investors": "yes",
+"couples": "yes"
+},
+"estimate": [],
+"contract": [],
+"sale_summary": [],
+"history": [],
+"how_to_buy": [],
+"loan_cal": [],
+"invest_cal": [],
+"support_info": [],
+"floorplans": [],
+"inspectionTimes": [],
+"ipr": [],
+"description": "This apartment contains 1 bedroom, 1 bathroom, balcony, 1 car space within car staker. It also includes dining room, lounge room, laundry, built-in wardrobes. The kitchen is equipped with cooktop, oven, rangehood, dishwasher. Other features include air conditioning, stainless steel appliances, gas cooktop, internet connection. \n\nWithin the development comprise security parking.",
+"observation": "This is a new 1 bedroom, 1 bathroom unit of a boutique size and comments relate, where relevant, to the market completion of the property, advised as early 2016. The unit area totals 59 sqm, comprising 50 sqm of living and 9 sqm balcony with secure car parking in a car stacker. This is a small size for a 1 bedroom apartment. The floor plan is a standard rectangle design, on the edge of the building on level 1, adjacent the lift well. The bathroom contains a shower, knee bath, WC and hand basin. The unit will face south, away from the roadway. The property would appeal to investors or professional couples"
+}

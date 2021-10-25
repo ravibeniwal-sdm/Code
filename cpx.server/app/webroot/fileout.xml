@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertyList SYSTEM "http://reaxml.realestate.com.au/propertyList.dtd">
+<propertyList date="2015-10-08" username="cpxupload" password="datafile0397">
+    <residential modTime="2015-10-08-09:02:00" status="current">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>res184477</uniqueID>
+       <authority value="open"/>
+       <underOffer value="no"/>
+       <listingAgent>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <price>595000</price> 
+       <priceView>$595,000 negotiable</priceView>
+       <address display="yes">
+           <streetNumber>1184</streetNumber> 
+           <street>Mole Creek Road</street>
+           <suburb display="yes">NEEDLES</suburb>
+           <state>TAS</state>
+           <postcode>7304</postcode>
+           <country>AUS</country>
+       </address>
+       <municipality/>
+       <streetDirectory type="UBD">
+           <page/>
+           <reference/>
+       </streetDirectory>
+		<category name="AcreageSemi-rural"/><buildingDetails>       <energyRating/>
+</buildingDetails>       <headline><![CDATA[Tasmanian forest and river Eco retreat]]></headline>
+       <description><![CDATA[For the Eco-property buyer. Comprised of a two storey 3 bedroom brick house on 77 acres on three adjoining titles. There is an abundance of pure water and over 1 km of river frontage to the Lobster River, with fresh water  lobster, trout and platypus - with the river connecting both blocks.  The 77 acres is virgin eucalyptus forest with some small clearings. This is a property for the lover of Tasmanian wilderness, or a getaway offering complete peace and privacy, or as a spiritual retreat - ideal location for an 'Eco-village'.. 
+
+The inquiry code for this property is 1667
+You will be asked for the code when you call about this property.
+
+This property is unique with its unlogged forest backing onto virgin state forest for bushwalking and climbing. With the popular Lobster Falls close by, and its abundant natural assets, makes this property ideally suited to eco-tourism or an Eco-village venture. 
+Only 5 minutes to Chudleigh with its general store, post office and primary school, petrol station etc - or 10 minutes to Deloraine with Woolworths, a hospital, doctorâ€™s surgery, library, primary and high school, (school bus at the gate), and a very alternative thriving community. Devonport and Launceston are both less than an hourâ€™s drive away. 
+
+The 110 sq/m two storey brick cottage has three bedrooms and two showers and toilets, has wood heating with an abundant supply of free wood from the property. Mains power and phone are connected. Has a double car garage/workshop.
+Will sell as a parcel with an additional 3rd block of 35 acres of pasture for $860K, or the two forested blocks of 77 acres with the house for $595K . 
+
+Once again the inquiry code for this property is 1667
+Please be advised that you will need the code when calling about this property.]]></description>
+       <features>
+           <bedrooms>3</bedrooms>
+           <bathrooms>2</bathrooms>
+<ensuite>0</ensuite>           <garages>2</garages>
+           <carports>1</carports>
+           <carSpaces>6</carSpaces>
+           <toilets>2</toilets>
+           <livingAreas>1</livingAreas>
+           <remoteGarage>0</remoteGarage>
+           <secureParking>0</secureParking>
+           <balcony>0</balcony>
+           <deck>1</deck>
+           <courtyard>0</courtyard>
+           <outdoorEnt>0</outdoorEnt>
+           <shed>1</shed>
+           <fullyFenced>0</fullyFenced>
+           <study>1</study>
+           <gasHeating>0</gasHeating>
+           <workshop>1</workshop>
+           <splitSystemHeating>0</splitSystemHeating>
+           <floorboards>0</floorboards>
+           <splitSystemAirCon>0</splitSystemAirCon>
+           <evaporativeCooling>0</evaporativeCooling>
+           <gym>0</gym>
+           <broadband>0</broadband>
+           <builtInRobes>1</builtInRobes>
+           <hydronicHeating>0</hydronicHeating>
+           <payTV>0</payTV>
+           <dishwasher>0</dishwasher>
+           <ductedHeating>0</ductedHeating>
+           <ductedCooling>0</ductedCooling>
+           <reverseCycleAirCon>0</reverseCycleAirCon>
+           <rumpusRoom>0</rumpusRoom>
+           <greyWaterSystem>0</greyWaterSystem>
+           <solarHotWater>0</solarHotWater>
+           <solarPanels>0</solarPanels>
+           <waterTank>0</waterTank>
+           <otherFeatures/>
+       </features>
+       <landDetails>
+           <area unit="acre">77</area>
+       </landDetails>
+       <vendorDetails>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone>
+       </vendorDetails>
+       <images>
+           <img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_71237726.jpg" format="jpg"/>
+           <img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_71237727.jpg" format="jpg"/>
+           <img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_71237728.jpg" format="jpg"/>
+           <img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_71237729.jpg" format="jpg"/>
+           <img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_71237730.jpg" format="jpg"/>
+           <img id="e" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_71237731.jpg" format="jpg"/>
+           <img id="f" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_71237732.jpg" format="jpg"/>
+       </images>
+<objects>
+</objects>
+       <inspectionTimes>
+       </inspectionTimes>
+       <externalLink href=""/>
+    </residential>
+    <residential modTime="2015-10-08-09:02:00" status="current">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>res221194</uniqueID>
+       <authority value="open"/>
+       <underOffer value="no"/>
+       <listingAgent>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <price>669000</price> 
+       <priceView>$669,000</priceView>
+       <address display="yes">
+           <streetNumber>7</streetNumber> 
+           <street>Cowry Crescent</street>
+           <suburb display="yes">DINGO BEACH</suburb>
+           <state>QLD</state>
+           <postcode>4800</postcode>
+           <country>AUS</country>
+       </address>
+       <municipality/>
+       <streetDirectory type="UBD">
+           <page/>
+           <reference/>
+       </streetDirectory>
+		<category name="House"/><buildingDetails>       <energyRating/>
+</buildingDetails>       <headline><![CDATA[Time for a Sea Change?]]></headline>
+       <description><![CDATA[Phone enquiry code for this property: 3600
+
+With stunning 180 degree Whitsunday water views and situated in the quiet seaside location of Dingo Beach, this replica Queenslander style house, built in 2007, is a rare find. Views of Gloucester, Rattray, Saddleback, Blackcurrant, Mantaray and Eshelby Islands provide a stunning vista and having these islands on your doorstep and a boat ramp just a minute's drive away mean that boating, fishing and snorkelling opportunities are right on your doorstep. 
+
+Features of the house include: 
+- exceptional sea views and ocean breezes
+- 3 bright, airy bedrooms with built-ins on the upper level
+- modern kitchen 
+- bathroom with separate plunge
+- upstairs laundry
+- 2.9 metre ceilings, louvred windows, sliding doors and fans throughout ensuring good ventilation
+- all round veranda with spacious 50 square metre entertainment area overlooking the islands
+- lower level offers private, air-conditioned, two-roomed guest area plus bathroom and toilet
+- remote controlled, generous sized, double garage
+- 2 kw solar power
+- solar hot water
+- 2 x 27 276 litre water tanks
+- Connection to broadband internet.
+
+Dingo Beach, on the Whitsunday Coast, has a hotel and store and is just 40 minutesâ€™ drive from Airlie Beach, gateway to the 74 Whitsunday Islands and the Great Barrier Reef. It is 30 minutesâ€™ drive from Proserpine and is serviced by a school bus. If you are looking for a quiet, relaxed lifestyle then this is definitely worth a look! 
+
+Phone enquiry code for this property: 3600]]></description>
+       <features>
+           <bedrooms>5</bedrooms>
+           <bathrooms>2</bathrooms>
+<ensuite>0</ensuite>           <garages>2</garages>
+           <carports>0</carports>
+           <carSpaces>4</carSpaces>
+           <toilets>2</toilets>
+           <livingAreas>1</livingAreas>
+           <remoteGarage>1</remoteGarage>
+           <secureParking>1</secureParking>
+           <balcony>1</balcony>
+           <deck>1</deck>
+           <courtyard>0</courtyard>
+           <outdoorEnt>1</outdoorEnt>
+           <shed>0</shed>
+           <fullyFenced>0</fullyFenced>
+           <study>0</study>
+           <gasHeating>0</gasHeating>
+           <workshop>0</workshop>
+           <splitSystemHeating>0</splitSystemHeating>
+           <floorboards>1</floorboards>
+           <splitSystemAirCon>1</splitSystemAirCon>
+           <evaporativeCooling>0</evaporativeCooling>
+           <gym>0</gym>
+           <broadband>1</broadband>
+           <builtInRobes>1</builtInRobes>
+           <hydronicHeating>0</hydronicHeating>
+           <payTV>0</payTV>
+           <dishwasher>1</dishwasher>
+           <ductedHeating>0</ductedHeating>
+           <ductedCooling>0</ductedCooling>
+           <reverseCycleAirCon>0</reverseCycleAirCon>
+           <rumpusRoom>0</rumpusRoom>
+           <greyWaterSystem>1</greyWaterSystem>
+           <solarHotWater>1</solarHotWater>
+           <solarPanels>1</solarPanels>
+           <waterTank>0</waterTank>
+           <otherFeatures/>
+       </features>
+       <landDetails>
+           <area unit="squareMeter">712</area>
+       </landDetails>
+       <vendorDetails>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone>
+       </vendorDetails>
+       <images>
+           <img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659226.jpg" format="jpg"/>
+           <img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659238.jpg" format="jpg"/>
+           <img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659227.jpg" format="jpg"/>
+           <img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659243.jpg" format="jpg"/>
+           <img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659228.jpg" format="jpg"/>
+           <img id="e" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659229.jpg" format="jpg"/>
+           <img id="f" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659230.jpg" format="jpg"/>
+           <img id="g" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659231.jpg" format="jpg"/>
+           <img id="h" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659232.jpg" format="jpg"/>
+           <img id="i" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659234.jpg" format="jpg"/>
+           <img id="j" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659233.jpg" format="jpg"/>
+           <img id="k" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659235.jpg" format="jpg"/>
+           <img id="l" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659236.jpg" format="jpg"/>
+           <img id="n" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659237.jpg" format="jpg"/>
+           <img id="o" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659239.jpg" format="jpg"/>
+           <img id="p" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659240.jpg" format="jpg"/>
+           <img id="q" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659241.jpg" format="jpg"/>
+           <img id="r" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659242.jpg" format="jpg"/>
+           <img id="s" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74651072.JPG" format="jpg"/>
+       </images>
+<objects>
+</objects>
+       <inspectionTimes>
+       </inspectionTimes>
+       <externalLink href=""/>
+    </residential>
+    <residential modTime="2015-10-08-09:02:00" status="current">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>res221446</uniqueID>
+       <authority value="open"/>
+       <underOffer value="no"/>
+       <listingAgent>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <price>838000</price> 
+       <priceView>$838,000</priceView>
+       <address display="yes">
+           <streetNumber>382</streetNumber> 
+           <street>Goulburn Valley Highway</street>
+           <suburb display="yes">SEYMOUR</suburb>
+           <state>VIC</state>
+           <postcode>3660</postcode>
+           <country>AUS</country>
+       </address>
+       <municipality/>
+       <streetDirectory type="UBD">
+           <page/>
+           <reference/>
+       </streetDirectory>
+		<category name="AcreageSemi-rural"/><buildingDetails>       <energyRating/>
+</buildingDetails>       <headline><![CDATA[YES, AT LAST YOUR SEARCH IS OVER.  UNIQUE LIVING ON 60 ACRES.]]></headline>
+       <description><![CDATA[Enquiry code for this property: 3944
+
+This is a rare opportunity to purchase a storybook home and a barn conversion, on a lovely 60 acre property, offering both the escape to the country lifestyle you have been looking for, plus the convenience of being only 5mins to town.  
+
+This gentle slopping property has established tree plantations, 8 well fenced paddocks, 4 dams, plus a seasonal creek. It is situated 5 kilometers north of Seymour, and centrally located to three major regional areas (High Country, Goldfields, Goulburn Valley) and Melbourne by rail or freeway.  
+
+Make this charming home yours.  Itsâ€™ outstanding house sited in a spacious tranquil garden setting, comprises a large welcoming family kitchen room with walk-in pantry, 3 bedrooms, 2 bathrooms, office area, 3 homely living areas and a formal dining room, providing plenty of room to relax. 
+ 
+Outside a large covered deck takes in the beautiful surrounds, including an arbor walkway, while providing for year round entertaining.  Maybe enjoy a spa in the Summerhouse.
+
+Further complementing the property is a fully self-sufficient loft-barn conversion in a modern style with one bedroom, an open living-kitchen area and combined bathroom-laundry.  It features gas cooking and hot water, separate metered power supply and spacious outside covered area with magnificent views over the park like dam paddock.
+
+Other features include:
+â€¢ 	quality landscaped gardens 
+â€¢ 	reticulated watering system 
+       3 phase power 
+â€¢	double glazing
+â€¢	  cypress floor boards 
+â€¢ 	solar panels 
+â€¢ 	split system heating-cooling
+â€¢	 close cell underfloor insulation
+â€¢	28,000 gallon water tank 
+	2 carport 
+â€¢	 garden shed
+â€¢	 covered sheep yards
+â€¢	 numerous sheds with additional car parking
+â€¢	dog yards and so much more.
+
+This property is ideal for those who seek a comfortable living, with enough room for the extended family or perhaps a B&amp;B or farm stay.  
+
+
+This is an exceptional property, nothing like it at this price, so send an inquiry now to book your private inspection! 
+
+
+ 
+Enquiry code for this property: 3944
+]]></description>
+       <features>
+           <bedrooms>3</bedrooms>
+           <bathrooms>2</bathrooms>
+<ensuite>0</ensuite>           <garages>3</garages>
+           <carports>2</carports>
+           <carSpaces>2</carSpaces>
+           <spa type="aboveground">yes</spa>
+           <toilets>2</toilets>
+           <livingAreas>3</livingAreas>
+           <remoteGarage>0</remoteGarage>
+           <secureParking>0</secureParking>
+           <balcony>1</balcony>
+           <deck>1</deck>
+           <courtyard>0</courtyard>
+           <outdoorEnt>1</outdoorEnt>
+           <shed>1</shed>
+           <fullyFenced>1</fullyFenced>
+           <study>1</study>
+           <gasHeating>0</gasHeating>
+           <workshop>0</workshop>
+           <splitSystemHeating>1</splitSystemHeating>
+           <floorboards>1</floorboards>
+           <splitSystemAirCon>1</splitSystemAirCon>
+           <evaporativeCooling>0</evaporativeCooling>
+           <gym>0</gym>
+           <broadband>0</broadband>
+           <builtInRobes>1</builtInRobes>
+           <hydronicHeating>0</hydronicHeating>
+           <payTV>0</payTV>
+           <dishwasher>1</dishwasher>
+           <ductedHeating>0</ductedHeating>
+           <ductedCooling>0</ductedCooling>
+           <reverseCycleAirCon>0</reverseCycleAirCon>
+           <rumpusRoom>0</rumpusRoom>
+           <greyWaterSystem>0</greyWaterSystem>
+           <solarHotWater>0</solarHotWater>
+           <solarPanels>1</solarPanels>
+           <waterTank>0</waterTank>
+           <otherFeatures/>
+       </features>
+       <landDetails>
+           <area unit="squareMeter">250700</area>
+       </landDetails>
+       <vendorDetails>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone>
+       </vendorDetails>
+       <images>
+           <img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655746.jpg" format="jpg"/>
+           <img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655744.jpg" format="jpg"/>
+           <img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655754.jpg" format="jpg"/>
+           <img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74657048.JPG" format="jpg"/>
+           <img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655758.jpg" format="jpg"/>
+           <img id="e" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655753.jpg" format="jpg"/>
+           <img id="f" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655757.jpg" format="jpg"/>
+           <img id="g" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655756.jpg" format="jpg"/>
+           <img id="h" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655761.jpg" format="jpg"/>
+           <img id="i" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655750.jpg" format="jpg"/>
+           <img id="j" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655747.jpg" format="jpg"/>
+           <img id="k" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655759.jpg" format="jpg"/>
+           <img id="l" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655749.jpg" format="jpg"/>
+           <img id="n" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655760.jpg" format="jpg"/>
+           <img id="o" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655752.jpg" format="jpg"/>
+           <img id="p" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659246.jpg" format="jpg"/>
+           <img id="q" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655748.jpg" format="jpg"/>
+           <img id="r" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74655751.jpg" format="jpg"/>
+           <img id="s" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659245.jpg" format="jpg"/>
+       </images>
+<objects>
+</objects>
+       <inspectionTimes>
+       </inspectionTimes>
+       <externalLink href=""/>
+    </residential>
+    <residential modTime="2015-10-08-09:02:00" status="current">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>res221602</uniqueID>
+       <authority value="open"/>
+       <underOffer value="no"/>
+       <listingAgent>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <price>764000</price> 
+       <priceView>$839,000</priceView>
+       <address display="yes">
+           <streetNumber>214/11A</streetNumber> 
+           <street>Lachlan Street</street>
+           <suburb display="yes">WATERLOO</suburb>
+           <state>NSW</state>
+           <postcode>2017</postcode>
+           <country>AUS</country>
+       </address>
+       <municipality/>
+       <streetDirectory type="UBD">
+           <page/>
+           <reference/>
+       </streetDirectory>
+		<category name="Unit"/><buildingDetails>       <energyRating/>
+</buildingDetails>       <headline><![CDATA[Spacious and Modern Apartment with park view]]></headline>
+       <description><![CDATA[Phone enquiry code for this property: 5046
+
+Not a dull, cramped shoebox!
+
+Spacious and modern -  
+The apartment  boost a 101sqm living space. The main bedroom can comfortably fit in a Queen Size Bed and comes with a large built-in wardrobe. There is still space to house an additional cabinet if required. The spacious second bedroom comes with a even larger Built-in wardrobe. The two modern bathrooms can be handy during the morning rush hour. There is a separate study area to do some work. The living, kitchen and dining area is a big open concept. The Stone Tops Kitchen comes with stainless steel gas cook tops, rangehood and oven. Just throw all the dishes into the dishwasher when done. There is also plenty of storage spaces.
+
+Lifestyle - 
+Dank Street and East Village is a short walk away. Enjoy a weekend brunch on the veranda while enjoying the park view. It's a nice walk to Centennial Park or hit some balls in the range at Moore Park Golf Course. It is only 20 mins walk to Allianz Stadium for Footy Fans.
+
+Convenience - 
+There are 4 X direct buses to the city. The bus stop is just out on the main road (Bourke St.) with Green Square Station a rough 12 mins walk. There is Coles, Aldi and other eateries in close vicinity. Convenience without the buzz.  The walked to/from the city via the vibrant Crown street is around 30mins.
+
+Facilities -
+There is no Gym or a Pool in the building but there is Plus Fitness Centre on Ground Floor or Virgin Fitness across the road.
+
+Phone enquiry code for this property: 5046
+]]></description>
+       <features>
+           <bedrooms>2</bedrooms>
+           <bathrooms>2</bathrooms>
+<ensuite>1</ensuite>           <garages>0</garages>
+           <carports>1</carports>
+           <carSpaces>0</carSpaces>
+           <intercom>yes</intercom>
+           <toilets>2</toilets>
+           <livingAreas>1</livingAreas>
+           <remoteGarage>0</remoteGarage>
+           <secureParking>1</secureParking>
+           <balcony>1</balcony>
+           <deck>0</deck>
+           <courtyard>0</courtyard>
+           <outdoorEnt>0</outdoorEnt>
+           <shed>0</shed>
+           <fullyFenced>0</fullyFenced>
+           <study>0</study>
+           <gasHeating>0</gasHeating>
+           <workshop>0</workshop>
+           <splitSystemHeating>0</splitSystemHeating>
+           <floorboards>1</floorboards>
+           <splitSystemAirCon>0</splitSystemAirCon>
+           <evaporativeCooling>0</evaporativeCooling>
+           <gym>0</gym>
+           <broadband>0</broadband>
+           <builtInRobes>1</builtInRobes>
+           <hydronicHeating>0</hydronicHeating>
+           <payTV>0</payTV>
+           <dishwasher>1</dishwasher>
+           <ductedHeating>0</ductedHeating>
+           <ductedCooling>0</ductedCooling>
+           <reverseCycleAirCon>1</reverseCycleAirCon>
+           <rumpusRoom>0</rumpusRoom>
+           <greyWaterSystem>0</greyWaterSystem>
+           <solarHotWater>0</solarHotWater>
+           <solarPanels>0</solarPanels>
+           <waterTank>0</waterTank>
+           <otherFeatures/>
+       </features>
+       <landDetails>
+           <area unit="squareMeter"/>
+       </landDetails>
+       <vendorDetails>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone>
+       </vendorDetails>
+       <images>
+           <img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658003.jpg" format="jpg"/>
+           <img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658010.jpg" format="jpg"/>
+           <img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658012.jpg" format="jpg"/>
+           <img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658009.jpg" format="jpg"/>
+           <img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658013.jpg" format="jpg"/>
+           <img id="e" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658011.jpg" format="jpg"/>
+           <img id="f" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658004.jpg" format="jpg"/>
+           <img id="g" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658005.jpg" format="jpg"/>
+           <img id="h" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658006.jpg" format="jpg"/>
+           <img id="i" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658007.jpg" format="jpg"/>
+           <img id="j" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658008.jpg" format="jpg"/>
+           <img id="k" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658014.jpg" format="jpg"/>
+           <img id="l" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658015.jpg" format="jpg"/>
+       </images>
+<objects>
+           <floorplan id="1" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_floorplan_4222.gif" format="gif"/>
+</objects>
+       <inspectionTimes>
+           <inspection>10-Oct-2015 11:00AM to 11:30AM</inspection>
+       </inspectionTimes>
+       <externalLink href=""/>
+    </residential>
+    <residential modTime="2015-10-08-09:02:00" status="withdrawn">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>res221627</uniqueID>
+       <authority value="open"/>
+       <underOffer value="no"/>
+       <listingAgent>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <price>574000</price> 
+       <priceView>Turnkey $574,000</priceView>
+       <address display="no">
+           <streetNumber>22/1</streetNumber> 
+           <street>Corner of Hursley Road and McDougall Street </street>
+           <suburb display="yes">GLENVALE</suburb>
+           <state>QLD</state>
+           <postcode>4350</postcode>
+           <country>AUS</country>
+       </address>
+       <municipality/>
+       <streetDirectory type="UBD">
+           <page/>
+           <reference/>
+       </streetDirectory>
+		<category name="DuplexSemi-detached"/><buildingDetails>       <energyRating/>
+</buildingDetails>       <headline><![CDATA[HUGE 300m2 DUPLEX - 6x4x4 - INC STAMP DUTY, LEGALS AND ALL COUNCIL COSTS]]></headline>
+       <description><![CDATA[FREE Stamp Duty â€“ FREE Legals â€“ ALL COUNCIL COSTS INCLUDED = $40,000 of included value 
+
+This HUGE 300 m2 DUPLEX, is the perfect investment for a savvy investor looking to see a $100,000 plus development profit and a cash flow positive return. 
+
+Just 8 min from town and within walking distance to shops, schools and public transport. Specifically designed for the exclusive Hursley Road Estate Toowoomba and will be ready to start construction as soon as next month. The build price is 100% fixed and fully turnkey â€“ nothing more to spend! 
+
+Situated on a substantial block of 505m2 giving a manageable and low maintenance rear yard that will be fully landscaped. 
+
+ALL BIG PROJECTS COME STANDARD WITH THE FOLLOWING: 
+
+-	FREE STAMP DUTY, FREE STAMP DUTY, LEGALS AND ALL COUNCIL COSTS
+-	Architecturally designed exterior incorporating wood, brick and render â€“ your selection 
+-	Custom interior floor plan to maximise usable living space
+-	High end kitchen with stainless steel appliances   
+-	Stone bench tops 
+-	Concrete driveways and paths 
+-	Full turf and landscaping to front and rear â€“ water smart 
+-	Fully fenced with gate to rear  
+-	Titles and carpet â€“ your selection 
+-	Electric roller door with 2 remotes  
+-	Alfresco under main roof with outdoor fan 
+-	Indoor / outdoor entertaining area 
+-	Blinds, fly screens, light fittings TV antenna, letter box â€“ FULLY TURN KEY.  
+
+]]></description>
+       <features>
+           <bedrooms>6</bedrooms>
+           <bathrooms>4</bathrooms>
+<ensuite>2</ensuite>           <garages>2</garages>
+           <carports>2</carports>
+           <carSpaces>0</carSpaces>
+           <alarmSystem>yes</alarmSystem>
+           <toilets>4</toilets>
+           <livingAreas>4</livingAreas>
+           <remoteGarage>1</remoteGarage>
+           <secureParking>1</secureParking>
+           <balcony>0</balcony>
+           <deck>1</deck>
+           <courtyard>1</courtyard>
+           <outdoorEnt>1</outdoorEnt>
+           <shed>0</shed>
+           <fullyFenced>1</fullyFenced>
+           <study>1</study>
+           <gasHeating>0</gasHeating>
+           <workshop>0</workshop>
+           <splitSystemHeating>1</splitSystemHeating>
+           <floorboards>0</floorboards>
+           <splitSystemAirCon>0</splitSystemAirCon>
+           <evaporativeCooling>0</evaporativeCooling>
+           <gym>0</gym>
+           <broadband>1</broadband>
+           <builtInRobes>1</builtInRobes>
+           <hydronicHeating>0</hydronicHeating>
+           <payTV>0</payTV>
+           <dishwasher>0</dishwasher>
+           <ductedHeating>0</ductedHeating>
+           <ductedCooling>0</ductedCooling>
+           <reverseCycleAirCon>0</reverseCycleAirCon>
+           <rumpusRoom>0</rumpusRoom>
+           <greyWaterSystem>0</greyWaterSystem>
+           <solarHotWater>0</solarHotWater>
+           <solarPanels>0</solarPanels>
+           <waterTank>0</waterTank>
+           <otherFeatures/>
+       </features>
+       <landDetails>
+           <area unit="squareMeter">505</area>
+       </landDetails>
+       <vendorDetails>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone>
+       </vendorDetails>
+       <images>
+           <img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658418.jpg" format="jpg"/>
+           <img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658420.jpg" format="jpg"/>
+           <img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658421.jpg" format="jpg"/>
+           <img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658422.jpg" format="jpg"/>
+           <img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74658423.jpg" format="jpg"/>
+       </images>
+<objects>
+</objects>
+       <inspectionTimes>
+       </inspectionTimes>
+       <externalLink href=""/>
+    </residential>
+    <residential modTime="2015-10-08-09:02:00" status="withdrawn">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>res221661</uniqueID>
+       <authority value="open"/>
+       <underOffer value="no"/>
+       <listingAgent>
+           <name>Property Now RLA232096</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <price>385000</price> 
+       <priceView>$385,000</priceView>
+       <address display="yes">
+           <streetNumber>12</streetNumber> 
+           <street>Barker Street</street>
+           <suburb display="yes">PORT NOARLUNGA</suburb>
+           <state>SA</state>
+           <postcode>5167</postcode>
+           <country>AUS</country>
+       </address>
+       <municipality/>
+       <streetDirectory type="UBD">
+           <page/>
+           <reference/>
+       </streetDirectory>
+		<category name="House"/><buildingDetails>       <energyRating/>
+</buildingDetails>       <headline><![CDATA[Near new 3 bedroom home]]></headline>
+       <description><![CDATA[Enquiry code for this property: 6021
+
+Almost 2 year old, quality home built by "Dechellis Homes"
+2.7 m ceilings 
+Ceilings and all internal and external walls fully insulated
+Stone vanity tops
+Twin ensuite shower
+Walk thru robe to main bedroom
+Linen press
+
+Enquiry code for this property: 6021]]></description>
+       <features>
+           <bedrooms>3</bedrooms>
+           <bathrooms>2</bathrooms>
+<ensuite>1</ensuite>           <garages>0</garages>
+           <carports>1</carports>
+           <carSpaces>1</carSpaces>
+           <toilets>2</toilets>
+           <livingAreas>1</livingAreas>
+           <remoteGarage>0</remoteGarage>
+           <secureParking>0</secureParking>
+           <balcony>0</balcony>
+           <deck>0</deck>
+           <courtyard>0</courtyard>
+           <outdoorEnt>0</outdoorEnt>
+           <shed>0</shed>
+           <fullyFenced>1</fullyFenced>
+           <study>0</study>
+           <gasHeating>0</gasHeating>
+           <workshop>0</workshop>
+           <splitSystemHeating>0</splitSystemHeating>
+           <floorboards>0</floorboards>
+           <splitSystemAirCon>1</splitSystemAirCon>
+           <evaporativeCooling>0</evaporativeCooling>
+           <gym>0</gym>
+           <broadband>0</broadband>
+           <builtInRobes>0</builtInRobes>
+           <hydronicHeating>0</hydronicHeating>
+           <payTV>0</payTV>
+           <dishwasher>1</dishwasher>
+           <ductedHeating>0</ductedHeating>
+           <ductedCooling>0</ductedCooling>
+           <reverseCycleAirCon>0</reverseCycleAirCon>
+           <rumpusRoom>0</rumpusRoom>
+           <greyWaterSystem>0</greyWaterSystem>
+           <solarHotWater>0</solarHotWater>
+           <solarPanels>0</solarPanels>
+           <waterTank>0</waterTank>
+           <otherFeatures/>
+       </features>
+       <landDetails>
+           <area unit="squareMeter">287</area>
+       </landDetails>
+       <vendorDetails>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone>
+       </vendorDetails>
+       <images>
+           <img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659262.jpg" format="jpg"/>
+           <img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659263.jpg" format="jpg"/>
+           <img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659264.jpg" format="jpg"/>
+           <img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659265.jpg" format="jpg"/>
+           <img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659266.jpg" format="jpg"/>
+           <img id="e" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659267.jpg" format="jpg"/>
+           <img id="f" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74659268.jpg" format="jpg"/>
+       </images>
+<objects>
+           <floorplan id="1" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_floorplan_4288.GIF" format="gif"/>
+</objects>
+       <inspectionTimes>
+       </inspectionTimes>
+       <externalLink href=""/>
+    </residential>
+    <residential modTime="2015-10-08-09:02:00" status="current">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>res221349</uniqueID>
+       <authority value="open"/>
+       <underOffer value="no"/>
+       <listingAgent>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <price>399000</price> 
+       <priceView>All reasonable offers considered</priceView>
+       <address display="yes">
+           <streetNumber>130</streetNumber> 
+           <street>Alawoona Street</street>
+           <suburb display="yes">REDBANK PLAINS</suburb>
+           <state>QLD</state>
+           <postcode>4301</postcode>
+           <country>AUS</country>
+       </address>
+       <municipality/>
+       <streetDirectory type="UBD">
+           <page/>
+           <reference/>
+       </streetDirectory>
+		<category name="House"/><buildingDetails>       <energyRating/>
+</buildingDetails>       <headline><![CDATA[Quality home or investment opportunity]]></headline>
+       <description><![CDATA[Phone enquiry code for this property: 4048
+
+Constructed in 2010, this four bedroom home has a 20 year structural guarantee. The home has been architecturally designed for the modern lifestyle, with stylish interiors and fitted with quality fittings and fixtures, including stainless steel appliances, blinds, split system air conditioning to the living area, outdoor patio area, and 5000L rainwater tank supplying non-potable water to toilets and washing machine.  
+
+The house has been rented since new and has only recently been vacated.  Renters have taken excellent care of the house and it is in near new condition, with tiles throughout the living areas providing easy care maintenance.  Ready to move in.
+
+Phone enquiry code for this property: 4048
+]]></description>
+       <features>
+           <bedrooms>4</bedrooms>
+           <bathrooms>2</bathrooms>
+<ensuite>1</ensuite>           <garages>2</garages>
+           <carports>0</carports>
+           <carSpaces>0</carSpaces>
+           <toilets>2</toilets>
+           <livingAreas>2</livingAreas>
+           <remoteGarage>1</remoteGarage>
+           <secureParking>1</secureParking>
+           <balcony>0</balcony>
+           <deck>0</deck>
+           <courtyard>1</courtyard>
+           <outdoorEnt>0</outdoorEnt>
+           <shed>0</shed>
+           <fullyFenced>1</fullyFenced>
+           <study>0</study>
+           <gasHeating>0</gasHeating>
+           <workshop>0</workshop>
+           <splitSystemHeating>0</splitSystemHeating>
+           <floorboards>0</floorboards>
+           <splitSystemAirCon>1</splitSystemAirCon>
+           <evaporativeCooling>0</evaporativeCooling>
+           <gym>0</gym>
+           <broadband>0</broadband>
+           <builtInRobes>1</builtInRobes>
+           <hydronicHeating>0</hydronicHeating>
+           <payTV>0</payTV>
+           <dishwasher>1</dishwasher>
+           <ductedHeating>0</ductedHeating>
+           <ductedCooling>0</ductedCooling>
+           <reverseCycleAirCon>1</reverseCycleAirCon>
+           <rumpusRoom>0</rumpusRoom>
+           <greyWaterSystem>0</greyWaterSystem>
+           <solarHotWater>0</solarHotWater>
+           <solarPanels>0</solarPanels>
+           <waterTank>0</waterTank>
+           <otherFeatures/>
+       </features>
+       <landDetails>
+           <area unit="squareMeter">448</area>
+       </landDetails>
+       <vendorDetails>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone>
+       </vendorDetails>
+       <images>
+           <img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656890.jpg" format="jpg"/>
+           <img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656891.jpg" format="jpg"/>
+           <img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656892.jpg" format="jpg"/>
+           <img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656894.jpg" format="jpg"/>
+           <img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656896.jpg" format="jpg"/>
+           <img id="e" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656897.jpg" format="jpg"/>
+           <img id="f" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656899.jpg" format="jpg"/>
+           <img id="g" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656900.jpg" format="jpg"/>
+           <img id="h" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656901.jpg" format="jpg"/>
+           <img id="i" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656902.jpg" format="jpg"/>
+           <img id="j" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656903.jpg" format="jpg"/>
+           <img id="k" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656905.jpg" format="jpg"/>
+           <img id="l" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656910.jpg" format="jpg"/>
+           <img id="n" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656907.jpg" format="jpg"/>
+           <img id="o" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656908.jpg" format="jpg"/>
+           <img id="p" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656909.jpg" format="jpg"/>
+           <img id="q" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656911.jpg" format="jpg"/>
+           <img id="r" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656912.jpg" format="jpg"/>
+           <img id="s" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656913.jpg" format="jpg"/>
+           <img id="t" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/residential_extra_74656915.jpg" format="jpg"/>
+       </images>
+<objects>
+</objects>
+       <inspectionTimes>
+       </inspectionTimes>
+       <externalLink href=""/>
+    </residential>
+    <residential modTime="2015-10-08-09:02:00" status="sold">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>res221398</uniqueID>
+       <soldDetails>
+           <price display="no" plusSAV="no">510000</price> 
+           <date>2015-10-07</date> 
+       </soldDetails>
+    </residential>
+    <residential modTime="2015-10-08-09:02:00" status="sold">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>res221286</uniqueID>
+       <soldDetails>
+           <price display="no" plusSAV="no">639000</price> 
+           <date>2015-10-07</date> 
+       </soldDetails>
+    </residential>
+    <land modTime="2015-10-08-09:02:00" status="current">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>resland28038</uniqueID>
+       <authority value="open"/>
+       <underOffer value="no"/>
+       <listingAgent>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <price display="yes">327250</price> 
+       <priceView>$327,250</priceView>
+       <address display="yes">
+           <streetNumber>133</streetNumber> 
+           <street>Jocelyn Drive</street>
+           <suburb display="yes">EUMUNDI</suburb>
+           <state>QLD</state>
+           <postcode>4562</postcode>
+           <country>AUS</country>
+       </address>
+       <municipality/>
+       <streetDirectory type="UBD">
+           <page/>
+           <reference/>
+       </streetDirectory>
+       <landCategory name="Residential"/>
+     <headline><![CDATA[pre-title sale $385,000 less 15%($327,250)]]></headline>
+     <description><![CDATA[Phone enquiry code for this property: 3952
+DEAL DIRECT WITH LAND OWNER
+Pre title sale in prestigious Rafter Country Estate
+Set amongst nature with beautiful rural views.
+Rafter Country offers a limited release of rural acerage allotments.
+15 minutes to Noosa main beach.
+2 minutes to Eumundi village.
+1 1/2 hours to Brisbane international airport.
+View by appointment only,due to road construction
+
+Phone enquiry code for this property: 3952]]></description>
+       <landDetails>
+           <area unit="squareMeter">7314</area>
+           <frontage unit="meter"/>
+           <depth unit="meter" side="rear"/>
+           <depth unit="meter" side="right"/>
+           <depth unit="meter" side="left"/>
+       </landDetails>
+       <images>
+           <img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047398.jpg" format="jpg"/>
+           <img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047700.jpg" format="jpg"/>
+           <img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047702.jpg" format="jpg"/>
+           <img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047707.jpg" format="jpg"/>
+           <img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047400.jpg" format="jpg"/>
+           <img id="e" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047401.jpg" format="jpg"/>
+       </images>
+       <externalLink href=""/>
+    </land>
+    <land modTime="2015-10-08-09:02:00" status="current">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>resland28075</uniqueID>
+       <authority value="open"/>
+       <underOffer value="no"/>
+       <listingAgent>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <price display="yes">327250</price> 
+       <priceView>$327,250</priceView>
+       <address display="yes">
+           <streetNumber>lot 14/133</streetNumber> 
+           <street>Jocelyn Drive</street>
+           <suburb display="yes">EUMUNDI</suburb>
+           <state>QLD</state>
+           <postcode>4562</postcode>
+           <country>AUS</country>
+       </address>
+       <municipality/>
+       <streetDirectory type="UBD">
+           <page/>
+           <reference/>
+       </streetDirectory>
+       <landCategory name="Residential"/>
+     <headline><![CDATA[pre-title sale $385,000 less 15%($327,250)]]></headline>
+     <description><![CDATA[Enquiry code for this property: 3952
+
+BUY DIRECT FROM LAND OWNER FOR BEST DEAL
+located in pristgious rafter country estate
+set amongst nature with beautiful views
+rafter country offers a new release on pre title sale
+view by appointment only
+
+Enquiry code for this property: 3952]]></description>
+       <landDetails>
+           <area unit="acre">8.9</area>
+           <frontage unit="meter"/>
+           <depth unit="meter" side="rear"/>
+           <depth unit="meter" side="right"/>
+           <depth unit="meter" side="left"/>
+       </landDetails>
+       <images>
+           <img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047692.jpg" format="jpg"/>
+           <img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047695.jpg" format="jpg"/>
+           <img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047697.jpg" format="jpg"/>
+           <img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047698.jpg" format="jpg"/>
+           <img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047699.jpg" format="jpg"/>
+           <img id="e" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047727.jpg" format="jpg"/>
+       </images>
+       <externalLink href=""/>
+    </land>
+    <land modTime="2015-10-08-09:02:00" status="current">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>resland28077</uniqueID>
+       <authority value="open"/>
+       <underOffer value="no"/>
+       <listingAgent>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <price display="yes">448000</price> 
+       <priceView>448000</priceView>
+       <address display="yes">
+           <streetNumber>68</streetNumber> 
+           <street>Torwoood Edge</street>
+           <suburb display="yes">HALLS HEAD</suburb>
+           <state>WA</state>
+           <postcode>6210</postcode>
+           <country>AUS</country>
+       </address>
+       <municipality/>
+       <streetDirectory type="UBD">
+           <page/>
+           <reference/>
+       </streetDirectory>
+       <landCategory name="Residential"/>
+     <headline><![CDATA[Sensational beach side block]]></headline>
+     <description><![CDATA[Enquiry code for this property: 6022
+
+Oceanfront Sensation
+
+$448,000
+
+568 m2 Level beachfront block
+
+Situated with lovely elevated coastal views to the north and south with 18m roadside frontage with 18m oceanfront.
+Close to schools, shopping, parks, cafes, sporting facilities and of course thereâ€™s the beach at your doorstep.
+All New exciting development. Direct access to coastal boardwalk to beautiful Falcon Bay or old Halls Head/City Centre.
+
+This piece of paradise brings the ultimate beachside lifestyle located in Halls Heads Seascape precinct.
+
+Create your ultimate dream home and be one of the few to experience the unlimited lifestyle options on offer in this very sought after location.
+
+68 Torwood Edge (lot 2149) Halls Head
+Enquiry code for this property: 6022
+]]></description>
+       <landDetails>
+           <area unit="squareMeter">568</area>
+           <frontage unit="meter">18</frontage>
+           <depth unit="meter" side="rear">18</depth>
+           <depth unit="meter" side="right">30</depth>
+           <depth unit="meter" side="left">30</depth>
+           <crossOver value="Left"/>
+       </landDetails>
+       <images>
+           <img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047711.jpeg" format="jpg"/>
+           <img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047712.JPG" format="jpg"/>
+           <img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047713.JPG" format="jpg"/>
+           <img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047714.JPG" format="jpg"/>
+           <img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047715.JPG" format="jpg"/>
+           <img id="e" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047716.JPG" format="jpg"/>
+           <img id="f" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047717.JPG" format="jpg"/>
+           <img id="g" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047718.JPG" format="jpg"/>
+           <img id="h" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047719.JPG" format="jpg"/>
+           <img id="i" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047721.JPG" format="jpg"/>
+           <img id="j" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047722.JPG" format="jpg"/>
+           <img id="k" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047723.JPG" format="jpg"/>
+           <img id="l" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047724.JPG" format="jpg"/>
+           <img id="n" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/land_extra_5047725.JPG" format="jpg"/>
+       </images>
+       <externalLink href=""/>
+    </land>
+    <rental modTime="2015-10-08-09:02:00" status="current">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>rental96598</uniqueID>
+       <listingAgent>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <dateAvailable>2015-10-20</dateAvailable> 
+       <rent period="weekly" display="yes">385</rent> 
+<priceView>$385 per week (incl. Water)</priceView>       <bond>1540</bond> 
+       <address display="yes">
+           <streetNumber>3/37</streetNumber> 
+           <street>Garrick street</street>
+           <suburb display="yes">COOLANGATTA</suburb>
+           <state>QLD</state>
+           <postcode>4225</postcode>
+           <country>AUS</country>
+       </address>
+       <municipality/>
+       <streetDirectory type="UBD">
+           <page/>
+           <reference/>
+       </streetDirectory>
+		<category name="Unit"/><headline><![CDATA[Coolangatta / Ocean View]]></headline>
+<description><![CDATA[Enquiry code for this property: 6011
+
+LOCATION LOCATION LOCATION !
+
+POSITION PERFECT Enjoy the Sea Breaze with the Direct North Easterly aspect, set high on 'Cooly' Hill with Ocean Views, in a true Retro style building. 
+Large 2 Bedroom Unfurnished Unit, ideally located in the sought after pocket, right in the centre of Coolangatta with the convenience and luxury of Main street Alfresco dining at your doorstep.
+Enjoy a 2 minute leisurely stroll to Coolangatta or Kirra Beach and only a 2 minute drive to Gold Coast International Airport and Southern Cross University.
+
+Leave the car at home in the secure underground garage and enjoy a lifestyle change.
+Walk everywhere and leave your footprint. This unit is one of the largest in town! 
+
+-Small block of eight
+-Rental includes Water 
+-Extra Large open plan living area
+-Large newly Renovated Gourmet kitchen
+-Huge bathroom / Laundry
+-Separate Toilet
+-2 good size bedrooms + Mirrored Built ins
+-Remote control Ceiling fans in all rooms
+-Balcony overlooking Coolangatta &amp; Pacific Ocean
+-Large rear courtyard
+-1 secure under cover car space
+-Plenty of Shaded Street Parking
+-Pet/Cat accepted
+
+Enquiry code for this property: 6011]]></description>
+       <allowances>
+       <petFriendly>1</petFriendly>
+       <furnished>0</furnished>
+       <smokers>0</smokers>
+       </allowances>
+       <features>
+           <bedrooms>2</bedrooms>
+           <bathrooms>1</bathrooms>
+<ensuite>0</ensuite>           <garages>1</garages>
+           <carports>0</carports>
+           <carSpaces>0</carSpaces>
+           <toilets>1</toilets>
+           <livingAreas>1</livingAreas>
+           <remoteGarage>1</remoteGarage>
+           <secureParking>1</secureParking>
+           <balcony>1</balcony>
+           <deck>0</deck>
+           <courtyard>1</courtyard>
+           <outdoorEnt>0</outdoorEnt>
+           <shed>0</shed>
+           <fullyFenced>0</fullyFenced>
+           <study>0</study>
+           <gasHeating>0</gasHeating>
+           <workshop>0</workshop>
+           <splitSystemHeating>0</splitSystemHeating>
+           <floorboards>0</floorboards>
+           <splitSystemAirCon>0</splitSystemAirCon>
+           <evaporativeCooling>0</evaporativeCooling>
+           <gym>0</gym>
+           <broadband>1</broadband>
+           <builtInRobes>1</builtInRobes>
+           <hydronicHeating>0</hydronicHeating>
+           <payTV>0</payTV>
+           <dishwasher>1</dishwasher>
+           <ductedHeating>0</ductedHeating>
+           <ductedCooling>0</ductedCooling>
+           <reverseCycleAirCon>0</reverseCycleAirCon>
+           <rumpusRoom>0</rumpusRoom>
+           <greyWaterSystem>0</greyWaterSystem>
+           <solarHotWater>0</solarHotWater>
+           <solarPanels>0</solarPanels>
+           <waterTank>0</waterTank>
+           <otherFeatures/>
+       </features>
+       <landDetails>
+           <area unit="squareMeter"/>
+       </landDetails>
+       <images>
+           <img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/rental_extra_34717089.jpg" format="jpg"/>
+           <img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/rental_extra_34717090.jpg" format="jpg"/>
+           <img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/rental_extra_34717091.jpg" format="jpg"/>
+           <img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/rental_extra_34717092.jpg" format="jpg"/>
+           <img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/rental_extra_34717093.jpg" format="jpg"/>
+           <img id="e" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/rental_extra_34717094.JPG" format="jpg"/>
+           <img id="f" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/rental_extra_34717095.jpg" format="jpg"/>
+       </images>
+<objects>
+           <floorplan id="1" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/rental_FloorPlans_514.gif" format="gif"/>
+</objects>
+       <inspectionTimes>
+       </inspectionTimes>
+       <externalLink href=""/>
+    </rental>
+    <commercial modTime="2015-10-08-09:02:00" status="current">
+       <agentID>cpxpropertynow</agentID>
+       <uniqueID>commercial264</uniqueID>
+       <authority value="sale"/>
+       <commercialListingType value="Lease"/>
+       <underOffer value="no"/>
+       <listingAgent>
+           <name>Property Now</name>
+           <telephone type="BH">1300 815 051</telephone> 
+           <email>sales@propertynow.com.au</email>
+       </listingAgent>
+       <commercialRent period="annual">48600</commercialRent> 
+       <priceView>$450/m2</priceView>
+       <outgoings period="annual"/> 
+       <address display="yes">
+           <streetNumber>14</streetNumber> 
+           <street>Martin Place</street>
+           <suburb display="yes">SYDNEY</suburb>
+           <state>NSW</state>
+           <postcode>2000</postcode>
+           <country>AUS</country>
+       </address>
+     <commercialCategory id="1" name="Offices"/>
+       <headline><![CDATA[Prime Sublease office space- Sought after central location- Best value in CBD]]></headline>
+       <description><![CDATA[Enquiry code for this property: 6020
+
+No. 14 Martin Place provides its occupants with a prime location amongst Sydney's leading financial, insurance and legal corporations. Located on the corner of Martin Place and Pitt Street, this office space provides easy access to public transport, restaurants and cafes, and the Pitt Street Mall.
+
+Sublease available immediately, up until December 2016.
+
+Premises includes:
+- Reception area
+- Meeting room
+- Four offices
+- Small open plan area
+- 108m2 total office space
+- With or without existing furniture and phone system
+
+At just $450 gross rent per square meter (plus outgoings), this office space is perfect for small businesses seeking a short-term solution in the heart of Sydney's CBD.
+
+Enquiry code for this property: 6020]]></description>
+     <landDetails>
+         <area unit="squareMeter"/>
+     </landDetails>
+       <buildingDetails>
+           <area unit="squareMeter">108</area>
+       </buildingDetails>
+           <carSpaces>0</carSpaces>
+           <zone>Office</zone>
+<images>
+<img id="m" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1466.jpg" format="jpg"/>
+<img id="a" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1467.jpg" format="jpg"/>
+<img id="b" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1450.jpg" format="jpg"/>
+<img id="c" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1451.jpg" format="jpg"/>
+<img id="d" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1468.jpg" format="jpg"/>
+<img id="e" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1469.jpg" format="jpg"/>
+<img id="f" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1465.jpg" format="jpg"/>
+<img id="g" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1470.jpg" format="jpg"/>
+<img id="h" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1472.jpg" format="jpg"/>
+<img id="i" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1455.jpg" format="jpg"/>
+<img id="j" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1456.jpg" format="jpg"/>
+<img id="k" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1464.jpg" format="jpg"/>
+<img id="l" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1459.jpg" format="jpg"/>
+<img id="n" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1471.jpg" format="jpg"/>
+<img id="o" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1457.jpg" format="jpg"/>
+<img id="p" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1461.jpg" format="jpg"/>
+<img id="q" modTime="2015-10-08-09:02:00" url="http://www.propertynow.com.au/database/images/commercial_extra_1462.jpg" format="jpg"/>
+</images>
+<objects>
+</objects>
+</commercial>
+</propertyList>

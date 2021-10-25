@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'HelveticaLTStd-Cond';
+    src: url('../fonts/new_template/HelveticaLTStd-Cond.otf') format('opentype'), url('../fonts/new_template/HelveticaLTStd-BoldCond.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SanFranciscoDisplay-Heavy';
+    src: url('../fonts/new_template/SanFranciscoDisplay-Heavy.otf') format('opentype'), url('../fonts/new_template/SanFranciscoDisplay-Light.otf') format('opentype'), url('../fonts/new_template/SanFranciscoDisplay-Medium.otf') format('opentype'), url('../fonts/new_template/SanFranciscoDisplay-Regular.otf') format('opentype'), url('../fonts/new_template/SanFranciscoDisplay-Semibold.otf') format('opentype'), url('../fonts/new_template/SanFranciscoDisplay-Thin.otf') format('opentype'), url('../fonts/new_template/SanFranciscoDisplay-Ultralight.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-Bold.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-BoldItalic.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-Heavy.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-HeavyItalic.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-Light.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-LightItalic.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-Medium.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-MediumItalic.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-Regular.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-RegularItalic.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-Semibold.otf') format('opentype'), url('../fonts/new_template/SanFranciscoText-SemiboldItalic.otf') format('opentype'), url('../fonts/new_template/SanFranciscoDisplay-Black.otf') format('opentype'), url('../fonts/new_template/SanFranciscoDisplay-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'FjallaOne-Regular';	
+    src: url('../fonts/new_template/FjallaOne-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body.smart-style-4 {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    margin: 0;
+    padding: 0;
+}
+#logo {margin-bottom:6px !important;margin-top:6px !important}
+
+ 
+ .smart-form .toggle{
+    font-size: 13px !important;
+    
+ }
+ .container-full {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.list-inline{
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+    text-align: right;
+    width: 100% !important;
+}
+
+.previewupdates {
+    background: #e1e1e1 url(../img/page3btn.png);
+    background-repeat: no-repeat;
+    background-position: 0px -608px;
+    margin: 0px 0 !important;
+    display: inline-block !important;
+    
+}
+
+.editbtnall {
+    color: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+    padding: 2px 5px 2px 33px;
+    margin: 5px;
+}
+
+.list-inline a{
+    color: #333;
+    text-decoration: none !important;
+}
+
+.list-inline a:hover{
+    color: #86b84c !important;
+}
+
+.counter_link a{
+    color: black !important;
+    text-decoration: none;
+}
+
+.counter_link a :hover{
+    color: #78b135 !important;
+}
+
+#sparks{
+    text-align:left !important;
+    
+}
