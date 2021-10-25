@@ -1,0 +1,115 @@
+<header2></header2>
+<div class="container-fluid cpxpage">
+	<div class="row">
+		<div class="col-sm-12 col-xs-12 cpxbg" align="left">
+			<h1 class="fronthead container" ng-if="pid != 'any'" >Public speaking profiles</h1>
+			<!-- <h1 class="fronthead container" ng-if="pid == 'view-directory'">View directory</h1>
+			<h1 class="fronthead container" ng-if="pid == 'Contact_us_for_more'">Contact us</h1>
+			<h1 class="fronthead container" ng-if="pid == 'public-speaking-profiles'">Public speaking profiles</h1> -->
+		</div>
+	</div>
+</div>
+<div class="container cpxcontent" >
+	<div class="row collapsedmenu visible-xs">
+		<div workingcpxmenu></div>
+	</div>
+	<div class="row datacontainer">
+		
+
+		<div class="col-sm-8 col-xs-12 maincontent">
+
+			<div ng-if="pid == 'anthonyaoun'" ng-include='"views/anthony-aoun-profile.html"'></div>
+	        <!-- <div ng-if="pid == 'Publications'"ng-include='"views/publications.html"'></div> 
+			<div ng-if="pid == 'cpx-announcements'"ng-include='"views/cpx_announcements.html"'></div>
+			<div ng-if="pid == 'FAQs'"ng-include='"views/FAQs.html"'></div>
+			<div ng-if="pid == 'Contact_us_for_more'"ng-include='"views/find_industry_professionals.html"'></div> -->
+			<div ng-if="pid == 'profileindex'"ng-include='"views/profileindex.html"'></div>
+			
+			
+			
+			<!-- <div class="cpxend">&nbsp;</div> -->
+
+
+		</div>
+		<div class="col-sm-4 col-xs-12  rightmenu" >
+			<div workingcpxmenu></div>
+			<div class="col-sm-12 col-xs-12 input-group downloadbutton">
+
+			</div>
+			
+
+			<div ng-if="pid == 'blogindex'">
+			  	
+			  
+			  	
+			  </div>		
+
+
+			  <div class="col-sm-12 sideheader" ng-if="pid == 'profileindex'">
+			  	<i></i>
+			  </div>
+			  
+			  <div class="col-sm-12 sideheader" ng-if="pid == 'independent-process'">
+			  	<i>A fresh approach to buying property</i>
+			  </div>
+			  
+			    <div class="col-sm-12 sideheader" ng-if="pid == 'independent-property-review'">
+			  	<i>Independent commentary on properties available for sale</i>
+			  </div>
+			  
+			   <div class="col-sm-12 sideheader" ng-if="pid == 'what-is-graded'">
+			  	<i>A smart, New concept in the world of real estate</i>
+			  </div>
+			  
+			  
+			   <div class="col-sm-12 sideheader" ng-if="pid == 'find-industry-professionals'">
+			  	<i>Independent representation and significant cost savings</i>
+			  </div>
+			  
+			  <div class="col-sm-12 sideheader" ng-if="pid == 'FAQs'">
+			  	<i>Be informed, get your questions answered</i>
+			  </div>
+			  
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'FAQs'">
+			  	<a class="thumbnail">
+		            <img src="images/FAQ-image.jpg" class="thumbnail img-responsive " alt="FAQ-image.jpg">
+		        </a>
+			  </div>
+			  
+			  
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid != 'any'">
+			  	<a class="thumbnail">
+		            <img src="images/thumbnail.png" class="thumbnail img-responsive " alt="thumbnail.png">
+		        </a>
+			  </div>
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'independent-process'">
+			  	<a class="thumbnail">
+		            <img src="images/independentprocess.jpg" class="thumbnail img-responsive " alt="independentprocess.jpg">
+		        </a>
+			  </div>
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'independent-property-review'">
+			  	<a class="thumbnail">
+		            <img src="images/independentpropertyreview.jpg" class="thumbnail img-responsive " alt="independentpropertyreview.jpg">
+		        </a>
+			  </div>
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'what-is-graded'">
+			  	<a class="thumbnail">
+		            <img src="images/whatisgraded.jpg" class="thumbnail img-responsive " alt="whatisgraded.jpg">
+		        </a>
+			  </div>
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'find-industry-professionals'">
+			  	<a class="thumbnail">
+		            <img src="images/findindustryprofessionals.jpg" class="thumbnail img-responsive " alt="findindustryprofessionals.jpg">
+		        </a>
+			  </div>
+			  			 
+			  
+		</div>
+	</div>
+</div>

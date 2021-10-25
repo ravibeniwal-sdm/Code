@@ -1,0 +1,16 @@
+<div class="col-sm-12" style="text-align:right">
+	<canvas style="z-index:1"></canvas>
+	<button type="button" class="btn btn-xs remove-button" ng-click="item.remove()">
+		<span class="glyphicon glyphicon-trash" style="top:2px;"></span>
+	</button>
+	<div class="col-sm-12 radio-popover" style="text-align:center;margin-top:-20px;">
+		<!-- <input popover="Set as Default image" popover-trigger="mouseenter" type="radio" ng-model="data.selectedOption" value="den{{index}}" name="default" /> -->
+		<input type="radio" ng-model="$parent.selectedOption" value="{{index}}" name="default" />
+	
+	
+	
+		<p ng-show="selectedOption == '{{index}}'">HELLO</p> 
+	
+	</div>
+</div>	
+	

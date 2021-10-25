@@ -1,0 +1,690 @@
+<html ng-app="landlordWebApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <title class="ng-binding">Central Property Exchange | Reports | Order Independent Reports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav.jpg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/custom2.css">
+	<link rel="stylesheet" type="text/css" href="css/nsPopover.css">
+	
+	
+ 	 <meta name="keywords" content="CPx,Free,Order,Rental,Report,Property,Buy now,Contract,Valuation,Summary,Property Review,Central property exchange,Property Valuation,Depreciation Report,Independent Rental Estimate,Population and Capital Growth,Independent Property Review,Independent Contract Summary">
+ 	 <meta name="description" content="Central Property Exchange – Reports – Order Independent Reports – Order Report, Buy Now, Free Estimate, Free Summary">
+ 
+  </head>
+  <body data-status="ready" data-twttr-rendered="true">
+  
+    <div class="container-fluid">
+    	<div class="row">
+    	<div class="waitprocess ng-hide" align="center" id="wait-payment-process" ng-show="loading">
+	  		<img src="images/payment_process.GIF" alt="CPx" ng-click="checkClicked4()">
+	   	</div>
+		<div header=""><div class="container-fluid logo-border">
+	<div class="row">
+		<div class="navbar navbar-default navbar-static-top header-bar"></div>
+		<div class="container pad-bot" style="padding-left: 0px; padding-right: 0px;">
+			<div class="navbar navbar-default navbar-static-top nomargin navbar-header mynavbar" style="width: 100%;">
+				<div class="navbar-inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+										<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+									</button>
+									<a class="fl-l" href="#!/" title="Home page"><img src="images/Logo.png" alt="CPx" class="logoscreen" ng-click="checkClicked4()"></a>
+
+								</div>
+								<div class="hidden-xs fl-l">
+									<ul class="nav navbar-nav nav pull-right nopadding">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+									</ul>
+								</div>
+								<div class="visible-xs collapse" collapse="!isCollapsed" style="height: 0px;">
+									<ul class="nav navbar-nav">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+		<!-- ngView:  --><div ng-view="" class="ng-scope">			<div class="container ng-scope">
+				<div class="row orderpage orderbtn">
+					<div class="col-sm-4 col-xs-12 firstcol">
+						<div class="ordersbutton">
+						<!--  		<button type="button" class="btn btn-default btn-lg btn-block">FREE - Population and capital growth</button> -->
+						</div>
+					</div>
+					<div class="col-sm-4 col-xs-12 centercol">
+						<div class="ordersbutton">
+								<button type="button" class="btn btn-default btn-lg btn-block">Open an account</button>
+						</div>
+					</div>
+					<div class="col-sm-4 col-xs-12 lastcol">
+						<div class="ordersbutton">
+								<button type="button" class="btn btn-default btn-lg btn-block">Login</button>
+						</div>
+					</div>
+				</div>
+			
+				<div class="row orderpage">
+						<div class="col-sm-4 col-xs-12 firstcol">
+							<div class="col-sm-12 col-xs-12 panelheading iprpanel">
+								<div class="col-sm-5 col-xs-6 ">
+									<img src="images/reporticon.png" class="thumbnail img-responsive " alt="reporticon.png">
+								</div>
+								<div class="col-sm-7 col-xs-6 frontheading">
+									<div class="col-sm-12 col-xs-12 headcontent">Independent</div>
+									<div class="col-sm-12 col-xs-12 headcontent">Property</div>
+									<div class="col-sm-12 col-xs-12 headcontent">Review (ipr)</div>
+								</div>
+							</div>
+							<div align="center" class="col-sm-12 col-xs-12 iprorderlink">
+								<a href="#">ORDER REPORT</a>
+							</div>
+							<accordion class="static-accordian"><div class="panel-group" ng-transclude="">
+							    <div class="panel panel-default ng-isolate-scope" is-open="toggleStatus.ipr">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+							  						<i class="pull-left glyphicon ng-scope glyphicon-plus" ng-class="{'glyphicon glyphicon-plus':  !toggleStatus.ipr, 'glyphicon glyphicon-minus': toggleStatus.ipr}"></i><span class="ng-scope">
+							  						Details
+							        </span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+							        <accordion-heading class="ng-scope"></accordion-heading>
+									        <div class="static-content ng-scope">
+									        	<p class="bluelink">The ipr is powered by <a href="http://www.propertycompass.com.au/" target="_blank" title="PropertyCompass®">PropertyCompass®</a> and compiled by <a href="http://www.propell.com.au/" target="_blank" title="Propell National Valuers">Propell National Valuers Pty Ltd</a>.</p>
+									        	
+									        	<p style="text-align: center;"><a href="http://www.propertycompass.com.au/" target="_blank" title="www.propertycompass.com.au"><img src="images/PropertyCompass.jpg" alt="PropertyCompass.jpg"></a></p>
+									        	
+									        	
+									        	<p>The review provides independent commentary on real estate properties available for sale and considers the actual property and the historical data based on property type, postcode, suburb and local government area.</p>
+									        	<p>Seen an interesting property that is not listed on CPx? Or, would you like your property assessed and graded? The ipr provides an unbiased assessment. 
+														You can order an ipr for any Australian property.
+												</p>
+												<p>
+													<a href="./docs/sample-CPx-ipr.pdf" class="top-link" target="_blank" title="Sample ipr pdf">Click here to view sample</a>	
+												</p>
+												
+													        
+											        			<b>Fees</b>
+											        		
+											        		<p>
+												        		$500 +GST per property
+                                                                ~an IPR is property specific.
+															</p>
+															
+															<p><b>No refunds</b></p>
+															
+															<b>Estimated delivery</b>
+															
+															<p>
+																This is a custom report, not a system auto-generated report.
+                                                                Please allow 2 - 5 days for delivery.
+															</p>
+															<b>Overseas buyers</b>
+															<p>
+																Do not pay the GST portion. If you are an overseas client, please ensure to <a href="#" class="top-link" target="_blank">open an account</a> (declaring your address) 
+																with us so that the GST portion is not charged
+															</p>
+												
+									        </div>
+							   </div>
+  </div>
+</div> 
+							  </div></accordion>
+							 <!--  <div class="col-sm-12 nopadding">
+							  	ipr content here
+							  </div> -->
+							  <div class="col-sm-12 endipr">&nbsp;</div>
+							  
+							  
+							  
+							  <div class="col-sm-12 col-xs-12 panelheading propvalpanel">
+									<div class="col-sm-5 col-xs-6 ">
+										<img src="images/reporticonred.png" class="thumbnail img-responsive " alt="reporticonred.png">
+									</div>
+									<div class="col-sm-7 col-xs-6 frontheading">
+										<div class="col-sm-12 col-xs-12 headcontent">Property</div>
+										<div class="col-sm-12 col-xs-12 headcontent">Valuation</div>
+										<div class="col-sm-12 col-xs-12 headcontent">&nbsp;</div>
+									</div>
+							</div>
+							<div align="center" class="col-sm-12 col-xs-12 propvalorderlink">
+								<a href="http://propell.com.au/valuation-services/residential/" target="_blank" title="ORDER REPORT">ORDER REPORT</a>
+							</div>
+								<accordion class="static-accordian"><div class="panel-group" ng-transclude="">
+								    <div class="panel panel-default ng-isolate-scope" is-open="toggleStatus.propval">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+								  						<i class="pull-left glyphicon ng-scope glyphicon-plus" ng-class="{'glyphicon glyphicon-plus':  !toggleStatus.propval, 'glyphicon glyphicon-minus': toggleStatus.propval}"></i><span class="ng-scope">
+								  						Details
+								        </span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+								        <accordion-heading class="ng-scope"></accordion-heading>
+								         				
+								         		<div class="static-content ng-scope">
+								         		
+								         		<p>This link is <b>sponsored</b> and serviced directly by: Propell National Valuers</p>
+								         				     
+								         		<p style="text-align: center;"><a href="http://propell.com.au/" target="_blank" title="propell.com.au"><img src="images/Propell.png" alt="Propell.png"></a></p>		     
+								         				     
+								         		<p>CPx does not charge a Referral Fee to industry professionals, but does charge a flat monthly Sponsorship Fee.</p>
+								         		
+								         		<p>CPx does not share in commissions or referral fees, nor does CPx introduce sellers or buyers to industry professionals.  CPx provides a marketplace that enables sellers, buyers and industry professionals to freely connect.  For that reason, CPx does not charge a referral fee when a seller or buyer chooses the services of an industry professional found through the CPx website.</p>
+								         		
+								         		<p class="bluelink">Please see <a href="#!/industry/working-with-cpx" target="_blank" title="Working with CPx">‘Working with CPx’</a> for details on applicable charges to list as an industry professional.</p>
+								         		
+								         		<p><b>Agreements:</b> Please ensure appropriate agreements covering the scope of service are established between yourself and industry professionals.</p>
+								         				   
+												
+									        </div>
+								         				
+								         				
+								                       		
+								      				
+								  </div>
+  </div>
+</div> 
+								</div></accordion>
+							  <div class="col-sm-12 endpropval">&nbsp;</div>
+							  
+						</div>
+						
+						
+						
+						
+						
+						
+						<div class="col-sm-4 col-xs-12 centercol">
+							<div class="col-sm-12 col-xs-12 panelheading irepanel">
+								<div class="col-sm-5 col-xs-6 ">
+									<img src="images/reporticonsingle.png" class="thumbnail img-responsive " alt="reporticonsingle.png">
+								</div>
+								<div class="col-sm-7 col-xs-6 frontheading">
+									<div class="col-sm-12 col-xs-12 headcontent">Independent</div>
+									<div class="col-sm-12 col-xs-12 headcontent">Rental</div>
+									<div class="col-sm-12 col-xs-12 headcontent">Estimate</div>
+								</div>
+							</div>
+							
+							<div class="row nomargin">
+							<div align="center" class="col-sm-6 col-xs-6 ireorderlink irefree">
+								<a href="#">FREE ESTIMATE</a>
+							</div>
+							<div align="center" class="col-sm-6 col-xs-6 ireorderlink irebuynow">
+								<a href="#">BUY NOW</a>
+							</div>
+							</div>
+							
+							
+							<accordion class="static-accordian"><div class="panel-group" ng-transclude="">
+								    <div class="margtop11px panel panel-default ng-isolate-scope" is-open="toggleStatus.ire">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+								  						<i class="pull-left glyphicon ng-scope glyphicon-plus" ng-class="{'glyphicon glyphicon-plus':  !toggleStatus.ire, 'glyphicon glyphicon-minus': toggleStatus.ire}"></i><span class="ng-scope">
+								  						Details
+								        </span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+								        <accordion-heading class="ng-scope"></accordion-heading>
+								        	<div class="static-content ng-scope">
+								        		<p class="bluelink">This single page estimate is provided by <a href="http://PropertyCompass.com.au/" target="_blank" title="PropertyCompass.com.au">PropertyCompass.com.au</a> in collaboration with <a href="http://Rent.com.au/" target="_blank" title="Rent.com.au">Rent.com.au</a></p>
+								        		<p>
+								        			This estimate is created using an auto-generated process tabling data on currently advertised rental properties, only. Hence this estimate may vary on a daily basis. 
+													The estimate is provided on residential properties within a suburb or city.
+								        		</p>
+								        		
+								        		<p>
+								        			<a href="#" class="top-link" target="_blank">Click here to view sample</a>
+								        		</p>
+
+
+								        			<b>Fees</b>
+								        		
+								        		<p>
+									        		$5 +GST per suburb/ city 
+													~indicative pricing, may be altered when officially released.
+												</p>
+												
+												<p><b>No refunds</b></p>
+												
+
+												<b>Delivery</b>
+
+												
+												<p>
+													This is a system auto-generated report.
+													This report will be generated after receipt of payment.
+												</p>
+
+												<b>Overseas buyers</b>
+
+												<p>
+													Do not pay the GST portion. If you are an overseas client, please ensure to <a href="#" class="top-link" target="_blank">open an account</a> (declaring your address) 
+													with us so that the GST portion is not charged
+												</p>
+								        	</div>
+								  </div>
+  </div>
+</div> 
+							</div></accordion>
+							<div class="col-sm-12 col-xs-12 endire">&nbsp;</div>
+							
+							
+							
+							<div class="col-sm-12 col-xs-12 panelheading deprptpanel">
+								<div class="col-sm-5 col-xs-6 ">
+									<img src="images/REPORTICONORANGE.png" class="thumbnail img-responsive " alt="REPORTICONORANGE.png">
+								</div>
+								<div class="col-sm-7 col-xs-6 frontheading">
+									<div class="col-sm-12 col-xs-12 headcontent">Depreciation</div>
+									<div class="col-sm-12 col-xs-12 headcontent">Report</div>
+									<div class="col-sm-12 col-xs-12 headcontent">&nbsp;</div>
+								</div>
+							</div>
+							
+							<div class="row nomargin">
+								<div align="center" class="col-sm-6 col-xs-6 deprptorderlink irefree">
+								<a href="https://www.washingtonbrown.com.au/depreciation/calculator/?RID=FDHUEWKEUF" target="_blank" title="FREE ESTIMATE">FREE ESTIMATE</a>
+							</div>
+							<div align="center" class="col-sm-6 col-xs-6 deprptorderlink irebuynow">
+								<a href="https://www.washingtonbrown.com.au/depreciation/quote/?RID=FDHUEWKEUF" target="_blank" title="ORDER REPORT">ORDER REPORT</a>
+							</div>
+							</div>
+							
+							<accordion class="static-accordian"><div class="panel-group" ng-transclude="">
+								    <div class="margtop11px panel panel-default ng-isolate-scope" is-open="toggleStatus.deprpt">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+								  						<i class="pull-left glyphicon ng-scope glyphicon-plus" ng-class="{'glyphicon glyphicon-plus':  !toggleStatus.deprpt, 'glyphicon glyphicon-minus': toggleStatus.deprpt}"></i><span class="ng-scope">
+								  						Details
+								        </span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+								        <accordion-heading class="ng-scope"></accordion-heading>
+								         				
+								         				
+								        <div class="static-content ng-scope">
+								         		
+								         		<p>These links are <b>sponsored</b> and serviced directly by: Washington Brown</p>
+								         				     
+								         		<p style="text-align: center;"><a href="http://www.washingtonbrown.com.au/" target="_blank" title="http://www.washingtonbrown.com.au/"><img src="images/washingtonbrown.png" alt="washingtonbrown.png"></a></p>		     
+								         				     
+								         		<p>CPx does not charge a Referral Fee to industry professionals, but does charge a flat monthly Sponsorship Fee.</p>
+								         		
+								         		<p>CPx does not share in commissions or referral fees, nor does CPx introduce sellers or buyers to industry professionals.  CPx provides a marketplace that enables sellers, buyers and industry professionals to freely connect.  For that reason, CPx does not charge a referral fee when a seller or buyer chooses the services of an industry professional found through the CPx website.</p>
+								         		
+								         		<p class="bluelink">Please see <a href="#!/industry/working-with-cpx" target="_blank" title="Working with CPx">‘Working with CPx’</a> for details on applicable charges to list as an industry professional.</p>
+								         		
+								         		<p><b>Agreements:</b> Please ensure appropriate agreements covering the scope of service are established between yourself and industry professionals.</p>
+								         				    
+									        	
+									        	
+									        </div> 				
+								         				
+								         				
+								         				
+								         				
+								         				
+								         				
+								  </div>
+  </div>
+</div> 
+							</div></accordion>
+							<div class="col-sm-12 col-xs-12  endire">&nbsp;</div>
+							
+							
+							
+							
+							
+						</div>
+						
+						
+						
+						
+						<div class="col-sm-4 col-xs-12 lastcol">
+							<div class="col-sm-12 col-xs-12 panelheading icspanel">
+								<div class="col-sm-5 col-xs-6 ">
+									<img src="images/reporticonblack1.png" class="thumbnail img-responsive " alt="reporticonblack1.png">
+								</div>
+								<div class="col-sm-7 col-xs-6 frontheading">
+									<div class="col-sm-12 col-xs-12 headcontent">Independent</div>
+									<div class="col-sm-12 col-xs-12 headcontent">Contract</div>
+									<div class="col-sm-12 col-xs-12 headcontent">Summary</div>
+								</div>
+							</div>
+							<div align="center" class="col-sm-12 col-xs-12 icsorderlink">
+								<a href="#">ORDER REPORT</a>
+							</div>
+							<accordion class="static-accordian"><div class="panel-group" ng-transclude="">
+								    <div class="panel panel-default ng-isolate-scope" is-open="toggleStatus.ics">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+								  						<i class="pull-left glyphicon ng-scope glyphicon-plus" ng-class="{'glyphicon glyphicon-plus':  !toggleStatus.ics, 'glyphicon glyphicon-minus': toggleStatus.ics}"></i><span class="ng-scope">
+								  						Details
+								        </span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+								        <accordion-heading class="ng-scope"></accordion-heading>
+								         				<div class="static-content ng-scope">
+											        		<p>This multipage summary is provided by via a network of Solicitors / Property Conveyancers across Australia. Summarising terms pertinent from a buyer's perspective. This summary can be provided on residential property contracts.</p>
+
+											        		
+											        		<p>
+											        			<a href="#" class="top-link" target="_blank">Click here to view sample</a>
+											        		</p>
+											        		
+
+											        			<b>Fees</b>
+											        		
+											        		<p>
+												        		$250 +GST per contract
+
+																, plus $1 per page above 250 pages.
+
+															</p>
+															
+															<p><b>No refunds</b></p>
+															
+
+															<b>Estimated delivery</b>
+
+															
+															<p>
+																This is a custom report, not a system auto-generated report.
+																Please allow 3 - 10 days for delivery.
+															</p>
+
+															<b>Overseas buyers</b>
+
+															<p>
+																Do not pay the GST portion. If you are an overseas client, please ensure to <a href="#" class="top-link" target="_blank">open an account</a> (declaring your address) 
+																with us so that the GST portion is not charged
+															</p>
+											        	</div>
+								  </div>
+  </div>
+</div> 
+							</div></accordion>
+							<!-- <div class="col-sm-12 col-xs-12  nopadding">
+							  	ics content here
+							  </div> -->
+							<div class="col-sm-12 col-xs-12  endics">&nbsp;</div>
+							
+							
+							<div class="col-sm-12 col-xs-12 panelheading populationpanel">
+								<div class="col-sm-5 col-xs-6 ">
+									<img src="images/clipboard.png" class="thumbnail img-responsive " alt="clipboard.png">
+								</div>
+								<div class="col-sm-7 col-xs-6 frontheading">
+									<div class="col-sm-12 col-xs-12 headcontent">Population</div>
+									<div class="col-sm-12 col-xs-12 headcontent">and Capital</div>
+									<div class="col-sm-12 col-xs-12 headcontent">Growth</div>
+								</div>
+							</div>
+							
+							<div align="center" class="col-sm-12 col-xs-12 populationlink">
+								<a href="#!/freesummary" target="_blank">FREE SUMMARY</a>
+							</div>
+							
+							<accordion class="static-accordian"><div class="panel-group" ng-transclude="">
+								    <div class="panel panel-default ng-isolate-scope" is-open="toggleStatus.popugrowth">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+								  						<i class="pull-left glyphicon ng-scope glyphicon-plus" ng-class="{'glyphicon glyphicon-plus':  !toggleStatus.popugrowth, 'glyphicon glyphicon-minus': toggleStatus.popugrowth}"></i><span class="ng-scope">
+								  						Details
+								        </span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+								        <accordion-heading class="ng-scope"></accordion-heading>
+								   
+								    <div class="static-content ng-scope">
+								         		
+								         		<p>This link is <b>sponsored</b> and serviced directly by: PropertyCompass®</p>
+								         				     
+								         		<p style="text-align: center;"><a href="http://www.propertycompass.com.au/" target="_blank" title="http://www.propertycompass.com.au/"><img src="images/PropertyCompass.jpg" alt="PropertyCompass.jpg"></a></p>		     
+								         				     
+								         		<p>CPx does not charge a Referral Fee to industry professionals, but does charge a flat monthly Sponsorship Fee.</p>
+								         		
+								         		<p>CPx does not share in commissions or referral fees, nor does CPx introduce sellers or buyers to industry professionals.  CPx provides a marketplace that enables sellers, buyers and industry professionals to freely connect.  For that reason, CPx does not charge a referral fee when a seller or buyer chooses the services of an industry professional found through the CPx website.</p>
+								         		
+								         		<p class="bluelink">Please see <a href="#!/industry/working-with-cpx" target="_blank" title="Working with CPx">‘Working with CPx’</a> for details on applicable charges to list as an industry professional.</p>
+								         		
+								         		<p><b>Agreements:</b> Please ensure appropriate agreements covering the scope of service are established between yourself and industry professionals.</p>
+								         				     
+									        	
+									        </div> 	
+								   
+								   
+								  </div>
+  </div>
+</div> 
+							</div></accordion>
+							<div class="col-sm-12 col-xs-12  endire">&nbsp;</div>
+							
+						</div>
+				</div>
+			</div></div>
+		<div footer=""><div class="logo-border pad-bot"></div>
+        
+<div class="container">
+	<div class="row">
+      
+      <div class="col-md-8">
+       <div class="row">
+         
+		<div class="col-sm-4 col-xs-12">
+			<div class="pad-bot5">&nbsp;</div>
+			<div class="fbold">PROPERTIES</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedview();" href="#!/view-graded-properties" title="View graded properties">View graded properties</a>
+			</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedlist();" href="#!/list-your-property-on-cpx/list-property" title="List your property on CPx">List your property on CPx</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">REPORTS</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedorder();" href="#!/order-independent-reports" title="Order independent reports">Order independent reports</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">CPx MARKETPLACE</div>
+			<div>
+				<a class="footer-data inactive-a" href="#!/marketplace/find-industry-professionals" title="Find industry professionals">Find industry professionals</a>
+			</div>
+
+		</div>
+				<div class="col-sm-4 col-xs-12">
+					<div class=" pad-bot5">&nbsp;</div>
+					<div class=" fbold">ABOUT</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-cpx" title="What is CPx?">What is CPx?</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-process" title="Independent process">Independent process</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-property-review" title="Independent property review(ipr)">Independent property review
+							(ipr)</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-graded" title="What is graded?">What is graded?</a>
+					</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class=" fbold">LEGALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/privacy" title="Privacy">Privacy</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/terms-and-conditions" title="Terms &amp; conditions">Terms &amp; conditions</a>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12 ">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">BLOG</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/press-releases/subid" title="Press releases">Press releases</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/Publications/subid" title="Publications">Publications</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/cpx-announcements/subid" title="CPx announcements">CPx announcements</a>
+				</div>
+				<div class="">
+					<a class="footer-data inactive-a" href="#!/blog/FAQs/subid" title="Frequently Asked Questions">FAQs</a>
+				</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">INDUSTRY PROFESSIONALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/industry/working-with-cpx" title="Working with CPx">Working with CPx</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="http://graded.centralpropertyexchange.com.au/login?ReturnUrl=/" target="_blank" title="Business login">Business
+							login</a>
+					</div>
+
+				</div>
+        
+        </div></div>
+        
+		<div class="col-sm-4 col-xs-12 mailformcontainer">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">CONTACT</div>
+			<div>
+				<a ng-click="shownothing = true" href="#!/contact" class="footer-data inactive-a" title="Contact us">Online form</a>
+			</div>
+
+
+			<div>
+				<span class="footer-data inactive-a">Telephone: +61 2 8006
+					1979</span>
+			</div>
+			<div>
+
+				<span class="footer-data inactive-a">Mobile/cell: +61 410 510
+					997</span>
+
+			</div>
+			<div class=" footemail">
+				<a class="footer-data inactive-a" href="mailto:contact@centralpropertyexchange.com" title="Contact us via email">Email:
+					contact@centralpropertyexchange.com</a>
+			</div>
+          <div>&nbsp;</div>
+			
+   
+
+    
+     <div class="email-update">
+     <form action="//landlordcentral.us2.list-manage.com/subscribe/post?u=44d30abfcde67c3847612b5cb&amp;id=4583813c3e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate ng-pristine ng-valid ng-valid-email" target="_blank" novalidate="">
+      <div class="fbold updatetextpad">EMAIL UPDATES</div> 
+       <div>
+        <span class="footer-data inactive-a"><p class="registertext">Register your email to receive industry news and insights from CPx.</p></span>
+       </div>
+       	   	   
+        <div class="type-email clearfix">
+         <span class="pull-left"><input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Type your email address here" class="input-bg ng-pristine ng-untouched ng-valid ng-valid-email" ng-model="registrationForm.email"> </span>
+         <span class="pull-right"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="btn sub-btn" ng-click="resetform()"> </span>
+       </div>
+       <p class="bot-txt">You will be sent a verification email to activate your registration.</p>
+    </form>
+    </div>        
+            
+            
+		</div>
+ 
+  
+  
+  
+
+	</div>
+</div>
+
+		
+    <div class="bottom-line"></div></div>
+		</div>
+	</div>
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+	
+    <script src="js/jquery.1.11.2/jquery-1.11.2.min.js"></script>
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+	<script src="js/angularjs/1.3.10/angular.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-route.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-resource.min.js"></script>
+    
+	<!-- Our Website Javascripts -->
+	<script src="js/app/constants.js"></script>
+	<script src="js/app/main.js"></script>
+	<script src="js/app/controllers.js"></script>
+	<script src="js/app/directives.js"></script>
+	<script src="js/app/services.js"></script>
+	<script src="js/app/filters.js"></script>
+	
+	
+	
+	<!-- below needs to be loaded before angular-google-maps.min.js -->
+    <!-- Directives for bootstrap -->
+    <script src="js/thirdparty/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <!-- overloaded some code from  ui-bootstrap-tpls-0.12.0-->
+    <script src="js/thirdparty/overloaded-ui-bootstrap-tpls-0.12.0.js"></script>
+    <!-- Directives for tab menu -->
+    <script src="js/thirdparty/df-tab-menu.js"></script>
+	<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script><script src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/main.js"></script>
+	<script src="js/thirdparty/lodash.min.js"></script>
+	<script src="js/thirdparty/angular-google-maps.min.js"></script>
+	<script src="js/thirdparty/angular-filter.js"></script>
+	
+	<script src="js/thirdparty/decimal-places.js"></script>
+	<script src="js/thirdparty/open-exchange-rates.js"></script>
+	<script src="js/thirdparty/angular-sanitize.js"></script>
+	<script src="js/thirdparty/ng-map.min.js"></script>
+	<script src="js/thirdparty/Chart.js"></script>
+	<script src="js/thirdparty/angular-chart.js"></script>
+	<script src="js/thirdparty/nsPopover.js"></script>
+	
+	  <script src="http://platform.twitter.com/widgets.js"></script>
+	  <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true"></script>
+	
+  
+</body></html>

@@ -1,0 +1,1367 @@
+<html ng-app="landlordWebApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <title class="ng-binding">Real Estate | Properties | Homes For Sale | Apartments For Sale | Old Homes | New Developments | Graded Properties | Independent Properties | Independently Reviewed | No Selling Fees  | CPx</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav.jpg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/custom2.css">
+	<link rel="stylesheet" type="text/css" href="css/nsPopover.css">
+	
+	
+ 	 <meta name="keywords" content="property,properties,price,cpx,beds,type,ipr,smsf,deposit,sold,domacom,grade,grid,map,all,graded">
+ 	 <meta name="description" content="A FRESH APPROACH TO BUYING PROPERTY, Get free, instant access to independently reviewed and graded properties">
+ 
+  <script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/common.js" style=""></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/util.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/stats.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttp%3A%2F%2Flocalhost%2Flandlord%2Flandlord%2F%23!%2Fview-graded-properties&amp;5e1&amp;callback=_xdc_._72upoq&amp;token=41614"></script></head>
+  <body data-status="ready" data-twttr-rendered="true">
+  
+    <div class="container-fluid">
+    	<div class="row">
+    	<div class="waitprocess ng-hide" align="center" id="wait-payment-process" ng-show="loading">
+	  		<img src="images/payment_process.GIF" alt="CPx" ng-click="checkClicked4()">
+	   	</div>
+		<div header=""><div class="container-fluid logo-border">
+	<div class="row">
+		<div class="navbar navbar-default navbar-static-top header-bar"></div>
+		<div class="container pad-bot" style="padding-left: 0px; padding-right: 0px;">
+			<div class="navbar navbar-default navbar-static-top nomargin navbar-header mynavbar" style="width: 100%;">
+				<div class="navbar-inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+										<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+									</button>
+									<a class="fl-l" href="#!/" title="Home page"><img src="images/Logo.png" alt="CPx" class="logoscreen" ng-click="checkClicked4()"></a>
+
+								</div>
+								<div class="hidden-xs fl-l">
+									<ul class="nav navbar-nav nav pull-right nopadding">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+									</ul>
+								</div>
+								<div class="visible-xs collapse" collapse="!isCollapsed" style="height: 0px;">
+									<ul class="nav navbar-nav">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+		<!-- ngView:  --><div ng-view="" class="ng-scope">
+<div class="container ng-scope">
+	<div class="row">
+
+		<div class="col-sm-12 col-xs-12 fl-rpage pad-top13">
+			<!--  	<div class="btn btn-social-icon nopadding xs-center scr-pad">
+							<a href="#" class="top-link linkwrap fl-r">Edit investment calculator default assumptions</a>
+						</div>
+					-->
+			<div class="input-group top-button1 btn btn-social-icon scr-pad xs-center">
+				<span class="input-group-addon top-span1 nopadding" style="background: #25427C" aria-hidden="true" id="basic-addon1">
+					<span class="glyphicon glyphicon-star star-color"></span>
+				</span> <a href="#!/shortlist" title="View shortlist"><button class="btn-default btn btn-icon pull-left top-spbtn nopadding ng-binding" type="button">View shortlist [ 0 ]</button></a>
+			</div>
+
+			<div class="input-group top-button3 btn btn-social-icon scr-pad xs-center">
+				<span class="input-group-addon top-span1 nopadding" style="background: #25427C" aria-hidden="true" id="basic-addon3">
+					<span class="star-color">@</span>
+				</span> <a href="#!/contact" title="Contact us">
+					<button class="btn-default btn btn-icon top-spbtn3 nopadding" type="button">Enquire</button>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 col-xs-12 fl-rpage  pad-top13 standardhead">
+
+			<div class="panel panel-default panel-view noborder stheading">
+				<div class="panel-body panel-body-back  panel-view pad-bot7">
+					<div align="center" class="col-sm-12 col-xs-12 nopadding toplist-head">
+						All properties are independently reviewed and graded by <a href="http://propell.com.au" target="_blank" class="inactive-a" title="Propell National Valuers">Propell
+							National Valuers</a>
+					</div>
+					<div align="center" class="col-sm-5 col-xs-12 nopadding fl-r">
+						<a href="#!/about/independent-property-review" class="top-link linkwrap" target="_blank" title="Independent property review (ipr)">What is an ipr,
+							grade and score?</a>
+					</div>
+					<div class="col-sm-1 col-xs-12">&nbsp;</div>
+					<div class="col-sm-5 col-xs-12 nopadding fl-l">
+
+						<script type="text/ng-template" id="myModalContent.html">
+                               
+       						   <div class="modal-body">
+								The properties listed on CPx do not include a real estate agent 'selling-fee'. This is indicated by the use of the following labels:  
+            					<ul style="list-style-type:square;">
+                					<li>
+                    					<b>Listed price:</b> means the property for-sale-price inclusive of the real estate agents 'selling-fee'.
+                					</li>
+									<li>
+										<b>CPx price:</b> means the property for-sale-price less the 'selling-fee'.
+									</li>
+									<li>
+										<b>Savings:</b> means the real estate agent 'selling-fee' where applicable.
+									</li>
+            					</ul>
+            					<a href="#!/about/independent-process?scrollTo=iptag" target="_blank" class="top-link">more</a>
+        						</div>
+        						<div class="modal-footer">
+            						<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        						</div>
+    							</script>
+						<a class="top-link linkwrap modallink" ng-click="open()">What
+							is Listed price, CPx price and Saving?</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="row">
+		<div align="center" class="col-sm-3 col-xs-12">
+			<div class="col-sm-11 col-xs-12 nopadding" id="sidesearchlist">
+				<div class="panel panel-default noborder">
+					<accordion><div class="panel-group" ng-transclude=""> <div class="standard panel panel-default ng-isolate-scope" is-open="groups[0].isopen">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+						<!--Standard view title is changed to search view --><span class="ng-scope">
+						
+					Search</span><i class="pull-right glyphicon ng-scope glyphicon-chevron-up" ng-class="{'glyphicon-chevron-up': groups[0].isopen, 'glyphicon-chevron-down': !groups[0].isopen}"></i>
+					</a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse in" collapse="!isOpen" style="height: auto;">
+	  <div class="panel-body" ng-transclude=""> <accordion-heading class="ng-scope"></accordion-heading>
+					<div class="col-sm-12 fl-lpage nopadding ng-scope">
+						<div class="form-group">
+							<label for="sel">Property type:</label> <select class="form-control ng-pristine ng-untouched ng-valid" id="sel" ng-init="searchcriteria.type = 'Any'" ng-model="searchcriteria.type" ng-options="typeopt.category as typeopt.category for typeopt in allproperties | unique: 'category'" ng-change="animate('on');"><option value="" class="">Any</option><option value="0" label="Apartment">Apartment</option><option value="1" label="House">House</option></select>
+						</div>
+					</div>
+					<div class="col-sm-12 fl-lpage nopadding ng-scope">
+						<div class="form-group">
+							<i class="form-control-feedback glyphicon glyphicon-search"></i>
+							<input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Suburb, state or property name" ng-model="searchcriteria.searchtext" ng-change="animate('on');">
+
+
+						</div>
+					</div>
+
+
+					<div class="col-sm-12 fl-lpage nopadding ng-scope">
+						<div class="form-group">
+							<i class="form-control-feedback glyphicon glyphicon-search"></i>
+							<input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Property id" ng-model="searchcriteria.searchid" ng-change="animate('on');">
+
+
+						</div>
+					</div>
+
+					<div class="col-sm-12 fl-lpage nopadding ng-scope">
+						<label for="sel">CPx price - currency: <img src="images/blank.gif" class="flag flag-au" alt="country flag"></label> 
+					</div>
+					<div class="col-sm-12 nopadding ng-scope">
+						<div class="col-sm-6 col-xs-6 fl-lpage minbed">
+							<div class="form-group">
+								<label for="sel1" class="ng-binding">Min (AUD) </label> <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Any" ng-model="searchcriteria.minprice" ng-change="animate('on');">
+							</div>
+						</div>
+						<div class="col-sm-6 col-xs-6 fl-rpage maxbed">
+							<div class="form-group">
+								<label for="sel2" class="ng-binding">Max (AUD) </label> <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Any" ng-model="searchcriteria.maxprice" ng-change="animate('on');">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 nopadding ng-scope">
+						<div class="col-sm-6 col-xs-6 fl-lpage minbed">
+							<div class="form-group">
+								<label for="sel1">Min beds:</label> <select class="form-control ng-pristine ng-untouched ng-valid" id="sel1" ng-init="searchcriteria.minbeds = 'Any'" ng-model="searchcriteria.minbeds" ng-options="bedopt.beds as bedopt.beds for bedopt in allproperties | unique: 'beds'" ng-change="animate('on');"><option value="" class="">Any</option><option value="0" label="1">1</option><option value="1" label="3">3</option><option value="2" label="4">4</option></select>
+							</div>
+						</div>
+						<div class="col-sm-6 col-xs-6 fl-rpage maxbed">
+							<div class="form-group">
+								<label for="sel2">Max beds:</label> <select class="form-control ng-pristine ng-untouched ng-valid" id="sel2" ng-init="searchcriteria.maxbeds = 'Any'" ng-model="searchcriteria.maxbeds" ng-options="bedopt.beds as bedopt.beds for bedopt in allproperties | unique: 'beds'" ng-change="animate('on');"><option value="" class="">Any</option><option value="0" label="1">1</option><option value="1" label="3">3</option><option value="2" label="4">4</option></select>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-xs-12 nopadding  ng-scope">
+
+						<div class="col-sm-6 col-xs-6 nopadding fl-lpage btn-group smsf smsf1 input-group questionspace">
+							<!-- <button type="button" class="btn btn-default">SMSF</button> -->
+							<label class="btn btn-primary  ng-pristine ng-untouched ng-valid" ng-click="animate('on');" ng-model="searchcriteria.left" btn-checkbox="">SMSF</label> <span>&nbsp;</span>
+							<a href="#!/blog/FAQs/self-managed-super-fund-smsf" target="_blank" class="fkquestion" title="FAQ- Self Managed Super Fund (SMSF)">?</a>
+						</div>
+						<div class="col-sm-6 col-xs-6 fl-lpage btn-group smsf domacom input-group questionspace maxbed">
+							<!-- <button type="button" class="btn btn-default">SMSF</button> -->
+							<label class="btn btn-primary  ng-pristine ng-untouched ng-valid" ng-click="animate('on');" ng-model="searchcriteria.domacom" btn-checkbox="">DomaCom</label> <span>&nbsp;</span>
+							<a href="#!/blog/FAQs/domacom-fractional-property-investing" target="_blank" class="fkquestion" title="FAQ - DomaCom Fractional Property Investing">?</a>
+						</div>
+
+
+						<!--  				<div class="col-sm-5 col-xs-12 nopadding latsold">
+																			<div class="col-sm-7 col-xs-6 nopadding fl-lpage btn-group smsf latest">
+																					
+																					<label class="btn btn-primary " ng-click="animate('on');" ng-model="searchcriteria.latest" btn-checkbox>Latest</label>
+																			</div>
+																			<div class="col-sm-5 col-xs-6 nopadding fl-lpage btn-group smsf sold">
+																					
+																					<label class="btn btn-primary " ng-click="animate('on');" ng-model="searchcriteria.sold" btn-checkbox>Sold</label>
+																			</div>
+																		</div> -->
+
+
+					</div>
+					<!-- <div class="col-sm-12 col-xs-12 nopadding ">
+																			<div class="col-sm-3 col-xs-6 nopadding fl-lpage btn-group smsf flagspacing">
+																					<button type="button" class="btn btn-default">SMSF</button>
+																					<label class="btn btn-primary " ng-click="animate('on');" ng-model="searchcriteria.left" btn-checkbox>SMSF</label>
+																			</div>
+																			
+																			<div class="col-sm-3 col-xs-6 nopadding fl-lpage btn-group domacom flagspacing">
+																					<button type="button" class="btn btn-default">SMSF</button>
+																					<label class="btn btn-primary " ng-click="animate('on');" ng-model="searchcriteria.domacom" btn-checkbox>DomaCom</label>
+																			</div>
+																			
+																			<div class="col-sm-3 col-xs-6 nopadding fl-lpage btn-group latest flagspacing">
+																					<button type="button" class="btn btn-default">SMSF</button>
+																					<label class="btn btn-primary " ng-click="animate('on');" ng-model="searchcriteria.latest" btn-checkbox>Latest</label>
+																			</div>
+																			
+																			<div class="col-sm-3 col-xs-6 nopadding fl-lpage btn-group sold flagspacing">
+																					<button type="button" class="btn btn-default">SMSF</button>
+																					<label class="btn btn-primary " ng-click="animate('on');" ng-model="searchcriteria.sold" btn-checkbox>Sold</label>
+																			</div>
+																		</div> --> </div>
+  </div>
+</div> 
+																		
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="loan panel panel-default ng-isolate-scope" is-open="groups[1].isopen">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading"><span class="ng-scope">
+					</span><i class="pull-right glyphicon ng-scope glyphicon-chevron-down" ng-class="{'glyphicon-chevron-up': groups[1].isopen, 'glyphicon-chevron-down': !groups[1].isopen}"></i>
+					</a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""> <accordion-heading class="ng-scope"></accordion-heading>
+					
+					
+					
+					<div class="col-sm-12 fl-lpage nopadding ng-scope">
+						
+						<div class="col-sm-8 minbed smallscreenpadinvest">
+							<label for="sel">Loan to value (LVR) %</label>
+							</div>
+							<div class="col-sm-4 maxbed smallscreenpadinvest">
+							<div class="form-group">
+							
+							<input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="loancriteria.lvr" ng-change="animate('on');" placeholder="Any" ng-mousedown="loancriteria.loancash = undefined">
+							</div>
+
+						
+							</div>
+						
+						
+						
+						<!-- <div class="form-group">
+						
+							<label for="sel">Loan to Value (LVR) %</label> <select
+								class="form-control" id="sel">
+								<option value="">Any</option>
+								
+							</select>
+						</div> -->
+						
+						
+						
+					</div>
+					<div class="col-sm-12 fl-lpage nopadding ng-scope">
+						
+						
+							<div class="col-sm-12 nopadding">
+							
+							<label for="sel" class="ng-binding">Cash amount - currency: <img src="images/blank.gif" class="flag flag-au" alt="country flag"> (AUD)</label> 
+							</div>
+
+
+						<div class="col-sm-12 nopadding">
+							<div class="col-sm-6 minbed smallscreenpadinvest">
+							<select class="form-control ng-pristine ng-untouched ng-valid" id="sel" ng-init="loancriteria.type = '$'" ng-model="loancriteria.type" ng-change="animate('on');">
+								<option value="$">$</option>
+								<option value="%">%</option>
+								
+							</select>
+							</div>
+							<div class="col-sm-6 maxbed smallscreenpadinvest">
+							<div class="form-group">
+							
+							
+							<input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Any" ng-model="loancriteria.loancash" ng-change="animate('on');" ng-mousedown="loancriteria.lvr = undefined">
+							
+							
+
+
+						</div>
+							</div></div>
+							
+							
+							<div class="col-sm-12 nopadding">
+							<div class="form-group">
+							<input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Monthly repayments, enter guide" ng-model="searchcriteria.repay" ng-change="animate('on');">
+							
+							</div>
+							</div>
+							
+							
+							
+						<div class="col-sm-12 nopadding">
+
+							<div class="col-sm-12 col-xs-12 nopadding fl-lpage btn-group smsf showcosts input-group">
+
+								<label class="btn btn-primary  ng-pristine ng-untouched ng-valid active" ng-init="showcosts = true" ng-model="showcosts" ng-change="animate('on');" ng-click="costselector(showcosts); loanupdate(loancriteria,'converter');" btn-checkbox=""> <!-- ngIf: showcosts --><span ng-if="showcosts" class="ng-scope">Costs (5%) included</span><!-- end ngIf: showcosts --> <!-- ngIf: !showcosts -->
+								</label>
+							</div>
+								
+							
+
+						</div>	
+						
+					</div>
+
+
+					<!-- <div class="col-sm-12 fl-lpage nopadding padbot smallscreenpad">
+					<div class="col-sm-6 col-xs-6 fl-lpage minbed">
+						
+							<label for="sel">Loan type</label>
+					</div>
+					<div class="col-sm-6 col-xs-6 fl-rpage maxbed">		
+							 <select
+								class="form-control" id="sel">
+								<option value="">Interest only</option>
+								
+							</select></div>
+						
+					</div>
+
+					
+					<div class="col-sm-12 nopadding padbot smallscreenpad">
+						<div class="col-sm-6 col-xs-6 fl-lpage minbed">
+							<label>Interest rate (%)</label>
+						</div>
+						<div class="col-sm-6 col-xs-6 fl-rpage maxbed">
+							<input type="text" class="form-control" />
+						</div>
+					</div>
+					
+					<div class="col-sm-12 nopadding padbot smallscreenpad">
+						<div class="col-sm-6 col-xs-6 fl-lpage minbed">
+							<label>Loan term</label>
+						</div>
+						<div class="col-sm-6 col-xs-6 fl-rpage maxbed">
+							<input type="text" class="form-control" />
+						</div>
+					</div>
+					
+					
+					<div class="col-sm-12 nopadding padbot smallscreenpad">
+						<div class="col-sm-6 col-xs-6 fl-lpage minbed">
+							<label>Cost (%)</label>
+						</div>
+						<div class="col-sm-6 col-xs-6 fl-rpage maxbed">
+							<input type="text" class="form-control" />
+						</div>
+					</div>
+					 -->
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					 </div>
+  </div>
+</div> 
+					
+					
+					<!-- <accordion-group is-open="groups[2].isopen" class="investment">
+					<accordion-heading> Investment view <i
+						class="pull-right glyphicon"
+						ng-class="{'glyphicon-chevron-up': groups[2].isopen, 'glyphicon-chevron-down': !groups[2].isopen}"></i>
+					</accordion-heading> </accordion-group> --> 
+					
+					
+					</div></accordion>
+
+					<div class="buttonPanel col-sm-12">
+						<div class="col-sm-12 nopadding">
+							<button type="button input-block-level form-control" class="btn btn-default btn-update" ng-click="loanupdate(loancriteria,'converter'); update(searchcriteria); sortlist(sortcriteria.option);" ng-class="{'updateanimate': animatebtn}">UPDATE</button>
+						</div>
+
+						<div class="col-sm-12 nopadding pad-top10">
+							<button type="button input-block-level form-control" class="btn btn-default btn-reset" ng-click="reset(searchcriteria,sortcriteria,loancriteria);">
+								<span class="glyphicon glyphicon-repeat fbold"></span>&nbsp;&nbsp;RESET
+							</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="col-sm-9 col-xs-12" id="list-panel">
+			<div class="row">
+				<div class="col-sm-1 col-sm-12 fl-lpage propertylistingrow" id="listtopicon">
+
+					<!-- ngIf: viewid == 'map' --> <!-- ngIf: viewid == 'grid' --><a ng-click="propertyview('map'); update(searchcriteria);" ng-if="viewid == 'grid'" class="btn btn-link btn-link-icon ng-scope"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a><!-- end ngIf: viewid == 'grid' -->
+
+				</div>
+
+
+				<div class="col-sm-5 col-xs-12">
+													
+						<div class="form-group">
+						
+						<a><img src="images/blank.gif" class="flag flag-au" alt="country flag"></a>
+								<select ng-options="currency as currency.label for currency in currencies | filter : $viewValue" ng-change="updateValueAll(from, to, allproperties);animate('on');" ng-model="to.currency" placeholder="Please Enter a Currency..." class="searchcurrencysel ng-pristine ng-untouched ng-valid"><option value="0" selected="selected" label="BGN Bulgarian Lev (1.39 / AUD)">BGN Bulgarian Lev (1.39 / AUD)</option></select>
+				<a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion">?</a>
+				
+				</div>
+				
+		</div>	
+
+				<div class="col-sm-3 col-xs-12 padleft7">
+					
+						
+						
+							<div class="form-group">
+
+								<select class="form-control ng-pristine ng-untouched ng-valid" id="sel1" ng-init="searchcriteria.grade = 'Filter by grade: Any'" ng-model="searchcriteria.grade" ng-options="optgrade.grade as optgrade.gradelabel for optgrade in allproperties | unique: 'gradelabel' | filter:{ gradelabel : '!Any' }" ng-change="update(searchcriteria);"><option value="" class="">Filter by grade: Any</option><option value="0" label="Filter by grade: B - a score equal or above 155">Filter by grade: B - a score equal or above 155</option></select>
+							</div>
+					
+				</div>
+
+				<div class="col-sm-3 col-xs-12">
+					
+						
+						
+							<div class="form-group">
+								<select class="form-control ng-pristine ng-untouched ng-valid" id="sel1" ng-init="sortcriteria.option = 'Sort by: Relevance'" ng-model="sortcriteria.option" ng-change="sortlist(sortcriteria.option);">
+									<option value="Sort by: Relevance">Sort by: Relevance</option>
+									<option value="Sort by: Beds max to min">Sort by: Beds max to min</option>
+									<option value="Sort by: Beds min to max">Sort by: Beds min to max</option>
+									<option value="Sort by: CPx price max to min">Sort by: CPx price max to min</option>
+									<option value="Sort by: CPx price min to max">Sort by: CPx price min to max</option>
+									<option value="Sort by: Grade AA to D">Sort by: Grade AA to D</option>
+									<option value="Sort by: Grade D to AA">Sort by: Grade D to AA</option>
+									<option disabled="" value=""></option>
+									<option value="Sort by: Monthly repayments max to min">Sort by: Monthly repayments max to min</option>
+									<option value="Sort by: Monthly repayments min to max">Sort by: Monthly repayments min to max</option>
+									<option value="Sort by: LVR max to min">Sort by: LVR max to min</option>
+									<option value="Sort by: LVR min to max">Sort by: LVR min to max</option>
+									<option value="Sort by: Estimated total max to min">Sort by: Estimated total max to min</option>
+									<option value="Sort by: Estimated total min to max">Sort by: Estimated total min to max</option>
+									<option value="Sort by: Loan amount max to min">Sort by: Loan amount max to min</option>
+									<option value="Sort by: Loan amount min to max">Sort by: Loan amount min to max</option>
+									<option value="Sort by: Cash amount max to min">Sort by: Cash amount max to min</option>
+									<option value="Sort by: Cash amount min to max">Sort by: Cash amount min to max</option>
+									
+								</select>
+							</div>
+						
+				</div>
+			</div>
+
+
+			<!-- ngIf: viewid == 'grid' --><!-- ngInclude: "views/gridview.html" --><div class="row ng-scope" ng-if="viewid == 'grid'" ng-include="&quot;views/gridview.html&quot;"><div class="col-sm-12 propertylistingrow ng-scope"> 
+										<!-- ngRepeat: property in properties --><div class="col-sm-6 nopadding  ng-scope panel-rightpad panel-clearleft" ng-class="$even ? 'panel-rightpad panel-clearleft' : 'panel-leftpad'" ng-repeat="property in properties">
+												<div class="panel panel-default noborder panel-def-left">
+													
+												  
+												  <div class="panel-body panel-left">
+												  
+													<producttile showgrade="false" item="property" class="ng-isolate-scope"><!-- ngIf: !formap --><div class="col-sm-12 col-xs-12 product-tile forgrid ng-scope" ng-if="!formap">
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+
+		
+		
+		<a href="#!/details/4931" class="thumbnail" title="CLICK TO SEE ALL DETAILS"> 
+		<!-- <img src="{{item.images[0].url}}" class="thumbnail img-responsive "> -->
+		<listslider item="item" class="ng-isolate-scope">  <div class="llslider" ng-style="styleHeight()" resizeimg="" style="height: 220px;">
+    <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="myInterval" style="height:220px;">
+    <ol class="carousel-indicators" ng-show="slides.length &gt; 1">
+        <!-- ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+      <!-- ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65341" alt="listpage slider images" class="img-responsive" style="max-height:220px;" src="http://cdn.cpx.net.au/image?id=65341">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope active" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65342" alt="listpage slider images" class="img-responsive" style="max-height:220px;" src="http://cdn.cpx.net.au/image?id=65342">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65340" alt="listpage slider images" class="img-responsive" style="max-height:220px;" src="http://cdn.cpx.net.au/image?id=65340">
+      </div>
+      </div><!-- end ngRepeat: image in item.images -->
+    </div>
+    <a class="left carousel-control" ng-click="prev()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" ng-click="next()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+  </div>
+ 
+</listslider>
+		</a> 
+		
+		<div class="col-lg-12 col-sm-12 col-xs-12 nopadding product-markup pull-right">
+   <!-- ngIf: item.smsf == true --><span class="label label-default smsf flaglabel ng-scope" ng-if="item.smsf == true">SMSF</span><!-- end ngIf: item.smsf == true -->
+  
+   <!-- ngIf: item.deposit == true -->
+  
+   <!-- ngIf: item.sold == true -->
+  
+   <!-- ngIf: item.domacom == true -->
+  
+   <!-- ngIf: !(item.ipr.length>0) -->
+  </div>
+		
+
+	</div>
+	
+	
+	
+  <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">    
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding botm-space2">
+		<div class="col-sm-6 fl-l nopadding fbold ng-binding">Beds 1 |
+			Bath 1 | Car 1</div>
+		<div class="col-sm-6 fl-r nopadding fbold ng-binding">
+			Ormond, VIC</div>
+	</div>
+
+	<div class="col-lg-12 col-sm-12 col-xs-12 fl-lpage nopadding prop-content ng-binding">
+		538 North, Apartment</div>
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">&nbsp;</div>
+
+	<div class="col-lg-6 col-sm-6 col-xs-12 nopadding">
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Listed price
+			(AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$375,000</div>
+
+			<!-- ngIf: !ishomepage --><div class="col-sm-8 col-xs-8 nopadding fl-lpage fbold ng-scope" ng-if="!ishomepage">
+				CPx price <!-- ngIf: (item.currencylabel) -->
+				<!-- ngIf: !(item.currencylabel) --><span ng-if="!(item.currencylabel)" class="ng-scope">(AUD)</span><!-- end ngIf: !(item.currencylabel) -->
+
+				<!-- <select
+        	ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+          
+          ng-change="updateValue(from, to, item)"
+          ng-model="to.currency"
+          placeholder="Please Enter a Currency..."
+          class="currencyselector"></select> -->
+
+				<a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion">?</a>
+
+			</div><!-- end ngIf: !ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+
+
+			<!-- ngIf: !ishomepage --><div ng-if="!ishomepage" class="ng-scope">
+			<!-- ngIf: !(item.currencylabel) --><div ng-if="!(item.currencylabel)" class="ng-scope">
+		<!-- ngIf: (item.convertedcpx) -->
+		<!-- ngIf: !(item.convertedcpx) --><div class="col-sm-4 col-xs-4 nopadding fl-rpage fbold ng-binding ng-scope" ng-if="!(item.convertedcpx)">$362,875</div><!-- end ngIf: !(item.convertedcpx) -->
+		</div><!-- end ngIf: !(item.currencylabel) -->
+		
+		<!-- ngIf: (item.currencylabel) -->
+		</div><!-- end ngIf: !ishomepage -->
+		
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Saving (AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$12,125</div>
+	</div>
+	<!-- ngIf: (showgrade && item.ipr.length > 0) -->
+</div>
+
+</div><!-- end ngIf: !formap -->
+
+
+<!-- ngIf: formap --></producttile>
+												     
+												     <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+												     <!-- ngRepeat: alert in alerts -->
+												       <div class="col-sm-4 col-xs-6 nopadding fl-lpage">
+												       		<!-- ngIf: !groups[1].isopen --><a href="#!/details/4931" class="inactive-a panellink ng-scope" ng-if="!groups[1].isopen">More details</a><!-- end ngIf: !groups[1].isopen -->
+												       		<!-- ngIf: groups[1].isopen -->
+												       </div>
+											  
+												       <div class="col-sm-8 col-xs-6 nopadding fl-r pull-right">
+												       		<div class="input-group top-button5 btn btn-social-icon pull-right">
+															  <span class="input-group-addon top-span1 nopadding" style="background:#25427C" aria-hidden="true" ng-click="addtoshortlist(property);addAlert(property.id);">
+																<span class="fa fa-plus star-color"></span>
+															  </span>
+																<!-- <button class="btn-default btn btn-icon top-spbtn5 nopadding " type="button">  --> 
+																
+																	<a class=" inactive-a" ng-click="addtoshortlist(property);addAlert(property.id);">Add</a><span class="">&nbsp;|&nbsp;</span><a href="#!/shortlist" class=" inactive-a" title="View shortlist">View shortlist</a>
+																<!-- </button>  --> 
+																
+															</div>
+												       </div>
+												    </div>
+												   
+												
+												    
+														 
+												  	 </div>
+												  	 
+												  	 <!-- ngIf: groups[0].isopen --><div ng-show="true" class="panel-body listpanelborder panelsubleft ng-scope" ng-if="groups[0].isopen">
+														 	<div class="col-sm-6 col-xs-6 nopadding">
+														 		<div class="input-group top-button4 btn btn-social-icon" style="width:164px;">
+																  <span class="input-group-addon top-span1 nopadding" style="background:#25427C" aria-hidden="true">
+																	<span class="glyphicon glyphicon-arrow-down star-color"></span>
+																  </span>
+																	 <button class="btn-default btn btn-icon top-spbtn4 nopadding" style="width:119px;" type="button" ng-click="go(property.ipr[0].url)">
+																		<span class="font15">Download ipr</span>
+																	 </button>
+																	<span class="input-group-addon top-span1 nopadding pdfspn" aria-hidden="true">
+																		<a class="btn btn-social-icon btn-pdf top-icon"></a>
+																	 </span>
+																</div>
+														 	</div>
+														 	<div class="col-sm-6 col-xs-6 fl-lpage listgrade">
+														 		<propertygrade item="property" class="ng-isolate-scope"><div class="col-sm-8 col-xs-7 grade-text ">
+	<span class="fbold" style="font-size: 20px;">GRADE</span>
+</div>
+<div class="col-sm-4 col-xs-5  grade-box">
+	<div class="gradecicle ng-binding Bcircle" ng-class="selectgradecolor(item.grade)">B</div>
+</div></propertygrade>
+														 	</div>
+												  		</div><!-- end ngIf: groups[0].isopen -->
+												  		
+												  		
+												  		<!-- ngIf: groups[1].isopen -->
+												  		
+												  		
+												  		<!-- <div class="panel-body investborder panelsubleft" ng-if="groups[2].isopen">
+														 	
+														 	this is investment view
+												  		</div> -->
+												  	 
+												 </div>
+												
+										</div><!-- end ngRepeat: property in properties --><div class="col-sm-6 nopadding  ng-scope panel-leftpad" ng-class="$even ? 'panel-rightpad panel-clearleft' : 'panel-leftpad'" ng-repeat="property in properties">
+												<div class="panel panel-default noborder panel-def-left">
+													
+												  
+												  <div class="panel-body panel-left">
+												  
+													<producttile showgrade="false" item="property" class="ng-isolate-scope"><!-- ngIf: !formap --><div class="col-sm-12 col-xs-12 product-tile forgrid ng-scope" ng-if="!formap">
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+
+		
+		
+		<a href="#!/details/4942" class="thumbnail" title="CLICK TO SEE ALL DETAILS"> 
+		<!-- <img src="{{item.images[0].url}}" class="thumbnail img-responsive "> -->
+		<listslider item="item" class="ng-isolate-scope">  <div class="llslider" ng-style="styleHeight()" resizeimg="" style="height: 220px;">
+    <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="myInterval" style="height:220px;">
+    <ol class="carousel-indicators" ng-show="slides.length &gt; 1">
+        <!-- ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+      <!-- ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65529" alt="listpage slider images" class="img-responsive" style="max-height:220px;" src="http://cdn.cpx.net.au/image?id=65529">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope active" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65530" alt="listpage slider images" class="img-responsive" style="max-height:220px;" src="http://cdn.cpx.net.au/image?id=65530">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65528" alt="listpage slider images" class="img-responsive" style="max-height:220px;" src="http://cdn.cpx.net.au/image?id=65528">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65532" alt="listpage slider images" class="img-responsive" style="max-height:220px;" src="http://cdn.cpx.net.au/image?id=65532">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65531" alt="listpage slider images" class="img-responsive" style="max-height:220px;" src="http://cdn.cpx.net.au/image?id=65531">
+      </div>
+      </div><!-- end ngRepeat: image in item.images -->
+    </div>
+    <a class="left carousel-control" ng-click="prev()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" ng-click="next()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+  </div>
+ 
+</listslider>
+		</a> 
+		
+		<div class="col-lg-12 col-sm-12 col-xs-12 nopadding product-markup pull-right">
+   <!-- ngIf: item.smsf == true --><span class="label label-default smsf flaglabel ng-scope" ng-if="item.smsf == true">SMSF</span><!-- end ngIf: item.smsf == true -->
+  
+   <!-- ngIf: item.deposit == true -->
+  
+   <!-- ngIf: item.sold == true -->
+  
+   <!-- ngIf: item.domacom == true --><span class="label label-default domacom flaglabel ng-scope" ng-if="item.domacom == true">DomaCom</span><!-- end ngIf: item.domacom == true -->
+  
+   <!-- ngIf: !(item.ipr.length>0) -->
+  </div>
+		
+
+	</div>
+	
+	
+	
+  <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">    
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding botm-space2">
+		<div class="col-sm-6 fl-l nopadding fbold ng-binding">Beds 3 |
+			Bath 2 | Car 1</div>
+		<div class="col-sm-6 fl-r nopadding fbold ng-binding">
+			Roxburgh Park, VIC</div>
+	</div>
+
+	<div class="col-lg-12 col-sm-12 col-xs-12 fl-lpage nopadding prop-content ng-binding">
+		EDEN PARK, House</div>
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">&nbsp;</div>
+
+	<div class="col-lg-6 col-sm-6 col-xs-12 nopadding">
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Listed price
+			(AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$365,000</div>
+
+			<!-- ngIf: !ishomepage --><div class="col-sm-8 col-xs-8 nopadding fl-lpage fbold ng-scope" ng-if="!ishomepage">
+				CPx price <!-- ngIf: (item.currencylabel) -->
+				<!-- ngIf: !(item.currencylabel) --><span ng-if="!(item.currencylabel)" class="ng-scope">(AUD)</span><!-- end ngIf: !(item.currencylabel) -->
+
+				<!-- <select
+        	ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+          
+          ng-change="updateValue(from, to, item)"
+          ng-model="to.currency"
+          placeholder="Please Enter a Currency..."
+          class="currencyselector"></select> -->
+
+				<a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion">?</a>
+
+			</div><!-- end ngIf: !ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+
+
+			<!-- ngIf: !ishomepage --><div ng-if="!ishomepage" class="ng-scope">
+			<!-- ngIf: !(item.currencylabel) --><div ng-if="!(item.currencylabel)" class="ng-scope">
+		<!-- ngIf: (item.convertedcpx) -->
+		<!-- ngIf: !(item.convertedcpx) --><div class="col-sm-4 col-xs-4 nopadding fl-rpage fbold ng-binding ng-scope" ng-if="!(item.convertedcpx)">$355,000</div><!-- end ngIf: !(item.convertedcpx) -->
+		</div><!-- end ngIf: !(item.currencylabel) -->
+		
+		<!-- ngIf: (item.currencylabel) -->
+		</div><!-- end ngIf: !ishomepage -->
+		
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Saving (AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$10,000</div>
+	</div>
+	<!-- ngIf: (showgrade && item.ipr.length > 0) -->
+</div>
+
+</div><!-- end ngIf: !formap -->
+
+
+<!-- ngIf: formap --></producttile>
+												     
+												     <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+												     <!-- ngRepeat: alert in alerts -->
+												       <div class="col-sm-4 col-xs-6 nopadding fl-lpage">
+												       		<!-- ngIf: !groups[1].isopen --><a href="#!/details/4942" class="inactive-a panellink ng-scope" ng-if="!groups[1].isopen">More details</a><!-- end ngIf: !groups[1].isopen -->
+												       		<!-- ngIf: groups[1].isopen -->
+												       </div>
+											  
+												       <div class="col-sm-8 col-xs-6 nopadding fl-r pull-right">
+												       		<div class="input-group top-button5 btn btn-social-icon pull-right">
+															  <span class="input-group-addon top-span1 nopadding" style="background:#25427C" aria-hidden="true" ng-click="addtoshortlist(property);addAlert(property.id);">
+																<span class="fa fa-plus star-color"></span>
+															  </span>
+																<!-- <button class="btn-default btn btn-icon top-spbtn5 nopadding " type="button">  --> 
+																
+																	<a class=" inactive-a" ng-click="addtoshortlist(property);addAlert(property.id);">Add</a><span class="">&nbsp;|&nbsp;</span><a href="#!/shortlist" class=" inactive-a" title="View shortlist">View shortlist</a>
+																<!-- </button>  --> 
+																
+															</div>
+												       </div>
+												    </div>
+												   
+												
+												    
+														 
+												  	 </div>
+												  	 
+												  	 <!-- ngIf: groups[0].isopen --><div ng-show="true" class="panel-body listpanelborder panelsubleft ng-scope" ng-if="groups[0].isopen">
+														 	<div class="col-sm-6 col-xs-6 nopadding">
+														 		<div class="input-group top-button4 btn btn-social-icon" style="width:164px;">
+																  <span class="input-group-addon top-span1 nopadding" style="background:#25427C" aria-hidden="true">
+																	<span class="glyphicon glyphicon-arrow-down star-color"></span>
+																  </span>
+																	 <button class="btn-default btn btn-icon top-spbtn4 nopadding" style="width:119px;" type="button" ng-click="go(property.ipr[0].url)">
+																		<span class="font15">Download ipr</span>
+																	 </button>
+																	<span class="input-group-addon top-span1 nopadding pdfspn" aria-hidden="true">
+																		<a class="btn btn-social-icon btn-pdf top-icon"></a>
+																	 </span>
+																</div>
+														 	</div>
+														 	<div class="col-sm-6 col-xs-6 fl-lpage listgrade">
+														 		<propertygrade item="property" class="ng-isolate-scope"><div class="col-sm-8 col-xs-7 grade-text ">
+	<span class="fbold" style="font-size: 20px;">GRADE</span>
+</div>
+<div class="col-sm-4 col-xs-5  grade-box">
+	<div class="gradecicle ng-binding Bcircle" ng-class="selectgradecolor(item.grade)">B</div>
+</div></propertygrade>
+														 	</div>
+												  		</div><!-- end ngIf: groups[0].isopen -->
+												  		
+												  		
+												  		<!-- ngIf: groups[1].isopen -->
+												  		
+												  		
+												  		<!-- <div class="panel-body investborder panelsubleft" ng-if="groups[2].isopen">
+														 	
+														 	this is investment view
+												  		</div> -->
+												  	 
+												 </div>
+												
+										</div><!-- end ngRepeat: property in properties --><div class="col-sm-6 nopadding  ng-scope panel-rightpad panel-clearleft" ng-class="$even ? 'panel-rightpad panel-clearleft' : 'panel-leftpad'" ng-repeat="property in properties">
+												<div class="panel panel-default noborder panel-def-left">
+													
+												  
+												  <div class="panel-body panel-left">
+												  
+													<producttile showgrade="false" item="property" class="ng-isolate-scope"><!-- ngIf: !formap --><div class="col-sm-12 col-xs-12 product-tile forgrid ng-scope" ng-if="!formap">
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+
+		
+		
+		<a href="#!/details/4941" class="thumbnail" title="CLICK TO SEE ALL DETAILS"> 
+		<!-- <img src="{{item.images[0].url}}" class="thumbnail img-responsive "> -->
+		<listslider item="item" class="ng-isolate-scope">  <div class="llslider" ng-style="styleHeight()" resizeimg="" style="height: 220px;">
+    <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="myInterval" style="height:220px;">
+    <ol class="carousel-indicators" ng-show="slides.length &gt; 1">
+        <!-- ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+      <!-- ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65527" alt="listpage slider images" class="img-responsive" style="max-height:220px;" src="http://cdn.cpx.net.au/image?id=65527">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope active" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65983" alt="listpage slider images" class="img-responsive" style="max-height:220px;" src="http://cdn.cpx.net.au/image?id=65983">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65526" alt="listpage slider images" class="img-responsive" style="max-height:220px;" src="http://cdn.cpx.net.au/image?id=65526">
+      </div>
+      </div><!-- end ngRepeat: image in item.images -->
+    </div>
+    <a class="left carousel-control" ng-click="prev()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" ng-click="next()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+  </div>
+ 
+</listslider>
+		</a> 
+		
+		<div class="col-lg-12 col-sm-12 col-xs-12 nopadding product-markup pull-right">
+   <!-- ngIf: item.smsf == true --><span class="label label-default smsf flaglabel ng-scope" ng-if="item.smsf == true">SMSF</span><!-- end ngIf: item.smsf == true -->
+  
+   <!-- ngIf: item.deposit == true -->
+  
+   <!-- ngIf: item.sold == true -->
+  
+   <!-- ngIf: item.domacom == true --><span class="label label-default domacom flaglabel ng-scope" ng-if="item.domacom == true">DomaCom</span><!-- end ngIf: item.domacom == true -->
+  
+   <!-- ngIf: !(item.ipr.length>0) -->
+  </div>
+		
+
+	</div>
+	
+	
+	
+  <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">    
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding botm-space2">
+		<div class="col-sm-6 fl-l nopadding fbold ng-binding">Beds 4 |
+			Bath 2 | Car 2</div>
+		<div class="col-sm-6 fl-r nopadding fbold ng-binding">
+			Truganina, VIC</div>
+	</div>
+
+	<div class="col-lg-12 col-sm-12 col-xs-12 fl-lpage nopadding prop-content ng-binding">
+		PARKVIEW, House</div>
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">&nbsp;</div>
+
+	<div class="col-lg-6 col-sm-6 col-xs-12 nopadding">
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Listed price
+			(AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$410,000</div>
+
+			<!-- ngIf: !ishomepage --><div class="col-sm-8 col-xs-8 nopadding fl-lpage fbold ng-scope" ng-if="!ishomepage">
+				CPx price <!-- ngIf: (item.currencylabel) -->
+				<!-- ngIf: !(item.currencylabel) --><span ng-if="!(item.currencylabel)" class="ng-scope">(AUD)</span><!-- end ngIf: !(item.currencylabel) -->
+
+				<!-- <select
+        	ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+          
+          ng-change="updateValue(from, to, item)"
+          ng-model="to.currency"
+          placeholder="Please Enter a Currency..."
+          class="currencyselector"></select> -->
+
+				<a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion">?</a>
+
+			</div><!-- end ngIf: !ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+
+
+			<!-- ngIf: !ishomepage --><div ng-if="!ishomepage" class="ng-scope">
+			<!-- ngIf: !(item.currencylabel) --><div ng-if="!(item.currencylabel)" class="ng-scope">
+		<!-- ngIf: (item.convertedcpx) -->
+		<!-- ngIf: !(item.convertedcpx) --><div class="col-sm-4 col-xs-4 nopadding fl-rpage fbold ng-binding ng-scope" ng-if="!(item.convertedcpx)">$400,000</div><!-- end ngIf: !(item.convertedcpx) -->
+		</div><!-- end ngIf: !(item.currencylabel) -->
+		
+		<!-- ngIf: (item.currencylabel) -->
+		</div><!-- end ngIf: !ishomepage -->
+		
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Saving (AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$10,000</div>
+	</div>
+	<!-- ngIf: (showgrade && item.ipr.length > 0) -->
+</div>
+
+</div><!-- end ngIf: !formap -->
+
+
+<!-- ngIf: formap --></producttile>
+												     
+												     <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+												     <!-- ngRepeat: alert in alerts -->
+												       <div class="col-sm-4 col-xs-6 nopadding fl-lpage">
+												       		<!-- ngIf: !groups[1].isopen --><a href="#!/details/4941" class="inactive-a panellink ng-scope" ng-if="!groups[1].isopen">More details</a><!-- end ngIf: !groups[1].isopen -->
+												       		<!-- ngIf: groups[1].isopen -->
+												       </div>
+											  
+												       <div class="col-sm-8 col-xs-6 nopadding fl-r pull-right">
+												       		<div class="input-group top-button5 btn btn-social-icon pull-right">
+															  <span class="input-group-addon top-span1 nopadding" style="background:#25427C" aria-hidden="true" ng-click="addtoshortlist(property);addAlert(property.id);">
+																<span class="fa fa-plus star-color"></span>
+															  </span>
+																<!-- <button class="btn-default btn btn-icon top-spbtn5 nopadding " type="button">  --> 
+																
+																	<a class=" inactive-a" ng-click="addtoshortlist(property);addAlert(property.id);">Add</a><span class="">&nbsp;|&nbsp;</span><a href="#!/shortlist" class=" inactive-a" title="View shortlist">View shortlist</a>
+																<!-- </button>  --> 
+																
+															</div>
+												       </div>
+												    </div>
+												   
+												
+												    
+														 
+												  	 </div>
+												  	 
+												  	 <!-- ngIf: groups[0].isopen --><div ng-show="true" class="panel-body listpanelborder panelsubleft ng-scope" ng-if="groups[0].isopen">
+														 	<div class="col-sm-6 col-xs-6 nopadding">
+														 		<div class="input-group top-button4 btn btn-social-icon" style="width:164px;">
+																  <span class="input-group-addon top-span1 nopadding" style="background:#25427C" aria-hidden="true">
+																	<span class="glyphicon glyphicon-arrow-down star-color"></span>
+																  </span>
+																	 <button class="btn-default btn btn-icon top-spbtn4 nopadding" style="width:119px;" type="button" ng-click="go(property.ipr[0].url)">
+																		<span class="font15">Download ipr</span>
+																	 </button>
+																	<span class="input-group-addon top-span1 nopadding pdfspn" aria-hidden="true">
+																		<a class="btn btn-social-icon btn-pdf top-icon"></a>
+																	 </span>
+																</div>
+														 	</div>
+														 	<div class="col-sm-6 col-xs-6 fl-lpage listgrade">
+														 		<propertygrade item="property" class="ng-isolate-scope"><div class="col-sm-8 col-xs-7 grade-text ">
+	<span class="fbold" style="font-size: 20px;">GRADE</span>
+</div>
+<div class="col-sm-4 col-xs-5  grade-box">
+	<div class="gradecicle ng-binding Bcircle" ng-class="selectgradecolor(item.grade)">B</div>
+</div></propertygrade>
+														 	</div>
+												  		</div><!-- end ngIf: groups[0].isopen -->
+												  		
+												  		
+												  		<!-- ngIf: groups[1].isopen -->
+												  		
+												  		
+												  		<!-- <div class="panel-body investborder panelsubleft" ng-if="groups[2].isopen">
+														 	
+														 	this is investment view
+												  		</div> -->
+												  	 
+												 </div>
+												
+										</div><!-- end ngRepeat: property in properties -->
+										
+
+			
+		
+			</div>
+									</div> 
+									
+									
+							<script type="text/ng-template" id="popoverPI" class="ng-scope">
+  						<div class="triangle" style="top: -7px !important;"></div>
+								<div class="ns-popover-tooltip ratepopover">
+								<div><b>Sponsored</b></div></br>
+								<div>
+								Principal and Interest (PI) rate is sponsored this week by: </br>&#60 your company name here &#62 &#60 your fav icon here &#62
+								</div></br>
+								<div style="text-align:left;"><a>Enquire</a></div>
+								</div>	
+								</script>
+								
+								<script type="text/ng-template" id="popoverIO" class="ng-scope">
+  						<div class="triangle" style="bottom: -7px !important;"></div>
+								
+								<div class="ns-popover-tooltip ratepopover">
+								<div><b>Sponsored</b></div></br>
+								<div>
+							    Interest only (IO) rate is sponsored this week by: </br>&#60 your company name here &#62 &#60 your fav icon here &#62 	
+								</div></br>
+								<div style="text-align:left;"><a>Enquire</a></div>
+								</div>	
+								</script>			 		
+	</div><!-- end ngIf: viewid == 'grid' -->
+			<!-- ngIf: viewid == 'map' -->
+
+
+
+
+
+		</div>
+
+
+
+
+	</div>
+
+
+
+
+</div>
+</div>
+		<div footer=""><div class="logo-border pad-bot"></div>
+        
+<div class="container">
+	<div class="row">
+      
+      <div class="col-md-8">
+       <div class="row">
+         
+		<div class="col-sm-4 col-xs-12">
+			<div class="pad-bot5">&nbsp;</div>
+			<div class="fbold">PROPERTIES</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedview();" href="#!/view-graded-properties" title="View graded properties">View graded properties</a>
+			</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedlist();" href="#!/list-your-property-on-cpx/list-property" title="List your property on CPx">List your property on CPx</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">REPORTS</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedorder();" href="#!/order-independent-reports" title="Order independent reports">Order independent reports</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">CPx MARKETPLACE</div>
+			<div>
+				<a class="footer-data inactive-a" href="#!/marketplace/find-industry-professionals" title="Find industry professionals">Find industry professionals</a>
+			</div>
+
+		</div>
+				<div class="col-sm-4 col-xs-12">
+					<div class=" pad-bot5">&nbsp;</div>
+					<div class=" fbold">ABOUT</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-cpx" title="What is CPx?">What is CPx?</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-process" title="Independent process">Independent process</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-property-review" title="Independent property review(ipr)">Independent property review
+							(ipr)</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-graded" title="What is graded?">What is graded?</a>
+					</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class=" fbold">LEGALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/privacy" title="Privacy">Privacy</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/terms-and-conditions" title="Terms &amp; conditions">Terms &amp; conditions</a>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12 ">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">BLOG</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/press-releases/subid" title="Press releases">Press releases</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/Publications/subid" title="Publications">Publications</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/cpx-announcements/subid" title="CPx announcements">CPx announcements</a>
+				</div>
+				<div class="">
+					<a class="footer-data inactive-a" href="#!/blog/FAQs/subid" title="Frequently Asked Questions">FAQs</a>
+				</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">INDUSTRY PROFESSIONALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/industry/working-with-cpx" title="Working with CPx">Working with CPx</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="http://graded.centralpropertyexchange.com.au/login?ReturnUrl=/" target="_blank" title="Business login">Business
+							login</a>
+					</div>
+
+				</div>
+        
+        </div></div>
+        
+		<div class="col-sm-4 col-xs-12 mailformcontainer">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">CONTACT</div>
+			<div>
+				<a ng-click="shownothing = true" href="#!/contact" class="footer-data inactive-a" title="Contact us">Online form</a>
+			</div>
+
+
+			<div>
+				<span class="footer-data inactive-a">Telephone: +61 2 8006
+					1979</span>
+			</div>
+			<div>
+
+				<span class="footer-data inactive-a">Mobile/cell: +61 410 510
+					997</span>
+
+			</div>
+			<div class=" footemail">
+				<a class="footer-data inactive-a" href="mailto:contact@centralpropertyexchange.com" title="Contact us via email">Email:
+					contact@centralpropertyexchange.com</a>
+			</div>
+          <div>&nbsp;</div>
+			
+   
+
+    
+     <div class="email-update">
+     <form action="//landlordcentral.us2.list-manage.com/subscribe/post?u=44d30abfcde67c3847612b5cb&amp;id=4583813c3e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate ng-pristine ng-valid ng-valid-email" target="_blank" novalidate="">
+      <div class="fbold updatetextpad">EMAIL UPDATES</div> 
+       <div>
+        <span class="footer-data inactive-a"><p class="registertext">Register your email to receive industry news and insights from CPx.</p></span>
+       </div>
+       	   	   
+        <div class="type-email clearfix">
+         <span class="pull-left"><input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Type your email address here" class="input-bg ng-pristine ng-untouched ng-valid ng-valid-email" ng-model="registrationForm.email"> </span>
+         <span class="pull-right"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="btn sub-btn" ng-click="resetform()"> </span>
+       </div>
+       <p class="bot-txt">You will be sent a verification email to activate your registration.</p>
+    </form>
+    </div>        
+            
+            
+		</div>
+ 
+  
+  
+  
+
+	</div>
+</div>
+
+		
+    <div class="bottom-line"></div></div>
+		</div>
+	</div>
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+	
+    <script src="js/jquery.1.11.2/jquery-1.11.2.min.js"></script>
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+	<script src="js/angularjs/1.3.10/angular.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-route.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-resource.min.js"></script>
+    
+	<!-- Our Website Javascripts -->
+	<script src="js/app/constants.js"></script>
+	<script src="js/app/main.js"></script>
+	<script src="js/app/controllers.js"></script>
+	<script src="js/app/directives.js"></script>
+	<script src="js/app/services.js"></script>
+	<script src="js/app/filters.js"></script>
+	
+	
+	
+	<!-- below needs to be loaded before angular-google-maps.min.js -->
+    <!-- Directives for bootstrap -->
+    <script src="js/thirdparty/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <!-- overloaded some code from  ui-bootstrap-tpls-0.12.0-->
+    <script src="js/thirdparty/overloaded-ui-bootstrap-tpls-0.12.0.js"></script>
+    <!-- Directives for tab menu -->
+    <script src="js/thirdparty/df-tab-menu.js"></script>
+	<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script><script src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/main.js"></script>
+	<script src="js/thirdparty/lodash.min.js"></script>
+	<script src="js/thirdparty/angular-google-maps.min.js"></script>
+	<script src="js/thirdparty/angular-filter.js"></script>
+	
+	<script src="js/thirdparty/decimal-places.js"></script>
+	<script src="js/thirdparty/open-exchange-rates.js"></script>
+	<script src="js/thirdparty/angular-sanitize.js"></script>
+	<script src="js/thirdparty/ng-map.min.js"></script>
+	<script src="js/thirdparty/Chart.js"></script>
+	<script src="js/thirdparty/angular-chart.js"></script>
+	<script src="js/thirdparty/nsPopover.js"></script>
+	
+	  <script src="http://platform.twitter.com/widgets.js"></script>
+	  <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true"></script>
+	
+  
+</body></html>

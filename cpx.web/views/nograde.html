@@ -1,0 +1,33 @@
+<div class="Sorrysection">
+    <div class="">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+
+                <div class="Sorryfound">
+                    
+                    <h4 ng-if="((searchcriteria.domacom==true || searchcriteria.left==true || searchcriteria.established==true || searchcriteria.new==true || searchcriteria.home==true || searchcriteria.underoffer==true || searchcriteria.sold==true  || searchcriteria.vendorfinance==true || searchcriteria.newprop==true || searchcriteria.homeland==true) && searchcriteria.grade==true) || searchcriteria.grade!=true" ><strong>Sorry, no properties found for the search criteria</strong></h4> 
+                    
+                    <h4 ng-if="!(searchcriteria.domacom==true || searchcriteria.left==true || searchcriteria.established==true || searchcriteria.new==true || searchcriteria.home==true || searchcriteria.underoffer==true || searchcriteria.sold==true  || searchcriteria.vendorfinance==true || searchcriteria.newprop==true || searchcriteria.homeland==true) && searchcriteria.grade==true"><strong>Sorry, no graded properties found</strong></h4>  
+                    
+                    <span ng-if="!(searchcriteria.domacom==true || searchcriteria.left==true || searchcriteria.established==true || searchcriteria.new==true || searchcriteria.home==true || searchcriteria.underoffer==true || searchcriteria.sold==true  || searchcriteria.vendorfinance==true || searchcriteria.newprop==true || searchcriteria.homeland==true) && searchcriteria.grade==true">
+                    
+                    <p class="nongradebox">To assist with making your purchase decision why not request a FREE Independent 
+					Property Review (ipr) which includes a grade in a 6 page report on this property.</p>
+					
+					<p class="nongradebox">The grade works like a hotel star rating.  It provides the disclosure buyers/ advisors 
+					need to find the right property.  Properties are independently reviewed and graded by <a style="color: #86b84c;" href="http://www.jll.com.au/australia/en-au/services/investors-developers/valuations-and-advisory/mortgage-services">JLL</a> </p>
+					 
+					 <p class="nongradebox">Please, only request an ipr from the owner/ agent if you are interested in their property</p> 
+                    
+                    
+                    <p>
+                        <a href="#!/blog/FAQs/why-grade-a-property" target="_blank" title="Why grade a property?">Why grade a property?</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#!/about/independent-property-review" target="_blank" title="Independent property review(ipr)">What is an ipr, grade and score?</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./docs/sample-CPx-ipr.pdf" target="_blank" title="See the sample ipr">Sample ipr and grade report.</a>
+                    </p>
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	 		

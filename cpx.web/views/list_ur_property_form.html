@@ -1,0 +1,266 @@
+<header2 selectedmenu="selectedmenu"></header2>
+<div class="ServiceRequest">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row ServiceRequest_title text-center">
+                <h3>List your property on CPx</h3>
+            </div>
+        </div>
+        
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 queaction queactionsucess">
+		  <alert dismiss-on-timeout="15000" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index);">{{alert.msg}}</alert>
+		</div>
+                 
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 startform">
+            <div class="row">
+                
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding-top: 5px; padding-left: 30px;    padding-right: 30px;">
+                        
+                    <div class="row well Listyourpropertyright">
+                        
+                            <h4>Already have an account?</h4>
+                        
+                        
+                            <a href="{{serverPath}}/auth/login" class="signinbtn">Click here to sign in</a>
+                            <br />
+                            <a href="{{serverPath}}/auth/forgot_password?calling_from=wb" class="link_forgot">Forgot password?</a>
+                            
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top: 30px;">
+                                <h5 class="text-center">- Or sign in using -</h5>
+                                <ul class="list-inline text-center">
+        							<li>
+        								<a href="{{serverPath}}/auth/login?provider=facebook"  class="btn btn-primary btn-circle fb_btn"><i class="fa fa-facebook"></i></a>
+        							</li>
+        							<li>
+        								<a href="{{serverPath}}/auth/login?provider=googleplus" class="btn btn-info btn-circle gp_btn"><i class="fa fa-google-plus"></i></a>
+        							</li>
+        							<li>
+        								<a href="{{serverPath}}/auth/login?provider=linkedin" class="btn btn-warning btn-circle in_btn"><i class="fa fa-linkedin"></i></a>
+        							</li>
+        						</ul>
+                            </div>
+                    </div>  
+                    
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 static-content">
+                    <accordion class="static-accordian pressaccordian" ng-model="forms">
+                    	
+                          <accordion-group is-open="listpropertystatus[0].value">
+                       
+                            <accordion-heading >
+                                <div class="row">
+                                    <p class="texthead">
+        	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !listpropertystatus[0].value, 'glyphicon glyphicon-minus': listpropertystatus[0].value}"></i>
+        	  						<span><strong> Register new account</strong></span>
+                                    </p>
+                                </div>
+                            </accordion-heading>
+                            
+        							<div class="Serviceform">
+                                        <form id="register-form" name="register-form" class="contact-form" ng-submit="registerUser()">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="">Email address <i class="required-text asterisk">*</i></label>
+                                                        <input type="text" class="form-control" ng-model="forms.register.email"   name="email" id="email"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="">Password <i class="required-text asterisk">*</i></label>
+                                                        <input type="password" class="form-control" ng-model="forms.register.password"  name="password" id="password"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="">Confirm password <i class="required-text asterisk">*</i></label>
+                                                        <input type="password" class="form-control" ng-model="forms.register.confirm_password"  name="confirm_password" id="confirm_password"/>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="">First name <i class="required-text asterisk">*</i></label>
+                                                        <input type="text" class="form-control" ng-model="forms.register.firstname"  name="firstname" id="firstname"/>
+                                                    </div>
+                                                </div>
+                                                
+                                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="">Last name </label>
+                                                        <input type="text" class="form-control" ng-model="forms.register.lastname"/>
+                                                    </div>
+                                                </div>
+                                               
+                                                
+                                                
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="">Phone number </label>
+                                                        <input type="text" class="form-control" ng-model="forms.register.phone_number" name="phone_number" id="phone_number"/>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="">Company name </label>
+                                                        <input type="text" class="form-control" ng-model="forms.register.company_name"/>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="form-group checkb">
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="margin-right: -10px !important;padding-right: 25px;">
+                                                            <input type="checkbox" style="height: 15px !important;" class="form-control formchackbox"  name="termsandcondition" id="termsandcondition" ng-model="forms.register.termsandcondition"  />
+                                                        </div>
+                                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                                         I agree with the <a class="link" href="#!/terms-and-conditions" target="_blank" >Terms and Conditions</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                               </div>   
+                                             
+                                                
+                                                <alert dismiss-on-timeout="15000" ng-repeat="alertcap in alertcaps1" type="{{alertcap.type}}" close="closeAlertcap1($index);">{{alertcap.msg}}</alert>
+                                            
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 robotdiv">
+                                                <div class="row robotdivrow">
+                                                   
+                                                    <div vc-recaptcha key="'6LeeeAoTAAAAADJtB95fd7tDeXLMk1kajrFd6d37'" ng-model="respone6"  theme="'light'" on-create="setWidgetIdRegister(widgetId);" on-success="setResponse6(response)" class="captcha_class"></div>
+                                                     
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <button type="submit" class="registerbtn" >Register</button>
+                                                </div>
+                                            </div>
+                                            
+                                        </form>
+                                    </div>
+                          </accordion-group>
+                          
+                          <accordion-group is-open="listpropertystatus[1].value" >
+                       
+                            <accordion-heading >
+                                <div class="row">
+                                    <p class="texthead">
+        	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !listpropertystatus[1].value, 'glyphicon glyphicon-minus': listpropertystatus[1].value}"></i>
+        	  						<span><strong> We can do it for you</strong></span>
+                                     
+                                    </p>
+                                </div>
+                            </accordion-heading>
+                            
+        							<div class="Serviceform">
+                                        <form id="contact-form" class="contact-form" ng-submit="sendContactEmail()">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="">Your name <i class="required-text asterisk">*</i></label>
+                                                        <input type="text" class="form-control" ng-model="forms1.contact.name"  name="name" id="name" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="">Your email <i class="required-text asterisk">*</i></label>
+                                                        <input type="text" class="form-control" ng-model="forms1.contact.con_email" name="con_email" id="con_email"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group selectbox">
+                                                        <label class="">Your role <i class="required-text asterisk">*</i></label>
+                                                        <select class="form-control select2"  ng-model="forms1.contact.role" name="role" id="role" title="Please select a role from the list">
+                                                            <option ng-selected="'Please select role'" value="">About you: Please select role</option>
+                                                            <option value="Accountant">Accountant</option>
+                                                            <option value="Buyer agent/ Advocate">Buyer agent/ Advocate</option>
+                                                            <option value="Bank">Bank</option>
+                                                            <option value="Developer">Developer</option>
+                                                            <option value="Financial planner">Financial planner</option>
+                                                            <option value="Mortgage broker">Mortgage broker</option>
+                                                            <option value="Property owner/ seller">Property owner/ seller</option>
+                                                            <option value="Real estate agent">Real estate agent</option>
+                                                            <option value="SMSF">SMSF</option>
+                                                            <option value="Solicitor/ Conveyancer">Solicitor/ Conveyancer</option>
+                                                        </select>
+                    
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="">Subject</label>
+                                                        <input type="text" class="form-control"  ng-model="forms1.contact.subject" ng-init="forms1.contact.subject='List my property on CPx'" readonly="true" tabindex="-1"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="">Your message</label>
+                                                        <textarea class="form-control textarea" rows="3" ng-model="forms1.contact.message"  placeholder="Please provide a summary of your property (or paste a URL link) and we will contact you to complete the process."></textarea>
+                                                        
+                
+                                                        <input type="hidden" class="form-control" name="subjectmail" ng-model="forms1.contact.dummysubject" ng-init="forms1.contact.dummysubject='List your property'"/>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            
+                                             <alert dismiss-on-timeout="15000" ng-repeat="alertcap in alertcaps" type="{{alertcap.type}}" close="closeAlertcap($index);">{{alertcap.msg}}</alert>
+                                            
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 robotdiv">
+                                                <div class="row robotdivrow">
+                                                  
+                                                    <div vc-recaptcha key="'6LeeeAoTAAAAADJtB95fd7tDeXLMk1kajrFd6d37'" ng-model="respone2"  theme="'light'" on-create="setWidgetIdContact(widgetId);" on-success="setResponse2(response)" class="captcha_class"></div>
+                                                    
+                                                      
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <button type="submit" class="sendbtn" >SEND</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                          </accordion-group>
+                          
+                </accordion>
+                                
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding-top: 5px;">
+                    <div class="well servicerightside Listyourpropertyright">
+                        <h4 >Buyers and Professionals want independent facts!</h4>
+    
+                        <p>All types of residential properties for sale or auction can be listed on CPx for FREE. </p>
+                        <br />
+                        <p>CPx allows property owners, developers and agents to advertise properties.</p>
+                    </div>
+                    <div class="dwonloadpdf">
+                        <a target="_blank" href="docs/List your property on CPx Brochure_V3.pdf" class="editbtnall dwonloadpdfBuy">Download PDF for more info</a>                        
+                    </div>
+					<div class="cont-btn" style="padding-top: 20px;"><a href="#!/contact">Contact us for more information </a></div>
+                   
+                    
+                    
+                    <div class="col-sm-12 sideheader">
+        			  	<span ng-if="pid == 'working-with-cpx'" >Free membership, No referral fees</span>
+        			  	<span ng-if="pid == 'view-directory'" >Free membership, No referral fees</span>
+        			  	<span ng-if="pid == 'Contact_us_for_more'" >Free membership, No referral fees</span>
+        			  </div>
+                    
+                    <div class="servicerightsideimg">
+                        <img alt="listurpropthumbnail.png" class="img-responsive" src="images/listurpropthumbnail.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

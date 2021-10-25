@@ -1,0 +1,116 @@
+<div class="maptab col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row" style="padding-bottom: 15px;">
+        <div class="mapviews col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 map-properties" ng-repeat ="item in properties">
+            
+            
+            
+            <div style="text-align: center;" class="paginationall" ng-if="item.id==mapDisplayPropID">
+                <a class="acolor" ng-if="!$first" style="float: left;cursor: pointer;" ng-click="changeproperty($index-1)">< &nbsp;Previous</a> &nbsp;</a>
+                <span style="text-align: center;">{{$index+1}}/{{properties.length}}</span>
+                <a class="acolor" ng-if="!$last" style="float: right;cursor: pointer;" ng-click="changeproperty($index+1)"> Next &nbsp; ></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="mapviews col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            
+                <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="map.options" events="map.events" control="googlemap">
+
+                 <ui-gmap-window coords="MapOptions.markers.selected.coords" show="windowOptions.show" options="windowOptions" closeClick="closeClick()" templateUrl="windowOptions.templateUrl" templateParameter="windowOptions.templateParameter" ></ui-gmap-window>
+
+                 <ui-gmap-markers models="markers" idkey="markers.id" coords="'coords'" click="'onClick'" events="markers.events" icon="'icon'"></ui-gmap-markers>
+                 
+            	 </ui-gmap-google-map> 
+             
+        </div>
+        
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 map-properties" ng-repeat ="item in properties" >
+                     
+            <div class="Propertydetails" ng-if="item.id==mapDisplayPropID">
+             
+                <div class="Propertydetailsdiv">
+                    
+                    
+                    
+                    
+                    <span ng-include='"templates/product_tile_map.html"'></span>
+                    
+                    <div class="Propertydetailslink">
+                        <alert style="background:#ffffcc;border-color: #ffffab;" ng-if="item.id == alertid" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)" class="alertbox">{{alert.msg}}</alert>
+                           <div class="pull-left">
+                               <a href="#!/details/{{properties[$index].id}}"  ng-if="!groups[1].isopen">More details</a> 
+        	       		      <a href="#!/details/{{properties[$index].id}}" ng-if="groups[1].isopen" ng-click="gotoloantab()">More details</a>
+                           </div>
+                           <div class="pull-right">
+                               <a href="javascript:void(0);" ng-click="addtoshortlist(item);addAlert(item.id);">Add</a>
+                               <a href="#!/shortlist"  title="View shortlist">View shortlist</a>
+                           </div>
+    
+                       </div>
+                       
+                       <div class="DownloadFreeipr" ng-show="{{item.gradestatus != 0}}" style="margin-top: 20px;" >
+                           <a class="editbtnall dwonloadpdfBuy" href="javascript:void(0);"  ng-click="go(item.iprs[0].downloadUri)">Download <b>FREE</b> ipr</a>
+                           <propertygrade item="item"></propertygrade>
+                       </div>
+                       
+                       <div class="DownloadFreeipr" ng-show="{{item.gradestatus == 0}}" style="margin-top: 20px;">
+                       
+                       	<a ng-click="passrequestfreeipr(item.id)" href="#!/request-free-ipr" target="_blank" title="Request a free ipr" class="editbtnall Requestjprgrad"> Request a <b>FREE</b> ipr</a>
+                   </div>
+                       
+                   <div class="DownloadFreeiprProper" style="margin-top: 20px;">
+                       <div class="">
+                           <div >
+                               <ul class="list-inline">
+                                   <li style="width: 100% !important;">
+                                       <span><a class="popoverlink monthlyrepay" ns-popover ns-popover-template="popoverIO" ns-popover-trigger="mouseenter" ns-popover-placement="top" ns-popover-theme="ns-popover-tooltip-theme" ns-popover-hide-on-inside-click=true>Monthly repayments<span > (IO - {{defaultIO_RATE}}%)</span> </a></span>
+                                       <span class="pull-right" ng-if="!item.conv_IOrepayments"><span ng-if="!item.currencylabel">$</span>{{item.IOrepayments | currency:"":0}}</span>
+                                       <span class="pull-right" ng-if="item.conv_IOrepayments"><span ng-if="!item.currencylabel">$</span>{{item.conv_IOrepayments | currency:"":0}}</span>
+                                   </li>
+                               </ul>
+                               <ul class="list-inline">
+                                   <li style="width: 100% !important;">
+                                       <span><a class="popoverlink monthlyrepay" ns-popover ns-popover-template="popoverPI" ns-popover-trigger="mouseenter" ns-popover-placement="bottom" ns-popover-theme="ns-popover-tooltip-theme" ns-popover-hide-on-inside-click=true>Monthly repayments<span> (PI - {{defaultPI_RATE}}%)</span></a></span>
+                                       <span class="pull-right" ng-if="!item.conv_PIrepayments"><span ng-if="!item.currencylabel">$</span>{{item.PIrepayments | currency:"":0}}</span>
+                                       <span class="pull-right" ng-if="item.conv_PIrepayments"><span ng-if="!item.currencylabel">$</span>{{item.conv_PIrepayments | currency:"":0}}</span>
+                                   </li>
+                               </ul>
+
+                           </div>
+                           <div >
+                               <ul class="list-inline" style="margin-bottom: 5px;">
+                                   <li style="width: 100% !important;">
+                                       <span class="pull-left">Loan to value (LVR)</span>
+                                       <span class="pull-left" style="padding-left: 5px;">{{item.lvrdisplay | currency:"":1}}%</span>
+                                   </li>
+                               </ul>
+                               <ul class="list-inline">
+                                   <li style="width: 100% !important;">
+                                       <span>Loan amount &nbsp;<img src="images/blank.gif" class="flag flag-{{countryflag}}" alt="country flag"/>({{countrylabel}})</span>
+                                       <span  style="padding-left: 5px;" ng-if="!item.conv_loanamt"><span ng-if="!item.currencylabel">$</span>{{item.loanamt | currency:"":0}}</span>
+                                       <span  style="padding-left: 5px;"  ng-if="item.conv_loanamt"><span ng-if="!item.currencylabel">$</span>{{item.conv_loanamt | currency:"":0}}</span>
+                                   </li>
+                               </ul>
+                               <ul class="list-inline">
+                                   <li style="width: 100% !important;">
+                                       <span>Cash amount - {{item.cashpercent | currency:"":1}}%</span>
+                                       <span  style="padding-left: 5px;" ng-if="!item.conv_cashamt"><span ng-if="!item.currencylabel">$</span>{{item.cashamt | currency:"":0}}</span>
+                                       <span   style="padding-left: 5px;" ng-if="item.conv_cashamt"><span ng-if="!item.currencylabel">$</span>{{item.conv_cashamt | currency:"":0}}</span>
+                                   </li>
+                               </ul>
+                           </div>
+
+                       </div>
+                   </div>    
+                       
+                       
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,323 @@
+<html ng-app="landlordWebApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <title class="ng-binding"></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav.jpg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/custom2.css">
+	<link rel="stylesheet" type="text/css" href="css/nsPopover.css">
+	
+	
+ 	 <meta name="keywords" content="">
+ 	 <meta name="description" content="">
+ 
+  </head>
+  <body data-status="ready" data-twttr-rendered="true">
+  
+    <div class="container-fluid">
+    	<div class="row">
+    	<div class="waitprocess ng-hide" align="center" id="wait-payment-process" ng-show="loading">
+	  		<img src="images/payment_process.GIF" alt="CPx" ng-click="checkClicked4()">
+	   	</div>
+		<div header=""><div class="container-fluid logo-border">
+	<div class="row">
+		<div class="navbar navbar-default navbar-static-top header-bar"></div>
+		<div class="container pad-bot" style="padding-left: 0px; padding-right: 0px;">
+			<div class="navbar navbar-default navbar-static-top nomargin navbar-header mynavbar" style="width: 100%;">
+				<div class="navbar-inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+										<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+									</button>
+									<a class="fl-l" href="#!/" title="Home page"><img src="images/Logo.png" alt="CPx" class="logoscreen" ng-click="checkClicked4()"></a>
+
+								</div>
+								<div class="hidden-xs fl-l">
+									<ul class="nav navbar-nav nav pull-right nopadding">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+									</ul>
+								</div>
+								<div class="visible-xs collapse" collapse="!isCollapsed" style="height: 0px;">
+									<ul class="nav navbar-nav">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+		<!-- ngView:  --><div ng-view="" class="ng-scope"><div class="container-fluid cpxpage ng-scope">
+	<div class="row">
+		<div class="col-sm-12 col-xs-12 cpxbg" align="left">
+			<!-- ngIf: pid == 'list-property' -->
+			<!-- ngIf: pid == 'advertise-property' --><h1 class="fronthead container ng-scope" ng-if="pid == 'advertise-property'">Advertise your property now</h1><!-- end ngIf: pid == 'advertise-property' -->
+		</div>
+	</div>
+</div>
+
+<div class="container cpxcontent ng-scope">
+	<div class="row collapsedmenu visible-xs">
+		<div listpropertymenucollapsed=""><div class="navbar navbar-default navbar-static-top nomargin navbar-header ">
+
+	<div class="navbar-inner hiddenaboutmenu">
+		<div class="navbar-header ">
+
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+				<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-toggle pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">PROPERTIES</a>
+		</div>
+		<div class="visible-xs collapse" collapse="!isCollapsed" style="height: 0px;">
+			<ul class="nav nav-pills nav-stacked ">
+				<li ng-class="{'active':  aboutmenu[6].value}"><a ng-click="selectMenuItem({mnu:'list-property'}); isCollapsed = !isCollapsed" href="#!/list-your-property-on-cpx/list-property">List your property on CPx</a></li>
+				<li ng-class="{'active':  aboutmenu[7].value}" class="active"><a ng-click="selectMenuItem({mnu:'advertise-property'}); isCollapsed = !isCollapsed" href="#!/list-your-property-on-cpx/advertise-property">Advertise your property now</a></li>
+				<li><a ng-click="selectMenuItem({mnu:'mnucontactus'}); isCollapsed = !isCollapsed" href="#!/contact">Contact us for more information</a></li>
+				<li><a ng-click="isCollapsed = !isCollapsed" href="#!/blog/blogindex/subid">Blog</a></li>
+			</ul>
+		</div>
+	</div>
+</div></div>
+	</div>
+	<div class="row datacontainer">
+
+		
+		<div class="col-sm-8 col-xs-12 maincontent">
+			<!-- ngIf: pid == 'list-property' -->
+			<!-- ngIf: pid == 'advertise-property' --><!-- ngInclude: "views/advproperty.html" --><div ng-if="pid == 'advertise-property'" ng-include="&quot;views/advproperty.html&quot;" class="ng-scope"><span class="ng-scope">Coming soon...</span></div><!-- end ngIf: pid == 'advertise-property' -->
+		</div>
+		<div class="col-sm-4 col-xs-12  rightmenu">
+			<div listpropertymenu=""><div class="navbar navbar-default navbar-static-top nomargin navbar-header ">
+	<div class="navbar-inner">
+		<div class="hidden-xs">
+			<ul class="nav nav-pills nav-stacked pull-left nopadding">
+				<li class="disabled abouthead"><a>PROPERTIES</a></li>
+				<li ng-class="{'active': aboutmenu[6].value}"><a ng-click="selectMenuItem({mnu:'list-property'}); isCollapsed = !isCollapsed" href="#!/list-your-property-on-cpx/list-property">List your property on CPx</a></li>
+				<li ng-class="{'active': aboutmenu[7].value}" class="active"><a ng-click="selectMenuItem({mnu:'advertise-property'}); isCollapsed = !isCollapsed" href="#!/list-your-property-on-cpx/advertise-property">Advertise your property now</a></li>
+				<li><a ng-click="selectMenuItem({mnu:'mnucontactus'}); isCollapsed = !isCollapsed" href="#!/contact">Contact us for more information</a></li>
+				<li><a href="#!/blog/blogindex/subid">Blog</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+			<!-- <div class="col-sm-12 col-xs-12 input-group downloadbutton">
+				 <a href="docs/ListyourpropertyonCPxFactsheet.pdf" target="_blank" class="btn btn-primary btn-lg btn-block nopadding noborder" type="button">
+					<span class="input-group-addon " style="padding: 0px;">
+						<span class=" glyphicon glyphicon-arrow-down star-color pull-left"></span>
+				  		<span class="buttonheading pull-left">Download a factsheet</span>
+				  		<span class="input-group-addon top-span1 nopadding pull-right btn-pdf" aria-hidden="true"></span>
+				  	</span>
+				 </a>
+			</div> -->
+
+			  <!-- ngIf: pid == 'list-property' -->
+			  <!-- ngIf: pid == 'list-property' -->
+		</div>
+	</div>
+</div>
+		</div>
+		<div footer=""><div class="logo-border pad-bot"></div>
+        
+<div class="container">
+	<div class="row">
+      
+      <div class="col-md-8">
+       <div class="row">
+         
+		<div class="col-sm-4 col-xs-12">
+			<div class="pad-bot5">&nbsp;</div>
+			<div class="fbold">PROPERTIES</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedview();" href="#!/view-graded-properties" title="View graded properties">View graded properties</a>
+			</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedlist();" href="#!/list-your-property-on-cpx/list-property" title="List your property on CPx">List your property on CPx</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">REPORTS</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedorder();" href="#!/order-independent-reports" title="Order independent reports">Order independent reports</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">CPx MARKETPLACE</div>
+			<div>
+				<a class="footer-data inactive-a" href="#!/marketplace/find-industry-professionals" title="Find industry professionals">Find industry professionals</a>
+			</div>
+
+		</div>
+				<div class="col-sm-4 col-xs-12">
+					<div class=" pad-bot5">&nbsp;</div>
+					<div class=" fbold">ABOUT</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-cpx" title="What is CPx?">What is CPx?</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-process" title="Independent process">Independent process</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-property-review" title="Independent property review(ipr)">Independent property review
+							(ipr)</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-graded" title="What is graded?">What is graded?</a>
+					</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class=" fbold">LEGALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/privacy" title="Privacy">Privacy</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/terms-and-conditions" title="Terms &amp; conditions">Terms &amp; conditions</a>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12 ">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">BLOG</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/press-releases/subid" title="Press releases">Press releases</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/Publications/subid" title="Publications">Publications</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/cpx-announcements/subid" title="CPx announcements">CPx announcements</a>
+				</div>
+				<div class="">
+					<a class="footer-data inactive-a" href="#!/blog/FAQs/subid" title="Frequently Asked Questions">FAQs</a>
+				</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">INDUSTRY PROFESSIONALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/industry/working-with-cpx" title="Working with CPx">Working with CPx</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="http://graded.centralpropertyexchange.com.au/login?ReturnUrl=/" target="_blank" title="Business login">Business
+							login</a>
+					</div>
+
+				</div>
+        
+        </div></div>
+        
+		<div class="col-sm-4 col-xs-12 mailformcontainer">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">CONTACT</div>
+			<div>
+				<a ng-click="shownothing = true" href="#!/contact" class="footer-data inactive-a" title="Contact us">Online form</a>
+			</div>
+
+
+			<div>
+				<span class="footer-data inactive-a">Telephone: +61 2 8006
+					1979</span>
+			</div>
+			<div>
+
+				<span class="footer-data inactive-a">Mobile/cell: +61 410 510
+					997</span>
+
+			</div>
+			<div class=" footemail">
+				<a class="footer-data inactive-a" href="mailto:contact@centralpropertyexchange.com" title="Contact us via email">Email:
+					contact@centralpropertyexchange.com</a>
+			</div>
+          <div>&nbsp;</div>
+			
+   
+
+    
+     <div class="email-update">
+     <form action="//landlordcentral.us2.list-manage.com/subscribe/post?u=44d30abfcde67c3847612b5cb&amp;id=4583813c3e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate ng-pristine ng-valid ng-valid-email" target="_blank" novalidate="">
+      <div class="fbold updatetextpad">EMAIL UPDATES</div> 
+       <div>
+        <span class="footer-data inactive-a"><p class="registertext">Register your email to receive industry news and insights from CPx.</p></span>
+       </div>
+       	   	   
+        <div class="type-email clearfix">
+         <span class="pull-left"><input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Type your email address here" class="input-bg ng-pristine ng-untouched ng-valid ng-valid-email" ng-model="registrationForm.email"> </span>
+         <span class="pull-right"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="btn sub-btn" ng-click="resetform()"> </span>
+       </div>
+       <p class="bot-txt">You will be sent a verification email to activate your registration.</p>
+    </form>
+    </div>        
+            
+            
+		</div>
+ 
+  
+  
+  
+
+	</div>
+</div>
+
+		
+    <div class="bottom-line"></div></div>
+		</div>
+	</div>
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+	
+    <script src="js/jquery.1.11.2/jquery-1.11.2.min.js"></script>
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+	<script src="js/angularjs/1.3.10/angular.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-route.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-resource.min.js"></script>
+    
+	<!-- Our Website Javascripts -->
+	<script src="js/app/constants.js"></script>
+	<script src="js/app/main.js"></script>
+	<script src="js/app/controllers.js"></script>
+	<script src="js/app/directives.js"></script>
+	<script src="js/app/services.js"></script>
+	<script src="js/app/filters.js"></script>
+	
+	
+	
+	<!-- below needs to be loaded before angular-google-maps.min.js -->
+    <!-- Directives for bootstrap -->
+    <script src="js/thirdparty/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <!-- overloaded some code from  ui-bootstrap-tpls-0.12.0-->
+    <script src="js/thirdparty/overloaded-ui-bootstrap-tpls-0.12.0.js"></script>
+    <!-- Directives for tab menu -->
+    <script src="js/thirdparty/df-tab-menu.js"></script>
+	<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script><script src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/main.js"></script>
+	<script src="js/thirdparty/lodash.min.js"></script>
+	<script src="js/thirdparty/angular-google-maps.min.js"></script>
+	<script src="js/thirdparty/angular-filter.js"></script>
+	
+	<script src="js/thirdparty/decimal-places.js"></script>
+	<script src="js/thirdparty/open-exchange-rates.js"></script>
+	<script src="js/thirdparty/angular-sanitize.js"></script>
+	<script src="js/thirdparty/ng-map.min.js"></script>
+	<script src="js/thirdparty/Chart.js"></script>
+	<script src="js/thirdparty/angular-chart.js"></script>
+	<script src="js/thirdparty/nsPopover.js"></script>
+	
+	  <script src="http://platform.twitter.com/widgets.js"></script>
+	  <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true"></script>
+	
+  
+</body></html>

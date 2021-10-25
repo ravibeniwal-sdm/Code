@@ -1,0 +1,18 @@
+{
+  		 "HEADLINE": "Was für ein großartiges Modul!",
+		  "PARAGRAPH": "Ernsthaft!",
+		  "PASSED_AS_TEXT": "Hey! Ich wurde als text übergeben!",
+		  "PASSED_AS_ATTRIBUTE": "Ich wurde als Attribut übergeben, cool oder?",
+		  "PASSED_AS_INTERPOLATION": "Anfänger! Ich bin interpoliert!",
+		  "VARIABLE_REPLACEMENT": "Hi {{name}}",
+		  
+		  "BUTTON_LANG_DE": "deutsch",
+		  "BUTTON_LANG_EN": "englisch",
+		   "TOP_LINE" : "Alle Objekte werden unabhängig überprüft und durch abgestufte",
+		   "WHAT_IS_IPR" : "Was ist ein ipr , Besoldungsgruppe und Score ?",
+		   "WHAT_IS_LISTED_PRICE" : "Was ist Preis, CPx Preis und Speichern enthalten sind?",
+		   "SUBMIT_PROPERTY_REQUEST_BTN" :"Immobilie Anfrage absch",
+		   "VIEW_SHORLIST_BTN" : "Meine Liste",
+		   "ENQUIRE_BTN" : "anfragen",
+           "SERVICE_REQUEST_BTN" : "Service request"            
+		}

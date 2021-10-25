@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<!-- <title>Central property exchange</title> -->
+    <title ng-bind="title">Central Property Exchange </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav.jpg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" media="screen,print" href="css/bootstrap-3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.5.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/custom.css" /> 
+	<!-- <link rel="stylesheet" type="text/css" href="css/customone.min.css" />  -->
+	
+  </head>
+  <body ng-app="landlordWebApp" class="">
+  
+    <div class="container-fluid printdetail">
+    	<div class="row">
+			 <div ng-controller="printCtrl">
+			
+				<title>CPx-Propertyid-{{currentproperty.id}}</title>
+				<!-- <div class="container-fluid cpxpage  visible-print">
+					<div class="row printbg">
+						<div class="container" align="left">
+							<h1 class="fronthead " >{{currentproperty.address[0].StreetNumber}} {{currentproperty.address[0].street}}, {{currentproperty.address[0].suburb}}, {{currentproperty.address[0].city}} {{currentproperty.address[0].state}} {{currentproperty.address[0].postcode}}</h1>
+						</div>
+					</div>
+				</div> -->
+				<div class="container-fluid detailheader">
+					<div class="container cpxpage printdetail">
+						<div class="row printbg">
+							<div class="container" align="left">
+								<!-- <h1 class="fronthead " >{{currentproperty.address[0].LotNumber}} {{currentproperty.address[0].StreetNumber}} {{currentproperty.address[0].street}}, {{currentproperty.address[0].suburb.text}}, {{currentproperty.address[0].city}} {{currentproperty.address[0].state}} {{currentproperty.address[0].postcode}}</h1> -->
+								<h1 class="fronthead">{{currentproperty.address[0].LotNumber}} {{currentproperty.address[0].subNumber}}<span ng-if="currentproperty.address[0].subNumber != null && currentproperty.address[0].StreetNumber != ''" style="color:white !important;">/{{currentproperty.address[0].StreetNumber}}</span><span ng-if="currentproperty.address[0].subNumber == null" style="color:white;"> {{currentproperty.address[0].StreetNumber}}</span> {{currentproperty.address[0].street}}, {{currentproperty.address[0].suburb.text}}, {{currentproperty.address[0].city}} {{currentproperty.address[0].state}} {{currentproperty.address[0].postcode}}</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="container printcontainer " >
+					<div class="row printcontent visible-print">
+						<div class="col-xs-8">
+							<img ng-src="{{currentproperty.images[0].url}}" class="img-responsive" style="width: 100%; max-height: 270px;">
+						</div>
+						<div class="col-xs-4">
+								<div class="panel panel-default panel-view noborder" ng-show="teststatus!=0" id="prop-panel">
+								  <div class="panel-heading panel-new panel-view " ng-show="teststatus==2">This property has been independently reviewed and graded by <a href="http://propell.com.au" target="_blank" class="inactive-a">Propell National Valuers</a></div>
+								  <div class="panel-heading panel-new panel-view " ng-show="teststatus==1">This property is currently being independently reviewed and graded by <a href="http://propell.com.au" target="_blank" class="inactive-a">Propell National Valuers</a></div>
+								  <div class="panel-body panel-body-back  panel-view">
+									<div ng-show="currentproperty.name != ''" class="col-xs-12 fbold">
+										<div class="row">
+										Property name
+										</div>
+									</div>
+									<div ng-show="currentproperty.name != ''" class="col-xs-12 botm-space6">
+										<div class="row">
+											{{currentproperty.name}}
+										</div>	
+									</div>
+									
+									<div class="col-xs-12 botm-space6">
+										<div class="row">
+											<div class="col-xs-7 fbold">
+												<div class="row">Property id</div>
+											</div>
+											<div class="col-xs-5">
+												<div class="row">{{currentproperty.id}}</div>
+											</div>
+										</div>	
+									</div>
+									
+									<div class="col-xs-12  botm-space6">
+										<div class="row">
+											<div class="col-xs-7 fbold">
+												<div class="row">Property type</div>
+											</div>
+											<div class="col-xs-5">
+												<div class="row">{{currentproperty.category}}</div>
+											</div>
+										</div>	
+									</div>
+									
+									<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-7 fbold">
+										<div class="row">
+											Listed price (AUD) 
+										</div>
+										</div>
+										<div class="col-xs-5">
+										<div class="row">
+										{{currentproperty.listedprice | currency:"$":0}}
+										</div>
+										</div>
+									</div>	
+									</div>
+									<div class="col-xs-12" ng-if="currentproperty.saving != 0">
+									<div class="row">
+										<div class="col-xs-7 fbold">
+										<div class="row">
+										CPx price (AUD) 
+										</div>
+										</div>
+										<div class="col-xs-5 fbold">
+										<div class="row">
+										{{currentproperty.cpxprice | currency:"$":0}}
+										</div>
+										</div>
+									</div>	
+									</div>
+									<div class="col-xs-12 botm-space6" ng-if="currentproperty.saving != 0">
+										<div class="row">
+										<div class="col-xs-7 fbold">
+										<div class="row">
+										Saving (AUD) 
+										</div>
+										</div>
+										<div class="col-xs-5">
+										<div class="row">
+										{{currentproperty.saving | currency:"$":0}}
+										</div>
+										</div>
+										</div>	
+									</div>
+									
+									
+									
+									<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-7 fbold">
+										<div class="row">
+										Beds
+										</div>
+										</div>
+										<div class="col-xs-5">
+										<div class="row">
+										{{currentproperty.beds}}
+										</div>
+										</div>
+									</div>	
+									</div>
+									<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-7 fbold">
+										<div class="row">
+										Bath
+										</div>
+										</div>
+										<div class="col-xs-5">
+										<div class="row">
+										{{currentproperty.bath}}
+										</div>
+										</div>
+										</div>
+									</div>
+									<div class="col-xs-12  botm-space6">
+									<div class="row">
+										<div class="col-xs-7  fbold">
+										<div class="row">
+										Car
+										</div>
+										</div>
+										<div class="col-xs-5 ">
+										<div class="row">
+										{{currentproperty.cars}}
+										</div>
+										</div>
+										</div>
+									</div>
+									
+									<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-7  fbold">
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'yes'">
+										House size (m2)
+										</div>
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'no'">
+										Internal size (m2)
+										</div>
+										</div>
+										<div class="col-xs-5  ">
+										<div class="row" ng-if="!(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0)">
+										{{currentproperty.buildingarea}}
+										</div>
+										<div class="row" ng-if="(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0)">
+										To be confirmed
+										</div>
+										</div>
+										</div>
+									</div>
+									<div class="col-xs-12  botm-space6">
+									<div class="row">
+										<div class="col-xs-7  fbold">
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'yes'">
+										Land size (m2)
+										</div>
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'no'">
+										External size (m2)
+										</div>
+										</div>
+										<div class="col-xs-5 ">
+										<div class="row" ng-if="!(currentproperty.landarea == 'na' || currentproperty.landarea == 0)">
+										{{currentproperty.landarea}}
+										</div>
+										<div class="row" ng-if="(currentproperty.landarea == 'na' || currentproperty.landarea == 0)">
+										To be confirmed
+										</div>
+										
+										</div>
+										</div>
+									</div>
+									
+									<div class="col-xs-12  botm-space6">
+									<div class="row">
+										<div class="col-xs-7 fbold">
+										<div class="row">
+										Market rent/lease
+										</div>
+										</div>
+										<div class="col-xs-5 ">
+										<div class="row">
+										{{currentproperty.marketrent | currency:"$":0}} per week
+										</div>
+										</div>
+										</div>
+									</div>
+									
+									
+							<!--		
+									<div class="col-sm-12 col-xs-12  fbold">
+									<div class="row">
+									Market rent/lease
+									</div>
+									</div>
+			
+									<div class="col-sm-12  botm-space6"><div class="row">$450 per week</div></div>
+									
+							  		<div class="col-sm-12  fbold"><div class="row">Estimated construction completion date</div></div>
+									<div class="col-sm-12  "><div class="row">{{currentproperty.constructionend}}</div></div> -->
+								  </div>
+								  
+								</div>
+								
+								<div class="panel panel-default panel-view noborder" ng-show="teststatus==0" id="prop-panel">
+								  
+								  <div ng-show="teststatus==0" class="col-sm-12 nopadding" style="text-align:right">
+										<!-- <span class="nopadding nomargin"><b>Offer from</b></span> -->
+										<span  ng-if="currentproperty.viewprice.length != 0" class="nopadding nomargin"> {{currentproperty.viewprice }}</span>
+										<span  ng-if="currentproperty.viewprice.length == 0" class="nopadding nomargin"> {{currentproperty.listedprice | currency:"$":0}}</span> 
+										<!-- <span  class="nopadding nomargin head1"> {{currentproperty.listedprice | currency:"$":0}}</span> -->
+									</div>
+								  
+								  <div class="panel-heading panel-new panel-view ">This property has NOT been graded </div>
+								  <div class="panel-body panel-body-back  panel-view">
+									
+									
+									<div class="col-xs-12 botm-space6">
+										<div class="row">
+											<div class="col-xs-7 fbold">
+												<div class="row">Property id</div>
+											</div>
+											<div class="col-xs-5">
+												<div class="row">{{currentproperty.id}}</div>
+											</div>
+										</div>	
+									</div>
+									
+									<div class="col-xs-12  botm-space6">
+										<div class="row">
+											<div class="col-xs-7 fbold">
+												<div class="row">Property type</div>
+											</div>
+											<div class="col-xs-5">
+												<div class="row">{{currentproperty.category}}</div>
+											</div>
+										</div>	
+									</div>
+									
+									
+									
+									
+									
+									
+									
+									<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-7 fbold">
+										<div class="row">
+										Beds
+										</div>
+										</div>
+										<div class="col-xs-5">
+										<div class="row">
+										{{currentproperty.beds}}
+										</div>
+										</div>
+									</div>	
+									</div>
+									<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-7 fbold">
+										<div class="row">
+										Bath
+										</div>
+										</div>
+										<div class="col-xs-5">
+										<div class="row">
+										{{currentproperty.bath}}
+										</div>
+										</div>
+										</div>
+									</div>
+									<div class="col-xs-12  botm-space6">
+									<div class="row">
+										<div class="col-xs-7  fbold">
+										<div class="row">
+										Car
+										</div>
+										</div>
+										<div class="col-xs-5 ">
+										<div class="row">
+										{{currentproperty.cars}}
+										</div>
+										</div>
+										</div>
+									</div>
+									
+									<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-7  fbold">
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'yes'">
+										House size (m2)
+										</div>
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'no'">
+										Internal size (m2)
+										</div>
+										</div>
+										<div class="col-xs-5  ">
+										<div class="row" ng-if="!(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0)">
+										{{currentproperty.buildingarea}}
+										</div>
+										<div class="row" ng-if="(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0)">
+										To be confirmed
+										</div>
+										</div>
+										</div>
+									</div>
+									<div class="col-xs-12  botm-space6">
+									<div class="row">
+										<div class="col-xs-7  fbold">
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'yes'">
+										Land size (m2)
+										</div>
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'no'">
+										External size (m2)
+										</div>
+										</div>
+										<div class="col-xs-5 ">
+										<div class="row" ng-if="!(currentproperty.landarea == 'na' || currentproperty.landarea == 0)">
+										{{currentproperty.landarea}}
+										</div>
+										<div class="row" ng-if="(currentproperty.landarea == 'na' || currentproperty.landarea == 0)">
+										To be confirmed
+										</div>
+										
+										</div>
+										</div>
+									</div>
+									
+									
+									
+									
+								</div>
+								  
+								</div>
+								
+								
+							</div>
+					</div>
+					
+					
+					<div class="row printcontent hidden-print">
+						<div class="col-sm-8 col-xs-12">
+							<img ng-src="{{currentproperty.images[0].url}}" class="img-responsive" style="width: 100%; max-height: 330px;">
+						</div>
+						<div class="col-sm-4 col-xs-12">
+								<div class="panel panel-default panel-view noborder" ng-show="teststatus!=0"  id="prop-panel">
+								  <div class="panel-heading panel-new panel-view" ng-show="teststatus==2">This property has been independently reviewed and graded by <a href="http://propell.com.au" target="_blank" class="inactive-a">Propell National Valuers</a></div>
+								  <div class="panel-heading panel-new panel-view" ng-show="teststatus==1">This property is currently being independently reviewed and graded by <a href="http://propell.com.au" target="_blank" class="inactive-a">Propell National Valuers</a></div>
+								  <div class="panel-body panel-body-back  panel-view">
+									<div ng-show="currentproperty.name != ''" class="col-sm-12 col-xs-12 fbold">
+										<div class="row">
+										Property name
+										</div>
+									</div>
+									<div ng-show="currentproperty.name != ''" class="col-sm-12 col-xs-12 botm-space6">
+										<div class="row">
+											{{currentproperty.name}}
+										</div>	
+									</div>
+									
+									<div class="col-sm-12 col-xs-12 botm-space6">
+										<div class="row">
+											<div class="col-sm-7 col-xs-12 fbold">
+												<div class="row">Property id</div>
+											</div>
+											<div class="col-sm-5 col-xs-12">
+												<div class="row">{{currentproperty.id}}</div>
+											</div>
+										</div>	
+									</div>
+									
+									<div class="col-sm-12 col-xs-12 botm-space6">
+										<div class="row">
+											<div class="col-sm-7 col-xs-12 fbold">
+												<div class="row">Property type</div>
+											</div>
+											<div class="col-sm-5 col-xs-12">
+												<div class="row">{{currentproperty.category}}</div>
+											</div>
+										</div>	
+									</div>
+									
+									
+									
+									
+									<div class="col-sm-12 col-xs-12">
+									<div class="row">
+										<div class="col-sm-7 col-xs-12 fbold">
+										<div class="row">
+											Listed price (AUD) 
+										</div>
+										</div>
+										<div class="col-sm-5 col-xs-12">
+										<div class="row">
+										{{currentproperty.listedprice | currency:"$":0}}
+										</div>
+										</div>
+									</div>	
+									</div>
+									<div class="col-sm-12" ng-if="currentproperty.saving != 0">
+									<div class="row">
+										<div class="col-sm-7 col-xs-12 fbold">
+										<div class="row">
+										CPx price (AUD) 
+										</div>
+										</div>
+										<div class="col-sm-5 col-xs-12 fbold">
+										<div class="row">
+										{{currentproperty.cpxprice | currency:"$":0}}
+										</div>
+										</div>
+									</div>	
+									</div>
+									<div class="col-sm-12 botm-space6" ng-if="currentproperty.saving != 0">
+										<div class="row">
+										<div class="col-sm-7 col-xs-12 fbold">
+										<div class="row">
+										Saving (AUD) 
+										</div>
+										</div>
+										<div class="col-sm-5 col-xs-12">
+										<div class="row">
+										{{currentproperty.saving | currency:"$":0}}
+										</div>
+										</div>
+										</div>	
+									</div>
+									
+									
+									
+									<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-7 col-xs-12 fbold">
+										<div class="row">
+										Beds
+										</div>
+										</div>
+										<div class="col-sm-5 col-xs-12">
+										<div class="row">
+										{{currentproperty.beds}}
+										</div>
+										</div>
+									</div>	
+									</div>
+									<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-7 col-xs-12 fbold">
+										<div class="row">
+										Bath
+										</div>
+										</div>
+										<div class="col-sm-5 col-xs-12">
+										<div class="row">
+										{{currentproperty.bath}}
+										</div>
+										</div>
+										</div>
+									</div>
+									<div class="col-sm-12  botm-space6">
+									<div class="row">
+										<div class="col-sm-7 col-xs-12  fbold">
+										<div class="row">
+										Car
+										</div>
+										</div>
+										<div class="col-sm-5 col-xs-12 ">
+										<div class="row">
+										{{currentproperty.cars}}
+										</div>
+										</div>
+										</div>
+									</div>
+									
+									<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-7 col-xs-12  fbold">
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'yes'">
+										House size (m2)
+										</div>
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'no'">
+										Internal size (m2)
+										</div>
+										</div>
+										<div class="col-sm-5 col-xs-12  ">
+										<div class="row" ng-if="!(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0)">
+										{{currentproperty.buildingarea}}
+										</div>
+										<div class="row" ng-if="(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0)">
+										To be confirmed
+										</div>
+										</div>
+										</div>
+									</div>
+									<div class="col-sm-12  botm-space6">
+									<div class="row">
+										<div class="col-sm-7 col-xs-12  fbold">
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'yes'">
+										Land size (m2)
+										</div>
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'no'">
+										External size (m2)
+										</div>
+										</div>
+										<div class="col-sm-5 col-xs-12 ">
+										<div class="row" ng-if="!(currentproperty.landarea == 'na' || currentproperty.landarea == 0)">
+										{{currentproperty.landarea}}
+										</div>
+										<div class="row" ng-if="(currentproperty.landarea == 'na' || currentproperty.landarea == 0)">
+										To be confirmed
+										</div>
+										</div>
+										</div>
+									</div>
+									
+									<div class="col-sm-12  botm-space6">
+									<div class="row">
+										<div class="col-sm-7 col-xs-12 fbold">
+										<div class="row">
+										Market rent/lease
+										</div>
+										</div>
+										<div class="col-sm-5 col-xs-12 ">
+										<div class="row">
+										{{currentproperty.marketrent |currency:"$":0}} per week
+										</div>
+										</div>
+										</div>
+									</div>
+									
+									
+							<!--		
+									<div class="col-sm-12 col-xs-12  fbold">
+									<div class="row">
+									Market rent/lease
+									</div>
+									</div>
+			
+									<div class="col-sm-12  botm-space6"><div class="row">$450 per week</div></div>
+									
+							  		<div class="col-sm-12  fbold"><div class="row">Estimated construction completion date</div></div>
+									<div class="col-sm-12  "><div class="row">{{currentproperty.constructionend}}</div></div> -->
+								  </div>
+								  
+								</div>
+								
+								
+								
+								<div class="panel panel-default panel-view noborder" ng-show="teststatus==0" id="prop-panel">
+								  <div ng-show="teststatus==0" class=" head1" style="text-align:right">
+										<!-- <span class="nopadding nomargin"><b>Offer from</b></span> -->
+										<span  ng-if="currentproperty.viewprice.length != 0" class="nopadding nomargin"> {{currentproperty.viewprice }}</span>
+										<span  ng-if="currentproperty.viewprice.length == 0" class="nopadding nomargin"> {{currentproperty.listedprice | currency:"$":0}}</span> 
+										<!-- <span  class="nopadding nomargin head1"> {{currentproperty.listedprice | currency:"$":0}}</span> -->
+								</div>
+								  <div class="panel-heading panel-new panel-view ">This property has NOT been graded </div>
+								  <div class="panel-body panel-body-back  panel-view">
+									
+									
+									<div class="col-xs-12 botm-space6">
+										<div class="row">
+											<div class="col-xs-7 fbold">
+												<div class="row">Property id</div>
+											</div>
+											<div class="col-xs-5">
+												<div class="row">{{currentproperty.id}}</div>
+											</div>
+										</div>	
+									</div>
+									
+									<div class="col-xs-12  botm-space6">
+										<div class="row">
+											<div class="col-xs-7 fbold">
+												<div class="row">Property type</div>
+											</div>
+											<div class="col-xs-5">
+												<div class="row">{{currentproperty.category}}</div>
+											</div>
+										</div>	
+									</div>
+									
+									
+									
+									
+									
+									
+									
+									<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-7 fbold">
+										<div class="row">
+										Beds
+										</div>
+										</div>
+										<div class="col-xs-5">
+										<div class="row">
+										{{currentproperty.beds}}
+										</div>
+										</div>
+									</div>	
+									</div>
+									<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-7 fbold">
+										<div class="row">
+										Bath
+										</div>
+										</div>
+										<div class="col-xs-5">
+										<div class="row">
+										{{currentproperty.bath}}
+										</div>
+										</div>
+										</div>
+									</div>
+									<div class="col-xs-12  botm-space6">
+									<div class="row">
+										<div class="col-xs-7  fbold">
+										<div class="row">
+										Car
+										</div>
+										</div>
+										<div class="col-xs-5 ">
+										<div class="row">
+										{{currentproperty.cars}}
+										</div>
+										</div>
+										</div>
+									</div>
+									
+									<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-7  fbold">
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'yes'">
+										House size (m2)
+										</div>
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'no'">
+										Internal size (m2)
+										</div>
+										</div>
+										<div class="col-xs-5  ">
+										<div class="row" ng-if="!(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0)">
+										{{currentproperty.buildingarea}}
+										</div>
+										<div class="row" ng-if="(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0)">
+										To be confirmed
+										</div>
+										</div>
+										</div>
+									</div>
+									<div class="col-xs-12  botm-space6">
+									<div class="row">
+										<div class="col-xs-7  fbold">
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'yes'">
+										Land size (m2)
+										</div>
+										<div class="row" ng-if="currentproperty.IsHouseLandPackage == 'no'">
+										External size (m2)
+										</div>
+										</div>
+										<div class="col-xs-5 ">
+										<div class="row" ng-if="!(currentproperty.landarea == 'na' || currentproperty.landarea == 0)">
+										{{currentproperty.landarea}}
+										</div>
+										<div class="row" ng-if="(currentproperty.landarea == 'na' || currentproperty.landarea == 0)">
+										To be confirmed
+										</div>
+										
+										</div>
+										</div>
+									</div>
+									
+									
+									
+									
+								</div>
+								  
+								</div>
+								
+								
+								
+								
+							</div>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="row visible-print" ng-show="currentproperty.ipr && currentproperty.ipr.length>0" style="display:flex;">
+						<div class="col-xs-6">
+								<div class="col-xs-12 nopadding ">
+									<h3 class="gradehead">PROPERTY GRADE</h3>
+								</div>
+								
+						</div>
+						
+						<div class="col-xs-6">
+							<propertydetailgrade item="currentproperty"></propertydetailgrade>
+						</div>
+					</div>
+					
+					<div class="col-xs-12 nopadding visible-print" ng-show="currentproperty.ipr && currentproperty.ipr.length>0">
+						<gradetable grades="currentproperty.ipr[0].propertyGrade" gradevalues="gradevalues"></gradetable>
+					</div>
+					
+					
+					
+					<div class="row hidden-print" ng-show="currentproperty.ipr && currentproperty.ipr.length>0">
+						<div class="col-sm-7 col-xs-12">
+								<div class="col-sm-7 col-sm-12 nopadding ">
+									<h3>PROPERTY GRADE</h3>
+								</div>
+						</div>
+						<div class="col-sm-5 col-xs-12">
+							<propertydetailgrade item="currentproperty"></propertydetailgrade>
+						</div>
+					</div>
+					
+					<div class="col-sm-12 nopadding hidden-print" ng-show="currentproperty.ipr && currentproperty.ipr.length>0">
+						<gradetable grades="currentproperty.ipr[0].propertyGrade" gradevalues="gradevalues"></gradetable>
+					</div>
+  	
+ 					
+					 <!-- <div class="col-xs-12 print-map hidden-print" >
+					  <div class="row" >
+							
+							<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+						        <ui-gmap-marker coords="marker.coords" options="marker.options"  idkey="marker.id">
+						        </ui-gmap-marker>
+						    </ui-gmap-google-map>
+							
+					  </div> /row
+					</div>  -->
+					
+					<!-- <div class="col-xs-12" style="width : 800px !important; margin-top:20px; text-align:center;border:1px solid #000;overflow:visible;"> -->
+					<div class="col-xs-12 hidden-print" style= "overflow:visible; margin:10px auto 0px auto;">
+					  <div class="row" >
+							
+							<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" style="">
+						        <ui-gmap-marker coords="marker.coords" options="marker.options"  idkey="marker.id">
+						        </ui-gmap-marker>
+						    </ui-gmap-google-map>
+							
+					  </div> <!-- /row -->
+					</div>
+					<div class="col-xs-12 mymapview" style= "width :660px !important; text-align:center;overflow:hidden; margin:10px auto 0px auto;">
+					  <div class="row" >
+							
+							<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" style="">
+						        <ui-gmap-marker coords="marker.coords" options="marker.options"  idkey="marker.id">
+						        </ui-gmap-marker>
+						    </ui-gmap-google-map>
+							
+					  </div> <!-- /row -->
+					</div> 
+					
+					<!-- <div class="col-xs-12 print-map visible-print" style="width:800px !important;height:300px !important;">
+					  <div class="row">
+							
+							<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+						        <ui-gmap-marker coords="marker.coords" options="marker.options"  idkey="marker.id">
+						        </ui-gmap-marker>
+						    </ui-gmap-google-map>
+							
+					  </div> 
+					</div>  -->
+					
+					
+					
+					
+						<div class="col-xs-12 nopadding userrule visible-print" style="margin-top:20px;">
+							 	<b>User rules</b>
+								<ul>
+									<li>
+										This Property Brochure [PB] has been created by accessing a range of information from trusted sources. CPx does not guarantee
+										the accuracy of the information contained in the PB, and recommend that readers continue to make their own investigations.
+										The information is a guide to you, and you should not rely solely on the contents of the PB when making any investment decisions.
+									</li>
+									<li>
+										The information is the copyright of CPx and should not be copied or reproduced without the written consent of CPx. It is a
+										breach for any person or corporation to use the information in the PB for commercial purpose including the sale of part or all
+										the information contained in the PB. A breach of this user rule provides to CPx or any of its suppliers a cause of action in copyright.
+									</li>
+									<li>
+										The user agrees to not hold liable either CPx or any of its third party suppliers for any loss, claim as a result of a decision of the 
+										user or any other person they give the PB to. 
+									</li>
+								</ul>
+							
+						</div>
+						<div class="col-xs-12 nopadding printfooter visible-print">
+							<div class="col-xs-6 nopadding footertext">CentralPropertyExchange.com.au [CPx]</div>
+							<div class="col-xs-6 nopadding footerimg" align="right">
+								<a class="fl-r" href="#!/"><img src="images/Logo.png"
+											alt="CPx" class="logoscreen" ng-click="checkClicked4()"></a>
+							</div>
+						</div>
+						
+						
+						
+						<div class="col-sm-12 nopadding userrule hidden-print">
+							 	<b>User rules</b>
+								<ul>
+									<li>
+										This Property Brochure [PB] has been created by accessing a range of information from trusted sources. CPx does not guarantee
+										the accuracy of the information contained in the PB, and recommend that readers continue to make their own investigations.
+										The information is a guide to you, and you should not rely solely on the contents of the PB when making any investment decisions.
+									</li>
+									<li>
+										The information is the copyright of CPx and should not be copied or reproduced without the written consent of CPx. It is a
+										breach for any person or corporation to use the information in the PB for commercial purpose including the sale of part or all
+										the information contained in the PB. A breach of this user rule provides to CPx or any of its suppliers a cause of action in copyright.
+									</li>
+									<li>
+										The user agrees to not hold liable either CPx or any of its third party suppliers for any loss, claim as a result of a decision of the 
+										user or any other person they give the PB to. 
+									</li>
+								</ul>
+							
+						</div>
+						<div class="col-sm-12 nopadding printfooter hidden-print">
+							<div class="col-sm-6 col-xs-12 nopadding footertext">CentralPropertyExchange.com.au [CPx]</div>
+							<div class="col-sm-6 col-xs-12 nopadding footerimg" align="right">
+								<a class="fl-r" href="#!/"><img src="images/Logo.png"
+											alt="CPx" class="logoscreen" ng-click="checkClicked4()"></a>
+							</div>
+						</div>
+					
+					
+					
+					
+					
+				</div>
+				
+				
+				
+				
+				
+			</div>
+		</div>
+	</div>
+	
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+	
+    <script src="js/jquery.1.11.2/jquery-1.11.2.min.js"></script>
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+	<script src="js/angularjs/1.3.10/angular.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-route.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-resource.min.js"></script>
+    
+	<!-- Our Website Javascripts -->
+	<script src="js/app/constants.js"></script>
+	<script src="js/app/main.js"></script>
+	<!-- <script src="js/app/controllers.js"></script> -->
+	<script src="js/app/directives.js"></script>
+	<script src="js/app/services.js"></script>
+	<script src="js/app/filters.js"></script> 
+	 
+	 
+	<!-- <script src="js/app/Controllers/allone.min.js"></script>  -->
+	
+	
+	
+	<script src="js/app/Controllers/DetailsController.js"></script>
+	<script src="js/app/Controllers/HomePageController.js"></script>
+	<script src="js/app/Controllers/PropertiesController.js"></script>
+	<script src="js/app/Controllers/ModalInstanceController.js"></script>
+	<script src="js/app/Controllers/ModalMailController.js"></script>
+	<script src="js/app/Controllers/FaqMailController.js"></script>
+	<script src="js/app/Controllers/AboutController.js"></script>
+	<script src="js/app/Controllers/OrderController.js"></script>
+	<script src="js/app/Controllers/ListController.js"></script>
+	<script src="js/app/Controllers/ErrorPageController.js"></script>
+	<script src="js/app/Controllers/ContactsController.js"></script>
+	<script src="js/app/Controllers/ShortlistController.js"></script>
+	<script src="js/app/Controllers/DefaultController.js"></script>
+	<script src="js/app/Controllers/FbController.js"></script>
+	<script src="js/app/Controllers/PrintController.js"></script>
+	<script src="js/app/Controllers/ProductileController.js"></script>
+	<script src="js/app/Controllers/CurrencyController.js"></script>
+	<script src="js/app/Controllers/EnquiryFormsController.js"></script>
+	<script src="js/app/Controllers/LogoSlideController.js"></script>  
+	
+	
+	<script src="js/app/Controllers/admin-list-property.js"></script> 
+	
+	<!-- below needs to be loaded before angular-google-maps.min.js -->
+    <!-- Directives for bootstrap -->
+    <script src="js/thirdparty/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <!-- overloaded some code from  ui-bootstrap-tpls-0.12.0-->
+    <script src="js/thirdparty/overloaded-ui-bootstrap-tpls-0.12.0.js"></script>
+    <!-- Directives for tab menu -->
+    <script src="js/thirdparty/df-tab-menu.js"></script>
+	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+	<script src='js/thirdparty/lodash.min.js'></script>
+	<script src='js/thirdparty/angular-google-maps.min.js'></script>
+	<script src='js/thirdparty/angular-filter.js'></script>
+	
+	<script src="js/thirdparty/ng-map.min.js"></script>
+	<script src='js/thirdparty/decimal-places.js'></script>
+	<script src='js/thirdparty/open-exchange-rates.js'></script>
+	<script src='js/thirdparty/angular-sanitize.js'></script>
+	
+	<script src='js/thirdparty/Chart.js'></script>
+	<script src="js/thirdparty/angular-chart.js"></script>
+	<script src="js/thirdparty/nsPopover.js"></script>
+	
+	<script type="text/javascript" src="js/thirdparty/jquery.flexisel.js"></script>	
+	
+	
+	<script src='js/thirdparty/angular-translate.js'></script>
+	<script src='js/thirdparty/angular-translate-loader-url.js'></script>
+	<script src='js/thirdparty/angular-translate-loader-static-files.js'></script>
+	
+	<script src='js/thirdparty/ui-bootstrap-tpls-0.13.3.js'></script>
+	
+	<script src="js/thirdparty/angular-file-upload.min.js"></script>
+	
+	 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+	  <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+		  <script src="https://www.google.com/recaptcha/api.js"></script>
+	  <script src='js/thirdparty/angulartics-google-analytics.min.js'></script>
+	 <script src='js/thirdparty/angulartics.min.js'></script>
+	 
+	 <script src="js/lib/pdf.js"></script>
+	<script src="js/thirdparty/angular-pdf.js"></script>
+	 
+	 
+	  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65727956-1', 'none');
+ 	
+</script>
+	 <script src="js/thirdparty/angular-recaptcha.js"></script>  
+	  
+	 <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+	
+	  <script src="http://platform.twitter.com/widgets.js"></script>
+	  <script src="https://apis.google.com/js/platform.js" async defer></script>
+	
+  </body>
+</html>

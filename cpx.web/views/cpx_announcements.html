@@ -1,0 +1,379 @@
+<script type="text/ng-template" id="mymailcontent.html">
+      
+  <div class="modal-body sharemailbody">                       
+       <form name="myForm">
+     <label class="title" for="yourname">Email to a friend</label><br>
+			
+            <div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your email<i class="required-text asterisk">*</i></label>
+				   <input type="text" class="form-control" ng-model="sharemail.youremail" ng-required='!sharemail.youremail'/>
+				</div>
+			</div>
+
+
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">To email<i class="required-text asterisk">*</i></label>
+				   <input type="email" class="form-control" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" ng-model="sharemail.toemail" ng-required='!sharemail.toemail'/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Subject</label>
+				   <input type="text" class="form-control" ng-init="sharemail.subject = subject" ng-model="sharemail.subject"/>
+				</div>
+			</div>
+			<div class="contactinput" style="display:none;">
+				<div class="form-group">
+					<input type="text" class="form-control" ng-init="sharemail.from = 'announcement'" ng-model="sharemail.from"/>
+					<input type="text" class="form-control" ng-init="sharemail.absurl = absurl" ng-model="sharemail.absurl"/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your message</label>
+				 <textarea class="form-control" style="width:100%; height: 170px;" ng-init="sharemail.message = txtmsg" ng-model="sharemail.message"></textarea>
+			<br>				
+			This email was sent by:&nbsp;<span style="font-size: 12px" ng-bind="sharemail.youremail"></span>
+			</div>
+			</div>
+
+<div class="modal-footer sharemail">
+			<div class="col-sm-2 nopadding">
+				<button type="submit" class="btn btn-default btn-lg btn-block" ng-click='(!(sharemail.toemail && sharemail.youremail))?" ":sendEmail();'>SEND</button>
+			</div>
+
+            <button class="btncancle btn-warning btn-lg" ng-click="cancel()">Cancel</button>
+		</div>	
+			
+			
+			</form>
+</div>
+    	</script>
+
+<div class="static-content">
+<accordion class="static-accordian pressaccordian">
+
+	<!-- For 4rd accordian  -->
+	
+	<a id="four"></a>
+	<accordion-group is-open="cpxanoustatus[3].value" >
+	
+        <accordion-heading >
+        				<div class="row">
+	  						<p class="texthead">
+  							<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !cpxanoustatus[3].value, 'glyphicon glyphicon-minus': cpxanoustatus[3].value}"></i>
+	  						Refined CPx Business Model Offers FREE LISTING<br/>
+	  						</p>
+	  						<p class="datehead">7 Jan 2016</p>
+	  					</div>
+  						
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('cpxannou4')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('four')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[3].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[3].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/cpx-announcements/refined-cpx-business-model')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[3].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=cpx-announcements%26subid=refined-cpx-business-model%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=CPx-announcement-refined-cpx-business-model" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=cpx-announcements%26subid=refined-cpx-business-model%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=CPx-announcement-refined-cpx-business-model&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[2].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div><br/>
+						
+						<p>The CPx business model of presenting properties to buyers and industry professionals using an independent process 
+						offers users many unique benefits.  Although there has been a lot of interest from many large financial service 
+						businesses there remains a lingering commercial question of the practicality of national and international 
+						uptake of the CPx business model. </p>
+						
+						<p>CPx has decided that continuing to deliver services using the initial business model may not create viable 
+						commercial uptake due to the excessive investment of time and labour required to achieve the desired end result. 
+						Further, the rapid changes currently happening within the Australian real estate industry indicate that such an 
+						investment may not necessarily achieve timely commercial viability.  </p>
+						
+						<p>With this in mind, CPx has instigated a new commercial uptake approach. The coding of these changes to the 
+						business platform have been recently completed by our software engineers and are now ready for marketing; 
+						coincidentally on the anniversary of the official launch of CPx on 7 January 2015.</p>
+						
+						<p>The CPx business model now offers <b>FREE LISTINGS</b>.  Property owners and developers can &lsquo;test the water&rsquo; 
+						before committing to paying a fee to have their properties independently reviewed and graded. Free Listing 
+						provides an incentive to try the CPx business model and for property sellers to experience the unique benefits 
+						CPx offers for advertising their properties. </p>
+						
+						<p>Sellers now spend nothing to list their properties with CPx until a buyer or industry professional chooses 
+						to request an &lsquo;Independent Property Review (ipr) and Graded Report&rsquo; on their advertised property. This 
+						request is then sent to the property seller notifying them of an expression of interest on their property. 
+						This new approach offers a mutual win for both the seller and the buyer. </p>
+						
+              		</accordion-group> 		
+		
+
+
+
+
+	   <!-- For 3rd accordian  -->
+	
+	<a id="three"></a>
+	<accordion-group is-open="cpxanoustatus[2].value" >
+	
+        <accordion-heading >
+        				<div class="row">
+	  						<p class="texthead">
+  							<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !cpxanoustatus[2].value, 'glyphicon glyphicon-minus': cpxanoustatus[2].value}"></i>
+	  						Advertising governance updated<br/>
+	  						</p>
+	  						<p class="datehead">10 Sept 2015</p>
+	  					</div>
+  						
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('cpxannou3')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('three')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[2].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[2].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/cpx-announcements/advertising-governance-updated')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[2].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=cpx-announcements%26subid=advertising-governance-updated%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=CPx-announcement-advertising-governance-updated" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=cpx-announcements%26subid=advertising-governance-updated%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=CPx-announcement-advertising-governance-updated&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[2].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div><br/>
+						
+						<p>Dear All,</p>
+						
+						<p>I recently went to hear a talk... actually more a discussion presented by international and Australian renowned architects.<br/>...one of the profound points I got from these exceptionally qualified (and successful) people was, something along the lines of <b>...&lsquo;do, view, re-do, view, re-do&rsquo;</b>.</p>
+						
+						<p>On that note; after much research/ market feedback we have modified our mandatory advertising governance.</p>
+						
+						<p>In summary <br/>
+						We have removed from our process the &lsquo;no listing-agent selling-fees&rsquo;. This is now optional for sellers and agents to pass on &lsquo;Buyer Saving&rsquo;.</p>
+						
+						<p>Thank you,</p>
+						<p>AA</p>
+						
+						<p>PS1: Thank you for all those that were part of this wonderful feedback. </p>
+						<p>PS2: <a href="#!/blog/Publications/subid" style="text-decoration:underline;">Click here </a>to read updated governance version.</p>
+              		</accordion-group> 		
+		
+		
+		
+		
+		
+	   <!-- For 2nd accordian  -->
+	
+	<a id="two"></a>
+	<accordion-group is-open="cpxanoustatus[1].value" >
+	
+        <accordion-heading >
+        				<div class="row">
+	  						<p class="texthead">
+  							<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !cpxanoustatus[1].value, 'glyphicon glyphicon-minus': cpxanoustatus[1].value}"></i>
+	  						Loan view Announcement<br/>
+	  						</p>
+	  						<p class="datehead">22 Jul 2015</p>
+	  					</div>
+  						
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('cpxannou2')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('two')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[1].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[1].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/cpx-announcements/loan-view')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[1].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=cpx-announcements%26subid=loan-view%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=CPx-announcement-loan-view" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=cpx-announcements%26subid=loan-view%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=CPx-announcement-loan-view&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[1].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div><br/>
+              			<p style="color:#398424;font-size:22px;text-align:center;">
+         				Loan view.<i>The smart new way to search property!</i>
+         				</p>
+         				<p>
+         					At <a href="http://centralpropertyexchange.com.au">http://centralpropertyexchange.com.au</a> [CPx], we are constantly working to develop the features and functionality
+         					 of our industry leading Real Estate sales website.  After extensive research and development, we can now introduce
+         					  you to <b>Loan view</b>, an innovation of CPx and an industry breakthrough in the way you can search for property. 
+         				</p>
+         				<p>
+         					How is <b>Loan view</b> different? <b>Loan view</b> is the only search facility available today that provides buyers (world-wide) and finance
+         					 professionals with the options to search for Australian property based upon foreign currency and a range of contributors to 
+         					 affordability, such as:
+         				</p>
+         				
+         									
+						<ul class="list">
+						  <li><b>Monthly repayments</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search by how much a budget allows</li>
+						  <li><b>Loan to value ratio (LVR)</b>&nbsp;&nbsp;&nbsp;&nbsp;Search by the loan percentage required</li>
+						  <li><b>Loan amount</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search by borrowing capacity </li>
+						  <li><b>Cash amount</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search by available deposit</li>
+						</ul>
+         				
+         				<p>
+         					Why waste time scrolling through endless properties ranked by price and location when you can target properties that meet your exact
+         					 lending criteria with Loan view?  When choosing a CPx property and entering your specific financial scenario into the Loan view 
+         					 fields, you will be provided with an editable graph view of your loan repayment life cycle.   This is a powerful tool, yet so easy to use.  
+         				</p>
+         				
+         				<p style="color:#398424;font-size:20px;">
+         					Experience the Loan view difference.
+         				</p>
+         				
+         				<p>
+         					To use <b>Loan view</b>, go to <a href="http://centralpropertyexchange.com.au" title="CPx">http://centralpropertyexchange.com.au</a>
+         				</p>
+         				
+         									
+						<ol class="list">
+						  <li> Select <b>View Graded Properties</b> from the header menu;</li>
+						  <li> On the left, click <b>Loan view;</b></li>
+						  <li> Optional: Input your selections and click<b> UPDATE;</b></li>
+						  <li> Your Loan view summary can be found in the green box underneath suitable properties;</li>
+						  <li> Sort by:<b> Relevance</b> OR scroll and choose a property you are interested in;</li>
+						  <li> Here you will find the full <b>Loan view</b> graph where you can edit and add loan scenarios;</li>
+						  <li> <b>Add </b>and compare properties in the <b> Shortlist;</b></li>
+						  <li> Click here for the<b> Loan view</b><a style="background:none;color: #337ab7; "href="./#!/blog/FAQs/loan-view"target="_blank"> Glossary of Terms.</a></li>
+						</ol>
+						
+						<p>Explore the difference of searching with a tool that is designed to find only properties suited 
+						to your financial needs.  This is an amazing benefit to both buyers and sellers, as well as a new 
+						time saving method that will also benefit finance professionals, buyer&#8217;s agents, investors, accountants,
+						 immigration agents, financial planners and SMSFs, to name a few.   Try <a href="#!/view-graded-properties">Loan view </a>today!</p>
+						 
+						 
+         				<p style="color:#398424;font-size:20px;">
+         					Be the power behind the Interest rate.
+         				</p>
+						 
+						 <p>The CPx Base Interest Only rate and Principle & Interest rate are competitive current market rates that are sponsored by
+						  a leading mortgage aggregator / financial institution.This could be you! </p>
+
+						<p>
+							<a href="#!/contact">Contact us</a> today to learn more about how to become an interest rate sponsor.
+						</p>  				
+   </accordion-group> 
+	
+
+ <!-- For 3rd accordian  -->
+
+
+	<a id="one"></a>
+	<accordion-group is-open="cpxanoustatus[0].value" >
+	
+        <accordion-heading >
+        				<div class="row">
+	  						<p class="texthead">
+  							<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !cpxanoustatus[0].value, 'glyphicon glyphicon-minus': cpxanoustatus[0].value}"></i>
+	  						New Service For Private Vendors And Developers<br/>
+	  						</p>
+	  						<p class="datehead">19 Jan 2015</p>
+	  					</div>
+  						
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('cpxannou1')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('one')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[0].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[0].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/cpx-announcements/new-service-for-private-vendors-and-developers')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[0].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=cpx-announcements%26subid=new-service-for-private-vendors-and-developers%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=CPx-announcement-new-service-for-private-vendors-and-developers" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=cpx-announcements%26subid=new-service-for-private-vendors-and-developers%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=CPx-announcement-new-service-for-private-vendors-and-developers&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fcpx-announcements%2f{{cpxanoustatus[0].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					<b>Advertise Your Property For Sale On CPx</b>  
+         				</p>
+         				<p>
+         					Ten years ago our company had the vision for an independent online real estate business model.  To get to where we are today, 
+         					we created many Australian technological firsts within the real estate industry.  
+         				</p>
+         				<p>
+         					We are proud to announce that our long held vision has now been refined and realised with the relaunch of CPx Beta from 19th January, 
+         					and the official launch on Monday 2nd February 2015. 
+         				</p>
+         				
+         				<p>
+         					We take this opportunity to thank all those who took part in the previous CPx business model. Your involvement and feedback has been 
+         					greatly appreciated and we hope that you will continue this connection by supporting the new CPx business model.
+         				</p>
+         				<p>
+         					View our new website at <a href="http://www.centralpropertyexchange.com.au/" title="CPx">http://www.centralpropertyexchange.com.au/</a>
+         				</p>
+         				<p>
+         				<div align="center"><b>No Real Estate Agent Fees</b></div>
+						<div align="center"><b>Graded Properties</b></div>
+						</p>
+						
+						<b>CPx is ideal for seller's</b>
+						<ul>
+							<li>Private vendors and commercial developers can list their properties at their price</li>
+							<li>No fees payable to real estate agents, project marketer or referrers, saving you thousands in sales commission fees</li>
+							<li>Mandatory property grading ensures a transparent business forum you can trust</li>
+						</ul>  
+						
+						<b>CPx is ideal for buyer's</b>
+						<ul>
+							<li>All properties listed have no real estate agents sales and marketing fees </li>
+							<li>An Independent Property Review (IPR) is mandatory for every property listed, ensuring a transparent business forum for both buyers and sellers</li>
+							<li>Buyers can deal directly with the vendor or have the option to choose an independent representative</li>
+						</ul>				
+						
+						<b>CPx is Ideal for professionals seeking an independent process</b>
+						<ul>
+							<li>Financial Planners, Mortgage Brokers and SMSF benefit from the independent process of CPx to maximise their clients wealth and avoid hefty agent fees</li>
+							<li>Financial service providers can confidently add CPx listed properties to their services with the benefit of mandatory independent grading as a buying guide</li>
+							<li>Real Estate Agents and other professionals benefit from the independent process of CPx to freelance as representatives</li>
+						</ul>
+						
+						<b>Long term plans</b>
+						<ul>
+							<li>The CPx website is launched, but is still a work in progress that will continually improve its products and services </li>
+							<li>CPx will launch a targeted digital media campaign in March/April 2015, to be followed by a targeted television advertising campaign in June 2015</li>
+							<li>CPx has the technology to expand into other countries in due course</li>
+						</ul>
+						
+						<b>In the mean time...</b>
+						<ul>
+							<li>We are busy listing Australian properties to be made available for buyers</li>
+							<li>CPx has three feature spots available on our home page to advertise your property for a faster sale</li>
+							<li>Explore our website and start to consider how CPx can benefit you or your clients </li>
+							<li>CPx is an Australian first and offers a great service for buyers, sellers, advisors and independent agents</li>
+						</ul>
+						
+						<b>List your property!</b><br/>
+						Send details of your properties or your general expressions of interest to <a href="http://www.centralpropertyexchange.com.au/" target="_blank" title="CPx">http://www.centralpropertyexchange.com.au/</a>
+						<br/><br/>
+						<p>
+							<b>Send via email | Email subject:</b><br/>  
+							Feel the freedom!  List your property with CPx and save thousands.
+						</p>  				
+   </accordion-group> 
+
+	
+	
+    
+   
+   
+   
+   
+     
+   
+   
+   
+   
+       
+   
+   
+  </accordion>
+   </div>

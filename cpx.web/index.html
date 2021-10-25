@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html ng-app="landlordWebApp">
+  <head>
+  	<title ng-bind="title">Central Property Exchange </title>
+    <title>{{title}}</title>
+   <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav.jpg">
+    <meta name="keywords" content={{metakeywords}}>
+ 	<!--  <meta name="description" content={{description}}> -->
+ 	
+ 	
+	 
+	<!-- <meta property="og:title" content="changed Details"/>
+	 <meta property="og:image" content="http://www.mantisproperty.com.au/database/images/extra_residential_706147.jpg"/>
+	 <meta property="og:image:url" content="http://www.mantisproperty.com.au/database/images/extra_residential_706147.jpg">
+	 <meta property="og:image:width" content="100">
+	 <meta property="og:image:height" content="100">
+	 <meta property="og:image:type" content="image/jpeg">
+	 
+	 <meta property="og:description" content="This is chnaged description"/>  -->
+	 
+	
+	 
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-3.3.1/css/bootstrap.min.css">-->
+    <!-- <link rel="stylesheet" type="text/css" href="css/customone.min.css" />  -->
+
+    
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css?t=1497593485" /> 
+	<link rel="stylesheet" type="text/css" href="css/custom2.css?t=1497593485" />
+	<link rel="stylesheet" type="text/css" href="css/nsPopover.css" />
+	
+	
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Fjalla+One&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+    
+    <link href="css/new_template/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/new_template/style.css?t=1497593485" rel="stylesheet" type="text/css"/>
+    <link href="css/new_template/responsive.css" rel="stylesheet" type="text/css"/> 	 
+ 
+    
+    <link rel="stylesheet" type="text/css" href="css/slick/listing.css">
+    <link rel="stylesheet" type="text/css" href="css/slick/slick.css">
+    
+    
+  </head>
+  <body data-status="ready" itemscope itemtype="http://schema.org/Product">
+	   <!-- <h1 itemprop="name" class="ng-hide">{{title}}</h1>
+	  
+	  <p itemprop="description" class="ng-hide">{{des}}</p> -->
+	  <h1 itemprop="name" class="ng-hide">"CPX prop"</h1>
+	  <!-- <img itemprop="image" class="ng-hide" src="{{imgurl}}"></img>-->
+	  <p itemprop="description" class="ng-hide">{{des}}</p>
+	  
+	  
+    <div class="container-fluid">
+    	<div class="row">
+    	<div class="waitprocess" align="center" id="wait-payment-process" ng-show="loading" class="loading col-sm-6">
+	  		<img src="images/payment_process.GIF" alt="CPx" ng-click="checkClicked4()">
+	   	</div>
+		
+		 
+		 <!-- <div class="container cpxcontent" style="overflow-x: hidden;" ng-show="showMenu">
+			<div class="row row-offcanvas row-offcanvas-left active1">		
+			<sidemenu ></sidemenu>
+			<div ng-view ></div>
+			</div>
+		</div> -->
+	
+		<!-- <div ng-show="!showMenu"><div ng-view></div></div> -->
+		 <div ng-view ></div> 
+		<div footer></div>
+	</div>
+	</div>
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+	
+    <script src="js/jquery.1.11.2/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.1.11.2/jquery.validate.min.js"></script> 
+    <script src="js/new_template/bootstrap.min.js"></script>
+    
+    
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+	<script src="js/angularjs/1.3.10/angular.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-route.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-resource.min.js"></script>
+	
+
+	
+   
+    
+	<!-- Our Website Javascripts -->
+	 <script src="js/app/constants.js?t=1497593485"></script>
+	<script src="js/app/main.js?t=1497593485"></script> 
+	 <!-- <script src="js/app/Controllers/controllers.js"></script>   -->
+ 	<script src="js/app/directives.js?t=1497593485"></script> 
+	 <script src="js/app/filters.js"></script>
+	<script src="js/app/services.js?t=1497593485"></script>   
+	
+	
+	<!-- <script src="http://underscorejs.org/underscore-min.js"></script> -->
+	<!-- CONTROLLER's JS -->
+	
+ 	<!--  <script src="js/app/Controllers/allone.min.js"></script>   -->
+	
+	<script src="js/app/Controllers/DetailsController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/HomePageController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/PropertiesController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/ModalInstanceController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/ModalMailController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/FaqMailController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/AboutController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/OrderController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/ListController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/ErrorPageController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/ContactsController.js?t=1497593485"></script>
+    <script src="js/app/Controllers/EnquireController.js?t=1497593485"></script>
+    <script src="js/app/Controllers/ServiceRequestController.js?t=1497593485"></script>
+    <script src="js/app/Controllers/BuyThisPropertyController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/ShortlistController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/DefaultController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/FbController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/PrintController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/ProductileController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/CurrencyController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/EnquiryFormsController.js?t=1497593485"></script>
+	<script src="js/app/Controllers/LogoSlideController.js?t=1497593485"></script>
+     
+	 
+	
+	<script src="js/app/Controllers/admin-list-property.js"></script> 
+	
+	<!-- <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> -->
+	
+    
+   
+    
+    
+	
+	<script src="js/lib/pdf.js"></script>
+	<script src="js/thirdparty/angular-pdf.js"></script>
+	
+	
+	<!-- below needs to be loaded before angular-google-maps.min.js -->
+    <!-- Directives for bootstrap -->
+    <script src="js/thirdparty/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <!-- overloaded some code from  ui-bootstrap-tpls-0.12.0-->
+    <script src="js/thirdparty/overloaded-ui-bootstrap-tpls-0.12.0.js"></script>
+    <!-- Directives for tab menu -->
+    <script src="js/thirdparty/df-tab-menu.js"></script>
+	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+	<script src='js/thirdparty/lodash.min.js'></script>
+	<script src='js/thirdparty/angular-google-maps.min.js'></script>
+	<script src='js/thirdparty/angular-filter.js'></script>
+	
+	<script src='js/thirdparty/decimal-places.js'></script>
+	<script src='js/thirdparty/open-exchange-rates.js'></script>
+	<script src='js/thirdparty/angular-sanitize.js'></script>
+	<script src="js/thirdparty/ng-map.min.js"></script>
+	<script src='js/thirdparty/Chart.js'></script>
+	<script src="js/thirdparty/angular-chart.js"></script>
+	<script src="js/thirdparty/nsPopover.js"></script>
+	
+	<script src='js/thirdparty/angular-translate.js'></script>
+	<script src='js/thirdparty/angular-translate-loader-url.js'></script>
+	<script src='js/thirdparty/angular-translate-loader-static-files.js'></script>
+	<!-- <script src='js/thirdparty/angular.audio.js'></script> -->
+	
+	<script src='js/thirdparty/ui-bootstrap-tpls-0.13.3.js'></script>
+	
+	<script src="js/thirdparty/angular-file-upload.min.js"></script>
+	
+	  <script src="http://platform.twitter.com/widgets.js"></script>
+	  <script src="https://apis.google.com/js/platform.js" async defer></script>
+	  
+	  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+
+	 <script src="js/thirdparty/angular-recaptcha.js"></script>  
+	 
+	 <!--  <script src="js/thirdparty/dirPagination.js"></script>   -->
+	  
+	      <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer></script> -->
+	  
+	  <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+	  		
+	  <!-- <script src="https://www.google.com/recaptcha/api.js"></script>  -->
+	  <script src='js/thirdparty/angulartics-google-analytics.min.js'></script>
+	 <script src='js/thirdparty/angulartics.min.js'></script>
+     
+     
+     
+	  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-65727956-1', 'none');
+     	
+    </script>
+	
+    <!--
+<script src="js/new_template/bootstrap.min.js"></script>
+    <script src="js/new_template/jquery.tools.min.js"></script>
+-->
+    
+    
+    <script src="js/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,955 @@
+{
+    "propertyList": {
+        "residential": [
+            {
+                "agentID": "cpxpropertynow",
+                "uniqueID": "res221593",
+                "authority": {
+                    "_value": "open"
+                },
+                "underOffer": {
+                    "_value": "no"
+                },
+                "listingAgent": {
+                    "name": "Property Now",
+                    "telephone": {
+                        "_type": "BH",
+                        "__text": "1300 815 051"
+                    },
+                    "email": "sales@propertynow.com.au"
+                },
+                "price": "699000",
+                "priceView": "Offers over $690,000",
+                "address": {
+                    "streetNumber": "34",
+                    "street": "Froude Street",
+                    "suburb": {
+                        "_display": "yes",
+                        "__text": "BANYO"
+                    },
+                    "state": "QLD",
+                    "postcode": "4014",
+                    "country": "AUS",
+                    "_display": "yes"
+                },
+                "municipality": "",
+                "streetDirectory": {
+                    "page": "",
+                    "reference": "",
+                    "_type": "UBD"
+                },
+                "category": {
+                    "_name": "House"
+                },
+                "buildingDetails": {
+                    "energyRating": ""
+                },
+                "headline": {
+                    "__cdata": "STYLISH, SPACIOUS AND ONLY 2 YEARS YOUNG"
+                },
+                "description": {
+                    "__cdata": "Enquiry code for this property: 5099\r\n\r\nThis stylish, modern home is perfect for today's busy family with three separate living areas, galley kitchen, 4 bedrooms and a large patio.  After a hard days work relax under the Balinese gazebo or take a dip in the spa while watching the kids play in the fully fenced backyard.   \r\n\r\nThe kitchen features a gas cook top, 900mm electric oven, stone benches and glass rangehood.  The kitchen overlooks a large family room and separate dining room, making it perfect for entertaining.  The home also boasts a media/activity room on the ground level as well as another large living room upstairs which has partial city views.\r\n\r\nThe upper level consists of 4 bedrooms all with built-in wardrobes.  The master suite has its own balcony, an enormous walk in robe and an ensuite featuring double basins, an oversized shower and separate toilet.\r\n\r\nThe home is situated on a low maintenance 405sqm block in one of Banyos best streets.  It’s just a short walk to rail, Banyo Village and the Banyo Bowls Club is only a stones throw away.  \r\n\r\nFeatures:\r\n\r\nDucted air-conditioning\r\nCeiling fans\r\n3kw solar power\r\n5000L water tank\r\n2700mm high ceilings downstairs\r\nGas cook top and gas hot water\r\n405sqmtr block\r\nFully fenced back yard\r\nDouble lock up garage with internal access\r\nUnder stair storage as well as plenty more upstairs\r\nBalinese hut and spa\r\nTitan 3x3m shed\r\nLandscaped gardens\r\n\r\nEnquiry code for this property: 5099\r\n"
+                },
+                "features": {
+                    "bedrooms": "4",
+                    "bathrooms": "3",
+                    "ensuite": "1",
+                    "garages": "0",
+                    "carports": "2",
+                    "carSpaces": "0",
+                    "spa": {
+                        "_type": "aboveground",
+                        "__text": "yes"
+                    },
+                    "toilets": "3",
+                    "livingAreas": "3",
+                    "remoteGarage": "1",
+                    "secureParking": "0",
+                    "balcony": "1",
+                    "deck": "0",
+                    "courtyard": "0",
+                    "outdoorEnt": "1",
+                    "shed": "1",
+                    "fullyFenced": "1",
+                    "study": "0",
+                    "gasHeating": "0",
+                    "workshop": "0",
+                    "splitSystemHeating": "0",
+                    "floorboards": "0",
+                    "splitSystemAirCon": "0",
+                    "evaporativeCooling": "0",
+                    "gym": "0",
+                    "broadband": "1",
+                    "builtInRobes": "1",
+                    "hydronicHeating": "0",
+                    "payTV": "0",
+                    "dishwasher": "1",
+                    "ductedHeating": "1",
+                    "ductedCooling": "1",
+                    "reverseCycleAirCon": "0",
+                    "rumpusRoom": "1",
+                    "greyWaterSystem": "0",
+                    "solarHotWater": "0",
+                    "solarPanels": "1",
+                    "waterTank": "0",
+                    "otherFeatures": ""
+                },
+                "landDetails": {
+                    "area": {
+                        "_unit": "squareMeter",
+                        "__text": "405"
+                    }
+                },
+                "vendorDetails": {
+                    "name": "Property Now",
+                    "telephone": {
+                        "_type": "BH",
+                        "__text": "1300 815 051"
+                    }
+                },
+                "images": {
+                    "img": [
+                        {
+                            "_id": "m",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658950.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "a",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658933.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "b",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658934.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "c",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658935.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "d",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658936.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "e",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658937.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "f",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658938.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "g",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658939.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "h",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658940.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "i",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658941.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "j",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658942.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "k",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658943.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "l",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658944.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "n",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658951.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "o",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658945.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "p",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658946.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "q",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/residential_extra_74658947.JPG",
+                            "_format": "jpg"
+                        }
+                    ]
+                },
+                "objects": "\n",
+                "inspectionTimes": {
+                    "inspection": [
+                        "07-Oct-2015 5:30PM to 6:00PM",
+                        "10-Oct-2015 8:45AM to 9:15AM"
+                    ]
+                },
+                "externalLink": {
+                    "_href": ""
+                },
+                "_modTime": "2015-10-06-15:02:00",
+                "_status": "current"
+            },
+            {
+                "agentID": "cpxpropertynow",
+                "uniqueID": "res221651",
+                "authority": {
+                    "_value": "open"
+                },
+                "underOffer": {
+                    "_value": "no"
+                },
+                "listingAgent": {
+                    "name": "Property Now",
+                    "telephone": {
+                        "_type": "BH",
+                        "__text": "1300 815 051"
+                    },
+                    "email": "sales@propertynow.com.au"
+                },
+                "price": "30000",
+                "priceView": "$320,000",
+                "address": {
+                    "streetNumber": "13",
+                    "street": "Delamere Street",
+                    "suburb": {
+                        "_display": "yes",
+                        "__text": "WYNDHAM"
+                    },
+                    "state": "WA",
+                    "postcode": "6740",
+                    "country": "AUS",
+                    "_display": "yes"
+                },
+                "municipality": "",
+                "streetDirectory": {
+                    "page": "",
+                    "reference": "",
+                    "_type": "UBD"
+                },
+                "category": {
+                    "_name": "House"
+                },
+                "buildingDetails": {
+                    "energyRating": ""
+                },
+                "headline": {
+                    "__cdata": "Comfortable family home"
+                },
+                "description": {
+                    "__cdata": "Enquiry code for this property: 6007\r\n\r\nThis spacious and comfortable 3br family home features air conditioning throughout, solar HWS and abundant covered areas and double carport.\r\n\r\nEnquiry code for this property: 6007"
+                },
+                "features": {
+                    "bedrooms": "3",
+                    "bathrooms": "1",
+                    "ensuite": "0",
+                    "garages": "0",
+                    "carports": "2",
+                    "carSpaces": "0",
+                    "toilets": "0",
+                    "livingAreas": "0",
+                    "remoteGarage": "0",
+                    "secureParking": "0",
+                    "balcony": "0",
+                    "deck": "0",
+                    "courtyard": "0",
+                    "outdoorEnt": "0",
+                    "shed": "1",
+                    "fullyFenced": "0",
+                    "study": "0",
+                    "gasHeating": "0",
+                    "workshop": "0",
+                    "splitSystemHeating": "0",
+                    "floorboards": "0",
+                    "splitSystemAirCon": "1",
+                    "evaporativeCooling": "0",
+                    "gym": "0",
+                    "broadband": "0",
+                    "builtInRobes": "0",
+                    "hydronicHeating": "0",
+                    "payTV": "0",
+                    "dishwasher": "0",
+                    "ductedHeating": "0",
+                    "ductedCooling": "0",
+                    "reverseCycleAirCon": "0",
+                    "rumpusRoom": "0",
+                    "greyWaterSystem": "0",
+                    "solarHotWater": "1",
+                    "solarPanels": "0",
+                    "waterTank": "0",
+                    "otherFeatures": ""
+                },
+                "landDetails": {
+                    "area": {
+                        "_unit": "squareMeter"
+                    }
+                },
+                "vendorDetails": {
+                    "name": "Property Now",
+                    "telephone": {
+                        "_type": "BH",
+                        "__text": "1300 815 051"
+                    }
+                },
+                "images": {
+                    "img": {
+                        "_id": "m",
+                        "_modTime": "2015-10-06-15:02:00",
+                        "_url": "http://www.propertynow.com.au/database/images/residential_extra_74659102.jpg",
+                        "_format": "jpg"
+                    }
+                },
+                "objects": "\n",
+                "inspectionTimes": "\n       ",
+                "externalLink": {
+                    "_href": ""
+                },
+                "_modTime": "2015-10-06-15:02:00",
+                "_status": "withdrawn"
+            }
+        ],
+        "land": [
+            {
+                "agentID": "cpxpropertynow",
+                "uniqueID": "resland28059",
+                "authority": {
+                    "_value": "open"
+                },
+                "underOffer": {
+                    "_value": "no"
+                },
+                "listingAgent": {
+                    "name": "Property Now",
+                    "telephone": {
+                        "_type": "BH",
+                        "__text": "1300 815 051"
+                    },
+                    "email": "sales@propertynow.com.au"
+                },
+                "price": {
+                    "_display": "yes",
+                    "__text": "239000"
+                },
+                "priceView": "$239,000 neg",
+                "address": {
+                    "streetNumber": "4",
+                    "street": "Bray Court",
+                    "suburb": {
+                        "_display": "yes",
+                        "__text": "BUSHLAND BEACH"
+                    },
+                    "state": "QLD",
+                    "postcode": "4818",
+                    "country": "AUS",
+                    "_display": "yes"
+                },
+                "municipality": "",
+                "streetDirectory": {
+                    "page": "",
+                    "reference": "",
+                    "_type": "UBD"
+                },
+                "landCategory": {
+                    "_name": "Residential"
+                },
+                "headline": {
+                    "__cdata": "Amazing Uninterupted Ocean Views!! Build your Dream on a useable 1/4 Acre Block"
+                },
+                "description": {
+                    "__cdata": "Enquiry code for this property: 4091\r\n\r\nBe quick! This approximately 50m x 25m, 1227sqm block is sure to be snapped up soon, with incredible uninterrupted ocean views over Halifax Bay,  Magnetic Island and the Palm group but that's not all, the twinkling lights of Townsville, Castle Hill and Mount Stuart vistas are equally breathtaking.\r\n\r\nCurrent owner's circumstances have changed, surveys and Geotech reports are available to the purchaser so you can work with your preferred builder to build your dream home or can point you in the direction of a highly regarded local builder, familiar with this site, with plans available for a large 4 Bed Executive style home designed to take in the views.\r\n\r\nThe blocks below are already built out, so you can purchase with confidence, safe in the knowledge that your 180 degree million dollar views are secured, build the largest of houses, pool and shed with plenty of room leftover. The aspect of this block will not only allow your home design to take advantage of the amazing views day and night but also the cooling sea breezes to reduce your dependence on that expensive aircon during the summer months.\r\n\r\nThis location high up on the hill at Bushland Beach has established itself as one of Townsville’s most exclusive enclaves populated with discerning executive style homes. This is your opportunity to bring out your creative side and build the house of your dreams. Just 2 minutes from the beach, boat ramp and beautiful nature walks, it offers a lifestyle that will make you the envy of your friends, the recently announced upgrade to Peggy Banfield park is just a hop skip and a jump away, all this and more just a 15 minute stress free drive from the city. \r\n\r\nCome and take a look at any time, be amazed at the views, then make contact and submit your offer before it's too late!\r\n\r\nEnquiry code for this property: 4091\r\n"
+                },
+                "landDetails": {
+                    "area": {
+                        "_unit": "squareMeter",
+                        "__text": "1277"
+                    },
+                    "frontage": {
+                        "_unit": "meter",
+                        "__text": "25"
+                    },
+                    "depth": [
+                        {
+                            "_unit": "meter",
+                            "_side": "rear",
+                            "__text": "25"
+                        },
+                        {
+                            "_unit": "meter",
+                            "_side": "right",
+                            "__text": "49"
+                        },
+                        {
+                            "_unit": "meter",
+                            "_side": "left",
+                            "__text": "48"
+                        }
+                    ]
+                },
+                "images": {
+                    "img": [
+                        {
+                            "_id": "m",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047588.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "a",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047655.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "b",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047656.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "c",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047589.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "d",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047587.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "e",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047591.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "f",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047590.JPG",
+                            "_format": "jpg"
+                        }
+                    ]
+                },
+                "externalLink": {
+                    "_href": ""
+                },
+                "_modTime": "2015-10-06-15:02:00",
+                "_status": "current"
+            },
+            {
+                "agentID": "cpxpropertynow",
+                "uniqueID": "resland28028",
+                "authority": {
+                    "_value": "open"
+                },
+                "underOffer": {
+                    "_value": "no"
+                },
+                "listingAgent": {
+                    "name": "Property Now",
+                    "telephone": {
+                        "_type": "BH",
+                        "__text": "1300 815 051"
+                    },
+                    "email": "sales@propertynow.com.au"
+                },
+                "price": {
+                    "_display": "yes",
+                    "__text": "495000"
+                },
+                "priceView": "Offers from $498,000",
+                "address": {
+                    "streetNumber": "44",
+                    "street": "Stellaria Street",
+                    "suburb": {
+                        "_display": "yes",
+                        "__text": "MARSDEN PARK"
+                    },
+                    "state": "NSW",
+                    "postcode": "2765",
+                    "country": "AUS",
+                    "_display": "no"
+                },
+                "municipality": "",
+                "streetDirectory": {
+                    "page": "",
+                    "reference": "",
+                    "_type": "UBD"
+                },
+                "landCategory": {
+                    "_name": "Residential"
+                },
+                "headline": {
+                    "__cdata": "ELARA - Registered Land Large Flat and ready to build your Dream Home "
+                },
+                "description": {
+                    "__cdata": "Enquiry code for this property: 3970\r\n\r\nA Large Registered Block of Land at Marsden Park on the new Elara Estate is available for sale now! Don't wait you can build today!\r\n\r\nNo awaiting registration, build now on this registered Flat 450+m2 block on Stellaria Street, Marsden Park ELARA.  The land is flat and is not affected by any easements has a Rolled Kerb ready to Build. The first properties are under construction on this Street don't miss out!\r\n\r\nThe advantages of this fantastic development are:\r\nTransport – Close to the M4 and M7 and only 5 minutes to Schofields Station for rapid access to the CBD and Parramatta.\r\n\r\nSchools – Close five mins drive to Marsden Park public .  \r\nWith two new Schools planned for the development.\r\n\r\nShopping – The development will have its own shopping precinct in addition the new IKEA, Bunnings and Costco park is five mins down Richmond Road.Short drive to Rouse Hill Shopping Centre and Parklea Markets.  \r\n\r\nThis MasterPlan development project is managed by Stockland. \r\nYou can choose your own builder and construction designs can be either complying development or an application to Blacktown Council. Attached are the current Design Essentials.\r\n\r\nDon't delay this is a popular growth Suburb with State investment in Infrastructure already underway join this beautiful development opportunity. Prices of Land in this Suburb are rising so be quick.\r\n\r\nEnquiry code for this property: 3970"
+                },
+                "landDetails": {
+                    "area": {
+                        "_unit": "squareMeter",
+                        "__text": "452"
+                    },
+                    "frontage": {
+                        "_unit": "meter",
+                        "__text": "17"
+                    },
+                    "depth": [
+                        {
+                            "_unit": "meter",
+                            "_side": "rear",
+                            "__text": "13"
+                        },
+                        {
+                            "_unit": "meter",
+                            "_side": "right",
+                            "__text": "31"
+                        },
+                        {
+                            "_unit": "meter",
+                            "_side": "left",
+                            "__text": "30"
+                        }
+                    ]
+                },
+                "images": {
+                    "img": [
+                        {
+                            "_id": "m",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047335.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "a",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047559.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "b",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047560.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "c",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047338.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "d",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047339.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "e",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047337.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "f",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047557.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "g",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047462.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "h",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047535.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "i",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/land_extra_5047536.jpg",
+                            "_format": "jpg"
+                        }
+                    ]
+                },
+                "externalLink": {
+                    "_href": ""
+                },
+                "_modTime": "2015-10-06-15:02:00",
+                "_status": "current"
+            }
+        ],
+        "rental": [
+            {
+                "agentID": "cpxpropertynow",
+                "uniqueID": "rental96597",
+                "listingAgent": {
+                    "name": "Property Now",
+                    "telephone": {
+                        "_type": "BH",
+                        "__text": "1300 815 051"
+                    },
+                    "email": "sales@propertynow.com.au"
+                },
+                "dateAvailable": "2015-10-23",
+                "rent": {
+                    "_period": "weekly",
+                    "_display": "no",
+                    "__text": "550"
+                },
+                "priceView": "550 per week negotiable",
+                "bond": "2100",
+                "address": {
+                    "streetNumber": "1",
+                    "street": "Maya Crescent",
+                    "suburb": {
+                        "_display": "yes",
+                        "__text": "FORRESTFIELD"
+                    },
+                    "state": "WA",
+                    "postcode": "6058",
+                    "country": "AUS",
+                    "_display": "no"
+                },
+                "municipality": "",
+                "streetDirectory": {
+                    "page": "",
+                    "reference": "",
+                    "_type": "UBD"
+                },
+                "category": {
+                    "_name": "House"
+                },
+                "headline": {
+                    "__cdata": "Near new spacious house in new estate - great location"
+                },
+                "description": {
+                    "__cdata": "Enquiry code for this property: 6008\r\n\r\nLarge 4x2 near new house with a theatre room, office and open plan living; on a spacious back yard on a corner block. \r\nTucked away in a great location, part of the new Tyler Springs Estate (very quiet and family friendly).\r\nVery convenient, easy access to Roe Highway:\r\n20 minutes from the city\r\n5 minutes from the airport (walking distance from the new airport train link being built).\r\n\r\nHouse features include:\r\n- Full reticulation back and front, 6 point management unit\r\n- NBN Internet with fibre optic to the office\r\n- Motion censored security system\r\n- Mabu decked alfresco area\r\n- Raised ceilings throughout living areas\r\n- Coffered ceilings to master and theatre\r\n- Roman blinds in living, wood venetians throughout house\r\n- 100% stain resistant top of the range carpet throughout all rooms (can wipe red wine etc off the top without any stains)\r\n- Polished porcelain tiles to bathrooms and toilet\r\n- 1km to new train station\r\n- 5 minutes from airport\r\n\r\nPets considered, rent is negotiable depending on garden upkeep etc.\r\n\r\nEnquiry code for this property: 6008\r\n\r\n"
+                },
+                "allowances": {
+                    "petFriendly": "0",
+                    "furnished": "0",
+                    "smokers": "0"
+                },
+                "features": {
+                    "bedrooms": "4",
+                    "bathrooms": "2",
+                    "ensuite": "1",
+                    "garages": "0",
+                    "carports": "2",
+                    "carSpaces": "4",
+                    "alarmSystem": "yes",
+                    "toilets": "2",
+                    "livingAreas": "3",
+                    "remoteGarage": "1",
+                    "secureParking": "1",
+                    "balcony": "0",
+                    "deck": "1",
+                    "courtyard": "1",
+                    "outdoorEnt": "1",
+                    "shed": "0",
+                    "fullyFenced": "1",
+                    "study": "0",
+                    "gasHeating": "1",
+                    "workshop": "0",
+                    "splitSystemHeating": "1",
+                    "floorboards": "1",
+                    "splitSystemAirCon": "1",
+                    "evaporativeCooling": "0",
+                    "gym": "0",
+                    "broadband": "1",
+                    "builtInRobes": "0",
+                    "hydronicHeating": "0",
+                    "payTV": "0",
+                    "dishwasher": "0",
+                    "ductedHeating": "0",
+                    "ductedCooling": "0",
+                    "reverseCycleAirCon": "0",
+                    "rumpusRoom": "0",
+                    "greyWaterSystem": "0",
+                    "solarHotWater": "0",
+                    "solarPanels": "0",
+                    "waterTank": "0",
+                    "otherFeatures": ""
+                },
+                "landDetails": {
+                    "area": {
+                        "_unit": "squareMeter",
+                        "__text": "570"
+                    }
+                },
+                "images": {
+                    "img": [
+                        {
+                            "_id": "m",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34717075.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "a",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34717076.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "b",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34717077.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "c",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34717078.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "d",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34717079.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "e",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34717080.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "f",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34717081.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "g",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34717082.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "h",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34717083.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "i",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34717084.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "j",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34717085.jpg",
+                            "_format": "jpg"
+                        }
+                    ]
+                },
+                "objects": "\n",
+                "inspectionTimes": "\n       ",
+                "externalLink": {
+                    "_href": ""
+                },
+                "_modTime": "2015-10-06-15:02:00",
+                "_status": "withdrawn"
+            },
+            {
+                "agentID": "cpxpropertynow",
+                "uniqueID": "rental96581",
+                "listingAgent": {
+                    "name": "Property Now",
+                    "telephone": {
+                        "_type": "BH",
+                        "__text": "1300 815 051"
+                    },
+                    "email": "sales@propertynow.com.au"
+                },
+                "dateAvailable": "2015-09-29",
+                "rent": {
+                    "_period": "weekly",
+                    "_display": "yes",
+                    "__text": "320"
+                },
+                "priceView": "$320 per week",
+                "bond": "1280",
+                "address": {
+                    "streetNumber": "2/63",
+                    "street": "Emsworth Street",
+                    "suburb": {
+                        "_display": "yes",
+                        "__text": "WYNNUM"
+                    },
+                    "state": "QLD",
+                    "postcode": "4178",
+                    "country": "AUS",
+                    "_display": "yes"
+                },
+                "municipality": "",
+                "streetDirectory": {
+                    "page": "",
+                    "reference": "",
+                    "_type": "UBD"
+                },
+                "category": {
+                    "_name": "Unit"
+                },
+                "headline": {
+                    "__cdata": "2 bedroom apartment in convenient location!"
+                },
+                "description": {
+                    "__cdata": "Enquiry code for this property: 3670\r\n\r\nLocated in the Bayside suburb of Wynnum this 2 bedroom apartment is conveniently located just a short stroll from public transport and amenities. \r\n\r\nInside you will find : \r\n~ Modern Kitchen \r\n~ Modern Bathroom with bath \r\n~ Large Master bedroom with ceiling fan &amp; built-in robe\r\n~ Second Bedroom has ceiling fan &amp; built-in robe\r\n~ Private Laundry Facilities \r\n~ Polished Timber Floors \r\n~ Security Screens on doors and windows \r\n~ Ceiling fan in Lounge room \r\n~ Lock-up garage for 2 cars or 1 plus storage. \r\n\r\nEnquiry code for this property: 3670\r\n"
+                },
+                "allowances": {
+                    "petFriendly": "0",
+                    "furnished": "0",
+                    "smokers": "0"
+                },
+                "features": {
+                    "bedrooms": "2",
+                    "bathrooms": "1",
+                    "ensuite": "0",
+                    "garages": "2",
+                    "carports": "0",
+                    "carSpaces": "0",
+                    "toilets": "1",
+                    "livingAreas": "1",
+                    "remoteGarage": "0",
+                    "secureParking": "0",
+                    "balcony": "0",
+                    "deck": "0",
+                    "courtyard": "0",
+                    "outdoorEnt": "0",
+                    "shed": "0",
+                    "fullyFenced": "0",
+                    "study": "0",
+                    "gasHeating": "0",
+                    "workshop": "0",
+                    "splitSystemHeating": "0",
+                    "floorboards": "0",
+                    "splitSystemAirCon": "0",
+                    "evaporativeCooling": "0",
+                    "gym": "0",
+                    "broadband": "0",
+                    "builtInRobes": "0",
+                    "hydronicHeating": "0",
+                    "payTV": "0",
+                    "dishwasher": "0",
+                    "ductedHeating": "0",
+                    "ductedCooling": "0",
+                    "reverseCycleAirCon": "0",
+                    "rumpusRoom": "0",
+                    "greyWaterSystem": "0",
+                    "solarHotWater": "0",
+                    "solarPanels": "0",
+                    "waterTank": "0",
+                    "otherFeatures": ""
+                },
+                "landDetails": {
+                    "area": {
+                        "_unit": "squareMeter"
+                    }
+                },
+                "images": {
+                    "img": [
+                        {
+                            "_id": "m",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34716974.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "a",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34716968.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "b",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34716969.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "c",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34716970.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "d",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34716971.JPG",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "e",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34716973.jpg",
+                            "_format": "jpg"
+                        },
+                        {
+                            "_id": "f",
+                            "_modTime": "2015-10-06-15:02:00",
+                            "_url": "http://www.propertynow.com.au/database/images/rental_extra_34716972.jpg",
+                            "_format": "jpg"
+                        }
+                    ]
+                },
+                "objects": "\n",
+                "inspectionTimes": "\n       ",
+                "externalLink": {
+                    "_href": ""
+                },
+                "_modTime": "2015-10-06-15:02:00",
+                "_status": "current"
+            }
+        ],
+        "_date": "2015-10-06",
+        "_username": "cpxupload",
+        "_password": "datafile0397"
+    }
+}

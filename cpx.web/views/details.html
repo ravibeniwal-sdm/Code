@@ -1,0 +1,1799 @@
+<header2 selectedmenu="selectedmenu"></header2>
+	<div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 toppager">
+             
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div ng-show = "shorlistedPropIds.status == false && searchcriteria.getonlyfeatured.from == 'listing'" class="paginationall">
+                            <a ng-click ="shareCriteria();" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES" class="acolor"> < &nbsp;Back to search results</a>
+                        </div>
+                        
+                        <div ng-show = "shorlistedPropIds.status == true" class="paginationall">
+                            <a href="#!/shortlist" title="SHORLISTED PROPERTIES" class="acolor"> < &nbsp; Back to shortlist</a>
+                        </div>
+                        
+                        <div ng-show = "shorlistedPropIds.status == false && searchcriteria.getonlyfeatured.from == 'home'" class="paginationall">
+                            <a href="#!/" title="SHORLISTED PROPERTIES" class="acolor"> < &nbsp; Back to home</a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="paginationall pull-right" ng-show = "shorlistedPropIds.status == false || shorlistedPropIds.status == true">
+                            <a ng-if =preid  href="#!/details/{{preid}}" class="acolor"  title="PREVIOUS PROPERTY"> < &nbsp;Previous</a> &nbsp;
+                            
+                            <a ng-if =nextid href="#!/details/{{nextid}}" class="acolor" title="NEXT PROPERTY"> Next &nbsp; ></a>
+                        </div>
+                    </div>
+                </div>
+          
+        </div>
+    </div>
+    
+    <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+        FB.init({appId: '351998031650844', status: true, cookie: true,
+        xfbml: true});
+    };
+    (function() {
+        var e = document.createElement('script'); e.async = true;
+        e.src = document.location.protocol +
+        '//connect.facebook.net/en_US/all.js';
+        document.getElementById('fb-root').appendChild(e);
+    }());
+    
+  </script>
+  
+  
+  <script type="text/ng-template" id="mymailcontent.html">
+      
+  <div class="modal-body sharemailbody">                       
+       <form name="myForm">
+         <label class="title" for="yourname">Email to a friend</label><br>
+    			
+                <div class="contactinput">
+    				<div class="form-group">
+    				  <label for="yourname">Your email<i class="required-text asterisk">*</i></label>
+    				   <input type="text" class="form-control" ng-model="sharemail.youremail" ng-required='!sharemail.youremail'/>
+    				</div>
+    			</div>
+    
+    
+    			<div class="contactinput">
+    				<div class="form-group">
+    				  <label for="yourname">To email<i class="required-text asterisk">*</i></label>
+    				   <input type="email" class="form-control" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" ng-model="sharemail.toemail" ng-required='!sharemail.toemail'/>
+    				</div>
+    			</div>
+    			<div class="contactinput">
+    				<div class="form-group">
+    				  <label for="yourname">Subject</label>
+    				   <input type="text" class="form-control" ng-init="sharemail.subject = subject" ng-model="sharemail.subject"/>
+    				</div>
+    			</div>
+    			
+    			<div class="contactinput">
+    				<div class="form-group">
+    				  <label for="yourname">Your message</label>
+    				 <textarea class="form-control" style="width:100%; height: 170px;" ng-init="sharemail.message = txtmsg" ng-model="sharemail.message"></textarea>
+    			<br>				
+    			This email was sent by:&nbsp;<span style="font-size: 12px" ng-bind="sharemail.youremail"></span>
+    			</div>
+    			</div>
+    			<div class="contactinput" style="display:none;">
+    				<div class="form-group">
+    				   <input type="text" class="form-control" ng-init="sharemail.propid = propid" ng-model="sharemail.propid"/>
+     					<input type="text" class="form-control" ng-init="sharemail.proparea = proparea" ng-model="sharemail.proparea"/>
+    					<input type="text" class="form-control" ng-init="sharemail.from = 'property'" ng-model="sharemail.from"/>
+    				</div>
+    			</div>
+    
+    		<div class="modal-footer sharemail">
+    			
+    				<button type="submit" class="btn btn-default btn-lg " style="float:left;" ng-click='(!(sharemail.toemail && sharemail.youremail))?" ":sendEmail();'>Send</button>
+    			
+    
+                <button class="btn btn-default btn-lg" style="float:left;" ng-click="cancel()">Cancel</button>
+    		</div>	
+    			
+    			
+    			</form>
+    </div>
+        	</script>
+    
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 alllistiong">
+            
+                
+                <div class="tabingicon pull-right">
+                    <div class="alllisting">
+                        <ul class="list-inline">
+                            <li>
+                                <a  href="./print.html" target="_blank" ng-click="passid(currentproperty.id)" popover="Take a print" popover-trigger="mouseenter"><img src="images/new_template/tabpageicon_01.png" alt="icon" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"  ng-click="open2()" popover="Share via email" popover-trigger="mouseenter"><img src="images/new_template/tabpageicon_02.png" alt="icon" /></a>
+                            </li>
+                            <li>
+                                <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fdetails%2f{{currentproperty.id}};media={{currentproperty.images[0].url}};description={{currentproperty.address[0].StreetNumber}} {{currentproperty.address[0].street}}, {{currentproperty.address[0].suburb}}, {{currentproperty.address[0].city}} {{currentproperty.address[0].state}} {{currentproperty.address[0].postcode}} http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fdetails%2f{{currentproperty.id}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"><img src="images/new_template/tabpageicon_03.png" alt="icon" /></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" ng-controller="fbCtrl" ng-click="share(currentproperty)" popover="Share via facebook" popover-trigger="mouseenter"><img src="images/new_template/tabpageicon_04.png" alt="icon" /></a>
+                            </li>
+                            <li>
+                                <a share-square="true" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fdetails/{{currentproperty.id}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"><img src="images/new_template/tabpageicon_05.png" alt="icon" /></a>
+                            </li>
+                            <!--
+<li>
+                                <a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/propertydetails?id={{currentproperty.id}}%26img={{currentproperty.images[0].url}}%26name=CPx%26type=sample" target="_blank" rel="nofollow"  popover="Share via google+" popover-trigger="mouseenter"><img src="images/new_template/tabpageicon_06.png" alt="icon" /></a>
+                            </li>
+-->
+                             <li>
+                                 <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/propertydetails?id={{currentproperty.id}}%26img={{currentproperty.images[0].url}}%26name=CPx%26type=samplee&title={{currentproperty.name}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fdetails/{{currentproperty.id}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"><img src="images/new_template/tabpageicon_06.png" alt="icon" /></a>
+                            </li>
+							</ul>
+							<ul class="list-inline btn-ul">
+                            <li>
+                                <a href="#!/shortlist" title="view shortlist" class="editbtnall Viewshortlist">View shortlist [ {{count}} ]</a>
+                            </li>
+                            <li ng-show= "currentproperty.gradestatus !=2 ">
+                                <a href="#!/request-free-ipr" target="_blank" title="Request a free ipr" class="editbtnall Requestjpr">Request a <strong>FREE</strong> ipr</a>
+                            </li>
+                            <li ng-click="passbuythis(currentproperty.id)">
+                                <a href="#!/buy_this_property" title="Buy this property" class="editbtnall Buythisproperty">Buy this property</a>
+                            </li>
+                            <li  ng-click="passenquiry(currentproperty.id);toggle_enquire_servicerequest('to');">
+                                <a href="#!/enquire" title="Enquire" class="editbtnall enquire">Enquire</a>
+                            </li>
+                            <li ng-click="passenquiry(currentproperty.id);toggle_enquire_servicerequest('to');">
+                                <a href="#!/service_request" title="Service request" class="editbtnall Servicerequest">Service request</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+
+        </div>
+    </div>
+    
+<div myslider></div>
+
+
+<div class="Addressonrequest">
+        <div class="container">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                
+                    <div class="text-center">
+                        <div class="headinginner">
+                            <h3 ng-show="currentproperty.address[0].display =='yes'">{{currentproperty.address[0].LotNumber}} {{currentproperty.address[0].subNumber}}<span ng-if="currentproperty.address[0].subNumber != null && currentproperty.address[0].StreetNumber != ''">/{{currentproperty.address[0].StreetNumber}}</span><span ng-if="currentproperty.address[0].subNumber == null"> {{currentproperty.address[0].StreetNumber}}</span> {{currentproperty.address[0].street}}, {{currentproperty.address[0].suburb.text}}, {{currentproperty.address[0].city}} {{currentproperty.address[0].state}} {{currentproperty.address[0].postcode}}</h3>
+                            <h3 ng-show="currentproperty.address[0].display =='no'">Address available on request</h3>
+                            
+                            
+                            <h3 ng-show="currentproperty.viewprice.length != 0 && currentproperty.saving == 0">{{currentproperty.viewprice }}</h3>
+                            
+                            <h3 ng-show="currentproperty.displayprice!= 'yes' && currentproperty.viewprice.length == 0 && currentproperty.saving == 0">Price on Request</h3>
+                        </div>
+                        <div class="actionday">
+                            <p  ng-show="currentproperty.auction_date.length && auctionstatus == 'yes'" class="actiondayP">Auction {{days}} days to go</p>
+                            
+                            <p ng-show="currentproperty.auction_date.length && auctionstatus == 'no'" class="actiondayP">Auction {{days*(-1)}} days ago</p>
+                            
+                            <p ng-show="currentproperty.auction_date.length && auctionstatus == 'today'" class="actiondayP">Auction today</p>
+                        </div>
+                        
+                        
+                        <div class="Propertydetailsdease">
+                            <div class=" text-center">
+                                <span class="Gradebtn" ng-if="currentproperty.gradestatus == 2">Grade<span class="badge">{{currentproperty.grade}}</span></span>
+                               <span class="Gradebtn" ng-if="currentproperty.gradestatus == 0" >Not Graded</span> 
+                               <span class="underofferactive" ng-if="currentproperty.deposit=='yes'" >Under Offer</span>
+                               <span class="smsfactive" ng-if="currentproperty.smsf == true">SMSF</span>
+                               <span class="soldfactive" ng-if="currentproperty.sold == true">Sold</span>
+                               <span class="domacomfactive" ng-if="currentproperty.domacom == true">DomaCom</span>
+                               <span class="vendorfinancefactive" ng-if="currentproperty.vendorfinance == true && currentproperty.vendor_finance_terms.length>0">Vendor Finance</span>
+                               <span class="savingfactive" ng-if="currentproperty.saving > 0">Saving</span>
+                               <span class="Gradebtn" ng-if="currentproperty.gradestatus == 1">Grade Coming Soon</span>
+                               
+                                <span class="establishedfactive" ng-if="currentproperty.established == 'yes'">Established</span>
+                                <span class="newfactive" ng-if="currentproperty.newConstruction == 'yes'">New</span>
+                                <span class="homelandfactive" ng-if="currentproperty.homelandpackage == 'yes'">Home + Land</span> 
+            
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 independently">
+                            <div class="row detailtabs" style="text-align: center !important;margin: 0 auto;">
+                                <div class="detailtab col-lg-3 col-md-3 col-sm-12 col-xs-12" style="margin: 0 0 0 auto;">
+                                    <div class="tab_title" ng-show="currentproperty.gradestatus==2 ">
+                                        <p>This property has been independently</p>
+                                        <p> reviewed and graded by <a href="http://www.jll.com.au/australia/en-au/services/investors-developers/valuations-and-advisory/mortgage-services" target="_blank" class="acolor" title="JLL">JLL</a></p>
+                                    </div>
+                                    
+                                    <div class="tab_title" ng-show="currentproperty.gradestatus==0 ">
+                                        <p>This property has not been graded</p>
+                                    
+                                    </div>
+                                    
+                                    <div class="tab_title" ng-show="currentproperty.gradestatus==1 ">
+                                        <p>This property is currently being independently</p>
+                                        <p> reviewed and graded by <a href="http://www.jll.com.au/australia/en-au/services/investors-developers/valuations-and-advisory/mortgage-services" target="_blank" class="acolor" title="JLL">JLL</a></p>
+                                    </div>
+
+                                </div>
+                                <div class="detailtab col-lg-3 col-md-3 col-sm-12 col-xs-12" ng-if="currentproperty.displayprice=='yes' && currentproperty.viewprice.length == 0 && currentproperty.saving == 0">
+                                    <div class="audpricediv">
+                                        <div class="audprice pull-left gridaudprice independentlyul">
+                                            <ul class="list-inline" >
+                                                <li>
+                                                    <span>Listed price  </span>
+                                                    
+                                                    
+                                                    <span class="priceinner" ng-if="!(currentproperty.short_currlabel)">
+                                                    
+                                                        <span ng-if="(currentproperty.short_convlisted)" style="font-weight: normal !important;">
+                                                            {{currentproperty.short_convlisted  | currency:"$":0}}
+                                                        </span>
+                                                        
+                                                        <span ng-if="!(currentproperty.short_convlisted)" style="font-weight: normal !important;">
+                                                            {{currentproperty.listedprice  | currency:"$":0}}
+                                                        </span>
+                                                    </span>
+                                                    
+                                                    <span class="priceinner" ng-if="(currentproperty.short_currlabel)">
+                                                    
+                                                        <span ng-if="(currentproperty.short_convlisted)" style="font-weight: normal !important;">
+                                                            {{currentproperty.short_convlisted  | currency:"":0}}
+                                                        </span>
+                                                        
+                                                        <span ng-if="!(currentproperty.short_convlisted)" style="font-weight: normal !important;">
+                                                            {{currentproperty.listedprice  | currency:"":0}}
+                                                        </span>
+                                                    </span>
+                                                    
+                                                    
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                                <div class="detailtab col-lg-3 col-md-3 col-sm-12 col-xs-12" ng-if="currentproperty.saving != 0">
+                                    <div class="audpricediv">
+                                        <div class="audprice pull-left gridaudprice independentlyul">
+                                            <ul class="list-inline" >
+                                                <li>
+                                                    <span>Listed price  </span>
+                                                    
+                                                    
+                                                    <span class="priceinner" ng-if="!(currentproperty.short_currlabel)">
+                                                    
+                                                        <span ng-if="(currentproperty.short_convlisted)" style="font-weight: normal !important;">
+                                                            {{currentproperty.short_convlisted  | currency:"$":0}}
+                                                        </span>
+                                                        
+                                                        <span ng-if="!(currentproperty.short_convlisted)" style="font-weight: normal !important;">
+                                                            {{currentproperty.listedprice  | currency:"$":0}}
+                                                        </span>
+                                                    </span>
+                                                    
+                                                    <span class="priceinner" ng-if="(currentproperty.short_currlabel)">
+                                                    
+                                                        <span ng-if="(currentproperty.short_convlisted)" style="font-weight: normal !important;">
+                                                            {{currentproperty.short_convlisted  | currency:"":0}}
+                                                        </span>
+                                                        
+                                                        <span ng-if="!(currentproperty.short_convlisted)" style="font-weight: normal !important;">
+                                                            {{currentproperty.listedprice  | currency:"":0}}
+                                                        </span>
+                                                    </span>
+                                                    
+                                                    
+                                                </li>
+                                            </ul>
+                                            <ul class="list-inline" >
+                                                <li>
+                                                        <span>CPx price </span>
+                                                                         
+                                                    <span class="priceinner" ng-if="!(currentproperty.short_currlabel)">
+                                                    
+                                                        <span ng-if="(currentproperty.short_convcpx)" style="font-weight: normal !important;">
+                                                            {{currentproperty.short_convcpx  | currency:"$":0}}
+                                                        </span>
+                                                        
+                                                        <span ng-if="!(currentproperty.short_convcpx)" style="font-weight: normal !important;">
+                                                            {{currentproperty.cpxprice  | currency:"$":0}}
+                                                        </span>
+                                                    </span>
+                                                    
+                                                    <span class="priceinner" ng-if="(currentproperty.short_currlabel)">
+                                                    
+                                                        <span ng-if="(currentproperty.short_convcpx)" style="font-weight: normal !important;">
+                                                            {{currentproperty.short_convcpx  | currency:"":0}}
+                                                        </span>
+                                                        
+                                                        <span ng-if="!(currentproperty.short_convcpx)" style="font-weight: normal !important;">
+                                                            {{currentproperty.cpxprice  | currency:"":0}}
+                                                        </span>
+                                                    </span>
+                                                    
+                                                </li>
+                                            </ul>
+                                            <ul class="list-inline" >
+                                                <li>
+                                                    <span>Savings   </span>
+                                                    
+                                                    
+                                                    <span class="priceinner" ng-if="!(currentproperty.short_currlabel)">
+                                                    
+                                                        <span ng-if="(currentproperty.short_convsaving)" style="font-weight: normal !important;">
+                                                            {{currentproperty.short_convsaving  | currency:"$":0}}
+                                                        </span>
+                                                        
+                                                        <span ng-if="!(currentproperty.short_convsaving)" style="font-weight: normal !important;">
+                                                            {{currentproperty.saving  | currency:"$":0}}
+                                                        </span>
+                                                    </span>
+                                                    
+                                                    <span class="priceinner" ng-if="(currentproperty.short_currlabel)">
+                                                    
+                                                        <span ng-if="(currentproperty.short_convsaving)" style="font-weight: normal !important;">
+                                                            {{currentproperty.short_convsaving  | currency:"":0}}
+                                                        </span>
+                                                        
+                                                        <span ng-if="!(currentproperty.short_convsaving)" style="font-weight: normal !important;">
+                                                            {{currentproperty.saving  | currency:"":0}}
+                                                        </span>
+                                                    </span>
+                                                    
+                                                </li>
+                                            </ul>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span>Currency <a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion"><img src="images/new_template/hint_icon.png" alt="" /></a> </span>
+                                                    <span class="priceinner">
+                                                    <img src="images/blank.gif" class="flag flag-{{countryflag}} newclass" alt="country flag" />&nbsp;
+                                                    
+                                                    
+                                                    <select style="width: 50px;"
+                                        				ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+                                        				ng-change="updateValueAll(from, to, properties[0]);update(searchcriteria,false,sortcriteria.option,loancriteria,'converter')" ng-model="to.currency"
+                                        				placeholder="Please Enter a Currency..." class="currencyselector" id="{{islisttype}}_curr_dropdown_{{item.id}}">
+                                                    </select> 
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div  class="detailtab col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                    <div class="audpricediv">
+                                        <div class="audprice pull-left gridaudprice independentlyul">
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span>Property type </span>
+                                                    <span class="priceinner">{{currentproperty.category}}</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span>Beds</span>
+                                                    <span class="priceinner">{{currentproperty.beds}}</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span>Bath</span>
+                                                    <span class="priceinner">{{currentproperty.bath}}</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span>Car</span>
+                                                    <span class="priceinner">{{currentproperty.cars}}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div style="margin: 0 auto 0 0;" class="detailtab col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                    <div class="audpricediv">
+                                        <div class="audprice pull-left gridaudprice independentlyul independentlyullast borderremove">
+                                            <ul class="list-inline">
+                                                <li >
+                                                    <span ng-if="currentproperty.IsHouseLandPackage == 'yes'">House size <strong ng-if="(currentproperty.areaunit != '') && (!(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0 || !(currentproperty.buildingarea)))">({{currentproperty.areaunit}})</strong>:</span>
+                                                    
+                                                    <span ng-if="currentproperty.IsHouseLandPackage == 'no'">Internal size <strong ng-if="(currentproperty.areaunit != '') && (!(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0 || !(currentproperty.buildingarea)))">({{currentproperty.areaunit}})</strong></span>
+                                                    
+                                                    <span ng-if="!(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0)" class="priceinner">{{currentproperty.buildingarea}}</span>
+                                                    <span ng-if="(currentproperty.buildingarea == 'na' || currentproperty.buildingarea == 0)" class="priceinner">To be confirmed</span>
+                                                </li>
+                                            </ul>
+                                            
+                                            
+                                            
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span ng-if="currentproperty.IsHouseLandPackage == 'yes'">Land size <strong ng-if="(currentproperty.areaunit != '') && (!(currentproperty.landarea == 'na' || currentproperty.landarea == 0 || !(currentproperty.landarea)))">({{currentproperty.areaunit}})</strong></span>
+                                                     <span ng-if="currentproperty.IsHouseLandPackage == 'no'">External size <strong ng-if="(currentproperty.areaunit != '') && (!(currentproperty.landarea == 'na' || currentproperty.landarea == 0 || !(currentproperty.landarea)))">({{currentproperty.areaunit}})</strong></span>
+                                                    <span ng-if="!(currentproperty.landarea == 'na' || currentproperty.landarea == 0)" class="priceinner">{{currentproperty.landarea}}</span>
+                                                    <span ng-if="(currentproperty.landarea == 'na' || currentproperty.landarea == 0 || !(currentproperty.landarea))" class="priceinner">To be confirmed</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <span>Property ID</span>
+                                                    <span class="priceinner">{{currentproperty.id}}</span>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 AddViewshortlist">
+                            <div class="row text-center">
+                                <a ng-click="addtoshortlist(currentproperty);addAlert(currentproperty.id);" href="javascript:void(0);">Add</a>
+                                <a href="#!/shortlist">View shortlist</a>
+                            </div>
+                            <alert style="background:#ffffcc;border-color: #ffffab;" ng-if="currentproperty.id == alertid" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)" class="alertbox">{{alert.msg}}</alert> 
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <div class="container shortlist-tile" id="tab-notgraded">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabbingsection">
+            <ul df-tab-menu menu-control="{{navigationState}}" theme="bootstrap" class="nav nav-tabs">
+                        <li ng-show="currentproperty.gradestatus==2" data-menu-item="tab-review" available="{{currentproperty.gradestatus==2 }}"><a data-ng-href="" data-ng-click="navigationState = 'tab-review'" ><span>Grade</span></a></li>
+						<li ng-show="currentproperty.gradestatus==1" data-menu-item="tab-beinggraded" available="{{currentproperty.gradestatus==1 }}"><a data-ng-href="" data-ng-click="navigationState = 'tab-beinggraded'" ><span>Grade</span></a></li>
+						<li ng-show="currentproperty.gradestatus==0" data-menu-item="tab-notgraded" available="{{currentproperty.gradestatus==0}}"><a data-ng-href="" data-ng-click="navigationState = 'tab-notgraded'" ><span>Grade</span></a></li> 
+						<li data-menu-item="tab-description" available="true"><a data-ng-href="" data-ng-click="navigationState = 'tab-description'" ><span>Description</span></a></li>
+						<li data-menu-item="tab-map" available="true"><a data-ng-href="" data-ng-click="navigationState = 'tab-map';refreshmap()" ><span>Map</span></a></li>
+						<li data-menu-item="tab-estimate" available ="{{currentproperty.estimate && currentproperty.estimate.length>0}}"><a data-ng-href="" data-ng-click="navigationState = 'tab-estimate'"><span>Independent Rental Estimate</span></a></li>
+						
+                        
+                        <li data-menu-item="tab-contract" available ="{{currentproperty.contract && currentproperty.contract.length>0}}"><a data-ng-href=""  data-ng-click="navigationState = 'tab-contract'" ><span>Contract-of-Sale <span ng-if="currentproperty.contract_of_sale == 'Summary'">{{currentproperty.contract_of_sale}}</span> </span></a></li>
+						                 
+                      <!--  <li data-menu-item="tab-sale-summary" available ="{{currentproperty.sale_summary && currentproperty.sale_summary.length>0}}"><a data-ng-href="" data-ng-click="go(currentproperty.sale_summary[0].url)"><span>Independent Contract of Sale Summary</span></a></li>
+						-->
+                        
+                       <li data-menu-item="tab-vendor-finance-terms" available ="{{currentproperty.vendorfinance == true && currentproperty.vendor_finance_terms.length>0}}"><a data-ng-href=""  data-ng-click="navigationState = 'tab-vendor-finance-terms'" ><span>Vendor Finance</span></a></li>
+                        
+                        <li data-menu-item="tab-history" available ="{{currentproperty.history && currentproperty.history.length>0}}"><a target="iframehistory" data-ng-click="showhistoryiframe();navigationState = 'tab-history'" href={{currentproperty.history[0].url}}><span>Historical & Population Data </span></a></li>
+						<li data-menu-item="tab-how-to-buy" available ="{{currentproperty.how_to_buy && currentproperty.how_to_buy.length>0}}"><a data-ng-href="" data-ng-click="go(currentproperty.how_to_buy[0].url)"><span>How to Buy & Fund this Property </span></a></li>
+						<li data-menu-item="tab-loan-cal" available ="true"><a data-ng-href="" data-ng-click="navigationState = 'tab-loan-cal'"><span>Affordability</span></a></li>
+						<li data-menu-item="tab-inv-cal" available ="{{currentproperty.invest_cal && currentproperty.invest_cal.length>0}}"><a data-ng-href="" data-ng-click="navigationState = 'tab-inv-cal'"><span>Invesment Calculator</span></a></li>
+						<li data-menu-item="tab-other-info" available ="{{currentproperty.support_info && (currentproperty.support_info.length>0 || currentproperty.floorplans.length>0 || currentproperty.documents.length>0 || currentproperty.externalLink != '')}}"><a data-ng-href="" data-ng-click="navigationState = 'tab-other-info'"><span>Supporting Information</span></a></li>
+						<li data-more-menu-item class="more-tab"><a data-ng-href="">More +</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="home" ng-class="{'active': navigationState=='tab-review','in': navigationState=='tab-review'}" class="tab-pane fade">
+                    <div class="gradetab" ng-show="currentproperty.gradestatus==2 || currentproperty.gradestatus==1">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gradetop">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left g-de-left">
+                                    <div class="row tabbingGrade" ng-include="'views/property_details_grade.html'"></div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right g-de-right">
+                                    <div class="row tabbingGrade text-right">
+                                        <a href="#!/about/independent-property-review" target="_blank" class="" style="color:#7cb33c">What is an ipr, grade and score?</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gradetable nopadding" ng-include="'views/grade_table.html'"></div>
+                        
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gradedesc"  ng-if="currentproperty.observation != ''" style="display: none;">
+                            <div class="row gradedesctitle">
+                                <h4>Property Observations</h4>
+                                <p>{{currentproperty.observation}}</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gradetable nopadding"  ng-if="ipr_history.length != 0" ng-include="'views/grade_history.html'"></div>
+                    </div>
+                </div>
+                
+                <div  ng-class="{'active': navigationState=='tab-notgraded','in': navigationState=='tab-notgraded'}" class="tab-pane fade">
+                    <div class="gradetab" ng-show="currentproperty.gradestatus==0">
+                       <div class="row standardcontainer" >
+
+
+							<div class="col-sm-12">
+
+								<h4 class="tabtitletetx">This property has NOT been graded</h4> 
+								
+								<p class="nongradebox">To assist with making your purchase decision why not request a FREE Independent 
+								Property Review (ipr) which includes a grade in a 6 page report on this property.</p>
+								
+								<p class="nongradebox">The grade works like a hotel star rating.  It provides the disclosure buyers/ advisors 
+								need to find the right property.  Properties are independently reviewed and graded by <a style="color: #86b84c;" href="http://www.jll.com.au/australia/en-au/services/investors-developers/valuations-and-advisory/mortgage-services" target="_blank">JLL</a> </p>
+								 
+								 <p class="nongradebox">Please, only request an ipr from the owner/ agent if you are interested in their property</p> 
+								 
+								<div class="input-group top-button2 btn-social-icon scr-pad xs-center" style="width:154px;padding-top: 20px; float: none;
+">
+								  <!-- <span class="input-group-addon top-span1 nopadding" style="background:#25427C" aria-hidden="true">
+									<span class="star-color">i</span>
+								  </span> -->
+									<a href="#!/request-free-ipr" target="_blank" title="Request a free ipr" class="editbtnall Requestjprgrad"> Request a <b>FREE</b> ipr</a>
+								</div> 
+								 
+								 <p class="dis-link" style="padding-bottom: 5px;padding-top: 30px;"><a class="" href="#!/blog/FAQs/why-grade-a-property"  title="Why grade a property?" target="_blank">Why grade a property?</a>  
+								<a class="" href="#!/about/independent-property-review" target="_blank"   title="Independent property review(ipr)">What is an ipr,
+									grade and score?</a>  
+								 <a class="" href="./docs/sample-CPx-ipr.pdf"  	 title="See the sample ipr" target="_blank">Sample ipr and grade report</a></p>
+				
+
+							</div>
+
+
+						</div>
+                    </div>
+                </div>
+                
+                <div  ng-class="{'active': navigationState=='tab-beinggraded','in': navigationState=='tab-beinggraded'}" class="tab-pane fade">
+                    <div class="gradetab" ng-show="currentproperty.gradestatus==1">
+                        <div class="row standardcontainer" >
+
+
+							<div class="col-sm-12">
+
+								<h4 style="text-align:center;">This property is being independently reviewed and graded by JLL</h4><br/>
+								
+								<p class="nongradebox">To assist with making your purchase decision; A FREE Independent Property Review (ipr) which includes 
+								a grade in a 6 page report will be posted against this property within 5 days.</p>
+								
+								<p class="nongradebox">The grade works like a hotel star rating.  It provides the disclosure buyers/ advisors 
+								need to find the right property.</p>
+								 
+								 
+								<br/>
+								 
+								 <p style="padding-bottom: 5px;"><a class="" href="#!/blog/FAQs/why-grade-a-property" style="text-decoration: underline;" title="Why grade a property?" target="_blank">Why grade a property?</a> | 
+								<a class="" href="#!/about/independent-property-review" target="_blank" style="text-decoration: underline;" title="Independent property review(ipr)">What is an ipr,
+									grade and score?</a> | 
+								 <a class="" href="./docs/sample-CPx-ipr.pdf" style="text-decoration: underline;" title="See the sample ipr" target="_blank">Sample ipr and grade report</a></p>
+				
+
+							</div>
+
+
+						</div>
+                    </div>
+                </div>
+                
+                <div class="dis-tabs-d" ng-class="{'active': navigationState=='tab-description','in': navigationState=='tab-description'}"  class="tab-pane fade">
+                    <div class="tabdesc2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                        <div class="tabdesc2left">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabdesc2lefttopdesc" >
+                                                <div class="row">
+                                                    <h4 class="tabtitletetx">{{currentproperty.headline}}</h4>
+                                                    <p style="white-space: pre-wrap;">{{currentproperty.description}}</p>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabdesc2lefttopGeneral " style="padding-top: 15px;">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tabGeneral_one ">
+                                                        <div class="row">
+                                                            
+                                                            <div class="Generalfeatures">
+                                                                <h4 class="tabtitletetx">General features</h4>
+                                                                <ul class="list-unstyled">
+                                                                    <li><p><span class="label-text"><strong>Property type: </strong></span><span class="value-text" style="font-weight: normal;">{{currentproperty.category}}</span></p></li>
+                                                                    <li><p><span class="label-text"<strong>Beds:</strong></span><span class="value-text" style="font-weight: normal;">{{currentproperty.beds}}</span></p></li>
+                                                                    <li><p><span class="label-text"<strong>Bath:</strong></span><span class="value-text" style="font-weight: normal;">{{currentproperty.bath}}</span></p></li>
+                                                                    <li><p><span class="label-text"<strong>Car:</strong></span><span class="value-text" style="font-weight: normal;">{{currentproperty.cars}}</span></p></li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            
+                                                            <div ng-show="currentproperty.features.airConditioning=='yes' || currentproperty.features.alarmSystem=='yes' ||
+									currentproperty.features.vacuumSystem=='yes'||currentproperty.features.intercom=='yes' ||
+									currentproperty.features.openFirePlace=='yes' ||currentproperty.features.livingAreas==1 ||
+									currentproperty.features.builtInRobes==1 ||currentproperty.features.dishwasher==1 ||
+									currentproperty.features.dishwasher=='yes' || currentproperty.features.dishwasher=='yes' ||
+									currentproperty.features.floorboards==1 || currentproperty.features.floorboards=='yes' ||
+									currentproperty.features.gasHeating==1 || currentproperty.features.gasHeating=='yes' || 
+									currentproperty.features.gym==1 || currentproperty.features.gym=='yes' ||
+									currentproperty.features.rumpusRoom==1 || currentproperty.features.rumpusRoom=='yes' ||
+									currentproperty.features.livingAreas=='yes' || currentproperty.features.insideSpa=='yes' ||
+									currentproperty.features.evaporativeCooling==1 || currentproperty.features.evaporativeCooling=='yes' || 
+									currentproperty.features.hotWaterService==1 || currentproperty.features.hotWaterService=='yes' ||
+									currentproperty.features.ensuite==1 || currentproperty.features.ensuite=='yes' || currentproperty.features.study==1 ||
+									currentproperty.features.study=='yes' || currentproperty.features.broadband=='yes' ||
+									currentproperty.features.broadband==1 || currentproperty.features.payTV =='yes' ||
+									currentproperty.features.payTV == 1 || currentproperty.features.ductedHeating=='yes' ||
+									currentproperty.features.ductedHeating==1 || currentproperty.features.ductedCooling =='yes'||
+									currentproperty.features.ductedCooling ==1 || currentproperty.features.splitsystemHeating=='yes' ||
+									currentproperty.features.splitsystemHeating==1 || currentproperty.features.hydronicHeating=='yes' ||
+									currentproperty.features.hydronicHeating==1 || currentproperty.features.splitSystemAirCon=='yes' ||
+									currentproperty.features.splitSystemAirCon==1 || currentproperty.features.reverseCycleAirCon=='yes' ||
+									currentproperty.features.reverseCycleAirCon==1 || currentproperty.features.splitSystemAircon=='yes' ||
+									currentproperty.features.splitSystemAircon==1|| currentproperty.features.splitsystemAircon=='yes' ||
+									currentproperty.features.splitsystemAircon==1 || currentproperty.features.reverseCycleAircon=='yes' ||
+									currentproperty.features.reverseCycleAircon==1 || currentproperty.features.evaporativeCooling=='yes' ||
+									currentproperty.features.evaporativeCooling==1" class="Generalfeaturestwo Outdoorfeatures">
+                                                            <h4 class="tabtitletetx">Indoor features</h4>
+                                                            <ul class="list-unstyled">
+                                                                     <li><p ng-show ="currentproperty.features.airConditioning== 'yes'">Air Conditioning</p></li>
+                        											 <li><p ng-show ="currentproperty.features.alarmSystem== 'yes'">Alarm System</p></li>
+                        											 <li><p ng-show ="currentproperty.features.vacuumSystem== 'yes'">Vacuum System</p></li>
+                        											 <li><p ng-show ="currentproperty.features.intercom== 'yes'">Intercom</p></li>
+                        											 <li><p ng-show ="currentproperty.features.openFirePlace== 'yes'">Open Fire Place</p></li>
+                        											 <li><p ng-show ="currentproperty.features.livingAreas ==1 || currentproperty.features.livingAreas=='yes'">Living Areas</p></li>
+                        											 <li><p ng-show ="currentproperty.features.insideSpa== 1 ||  currentproperty.features.insideSpa=='yes'">Inside Spa</p></li>
+                        											 
+                        											 <li><p ng-show ="currentproperty.features.builtInRobes== 1 || currentproperty.features.builtInRobes=='yes' ">Built in Robes</p></li>
+                        											 <li><p ng-show ="currentproperty.features.dishwasher== 1 || currentproperty.features.dishwasher=='yes'">Dishwasher</p></li>
+                        											 <li><p ng-show ="currentproperty.features.floorboards== 1 || currentproperty.features.floorboards=='yes'">Floorboards</p></li>
+                        											 <li><p ng-show ="currentproperty.features.gasHeating== 1 || currentproperty.features.gasHeating=='yes'">Gas Heating</p></li>
+                        											 <li><p ng-show ="currentproperty.features.gym== 1 || currentproperty.features.gym=='yes'">Gym</p></li>
+                        											 <li><p ng-show ="currentproperty.features.rumpusRoom== 1 || currentproperty.features.rumpusRoom=='yes'">Rumpus Room</p></li>
+                        											 <li><p ng-show ="currentproperty.features.evaporativeCooling== 1 || currentproperty.features.evaporativeCooling=='yes'">Evaporative Cooling</p></li>
+                        											 <li><p ng-show ="currentproperty.features.hotWaterService== 1 || currentproperty.features.hotWaterService=='yes'">Hot Water Service</p></li>
+                        											 <li><p ng-show ="currentproperty.features.ensuite== 1 || currentproperty.features.ensuite=='yes'">Ensuite</p></li>
+                        											 <li><p ng-show ="currentproperty.features.study== 1 || currentproperty.features.study=='yes'">Study</p></li>
+                        											 <li><p ng-show ="currentproperty.features.broadband== 1 || currentproperty.features.broadband=='yes'">Broadband</p></li>
+                        											 <li><p ng-show ="currentproperty.features.payTV== 1 || currentproperty.features.payTV=='yes'">Pay TV</p></li>
+                        											 <li><p ng-show ="currentproperty.features.ductedHeating== 1 || currentproperty.features.ductedHeating=='yes' ">Ducted Heating</p></li>
+                        											 <li><p ng-show ="currentproperty.features.ductedCooling== 1 || currentproperty.features.ductedCooling=='yes' ">Ducted Cooling</p></li>
+                        											 <li><p ng-show ="currentproperty.features.splitsystemHeating== 1 || currentproperty.features.splitsystemHeating=='yes' ">Splitsystem Heating</p></li>
+                        											 <li><p ng-show ="currentproperty.features.hydronicHeating== 1 || currentproperty.features.hydronicHeating=='yes' ">Hydronic Heating</p></li>
+                        											 <li><p ng-show ="currentproperty.features.splitSystemAirCon== 1 || currentproperty.features.splitSystemAirCon=='yes' || currentproperty.features.splitsystemAircon== 1 || currentproperty.features.splitsystemAircon=='yes' || currentproperty.features.splitSystemAircon== 1 || currentproperty.features.splitSystemAircon=='yes' ">Splitsystem Aircon</p></li>
+                        											
+                                                                     <li><p ng-show ="currentproperty.features.reverseCycleAircon== 1 || currentproperty.features.reverseCycleAircon=='yes' || currentproperty.features.reverseCycleAirCon== 1 || currentproperty.features.reverseCycleAirCon=='yes' ">ReverseCycle Aircon</p></li>
+						
+                                                            </ul>
+                                                        </div>
+                                                            
+                                                            
+                                                            
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div  class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tabGeneral_one ">
+                                                        <div class="Outdoorfeatures" ng-show ="currentproperty.idealFor.firstHomeBuyer=='yes' || currentproperty.idealFor.investors=='yes' || currentproperty.idealFor.downsizing=='yes' || currentproperty.idealFor.couples=='yes' || currentproperty.idealFor.students=='yes' || currentproperty.idealFor.lrgFamilies=='yes' || currentproperty.idealFor.retirees=='yes'">
+                                                                <h4 class="tabtitletetx">Ideal for</h4>
+                                                                <ul class="list-unstyled">
+                                                                    
+                                                                   <li><p ng-show ="currentproperty.idealFor.firstHomeBuyer=='yes'">First Home Buyers </p></li>
+                        											<li><p ng-show ="currentproperty.idealFor.investors=='yes'">Investors</p></li>
+                        											<li> <p ng-show ="currentproperty.idealFor.downsizing=='yes'">Downsizing</p></li>
+                        											<li><p ng-show ="currentproperty.idealFor.couples=='yes'">Couples</p></li>
+                        											<li><p ng-show ="currentproperty.idealFor.students=='yes'">Students</p></li>
+                        											<li><p ng-show ="currentproperty.idealFor.lrgFamilies=='yes'">Large Families</p></li>
+                        											<li><p ng-show ="currentproperty.idealFor.retirees=='yes'">Retirees</p></li>
+                                                                   
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div ng-class="{'Generalfeaturestwo': (currentproperty.idealFor.firstHomeBuyer=='yes' || currentproperty.idealFor.investors=='yes' || currentproperty.idealFor.downsizing=='yes' || currentproperty.idealFor.couples=='yes' || currentproperty.idealFor.students=='yes' || currentproperty.idealFor.lrgFamilies=='yes' || currentproperty.idealFor.retirees=='yes')}" ng-show="currentproperty.views.city=='yes' ||currentproperty.views.water=='yes' || currentproperty.views.valley=='yes' || currentproperty.views.ocean=='yes'|| currentproperty.views.mountain=='yes' || currentproperty.features.garden=='yes' || currentproperty.features.remoteGarage==1 ||
+									currentproperty.features.remoteGarage=='yes'  || currentproperty.features.secureParking=='yes' ||
+									currentproperty.features.secureParking==1 || currentproperty.features.pool ||
+									currentproperty.features.spa || currentproperty.features.tennisCourt=='yes' ||
+									currentproperty.features.balcony==1 || currentproperty.features.balcony=='yes' || currentproperty.features.balcony=='yes'
+									||currentproperty.features.deck==1 || currentproperty.features.courtyard =='yes' ||currentproperty.features.outdoorEnt==1 ||
+									currentproperty.features.shed==1|| currentproperty.features.fullyFenced==1 ||
+									currentproperty.features.workshop==1 || currentproperty.features.outsideSpa=='yes'" class="Outdoorfeatures">
+                                                            <h4 class="tabtitletetx">Outdoor features</h4>
+                                                            <ul class="list-unstyled">
+                                                                <li><p ng-show ="currentproperty.features.garden=='yes'">Garden</p></li>
+                    											 <li><p ng-show ="currentproperty.features.remoteGarage==1 || currentproperty.features.remoteGarage=='yes'">Remote Garage</p></li>
+                    											 <li><p ng-show ="currentproperty.features.secureParking==1 || currentproperty.features.secureParking=='yes'" >Secure Parking</p></li>
+                    											 <!-- <p ng-show ="currentproperty.features.pool.''==yes">Pool</p> -->
+                    											 <li><p ng-show ="currentproperty.features.pool=='inground' || currentproperty.features.poolInGround == 'true' || currentproperty.features.poolInGround == 'yes' || currentproperty.features.poolInGround == 1">Pool in Ground</p></li>
+                    											 <li><p ng-show ="currentproperty.features.pool=='aboveground' || currentproperty.features.poolAboveGround == 'yes' || currentproperty.features.poolAboveGround == 'true' || currentproperty.features.poolAboveGround ==1" >Pool Above Ground</p></li>
+                    											<li><p ng-show ="currentproperty.features.pool=='yes' || currentproperty.features.pool == '1' || currentproperty.features.pool == 'true'" >Pool</p></li>
+                    											 <!-- <p ng-show ="currentproperty.features.pool.''==yes">Spa</p> -->
+                    											 <li><p ng-show ="currentproperty.features.spa=='inground' || currentproperty.features.spa=='aboveground' || currentproperty.features.spa=='yes' || currentproperty.features.spa== 1">Spa</p></li>
+                    											 <li><p ng-show ="currentproperty.features.spa=='inground' || currentproperty.features.spa=='yes' || currentproperty.features.spa== 1">Spa in Ground</p></li>
+                    											 <li><p ng-show ="currentproperty.features.spa=='aboveground'">Spa Above Ground</p></li>
+                    											 <li><p ng-show ="currentproperty.features.outsideSpa==1 || currentproperty.features.outsideSpa=='yes'">Outside Spa</p></li>
+                    											 <li><p ng-show ="currentproperty.features.tennisCourt=='yes'">Tennis Court</p></li>
+                    											 <li><p ng-show ="currentproperty.features.balcony==1 || currentproperty.features.balcony=='yes'">Balcony</p></li>
+                    											 <li><p ng-show ="currentproperty.features.deck==1 || currentproperty.features.deck=='yes'">Deck</p></li>
+                    											 <li><p ng-show ="currentproperty.features.courtyard=='yes'">Courtyard</p></li>
+                    											 <li><p ng-show ="currentproperty.features.outdoorEnt==1 || currentproperty.features.outdoorEnt=='yes'">Outdoor Entertainment</p></li>
+                    											 <li><p ng-show ="currentproperty.features.shed==1 || currentproperty.features.shed=='yes'">Shed</p></li>
+                    											 <li><p ng-show ="currentproperty.features.fullyFenced==1 || currentproperty.features.fullyFenced=='yes'">Fully Fenced</p></li>
+                    											 <li><p ng-show ="currentproperty.features.workshop==1 || currentproperty.features.workshop=='yes'">workshop</p></li>
+                                                            </ul>
+                                                        </div>
+                                                            
+                                                            
+                                                            
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tabGeneral_one ">
+                                                        
+                                                        <div class="row">
+                                                        <div ng-show = "currentproperty.ecoFriendly.solarPanels==1 ||currentproperty.ecoFriendly.solarHotWater==1||
+									currentproperty.ecoFriendly.waterTank==1 || currentproperty.ecoFriendly.greyWaterSystem==1 || 
+									currentproperty.ecoFriendly.solarPanels=='yes' || currentproperty.ecoFriendly.solarHotWater=='yes' || 
+									currentproperty.ecoFriendly.waterTank=='yes' || currentproperty.ecoFriendly.greyWaterSystem=='yes'"  class=" Outdoorfeatures">
+                                                                <h4 class="tabtitletetx">Eco Friendly</h4>
+                                                                <ul class="list-unstyled">
+                                                                    
+                                                                   <li><p ng-show ="currentproperty.ecoFriendly.solarPanels==1 || currentproperty.ecoFriendly.solarPanels=='yes'">Solar Panels </p></li>
+                        											<li><p ng-show ="currentproperty.ecoFriendly.solarHotWater==1 || currentproperty.ecoFriendly.solarHotWater=='yes'">Solar Hot Water</p></li>
+                        											<li> <p ng-show ="currentproperty.ecoFriendly.waterTank==1 || currentproperty.ecoFriendly.waterTank=='yes'">Water Tank</p></li>
+                        											<li><p ng-show ="currentproperty.ecoFriendly.greyWaterSystem==1 || currentproperty.ecoFriendly.greyWaterSystem=='yes'">Grey Water System</p></li>
+                        											
+                                                                   
+                                                                </ul>
+                                                            </div>
+                                                        
+                                                        <div ng-class="{'Generalfeaturestwo': (currentproperty.ecoFriendly.solarPanels==1 ||currentproperty.ecoFriendly.solarHotWater==1||
+									currentproperty.ecoFriendly.waterTank==1 || currentproperty.ecoFriendly.greyWaterSystem==1 || 
+									currentproperty.ecoFriendly.solarPanels=='yes' || currentproperty.ecoFriendly.solarHotWater=='yes' || 
+									currentproperty.ecoFriendly.waterTank=='yes' || currentproperty.ecoFriendly.greyWaterSystem=='yes')}" ng-show="currentproperty.views.city=='yes' ||currentproperty.views.water=='yes' ||	currentproperty.views.valley=='yes' || currentproperty.views.ocean=='yes'||	currentproperty.views.mountain=='yes'" class=" Outdoorfeatures">
+                                                            <h4 class="tabtitletetx">Views</h4>
+                                                            <ul class="list-unstyled">
+                                                                    <li><p ng-show ="currentproperty.views.city=='yes'">City</p></li>
+                    											 <li><p ng-show ="currentproperty.views.water=='yes'">Water</p></li>
+                    											 <li><p ng-show ="currentproperty.views.valley=='yes'">Valley</p></li>
+                    											 <li><p ng-show ="currentproperty.views.ocean=='yes'">Ocean</p></li> 
+                    											 <li><p ng-show ="currentproperty.views.mountain=='yes'">Mountain</p></li>
+                                                            </ul>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <div class="tabdesc2right">
+                                            
+                                            
+                                            
+                                            <div ng-show="currentproperty.gradestatus==0" class="well" style="background:#fff9cb;border:1px solid #ffe032;color:#1e1e1e">
+                                                This description is provided by the property owner/ agent.<br />
+                                                This property is : <span class="Gradebtn" style="margin: 7px 5px;font-weight: normal;">Not Graded</span><br />
+                                                To assist with making your purchase decision why not request a FREE 
+												Independent Property Review (ipr) which includes a grade in a 6 page 
+												report on this property.<br /><br />
+                                                <a href="#!/request-free-ipr" style="color:#77b234;">Click here for more details</a>
+                                            </div>
+                                            
+                                            <div ng-show="currentproperty.gradestatus==1" class="well" style="background:#fff9cb;border:1px solid #ffe032;color:#1e1e1e">
+                                                This description is provided by the property owner/ agent.<br />
+                                                A FREE Independent Property Review (ipr) which includes a grade in 
+											a 6 page report will be posted against this property within 5 days. <br /><br />
+                                                <a href="" ng-click="gotoGradetab(1);" style="color:#77b234;">Click here for more details</a>
+                                            </div>
+                                            
+                                            <div ng-show="currentproperty.gradestatus==2" class="well" style="background:#fff9cb;border:1px solid #ffe032;color:#1e1e1e">
+                                                This description is provided by the property owner/ agent.<br />
+                                                This property is :<span class="Gradebtn" style="margin: 7px 5px;font-weight: normal;">Grade<span class="badge">{{currentproperty.grade}}</span></span><br />
+                                                A FREE Independent Property Review (ipr) which includes a grade 
+											in a 6 page report is posted against this property. <br /><br />
+                                                <a href="" ng-click="gotoGradetab(2);" style="color:#77b234;">Click here for more details</a>
+                                            </div>
+                                            
+                                            <div class="text-center Enquirebtn">
+                                                <ul class="list-unstyled">
+                                                    <li ng-click="passenquiry(currentproperty.id);toggle_enquire_servicerequest('to');">
+                                                        <a href="#!/service_request" class="editbtnall Servicerequest">Service request</a>
+                                                    </li>
+                                                    <li  ng-click="passenquiry(currentproperty.id);toggle_enquire_servicerequest('to');">
+                                                        <a href="#!/enquire" class="editbtnall enquire">Enquire</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <!--
+<div class="well">
+                                                <a href="#!/service_request" style="color:#1d1d1d;">Click here to access <strong>Service request form</strong> </a>
+                                            </div>
+-->
+                                            
+                                            
+                                            
+                                            <div ng-hide="!currentproperty.auction_date.length" class="well auction_header" style="background:#e9f4dd;border:1px solid #d1d1d1;">
+                                                <p ><strong>Auction</strong>
+                                                <span style="float: right;" ng-if="auctionstatus=='yes'"><strong>{{days}} days to go</strong> </span> </p>
+                                                Auction scheduled for {{auctionDate}}
+                                            </div>
+                                            
+                                            
+                                            <div ng-show="contactexist==true" class="well hr_style">
+                                                <div class="right_panel_header">
+                                                    <p ><strong>Contacts</strong></p>
+                                                  </div>
+                                                  
+                                                <div ng-repeat="contact in currentproperty.contact" ng-if="(contact.display_val == undefined || contact.display_val) && (contact.type =='listingAgent')" class="right_panel_content">
+                                                  
+                                                    
+                                                        <p ng-show = "contact.name.length!=0">
+                                                            <strong>Contact: </strong>{{contact.name}}
+                                                        </p>
+                                                        <p ng-show = "contact.email.length!=0" style="word-wrap: break-word;">
+                                                            <strong>Email: </strong>{{contact.email}}
+                                                        </p>
+                                                        <p ng-if="contact.telephone | isArray"  ng-repeat="tel in contact.telephone">
+                                                          <span ng-show="tel.telephone!=''" class="capital_char">  <strong>{{tel.telephoneType}}: </strong>{{tel.telephone}}</span>
+                                                        </p>
+                                                        <p ng-if="!(contact.telephone | isArray)"  >
+                                                          <span ng-show="contact.telephone!=''">  <strong>Mobile: </strong>{{contact.telephone}}</span>
+                                                        </p>
+                                                        <p ng-if="!(contact.telephone | isArray)" ng-show = "contact.telephone[0] == NULL">
+                                                          <span ng-show="contact.telephone!=''">  <strong>Mobile: </strong>{{contact.telephone}}</span>
+                                                        </p>    
+                                                        <hr ng-if != "$last" />
+                                                    
+                                                  </div>  
+                                                  
+                                                  
+                                                  <div ng-show="ownerexist==true" class="right_panel_header2">
+                                                    <hr ng-show="contactexist==true"/>
+                                                    <p><strong>Owner</strong></p>
+                                                  </div>
+                                                  
+                                                  <div ng-repeat="contact in currentproperty.contact" ng-if="(contact.display_val !== undefined) && (contact.display_val) && (contact.type =='vendorDetails')" class="right_panel_content">
+                                                   
+                                                        <p ng-show = "contact.name.length!=0">
+                                                            <strong>Contact: </strong>{{contact.name}}
+                                                        </p>
+                                                        <p ng-show = "contact.email.length!=0" style="word-wrap: break-word;">
+                                                            <strong>Email: </strong>{{contact.email}}
+                                                        </p>
+                                                        <p ng-if="contact.telephone | isArray"  ng-repeat="tel in contact.telephone">
+                                                          <span ng-show="tel.telephone!=''" class="capital_char">  <strong>{{tel.telephoneType}}: </strong>{{tel.telephone}}</span>
+                                                        </p>
+                                                        <p ng-if="!(contact.telephone | isArray)"  >
+                                                          <span ng-show="contact.telephone!=''">  <strong>Mobile: </strong>{{contact.telephone}}</span>
+                                                        </p>
+                                                        <p ng-if="!(contact.telephone | isArray)" ng-show = "contact.telephone[0] == NULL">
+                                                          <span ng-show="contact.telephone!=''">  <strong>Mobile: </strong>{{contact.telephone}}</span>
+                                                        </p>  
+                                                        
+                                                        <hr ng-if != "$last" />
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            
+                                            <div ng-hide= "!currentproperty.inspectionTimes.length" class="well right_panel_header">
+                                                <p><strong>Inspections</strong></p>
+                                                <table border="1" width="100%" >
+                                                <tr ng-repeat="inspect in inspect3">
+                                                    <td style="padding: 2px;"><strong>{{inspect.label}} </strong></td>
+                                                    <td style="padding: 2px;">{{inspect.time}}</td>
+                                                </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                
+                                
+                                <div class="" ng-show= "currentproperty.features.otherFeatures.length">
+                                    <br />
+                                    <h4 class="tabtitletetx"><strong>Other features</strong></h4>
+                                    <p>{{currentproperty.features.otherFeatures}}</p>
+                                    <br />
+
+                                    
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dis-tabs-m" ng-class="{'active': navigationState=='tab-description','in': navigationState=='tab-description'}"  class="tab-pane fade">
+                    <div class="tabdesc2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                        <div class="tabdesc2left">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabdesc2lefttopdesc" >
+                                                <div class="row">
+                                                    <h4 class="tabtitletetx">{{currentproperty.headline}}</h4>
+                                                    <p style="white-space: pre-wrap;">{{currentproperty.description}}</p>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabdesc2lefttopGeneral " style="padding-top: 15px;">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tabGeneral_one ">
+                                                        <div class="row">
+                                                            
+                                                            <div class="Generalfeatures">
+                                                                <h4 class="tabtitletetx">General features</h4>
+                                                                <ul class="list-unstyled">
+                                                                   <li><p><span class="label-text"><strong>Property type: </strong></span><span class="value-text" style="font-weight: normal;">{{currentproperty.category}}</span></p></li>
+                                                                    <li><p><span class="label-text"<strong>Beds:</strong></span><span class="value-text" style="font-weight: normal;">{{currentproperty.beds}}</span></p></li>
+                                                                    <li><p><span class="label-text"<strong>Bath:</strong></span><span class="value-text" style="font-weight: normal;">{{currentproperty.bath}}</span></p></li>
+                                                                    <li><p><span class="label-text"<strong>Car:</strong></span><span class="value-text" style="font-weight: normal;">{{currentproperty.cars}}</span></p></li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div class="Outdoorfeatures" ng-show ="currentproperty.idealFor.firstHomeBuyer=='yes' || currentproperty.idealFor.investors=='yes' || currentproperty.idealFor.downsizing=='yes' || currentproperty.idealFor.couples=='yes' || currentproperty.idealFor.students=='yes' || currentproperty.idealFor.lrgFamilies=='yes' || currentproperty.idealFor.retirees=='yes'">
+                                                                <h4 class="tabtitletetx">Ideal for</h4>
+                                                                <ul class="list-unstyled">
+                                                                    
+                                                                   <li><p ng-show ="currentproperty.idealFor.firstHomeBuyer=='yes'">First Home Buyers </p></li>
+                        											<li><p ng-show ="currentproperty.idealFor.investors=='yes'">Investors</p></li>
+                        											<li> <p ng-show ="currentproperty.idealFor.downsizing=='yes'">Downsizing</p></li>
+                        											<li><p ng-show ="currentproperty.idealFor.couples=='yes'">Couples</p></li>
+                        											<li><p ng-show ="currentproperty.idealFor.students=='yes'">Students</p></li>
+                        											<li><p ng-show ="currentproperty.idealFor.lrgFamilies=='yes'">Large Families</p></li>
+                        											<li><p ng-show ="currentproperty.idealFor.retirees=='yes'">Retirees</p></li>
+                                                                   
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div ng-show = "currentproperty.ecoFriendly.solarPanels==1 ||currentproperty.ecoFriendly.solarHotWater==1||
+									currentproperty.ecoFriendly.waterTank==1 || currentproperty.ecoFriendly.greyWaterSystem==1 || 
+									currentproperty.ecoFriendly.solarPanels=='yes' || currentproperty.ecoFriendly.solarHotWater=='yes' || 
+									currentproperty.ecoFriendly.waterTank=='yes' || currentproperty.ecoFriendly.greyWaterSystem=='yes'"  class=" Outdoorfeatures">
+                                                                <h4 class="tabtitletetx">Eco Friendly</h4>
+                                                                <ul class="list-unstyled">
+                                                                    
+                                                                   <li><p ng-show ="currentproperty.ecoFriendly.solarPanels==1 || currentproperty.ecoFriendly.solarPanels=='yes'">Solar Panels </p></li>
+                        											<li><p ng-show ="currentproperty.ecoFriendly.solarHotWater==1 || currentproperty.ecoFriendly.solarHotWater=='yes'">Solar Hot Water</p></li>
+                        											<li> <p ng-show ="currentproperty.ecoFriendly.waterTank==1 || currentproperty.ecoFriendly.waterTank=='yes'">Water Tank</p></li>
+                        											<li><p ng-show ="currentproperty.ecoFriendly.greyWaterSystem==1 || currentproperty.ecoFriendly.greyWaterSystem=='yes'">Grey Water System</p></li>
+                        											
+                                                                   
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <div ng-show="currentproperty.features.airConditioning=='yes' || currentproperty.features.alarmSystem=='yes' ||
+									currentproperty.features.vacuumSystem=='yes'||currentproperty.features.intercom=='yes' ||
+									currentproperty.features.openFirePlace=='yes' ||currentproperty.features.livingAreas==1 ||
+									currentproperty.features.builtInRobes==1 ||currentproperty.features.dishwasher==1 ||
+									currentproperty.features.dishwasher=='yes' || currentproperty.features.dishwasher=='yes' ||
+									currentproperty.features.floorboards==1 || currentproperty.features.floorboards=='yes' ||
+									currentproperty.features.gasHeating==1 || currentproperty.features.gasHeating=='yes' || 
+									currentproperty.features.gym==1 || currentproperty.features.gym=='yes' ||
+									currentproperty.features.rumpusRoom==1 || currentproperty.features.rumpusRoom=='yes' ||
+									currentproperty.features.livingAreas=='yes' || currentproperty.features.insideSpa=='yes' ||
+									currentproperty.features.evaporativeCooling==1 || currentproperty.features.evaporativeCooling=='yes' || 
+									currentproperty.features.hotWaterService==1 || currentproperty.features.hotWaterService=='yes' ||
+									currentproperty.features.ensuite==1 || currentproperty.features.ensuite=='yes' || currentproperty.features.study==1 ||
+									currentproperty.features.study=='yes' || currentproperty.features.broadband=='yes' ||
+									currentproperty.features.broadband==1 || currentproperty.features.payTV =='yes' ||
+									currentproperty.features.payTV == 1 || currentproperty.features.ductedHeating=='yes' ||
+									currentproperty.features.ductedHeating==1 || currentproperty.features.ductedCooling =='yes'||
+									currentproperty.features.ductedCooling ==1 || currentproperty.features.splitsystemHeating=='yes' ||
+									currentproperty.features.splitsystemHeating==1 || currentproperty.features.hydronicHeating=='yes' ||
+									currentproperty.features.hydronicHeating==1 || currentproperty.features.splitSystemAirCon=='yes' ||
+									currentproperty.features.splitSystemAirCon==1 || currentproperty.features.reverseCycleAirCon=='yes' ||
+									currentproperty.features.reverseCycleAirCon==1 || currentproperty.features.splitSystemAircon=='yes' ||
+									currentproperty.features.splitSystemAircon==1|| currentproperty.features.splitsystemAircon=='yes' ||
+									currentproperty.features.splitsystemAircon==1 || currentproperty.features.reverseCycleAircon=='yes' ||
+									currentproperty.features.reverseCycleAircon==1 || currentproperty.features.evaporativeCooling=='yes' ||
+									currentproperty.features.evaporativeCooling==1" class="Generalfeaturestwo Outdoorfeatures">
+                                                            <h4 class="tabtitletetx">Indoor features</h4>
+                                                            <ul class="list-unstyled">
+                                                                     <li><p ng-show ="currentproperty.features.airConditioning== 'yes'">Air Conditioning</p></li>
+                        											 <li><p ng-show ="currentproperty.features.alarmSystem== 'yes'">Alarm System</p></li>
+                        											 <li><p ng-show ="currentproperty.features.vacuumSystem== 'yes'">Vacuum System</p></li>
+                        											 <li><p ng-show ="currentproperty.features.intercom== 'yes'">Intercom</p></li>
+                        											 <li><p ng-show ="currentproperty.features.openFirePlace== 'yes'">Open Fire Place</p></li>
+                        											 <li><p ng-show ="currentproperty.features.livingAreas ==1 || currentproperty.features.livingAreas=='yes'">Living Areas</p></li>
+                        											 <li><p ng-show ="currentproperty.features.insideSpa== 1 ||  currentproperty.features.insideSpa=='yes'">Inside Spa</p></li>
+                        											 
+                        											 <li><p ng-show ="currentproperty.features.builtInRobes== 1 || currentproperty.features.builtInRobes=='yes' ">Built in Robes</p></li>
+                        											 <li><p ng-show ="currentproperty.features.dishwasher== 1 || currentproperty.features.dishwasher=='yes'">Dishwasher</p></li>
+                        											 <li><p ng-show ="currentproperty.features.floorboards== 1 || currentproperty.features.floorboards=='yes'">Floorboards</p></li>
+                        											 <li><p ng-show ="currentproperty.features.gasHeating== 1 || currentproperty.features.gasHeating=='yes'">Gas Heating</p></li>
+                        											 <li><p ng-show ="currentproperty.features.gym== 1 || currentproperty.features.gym=='yes'">Gym</p></li>
+                        											 <li><p ng-show ="currentproperty.features.rumpusRoom== 1 || currentproperty.features.rumpusRoom=='yes'">Rumpus Room</p></li>
+                        											 <li><p ng-show ="currentproperty.features.evaporativeCooling== 1 || currentproperty.features.evaporativeCooling=='yes'">Evaporative Cooling</p></li>
+                        											 <li><p ng-show ="currentproperty.features.hotWaterService== 1 || currentproperty.features.hotWaterService=='yes'">Hot Water Service</p></li>
+                        											 <li><p ng-show ="currentproperty.features.ensuite== 1 || currentproperty.features.ensuite=='yes'">Ensuite</p></li>
+                        											 <li><p ng-show ="currentproperty.features.study== 1 || currentproperty.features.study=='yes'">Study</p></li>
+                        											 <li><p ng-show ="currentproperty.features.broadband== 1 || currentproperty.features.broadband=='yes'">Broadband</p></li>
+                        											 <li><p ng-show ="currentproperty.features.payTV== 1 || currentproperty.features.payTV=='yes'">Pay TV</p></li>
+                        											 <li><p ng-show ="currentproperty.features.ductedHeating== 1 || currentproperty.features.ductedHeating=='yes' ">Ducted Heating</p></li>
+                        											 <li><p ng-show ="currentproperty.features.ductedCooling== 1 || currentproperty.features.ductedCooling=='yes' ">Ducted Cooling</p></li>
+                        											 <li><p ng-show ="currentproperty.features.splitsystemHeating== 1 || currentproperty.features.splitsystemHeating=='yes' ">Splitsystem Heating</p></li>
+                        											 <li><p ng-show ="currentproperty.features.hydronicHeating== 1 || currentproperty.features.hydronicHeating=='yes' ">Hydronic Heating</p></li>
+                        											 <li><p ng-show ="currentproperty.features.splitSystemAirCon== 1 || currentproperty.features.splitSystemAirCon=='yes' || currentproperty.features.splitsystemAircon== 1 || currentproperty.features.splitsystemAircon=='yes' || currentproperty.features.splitSystemAircon== 1 || currentproperty.features.splitSystemAircon=='yes' ">Splitsystem Aircon</p></li>
+                        											
+                                                                     <li><p ng-show ="currentproperty.features.reverseCycleAircon== 1 || currentproperty.features.reverseCycleAircon=='yes' || currentproperty.features.reverseCycleAirCon== 1 || currentproperty.features.reverseCycleAirCon=='yes' ">ReverseCycle Aircon</p></li>
+						
+                                                            </ul>
+                                                        </div>
+                                                            
+                                                          <div ng-class="{'Generalfeaturestwo': (currentproperty.idealFor.firstHomeBuyer=='yes' || currentproperty.idealFor.investors=='yes' || currentproperty.idealFor.downsizing=='yes' || currentproperty.idealFor.couples=='yes' || currentproperty.idealFor.students=='yes' || currentproperty.idealFor.lrgFamilies=='yes' || currentproperty.idealFor.retirees=='yes')}" ng-show="currentproperty.views.city=='yes' ||currentproperty.views.water=='yes' ||	currentproperty.views.valley=='yes' || currentproperty.views.ocean=='yes'||	currentproperty.views.mountain=='yes' || currentproperty.features.garden=='yes' || currentproperty.features.remoteGarage==1 ||
+									currentproperty.features.remoteGarage=='yes'  || currentproperty.features.secureParking=='yes' ||
+									currentproperty.features.secureParking==1 || currentproperty.features.pool ||
+									currentproperty.features.spa || currentproperty.features.tennisCourt=='yes' ||
+									currentproperty.features.balcony==1 || currentproperty.features.balcony=='yes' || currentproperty.features.balcony=='yes'
+									||currentproperty.features.deck==1 || currentproperty.features.courtyard =='yes' ||currentproperty.features.outdoorEnt==1 ||
+									currentproperty.features.shed==1|| currentproperty.features.fullyFenced==1 ||
+									currentproperty.features.workshop==1 || currentproperty.features.outsideSpa=='yes'" class="Outdoorfeatures">
+                                                            <h4 class="tabtitletetx">Outdoor features</h4>
+                                                            <ul class="list-unstyled">
+                                                                <li><p ng-show ="currentproperty.features.garden=='yes'">Garden</p></li>
+                    											 <li><p ng-show ="currentproperty.features.remoteGarage==1 || currentproperty.features.remoteGarage=='yes'">Remote Garage</p></li>
+                    											 <li><p ng-show ="currentproperty.features.secureParking==1 || currentproperty.features.secureParking=='yes'" >Secure Parking</p></li>
+                    											 <!-- <p ng-show ="currentproperty.features.pool.''==yes">Pool</p> -->
+                    											 <li><p ng-show ="currentproperty.features.pool=='inground' || currentproperty.features.poolInGround == 'true' || currentproperty.features.poolInGround == 'yes' || currentproperty.features.poolInGround == 1">Pool in Ground</p></li>
+                    											 <li><p ng-show ="currentproperty.features.pool=='aboveground' || currentproperty.features.poolAboveGround == 'yes' || currentproperty.features.poolAboveGround == 'true' || currentproperty.features.poolAboveGround ==1" >Pool Above Ground</p></li>
+                    											<li><p ng-show ="currentproperty.features.pool=='yes' || currentproperty.features.pool == '1' || currentproperty.features.pool == 'true'" >Pool</p></li>
+                    											 <!-- <p ng-show ="currentproperty.features.pool.''==yes">Spa</p> -->
+                    											 <li><p ng-show ="currentproperty.features.spa=='inground' || currentproperty.features.spa=='aboveground' || currentproperty.features.spa=='yes' || currentproperty.features.spa== 1">Spa</p></li>
+                    											 <li><p ng-show ="currentproperty.features.spa=='inground' || currentproperty.features.spa=='yes' || currentproperty.features.spa== 1">Spa in Ground</p></li>
+                    											 <li><p ng-show ="currentproperty.features.spa=='aboveground'">Spa Above Ground</p></li>
+                    											 <li><p ng-show ="currentproperty.features.outsideSpa==1 || currentproperty.features.outsideSpa=='yes'">Outside Spa</p></li>
+                    											 <li><p ng-show ="currentproperty.features.tennisCourt=='yes'">Tennis Court</p></li>
+                    											 <li><p ng-show ="currentproperty.features.balcony==1 || currentproperty.features.balcony=='yes'">Balcony</p></li>
+                    											 <li><p ng-show ="currentproperty.features.deck==1 || currentproperty.features.deck=='yes'">Deck</p></li>
+                    											 <li><p ng-show ="currentproperty.features.courtyard=='yes'">Courtyard</p></li>
+                    											 <li><p ng-show ="currentproperty.features.outdoorEnt==1 || currentproperty.features.outdoorEnt=='yes'">Outdoor Entertainment</p></li>
+                    											 <li><p ng-show ="currentproperty.features.shed==1 || currentproperty.features.shed=='yes'">Shed</p></li>
+                    											 <li><p ng-show ="currentproperty.features.fullyFenced==1 || currentproperty.features.fullyFenced=='yes'">Fully Fenced</p></li>
+                    											 <li><p ng-show ="currentproperty.features.workshop==1 || currentproperty.features.workshop=='yes'">workshop</p></li>
+                                                            </ul>
+                                                        </div>
+                                                        
+                                                        <div ng-class="{'Generalfeaturestwo': (currentproperty.ecoFriendly.solarPanels==1 ||currentproperty.ecoFriendly.solarHotWater==1||
+									currentproperty.ecoFriendly.waterTank==1 || currentproperty.ecoFriendly.greyWaterSystem==1 || 
+									currentproperty.ecoFriendly.solarPanels=='yes' || currentproperty.ecoFriendly.solarHotWater=='yes' || 
+									currentproperty.ecoFriendly.waterTank=='yes' || currentproperty.ecoFriendly.greyWaterSystem=='yes')}" ng-show="currentproperty.views.city=='yes' ||currentproperty.views.water=='yes' ||	currentproperty.views.valley=='yes' || currentproperty.views.ocean=='yes'||	currentproperty.views.mountain=='yes'" class=" Outdoorfeatures">
+                                                            <h4 class="tabtitletetx">Views</h4>
+                                                            <ul class="list-unstyled">
+                                                                    <li><p ng-show ="currentproperty.views.city=='yes'">City</p></li>
+                    											 <li><p ng-show ="currentproperty.views.water=='yes'">Water</p></li>
+                    											 <li><p ng-show ="currentproperty.views.valley=='yes'">Valley</p></li>
+                    											 <li><p ng-show ="currentproperty.views.ocean=='yes'">Ocean</p></li> 
+                    											 <li><p ng-show ="currentproperty.views.mountain=='yes'">Mountain</p></li>
+                                                            </ul>
+                                                        </div>  
+                                                        
+                                                        <div class="" ng-show= "currentproperty.features.otherFeatures.length">
+                                                            <br />
+                                                            <h4 class="tabtitletetx"><strong>Other features</strong></h4>
+                                                            <p>{{currentproperty.features.otherFeatures}}</p>
+                                                            <br />
+                        
+                                                            
+                                                        </div>                                                            
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <div class="tabdesc2right">
+                                            
+                                            
+                                            
+                                            <div ng-show="currentproperty.gradestatus==0" class="well" style="background:#fff9cb;border:1px solid #ffe032;color:#1e1e1e">
+                                                This description is provided by the property owner/ agent.<br />
+                                                This property is : <span class="Gradebtn" style="margin: 7px 5px;">Not Graded</span><br />
+                                                To assist with making your purchase decision why not request a FREE 
+												Independent Property Review (ipr) which includes a grade in a 6 page 
+												report on this property.<br /><br />
+                                                <a href="#!/request-free-ipr" style="color:#77b234;">Click here for more details</a>
+                                            </div>
+                                            
+                                            <div ng-show="currentproperty.gradestatus==1" class="well" style="background:#fff9cb;border:1px solid #ffe032;color:#1e1e1e">
+                                                This description is provided by the property owner/ agent.<br />
+                                                A FREE Independent Property Review (ipr) which includes a grade in 
+											a 6 page report will be posted against this property within 5 days. <br /><br />
+                                                <a href="" ng-click="gotoGradetab(1);" style="color:#77b234;">Click here for more details</a>
+                                            </div>
+                                            
+                                            <div ng-show="currentproperty.gradestatus==2" class="well" style="background:#fff9cb;border:1px solid #ffe032;color:#1e1e1e">
+                                                This description is provided by the property owner/ agent.<br />
+                                                This property is :<span class="Gradebtn" style="margin: 7px 5px;">Grade<span class="badge">{{currentproperty.grade}}</span></span><br />
+                                                A FREE Independent Property Review (ipr) which includes a grade 
+											in a 6 page report is posted against this property. <br /><br />
+                                                <a href="" ng-click="gotoGradetab(2);" style="color:#77b234;">Click here for more details</a>
+                                            </div>
+                                            
+                                            <div class="text-center Enquirebtn">
+                                                <ul class="list-unstyled">
+                                                    <li ng-click="passenquiry(currentproperty.id);toggle_enquire_servicerequest('to');">
+                                                        <a href="#!/service_request" class="editbtnall Servicerequest">Service request</a>
+                                                    </li>
+                                                    <li  ng-click="passenquiry(currentproperty.id);toggle_enquire_servicerequest('to');">
+                                                        <a href="#!/enquire" class="editbtnall enquire">Enquire</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <!--
+<div class="well">
+                                                <a href="#!/service_request" style="color:#1d1d1d;">Click here to access <strong>Service request form</strong> </a>
+                                            </div>
+-->
+                                            
+                                            
+                                            
+                                            <div ng-hide="!currentproperty.auction_date.length" class="well" style="background:#e9f4dd;border:1px solid #d1d1d1;">
+                                                <strong>Auction</strong><br />
+                                                Auction scheduled for {{auctionDate}}
+                                            </div>
+                                            
+                                            
+                                            
+                                            <div ng-show="currentproperty.contact.length!=0" class="well">
+                                                <div ng-repeat="contact in currentproperty.contact" class="tabemail">
+                                                    
+                                                    <div ng-show="contact.type !='vendorDetails'">
+                                                        <p ng-show = "contact.name.length!=0">
+                                                            <strong>Contact: </strong>{{contact.name}}
+                                                            
+                                                        </p>
+                                                        <p ng-show = "contact.email.length!=0" style="word-wrap: break-word;">
+                                                            <strong>Email: </strong>{{contact.email}}
+                                                            
+                                                        </p>
+                                                        <p ng-if="contact.telephone | isArray"  ng-repeat="tel in contact.telephone" ng-show = "contact.type !='vendorDetails'">
+                                                          <span ng-show="tel.telephone!=''">  <strong>Mobile: </strong>{{tel.telephone}}</span>
+                                                            
+                                                        </p>
+                                                        <p ng-if="!(contact.telephone | isArray)"  ng-show = "contact.type !='vendorDetails'">
+                                                          <span ng-show="contact.telephone!=''">  <strong>Mobile: </strong>{{contact.telephone}}</span>
+                                                            
+                                                        </p>
+                                                        
+                                                        <p ng-if="!(contact.telephone | isArray)" ng-show = "contact.type !='vendorDetails' && contact.telephone[0] == NULL">
+                                                          <span ng-show="contact.telephone!=''">  <strong>Mobile: </strong>{{contact.telephone}}</span>
+                                                            
+                                                        </p>    
+                                                    
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            <div ng-hide= "!currentproperty.inspectionTimes.length" class="well right_panel_header">
+                                                <p><strong>Inspections</strong></p>
+                                                <table border="1" width="100%" >
+                                                <tr ng-repeat="inspect in inspect3">
+                                                    <td style="padding: 2px;"><strong>{{inspect.label}} </strong></td>
+                                                    <td style="padding: 2px;">{{inspect.time}}</td>
+                                                </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                                                
+                <div class="tab-pane" id="tab-estimate"      ng-class="{'active': navigationState=='tab-estimate','in': navigationState=='tab-estimate'}">Coming soon..</div>
+                
+                <div id="tab-map"
+					ng-class="{'active': navigationState=='tab-map','in': navigationState=='tab-map'}"  class="tab-pane fade">
+                    <div class="tabmap " ng-show="currentproperty.coords.latitude != null ">
+						<div class="row">
+							<!-- <span class="maptypecontrol"><a class="inactive-a"
+								ng-click="setmap('roadmap')"
+								ng-class="{'active-a': maptype=='roadmap'}">Map </a>&nbsp;|&nbsp;
+								<a class="inactive-a" ng-click="setmap('streetview')"
+								ng-class="{'active-a': maptype=='streetview'}">Street view</a>&nbsp;|&nbsp;
+								<a class="inactive-a" ng-click="setmap('satellite')"
+								ng-class="{'active-a': maptype=='satellite'}">Satellite</a></span> -->
+								
+								<span class="maptypecontrol"><a class="active-a"
+								ng-click="setmap('roadmap')"
+								ng-if="maptype == 'streetview'">Map </a>
+								
+								<a class="active-a" ng-click="setmap('streetview')"
+								ng-if="maptype == 'roadmap'">Street view</a>
+								
+								</span>
+								
+								
+								
+								
+								
+						</div>
+						<div class="row mapcontainer">
+							<map center="[{{map.center.latitude}},{{map.center.longitude}}]"
+								zoom="17"
+								ng-if="showMap == true && maptype == 'roadmap'">
+								<marker
+									position="[{{map.center.latitude}},{{map.center.longitude}}]"
+									icon="{{icon}}" />
+							</map>
+
+
+							<map ng-if="showMap == true && maptype == 'streetview'">
+
+								<street-view-panorama click-to-go="true"
+									disable-default-u-i="false" disable-double-click-zoom="false"
+									position="{{map.center.latitude}}, {{map.center.longitude}}"
+									scrollwheel="true" enable-close-button="true" on-closeclick="streetviewclosed()" visible="true">
+								</street-view-panorama>
+							</map>
+
+						</div>
+
+
+
+					</div>
+                    
+                    <div class="tab_title" ng-show="currentproperty.coords.latitude == null ">
+                        <p>Map was not found for this property.</p>
+                    
+                    </div>
+                    
+                </div>
+                                                
+                <div  ng-class="{'active': navigationState=='tab-contract'}" class="tab-pane" ng-if="navigationState=='tab-contract'">
+                
+                <div class="lasttan">
+                            <div  ng-show="currentproperty.contract.length>0 || currentproperty.contract.length>0" >
+                                <ul class="list-inline Brochre9SEPT" ng-show="currentproperty.contract.length >0">
+                                    <li ng-repeat="document in currentproperty.contract" ng-show = "document.name != undefined">
+                                        <a ng-if="document.isurl==1" href="{{document.path}}" target="_blank" title="" class="editbtnall">{{document.name}}
+                                        </a>
+                                        <a ng-if="document.isurl==0" href="{{serverPath}}/{{document.path}}" target="_blank" title="" class="editbtnall">{{document.name}}
+                                        </a>
+                                        
+                                    </li>
+                                    
+                                </ul>
+                                
+                            </div>
+                        </div>
+                
+                
+                
+                
+                </div>
+                
+                <div  ng-class="{'active': navigationState=='tab-vendor-finance-terms'}" class="tab-pane" ng-if="navigationState=='tab-vendor-finance-terms'">
+                
+                <div class="lasttan">
+                            <div  ng-show="currentproperty.vendor_finance_terms.length>0" >
+                              
+                               <p ng-bind-html="currentproperty.vendor_finance_terms"></p> 
+                            </div>
+                        </div>
+                
+                
+                
+                
+                </div>
+                
+                
+                <div  ng-class="{'active': navigationState=='tab-sale-summary'}"  class="tab-pane fade">
+                
+                Coming soon..
+                </div>
+                
+                <div  ng-class="{'active': navigationState=='tab-history'}"  class="tab-pane fade">
+                
+                <iframe class="support-ifrm" ng-if="iframehistory == true" name="iframehistory" width="100%" height="600px"></iframe>
+                </div>
+                
+                
+                <div   ng-class="{'active': navigationState=='tab-how-to-buy'}" class="tab-pane fade">
+                
+                Coming soon..
+                </div>
+                
+                
+                <div id="menu3" class="tab-pane active loan-view" ng-class="{'active': navigationState=='tab-loan-cal'}" ng-if="navigationState=='tab-loan-cal'">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 margin-b">
+                                <div class="row">
+                                    <div class="">
+                                        <a style="padding-right: 10px;" ng-click="toggle();setiscreate();" title="Add loan scenario" href="javascript:void(0);" class="acolor margin-b"><img src="images/new_template/Affordabilityadd.png"  /></a>
+                                        
+                                            <span>
+            Currency <a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion"><img src="images/new_template/hint_icon.png" alt="" /></a> 
+                                
+                                                <span style="padding-left: 15px;">
+                                                
+                                                <img src="images/blank.gif" class="flag flag-{{countryflag}}" alt="country flag"/>
+                                                
+                                                <select style="width: 50px;"
+                                        				ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+                                        				ng-change="updateValueAll(from, to, properties[0]);update(searchcriteria,false,sortcriteria.option,loancriteria,'converter')" ng-model="to.currency"
+                                        				placeholder="Please Enter a Currency..." class="currencyselector" id="{{islisttype}}_curr_dropdown_{{item.id}}">
+                                                    </select> 
+                                                </span>
+                
+                                            </span>
+                                        
+                                         
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="pull-right text-l ">
+                                       <a  href="#!/blog/FAQs/loan-search"> <p class="acolor">Glossary + Instructions</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="colorrange">
+                                <ul class="list-inline">
+                                    <li>
+                                        <span class="BaseIOrate">Base IO rate, sponsored by:</span>
+                                    </li>
+                                    <li>
+                                        <a href="{{currentproperty.sponsors.IO.url}}" target="_blank" analytics-on="click" analytics-event="betterchoice.com.au" analytics-label="CPx->Details-PI" class="BetterChoice">
+                                        <img class="sponsorFavicon" src="{{baseAmazonUrl+'/'+currentproperty.sponsors.IO.logo[0].path}}" />
+                                        {{currentproperty.sponsors.IO.sponsor_name}}</a>
+                                    </li>
+                                    <li>
+                                        <span class="BasePI">Base PI rate, sponsored by:</span>
+                                    </li>
+                                    <li>
+                                        <a href="{{currentproperty.sponsors.PI.url}}" target="_blank" analytics-on="click" analytics-event="betterchoice.com.au" analytics-label="CPx->Details-PI" class="BetterChoiceHome">
+                                         <img class="sponsorFavicon" src="{{baseAmazonUrl+'/'+currentproperty.sponsors.PI.logo[0].path}}" />
+                                        {{currentproperty.sponsors.PI.sponsor_name}}</a>
+                                    </li>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-12 col-xs-12 loanform nopadding">
+
+							<div collapse="!isCollapsedflag">
+								<div class="well">
+
+									<div class="col-sm-12 col-xs-12 marbot20 headertext">
+										<b>Amend loan values to <span ng-if="iscreate">create</span><span
+											ng-if="!iscreate">edit</span> a scenario
+										</b>: 
+                                        
+                                        <span ng-show="currentproperty.address[0].display =='yes'">{{currentproperty.address[0].LotNumber}} {{currentproperty.address[0].subNumber}}<span ng-if="currentproperty.address[0].subNumber != null && currentproperty.address[0].StreetNumber != ''">/{{currentproperty.address[0].StreetNumber}}</span><span ng-if="currentproperty.address[0].subNumber == null"> {{currentproperty.address[0].StreetNumber}}</span> {{currentproperty.address[0].street}}, {{currentproperty.address[0].suburb.text}}, {{currentproperty.address[0].city}} {{currentproperty.address[0].state}} {{currentproperty.address[0].postcode}}</span>
+                                        <span ng-show="currentproperty.address[0].display =='no'">Address available on request</span>
+                                        
+                                        
+                                        
+                                        
+									</div>
+
+									<div class="col-sm-12 col-xs-12 marbot20">
+
+										<div class="col-sm-6 col-xs-12 floatleft">
+
+
+											<div class="form-group">
+												<label class="col-sm-6 col-xs-12 control-label">Scenario name</label>
+												<div class="col-sm-6 col-xs-12">
+													<input type="text" class="form-control"
+														placeholder="Scenario name" ng-model="currentproperty.scena.name" ng-disabled="editflag == 0 || editflag == 1"/>
+												</div>
+
+											</div>
+										</div>
+
+									</div>
+
+									<div class="col-sm-12 col-xs-12 marbot20">
+
+										<div class="col-sm-6 col-xs-12">
+
+											<div class="form-group">
+												<label class="col-sm-6 col-xs-12 control-label">Loan to value
+													(LVR) %</label>
+												<div class="col-sm-6 col-xs-12">
+
+													<input type="text" class="form-control"
+														ng-model="currentproperty.scena.lvr" placeholder="Any"
+														ng-mousedown="currentproperty.scena.cashamount = undefined" />
+												</div>
+
+											</div>
+										</div>
+
+
+
+										<div class="col-sm-6 col-xs-12">
+
+											<div class="form-group">
+												<label class="col-sm-6 col-xs-12 control-label">Cash amount</label>
+												<div class="col-sm-6 col-xs-12">
+
+													<div class="cashtype">
+														<select class="form-control" id="sel"
+															ng-model="currentproperty.scena.cashtype"
+															ng-init="currentproperty.scena.cashtype = '$'">
+															<option value="$">$</option>
+															<option value="%">%</option>
+														</select>
+
+													</div>
+
+
+
+													<div class="cashamt">
+														<input type="text" class="form-control" placeholder="Any"
+															ng-model="currentproperty.scena.cashamount"
+															ng-mousedown="currentproperty.scena.lvr = undefined">
+													</div>
+												</div>
+
+											</div>
+
+										</div>
+
+
+
+									</div>
+
+									<div class="col-sm-12 col-xs-12 marbot20">
+
+										<div class="col-sm-6 col-xs-12">
+											<div class="form-group">
+												<label class="col-sm-6 col-xs-12 control-label">Loan type</label>
+												<div class="col-sm-6 col-xs-12">
+													<select class="form-control" id="sel1"
+														ng-model="currentproperty.scena.loantype"
+														ng-init="currentproperty.scena.loantype='IO'"
+														ng-change="isIOselected(currentproperty.scena.loantype)" ng-disabled="editflag == 0 || editflag == 1">
+														<option value="IO">Interest only (IO)</option>
+														<option value="PI">Principal and Interest (PI)</option>
+													</select>
+												</div>
+
+											</div>
+
+
+										</div>
+
+										<div class="col-sm-6 col-xs-12">
+
+											<div class="form-group">
+												<label class="col-sm-6 col-xs-12 control-label">Interest rate
+													(%)</label>
+												<div class="col-sm-6 col-xs-12">
+													<input type="text" class="form-control" placeholder="Any"
+														ng-model="currentproperty.scena.interestrate" ng-disabled="editflag == 0 || editflag == 1"/>
+												</div>
+
+											</div>
+
+
+										</div>
+
+
+
+
+									</div>
+
+
+
+									<div class="col-sm-12 col-xs-12 marbot20">
+
+										<div class="col-sm-6 col-xs-12">
+											<div class="form-group">
+												<label class="col-sm-6 col-xs-12 control-label">Loan term</label>
+												<div class="col-sm-6 col-xs-12">
+													<input type="text" class="form-control" 
+														ng-model="currentproperty.scena.loanterm"/>
+												</div>
+
+											</div>
+
+
+										</div>
+										<div class="col-sm-6 col-xs-12">
+
+											<div class="form-group">
+												<label class="col-sm-6 col-xs-12 control-label">Costs (%)</label>
+												<div class="col-sm-6 col-xs-12">
+													<input type="text" class="form-control" placeholder="Any"
+														ng-model="currentproperty.scena.costper">
+												</div>
+
+											</div>
+										</div>
+
+									</div>
+
+									<div class="col-sm-12 col-xs-12 marbot20">
+
+
+										<button type="submit" class="btn btn-default loanformbtn"
+											ng-click="submitscenario(currentproperty,currentproperty.scena);clearscenario(currentproperty,currentproperty.scena);toggle();">SAVE</button>
+										<button type="submit"
+											class="btn btn-default loanformbtn cancelbtn"
+											ng-click="clearscenario(currentproperty,currentproperty.scena,editflag);toggle();">CANCEL</button>
+
+									</div>
+
+
+
+
+
+								</div>
+							</div>
+
+
+						</div>
+                        
+                        <div class="col-sm-12 col-xs-12 nopadding">
+					<alert ng-repeat="alert in alerts" type="{{alert.type}}">{{alert.msg}}</alert>
+						</div>
+                        
+                        <div class="col-sm-12 col-xs-12 tablecontainer nopadding">
+
+
+					<div class="table-responsive">
+						<table class="table table-bordered grading-table">
+							<thead>
+								<tr class="table-heading">
+									<th class="first" style="text-align: left !important;">Scenario name</th>
+									<th>LVR</th>
+									<th>Cash amount</th>
+									<th>Loan type</th>
+									<th>Interest rate</th>
+									<th>Loan term</th>
+									<th>Monthly repayments</th>
+									<th>Costs (%)</th>
+									<th>Estimated total</th>
+									<th>Loan amount</th>
+									<th></th>
+
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="even"
+									ng-repeat="scenario in currentproperty.scenarios track by $index">
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.namechanged}"><span>{{scenario.name}}</span></td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.lvrchanged}">{{scenario.lvr
+										| currency:"":1}}%</td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.cashamountchanged}"><span
+										ng-if="scenario.conv_cashamount"><span
+											ng-if="!currentproperty.short_currlabel">$</span>{{scenario.conv_cashamount
+											| currency:"":0}}</span> 
+											<span ng-if="!scenario.conv_cashamount"><span
+											ng-if="!currentproperty.short_currlabel">$</span>{{scenario.cashamount
+											| currency:"":0}}</span> - {{scenario.cashpercent |
+										currency:"":1}}%</td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.loantypechanged}">{{scenario.loantype}}</td>
+
+									<td ng-if="scenario.name == 'Base IO'" class="tablecell" ns-popover=true ns-popover-template="popoverIO" ns-popover-trigger="mouseenter" ns-popover-placement="top" ns-popover-theme="ns-popover-tooltip-theme" ns-popover-hide-on-inside-click=true
+										ng-class="{'yellotd': scenario.intratechanged}"><u>{{scenario.intrate}}</u><span
+										ng-if="scenario.intrate"><u>%</u></span></td>
+										
+										
+										<td ng-if="scenario.name == 'Base PI'" class="tablecell" ns-popover=true ns-popover-template="popoverPI" ns-popover-trigger="mouseenter" ns-popover-placement="bottom" ns-popover-theme="ns-popover-tooltip-theme" ns-popover-hide-on-inside-click=true
+										ng-class="{'yellotd': scenario.intratechanged}"><u>{{scenario.intrate}}</u><span
+										ng-if="scenario.intrate"><u>%</u></span></td>
+										
+										
+										<td  ng-if="scenario.name != 'Base IO' && scenario.name != 'Base PI'" class="tablecell"
+										ng-class="{'yellotd': scenario.intratechanged}">{{scenario.intrate}}<span
+										ng-if="scenario.intrate">%</span></td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.loantermchanged}">{{scenario.loanterm}}</td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.repaymentschanged}"><span
+										ng-if="scenario.conv_repayments"><span
+											ng-if="!currentproperty.short_currlabel">$</span>{{scenario.conv_repayments
+											| currency:"":0}}</span> <span ng-if="!scenario.conv_repayments"><span ng-if="!currentproperty.short_currlabel">$</span>{{scenario.repayments
+											| currency:"":0}}</span></td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.costchanged}"><span
+										ng-if="scenario.conv_costprice"><span
+											ng-if="!currentproperty.short_currlabel">$</span>{{scenario.conv_costprice
+											| currency:"":0}}</span> <span ng-if="!scenario.conv_costprice"><span ng-if="!currentproperty.short_currlabel">$</span>{{scenario.costprice
+											| currency:"":0}}</span> - {{scenario.cost | currency:"":0}}%</td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.estimatechanged}"><span
+										ng-if="scenario.conv_estimate"><span
+											ng-if="!currentproperty.short_currlabel">$</span>{{scenario.conv_estimate
+											| currency:"":0}}</span> <span ng-if="!scenario.conv_estimate"><span ng-if="!currentproperty.short_currlabel">$</span>{{scenario.estimate
+											| currency:"":0}}</span></td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.loanamtchanged}"><span
+										ng-if="scenario.conv_loanamt"><span
+											ng-if="!currentproperty.short_currlabel">$</span>{{scenario.conv_loanamt
+											| currency:"":0}}</span> <span ng-if="!scenario.conv_loanamt"><span ng-if="!currentproperty.short_currlabel">$</span>{{scenario.loanamt
+											| currency:"":0}}</span></td>
+
+									<td class="tablecell editdelete"><span
+										ng-click="editscenario(scenario,currentproperty,$index);toggle();"
+										popover="Edit scenario" popover-trigger="mouseenter" style="cursor: pointer;"><img
+											src="images/Edit button_green.jpg" alt="edit button"></img></span> <span
+										ng-click="deletescenario(currentproperty,$index)"
+										popover="Delete scenario" popover-trigger="mouseenter" ng-class="{'hidedelete': (scenario.name == 'Base PI' || scenario.name == 'Base IO')}" style="cursor: pointer;"><img
+											src="images/Delete button_red.jpg" alt="delete button"></img></span>
+
+									</td>
+
+
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+
+
+				</div>
+                 <div class="col-sm-12 col-xs-12 tablecontainer">
+					<label>Loan amount</label>
+					<canvas id="line" class="chart chart-line chartcanvas"
+						data="currentproperty.data" labels="currentproperty.labels" legend="true" 
+						series="currentproperty.series" click="onClick" height="130px"></canvas>
+						
+					<label class="xaxis">Years</label>
+				</div>       
+                    
+                    
+                </div>
+                
+                <div class="tab-pane " id="tab-inv-cal"       ng-class="{'active': navigationState=='tab-inv-cal'}">Coming soon..</div>    
+                
+                <div class="tab-pane" id="tab-other-info"    ng-class="{'active': navigationState=='tab-other-info'}">
+                    
+                        <div class="lasttan">
+                            <div class="lasttabul" ng-show="currentproperty.floorplans.length>0 || currentproperty.documents.length>0  || currentproperty.externalLink !='' || currentproperty.videoLink !=''" >
+                                <ul class="list-inline" ng-show="currentproperty.floorplans.length >0">
+                                    <li ng-repeat="floorplan in currentproperty.floorplans">
+                                        <a href="{{floorplan.url}}" target="iframeName" title="" class="editbtnall Floorplan">Floor plan {{$index+1}}</a>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline Brochre9SEPT" ng-show="currentproperty.documents.length >0">
+                                    <li ng-repeat="document in mydocsurl" ng-show = "document.title != undefined">
+                                        <a href="{{document.url}}" target="_blank" title="" class="editbtnall">{{document.title}}
+                                        </a>
+                                        
+                                        <a href="{{document.url}}" target="_blank" title="" class="editbtnall" ng-show = "document.title == undefined">
+                                            {{document.urlTitle}}
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                                <ul class="list-inline Brochre9SEPT"  ng-show="currentproperty.externalLink !=''">
+                                    <li>
+                                        <a href="{{currentproperty.externalLink}} " target="_blank" title="External link" class="editbtnall">External link</a>
+                                    </li>
+                                   
+                                </ul>
+                                <ul class="list-inline" ng-show="currentproperty.videoLink !=''">
+                                    <li>
+                                        <a  href="{{currentproperty.videoLink}}" target="_blank" title="Video link" class="editbtnall Externallink">Video link</a>
+                                     
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                   
+                    
+                    <div class="col-sm-12 col-xs-12 gapp-map">&nbsp;</div>
+						<div class="row"> 
+						<div class="col-sm-12">
+							<iframe class="support-ifrm" ng-if="iframevisible == true" name="iframeName" id="myIframe" width="100%" height="600px"></iframe>
+							<div id="imagediv" ng-repeat="menus in currentproperty.support_info" ng-if="newtype[$index]=='image'">
+								<img class="support-ifrm" ng-if="newtype[$index]=='image' && imageSupport == menus.Title && iframevisible == false" id="{{menus.Title}}" src="{{menus.Uri}}" alt="supporting info images"></img>
+							</div>
+						</div>
+						</div>
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 toppager tabbottm">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="row">
+                            <div class="paginationall" ng-show = "shorlistedPropIds.status == false && searchcriteria.getonlyfeatured.from == 'listing'" class="paginationall">
+                               
+                                <a ng-click ="shareCriteria();" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES" class="acolor"> &lt; &nbsp; Back to search results</a>
+                            </div>
+                            
+                            <div ng-show = "shorlistedPropIds.status == true" class="paginationall">
+                                <a href="#!/shortlist" title="SHORLISTED PROPERTIES" class="acolor"> < &nbsp; Back to shortlist</a>
+                            </div>
+                            
+                            <div ng-show = "shorlistedPropIds.status == false && searchcriteria.getonlyfeatured.from == 'home'" class="paginationall">
+                                <a href="#!/" title="SHORLISTED PROPERTIES" class="acolor"> < &nbsp; Back to home</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="row">
+                             <div class="paginationall pull-right" ng-show = "shorlistedPropIds.status == false || shorlistedPropIds.status == true">
+                                <a ng-if =preid  href="#!/details/{{preid}}" class="acolor"  title="PREVIOUS PROPERTY"> &lt; &nbsp;Previous</a> &nbsp;
+                                
+                                <a ng-if =nextid href="#!/details/{{nextid}}" class="acolor" title="NEXT PROPERTY"> Next &nbsp; &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+<script type="text/ng-template" id="popoverPI">
+	<div class="triangle" style="top: -7px !important;"></div>
+			<div class="ns-popover-tooltip ratepopover">
+			<div><b>Sponsored</b></div></br>
+			<div>
+			Principal and Interest (PI) rate is sponsored this week by: </br><br/> 
+			<div class="col-sm-2" style="padding-left:0px;padding-right:0px;">
+				<img class="sponsorFavicon" src="{{baseAmazonUrl+'/'+currentproperty.sponsors.PI.logo[0].path}}" />
+			</div>
+			<div class="col-sm-10" style="padding-right:0px;"><p>{{currentproperty.sponsors.PI.sponsor_name}}</p></div>
+
+			</div></br>
+			<div style="text-align:left;"><a href="{{currentproperty.sponsors.PI.url}}" target="_blank" analytics-on="click" analytics-event="betterchoice.com.au" analytics-label="CPx->Details-PI">Enquire</a></div>
+			</div>	
+			</script>
+			
+<script type="text/ng-template" id="popoverIO">
+	<div class="triangle" style="bottom: -7px !important;"></div>
+			
+			<div class="ns-popover-tooltip ratepopover">
+			<div><b>Sponsored</b></div></br>
+			<div>
+		    Interest only (IO) rate is sponsored this week by: </br><br/> 
+			<div class="col-sm-2" style="padding-left:0px;padding-right:0px;">
+			<img class="sponsorFavicon" src="{{baseAmazonUrl+'/'+currentproperty.sponsors.IO.logo[0].path}}" />
+			</div>
+			<div class="col-sm-10" style="padding-right:0px;"><p>{{currentproperty.sponsors.IO.sponsor_name}}</p></div>
+
+			</div></br>
+			<div style="text-align:left;"><a href="{{currentproperty.sponsors.IO.url}}" target="_blank" analytics-on="click" analytics-event="betterchoice.com.au" analytics-label="Details-IO" >Enquire</a></div>
+			</div>	
+</script>			

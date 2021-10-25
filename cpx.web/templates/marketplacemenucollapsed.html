@@ -1,0 +1,34 @@
+<div
+	class="navbar navbar-default navbar-static-top nomargin navbar-header">
+
+	<div class="navbar-inner hiddenaboutmenu">
+		<div class="navbar-header ">
+
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-3"
+				ng-click="isCollapsed = !isCollapsed">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-toggle pull-left" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-3"
+				ng-click="isCollapsed = !isCollapsed">CPx MARKETPLACE</a>
+		</div>
+		<div class="visible-xs" collapse="!isCollapsed">
+			<ul class="nav nav-pills nav-stacked">
+				
+				<li ng-class="{'active': aboutmenu[4].value}"><a
+					ng-click="isCollapsed = !isCollapsed" href="#!/marketplace/find-industry-professionals">Find industry professionals</a></li>
+				<li ng-class="{'active': aboutmenu[10].value}"><a
+					ng-click="isCollapsed = !isCollapsed" href="#!/marketplace/view-directory">View directory</a></li>
+				<li ng-class="{'active': aboutmenu[18].value}"><a
+					ng-click="isCollapsed = !isCollapsed;clearPropertyID();" href="#!/service_request">Submit service request</a></li>
+				<li ng-class="{'active': aboutmenu[13].value}"><a
+					ng-click="isCollapsed = !isCollapsed" href="#!/contact">Contact us for more information</a></li>
+				<li><a
+					ng-click="isCollapsed = !isCollapsed" href="#!/blog/blogindex/subid">Blog</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

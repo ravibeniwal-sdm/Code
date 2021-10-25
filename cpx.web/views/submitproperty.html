@@ -1,0 +1,45 @@
+<header2></header2>
+<div class="container-fluid cpxpage" >
+	<div class="row">
+		<div class="col-sm-12 col-xs-12 cpxbg" align="left">
+			<h1 class="fronthead container" ng-if="pid == 'list-property'">Why list your property on CPx?</h1>
+			<h1 class="fronthead container" ng-if="pid == 'advertise-property'">Advertise your property now</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container cpxcontent" >
+	<div class="row collapsedmenu visible-xs">
+		<div listpropertymenucollapsed></div>
+	</div>
+	<div class="row datacontainer">
+
+		
+		<div class="col-sm-8 col-xs-12 maincontent">
+			<div ng-if="pid == 'list-property'" ng-include='"views/list_property.html"'></div>
+			<div ng-if="pid == 'advertise-property'" ng-include='"views/advproperty.html"'></div>
+		</div>
+		<div class="col-sm-4 col-xs-12  rightmenu" >
+			<div listpropertymenu></div>
+			<!-- <div class="col-sm-12 col-xs-12 input-group downloadbutton">
+				 <a href="docs/ListyourpropertyonCPxFactsheet.pdf" target="_blank" class="btn btn-primary btn-lg btn-block nopadding noborder" type="button">
+					<span class="input-group-addon " style="padding: 0px;">
+						<span class=" glyphicon glyphicon-arrow-down star-color pull-left"></span>
+				  		<span class="buttonheading pull-left">Download a factsheet</span>
+				  		<span class="input-group-addon top-span1 nopadding pull-right btn-pdf" aria-hidden="true"></span>
+				  	</span>
+				 </a>
+			</div> -->
+
+			  <div class="col-sm-12 sideheader" ng-if="pid == 'list-property'">
+			  <i>Your money, Your property</i>
+			  </div>
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'list-property'">
+			  	<a class="thumbnail">
+		            <img src="images/listyourpropertyonCPx.jpg" class="thumbnail img-responsive " alt="listyourpropertyonCPx.jpg">
+		        </a>
+			  </div>
+		</div>
+	</div>
+</div>
+		

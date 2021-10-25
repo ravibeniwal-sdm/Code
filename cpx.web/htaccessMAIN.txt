@@ -1,0 +1,36 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+	
+	#RewriteCond %{QUERY_STRING} ^(.*)$
+    
+	
+	RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|linkedinbot|Pinterest|Google.*snippet) [NC]
+	RewriteCond %{QUERY_STRING} ^id=(.*)&img=(.*)&name=(.*)&type=(.*)$ [NC]
+	RewriteRule ^propertydetails$ http://www.centralpropertyexchange.com.au/application/propertydetails?id=%1&img=%2&name=%3&type=%4 [L]
+	
+	RewriteCond %{QUERY_STRING} ^id=(.*)&img=(.*)&name=(.*)&type=(.*)$
+	RewriteRule ^propertydetails$ http://www.centralpropertyexchange.com.au/application/propertydetails?id=%1 [L]
+	
+	
+	RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|linkedinbot|Pinterest|Google.*snippet) [NC]
+	RewriteCond %{QUERY_STRING} ^blogtype=(.*)&subid=(.*)&img=(.*)&name=(.*)$ [NC]
+	RewriteRule ^blogshare$ http://www.centralpropertyexchange.com.au/application/blogshare?blogtype=%1&subid=%2&img=%3&name=%4 [L]
+	
+	RewriteCond %{QUERY_STRING} ^blogtype=(.*)&subid=(.*)&img=(.*)&name=(.*)$
+	RewriteRule ^blogshare$ http://www.centralpropertyexchange.com.au/application/blogshare?blogtype=%1&subid=%2 [L]
+	
+	
+	RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|linkedinbot|Pinterest|Google.*snippet) [NC]
+	RewriteCond %{QUERY_STRING} ^profileid=(.*)&img=(.*)&name=(.*)$ [NC]
+	RewriteRule ^profileshare$ http://www.centralpropertyexchange.com.au/application/profileshare?profileid=%1&img=%2&name=%3 [L]
+	
+	RewriteCond %{QUERY_STRING} ^profileid=(.*)&img=(.*)&name=(.*)$
+	RewriteRule ^profileshare$ http://www.centralpropertyexchange.com.au/application/profileshare?profileid=%1 [L]
+	
+
+	#RewriteCond %{REQUEST_URI}  ^/$
+	RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/?(.*)$
+	RewriteRule ^(.*)$ http://www.centralpropertyexchange.com.au/snapshots/%1snap.html? [NC,L]
+	
+
+</IfModule>

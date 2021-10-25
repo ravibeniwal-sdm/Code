@@ -1,0 +1,206 @@
+<!--
+<header></header>
+-->
+<header2></header2>
+<div class="row boxform">
+    <div class="container">
+        <div class="box">
+            <div class="frasebox">
+                Buy or Invest based on affordability Australia-wide
+            </div>
+            <div class="form homesearch">
+                <form>
+                
+                    <span style="<!-- float: left;padding-right: 10px;margin-top: 20px; -->"><strong>Currency</strong>
+                    <a ><img src="images/blank.gif" class="flag flag-{{countryflag}}" alt="country flag"/></a>
+                    </span>
+                    
+                    <select style="width: 68px " id="dropdown"
+        				ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+        				ng-change="updateValueAll(from, to,properties);"
+        				ng-model="to.currency" placeholder="Please Enter a Currency..."
+        				class=""></select>
+                        <input class="clearfield" type="text"  placeholder="Enter monthly amount you can afford" ng-model="searchcriteria.repay" ng-change="animate('on');"/>
+                    <input class="submit ripplelink" type="button" ng-click="checkClickedview();setVal();" href="" title="SEARCH PROPERTIES"/>
+                    
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div><!--row-->
+
+<div class="row properties">
+    <div class="container">
+        
+             
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs">
+                
+                 
+                    <a id="feature" class="ripplelink tabli current" onclick="return false;" href="#" ng-click="tabClick('feature');" >Featured properties</a> 
+                    <a id="update" class="ripplelink tabli" href="#" onclick="return false;" ng-click="tabClick('update');">Updates</a> 
+                    <a id="allprop" class="ripplelink tabli" href="#!/view-graded-properties/affordable">All</a> 
+               
+                
+            </div>
+            
+       
+
+        <div class="row">
+            <div class="panes col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            
+                    <div class=" feature_prop col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                        	<div class="itemproperties col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="item in (filteredItems = (properties | filter:{ featured: true }))" ng-if="$index<3" ng-style="{ 'border' : ($index == '2') ? 'none' : '' }" ng-include='"templates/product_tile.html"'>
+     							
+                                                                
+        	               </div>
+                        </div>
+                    </div>
+
+              
+                    <div class=" update_prop col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none;">
+                        <div class="row">
+                        	<div class="itemproperties col-lg-4 col-md-4 col-sm-4 col-xs-12 " ng-repeat="item in (filteredItems = (properties | filter:{ featured: false }))" ng-if="$index<3" ng-style="{ 'border' : ($index == '2') ? 'none' : '' }" ng-include='"templates/product_tile.html"'>
+                                
+        	               </div>
+                        </div>
+                    </div>
+                
+            </div><!--panes-->
+        </div><!--row-->
+    </div><!--container-->
+</div><!--row-->
+
+<div class="row engvideo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 frasevideo text-center">
+                <h3>Cut out the marketing hype</h3>
+                <p>CPx is Australia's first independent buyer-focused real estate<br/>advertising website</p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 video">
+                <iframe class="img-responsive" width="100%" style="height: 275px;" src="//www.youtube.com/embed/-kFrcofNb_Q" frameborder="0" allowfullscreen></iframe>
+                
+                
+                
+                <!--
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-kFrcofNb_Q" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-kFrcofNb_Q" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-kFrcofNb_Q" frameborder="0" allowfullscreen></iframe>
+                
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-kFrcofNb_Q" frameborder="0" allowfullscreen></iframe>
+                
+<iframe class="img-responsive" width="100%" style="height: 275px;" src="//www.youtube.com/embed/Ns9Rn_sej6s" frameborder="0" allowfullscreen></iframe>
+-->
+                
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <!--<div class="col-md-8 pessoa container">
+                <img src="images/new_template/img_pessoa.png" class="col-md-offset-5" />
+                <p>Alan Kohler, the host of Qantas Talking Business, interviews Anthony Aoun on why CPX improves user benefits when compared to sites like realesate.com.au</p>
+                <a class="col-md-offset-5 col-xs-offset-4" href="">Click to Listen</a>
+            </div>-->
+            
+            <div class="media col-lg-12 col-md-12 col-sm-12 col-xs-12 homemedia"  >
+                <div class="media-body" style=" text-align: center;  ">
+                    <img class="media-object" src="images/new_template/client_thumbnail.png" alt="Media Object" />
+                </div>
+
+                
+            </div>
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                
+
+                <div class="media-body media-cont">
+                    <br />
+                    <p class="mediatext" style="">Alan Kohler, the host of Qantas Talking Business, interviews Anthony Aoun on why CPx improves user benefits when compared to sites like realesate.com.au</p>
+                    <a  href="">
+                        <audio controls id="audio1" style=" width: 70%; text-align:center;"><source src="mp3/AnthonyAoun.mp3"></source></audio>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        
+    </div><!--container-->
+</div><!--row-->
+
+<div class="row alternative">
+    <div class="container">
+        <div class="row">
+            <h1>The best alternative</h1>
+            <h3>We are NOT your normal real estate advertising website. CPx is the 'best alternative' to realestate.com.au and<br />domain.com.au to buy, sell or invest in residential property. Because...</h3>
+        </div>
+        
+        <div class="row" style="margin:20px 0;">
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 homelinked text-center">
+               <a  href="https://www.linkedin.com/pulse/best-alternative-realestatecomau-domaincomau-anthony-aoun?trk=hp-feed-article-title-publish"  class="linkedinbtn ripplelink">View post on Linked <img src="images/new_template/linkedin.png" /></a>
+            </div>
+            
+        </div>
+        
+        <div class="row propriedades">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <h2 class="prop">Property buyers DO NOT TRUST real estate agents</h2>
+                <p>CPx provides an Independent Property Review and Grade Report [ipr]. This is like a hotel star rating; image how helpful that would be for property buyers</p>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <h2 class="frust">Frustrated with limiting suburb-by-suburb searches for affordable properties?</h2>
+                <p class="frust">Save time and money; find affordable properties Australia-wide, instantly and in any currency</p>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+
+                <h2 class="sub">Submit a SERVICE REQUEST to one or many independent advisors</h2>
+                <p>Potential buyers can submit a SERVICE REQUEST to one or many independent professionals; to help evaluate and buy the property</p>
+
+            </div>
+        </div>
+
+        <div class="row propriedades">
+            <div class="col-md-2 hidden-xs"></div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <h2 class="buy">Buyers and sellers can save thousands of dollars</h2>
+                <p>BUYERS can deal directly with the seller and save thousands. SELLERS can list properties for free; a win-win for all</p>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <h2 class="trad">Traditional model fails to serve BEST INTEREST</h2>
+                <p>CPx provides a platform for: independent advisors, banks, financial planners, accountants, mortgage brokers, investment organisations; which serves the BEST INTERESTS of their clients</p>
+
+            </div>
+
+            <div class="col-md-2 hidden-xs"></div>
+        </div>
+    </div><!--container-->
+</div><!--row-->
+
+<div class="row partners">
+    <div class="ct1 container">
+        <h1>Endorsements - Partners</h1>
+
+        <div class="slide-items row">
+            <!-- <div class="col-md-1 prevarrow">
+                <a class="prev browse left"></a>
+            </div> -->
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logoslider-b" ng-include='"templates/logoslider.html"'>
+            </div>
+            <!-- <div class="col-md-1 backarrow">
+                <a class="next browse right"></a>
+            </div> -->
+        </div>
+    </div><!--container-->
+</div><!--row-->

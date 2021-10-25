@@ -1,0 +1,577 @@
+<html ng-app="landlordWebApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <title class="ng-binding">Central Property Exchange | Find Industry Professionals | Appoint your own Professional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav.jpg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/custom2.css">
+	<link rel="stylesheet" type="text/css" href="css/nsPopover.css">
+	
+	
+ 	 <meta name="keywords" content="CPx,Sellers,Buyers,Service,Agreements,Recommendations,Benefit,Fixed fee,CPx governance,Customer loyalty,Industry professionals,Central Property Exchange,Indicative service fees,Significant cost savings ,Property seller and buyer,Percentage of the sale price,Independent representation,Finding an industry professional">
+ 	 <meta name="description" content="Central Property Exchange – Find Industry Professionals – CPx Allows The Property Seller And Buyer To Appoint Their Personal Industry Professional.">
+ 
+  </head>
+  <body data-status="ready" data-twttr-rendered="true">
+  
+    <div class="container-fluid">
+    	<div class="row">
+    	<div class="waitprocess ng-hide" align="center" id="wait-payment-process" ng-show="loading">
+	  		<img src="images/payment_process.GIF" alt="CPx" ng-click="checkClicked4()">
+	   	</div>
+		<div header=""><div class="container-fluid logo-border">
+	<div class="row">
+		<div class="navbar navbar-default navbar-static-top header-bar"></div>
+		<div class="container pad-bot" style="padding-left: 0px; padding-right: 0px;">
+			<div class="navbar navbar-default navbar-static-top nomargin navbar-header mynavbar" style="width: 100%;">
+				<div class="navbar-inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+										<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+									</button>
+									<a class="fl-l" href="#!/" title="Home page"><img src="images/Logo.png" alt="CPx" class="logoscreen" ng-click="checkClicked4()"></a>
+
+								</div>
+								<div class="hidden-xs fl-l">
+									<ul class="nav navbar-nav nav pull-right nopadding">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+									</ul>
+								</div>
+								<div class="visible-xs collapse" collapse="!isCollapsed" style="height: 0px;">
+									<ul class="nav navbar-nav">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+		<!-- ngView:  --><div ng-view="" class="ng-scope"><div class="container-fluid cpxpage ng-scope">
+	<div class="row">
+		<div class="col-sm-12 col-xs-12 cpxbg" align="left">
+			<!-- ngIf: pid == 'find-industry-professionals' --><h1 class="fronthead container ng-scope" ng-if="pid == 'find-industry-professionals'">Find industry professionals</h1><!-- end ngIf: pid == 'find-industry-professionals' -->
+			<!-- ngIf: pid == 'view-directory' -->
+			<!-- ngIf: pid == 'submit-service-request' -->
+		</div>
+	</div>
+</div>
+
+<div class="container cpxcontent ng-scope">
+	<div class="row collapsedmenu visible-xs">
+		<div marketplacemenucollapsed=""><div class="navbar navbar-default navbar-static-top nomargin navbar-header">
+
+	<div class="navbar-inner hiddenaboutmenu">
+		<div class="navbar-header ">
+
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+				<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-toggle pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">CPx MARKETPLACE</a>
+		</div>
+		<div class="visible-xs collapse" collapse="!isCollapsed" style="height: 0px;">
+			<ul class="nav nav-pills nav-stacked">
+				
+				<li ng-class="{'active': aboutmenu[4].value}" class="active"><a ng-click="isCollapsed = !isCollapsed" href="#!/marketplace/find-industry-professionals">Find industry professionals</a></li>
+				<li ng-class="{'active': aboutmenu[10].value}"><a ng-click="isCollapsed = !isCollapsed" href="#!/marketplace/view-directory">View directory</a></li>
+				<li ng-class="{'active': aboutmenu[18].value}"><a ng-click="isCollapsed = !isCollapsed" href="#!/marketplace/submit-service-request">Submit service request</a></li>
+				<li ng-class="{'active': aboutmenu[13].value}"><a ng-click="isCollapsed = !isCollapsed" href="#!/contact">Contact us for more information</a></li>
+				<li><a ng-click="isCollapsed = !isCollapsed" href="#!/blog/blogindex/subid">Blog</a></li>
+			</ul>
+		</div>
+	</div>
+</div></div>
+	</div>
+	<div class="row datacontainer">
+		
+
+		<div class="col-sm-8 col-xs-12 maincontent">
+
+			<!-- ngIf: pid == 'find-industry-professionals' --><!-- ngInclude: "views/find_industry_professionals.html" --><div ng-if="pid == 'find-industry-professionals'" ng-include="&quot;views/find_industry_professionals.html&quot;" class="ng-scope"><div class="static-content ng-scope">
+
+<!-- <div class="professionalsbutton">
+<div class="row">
+<button type="button" class="btn btn-default active">Summary</button>
+<button type="button" class="btn btn-default">View existing groups/networks</button>
+<button type="button" class="btn btn-default">Submit service request</button>
+</div>
+</div> -->
+
+<p>CPx allows the property seller and buyer to appoint their personal industry professional; ensuring service obligation and customer loyalty. Thus, the interests of each party are independently represented at the same time significant cost savings are achieved!</p>
+
+<ul style="list-style-type:none">
+
+<p>To assist seller and buyer benefit from this relatively new thinking...</p>
+
+<p><b><i>Part of the CPx governance, includes the following recommendations:</i></b></p>
+
+<ul>
+
+<li><i>The seller and buyer are encouraged to negotiate a fixed fee-for-service terms and not a percentage of the sale price, with their nominated industry professional.</i></li>
+
+<li><i>The buyer and seller do not appoint the same industry professional for the same property sale/purchase.</i></li>
+</ul>
+
+<br>
+<p><b><i>CPx's objective is to give property buyers and sellers an expectation of the indicative fees CPx recommends the industry professionals charge for independent service.</i></b></p>
+
+</ul>
+
+ <accordion class="static-accordian"><div class="panel-group" ng-transclude="">
+   
+    <div class="panel panel-default ng-isolate-scope" is-open="toggleStatus.first">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+  						<i class="pull-left glyphicon ng-scope glyphicon-plus" ng-class="{'glyphicon glyphicon-plus':  !toggleStatus.first, 'glyphicon glyphicon-minus': toggleStatus.first}"></i><span class="ng-scope">
+  						Industry professionals
+					
+        </span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+        <accordion-heading class="ng-scope"></accordion-heading>
+         				<p class="ng-scope">An industry professional is any entity that is providing a service to a property buyer or seller for the purchase or selling of a property. List of industry professionals</p>
+   
+   <div class="proffessionalstable ng-scope">
+                   <table class="table table-bordered">
+                   
+                   <tbody><tr><td>Representing the seller</td>
+                   <td>Representing the buyer</td>
+                   </tr>
+                  
+                   <tr>
+                   <td>
+                   <p>Legal</p>
+                   <p>Accountants</p>
+                   <p>Auctioneers</p>
+                   <p>Negotiators</p>
+                   <p>Process managers/administrators</p>
+                   <p>Inspections</p>
+                   <p>Energy efficient ratings</p>
+                   <p>Signs</p>
+                   <p>Valuers</p>
+                   <p>Confidis (an independent trust account)</p>
+                   
+                   </td>
+                   
+                   <td>
+                   <p>Legal</p>
+                   <p>Accountants</p>
+                   <p>Financial Planners</p>
+                   <p>Mortgage brokers</p>
+                   <p>SMSF</p>
+                   <p>Buyers agents</p>
+                   <p>Real Estate Agents</p>
+                   <p>Property investment Coaches</p>
+                   <p>Inspections</p>
+                   <p>Valuers</p>
+                   <p>Confidis (an independent trust account)</p>
+                   </td>
+                  
+                   </tr>
+                   </tbody></table>   
+   </div>
+   
+   
+   
+   
+   </div>
+  </div>
+</div> 
+   
+   <div class="panel panel-default ng-isolate-scope" is-open="toggleStatus.second">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+  						<i class="pull-left glyphicon ng-scope glyphicon-plus" ng-class="{'glyphicon glyphicon-plus':  !toggleStatus.second, 'glyphicon glyphicon-minus': toggleStatus.second}"></i><span class="ng-scope">
+  						Industry professionals representing sellers – indicative service fees
+					
+        </span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+        <accordion-heading class="ng-scope"></accordion-heading>
+         		<p class="ng-scope">Within the CPx process, ‘Process manager/administrators’ (see industry professionals section above) replace the traditional services provided by the real estate agent or project marketer.</p>
+         		
+         		<p class="ng-scope">The effort required to list and provide administrative support per property is exactly the same regardless of the property sale price.</p>
+         		
+         		<p class="ng-scope">Scope of service may include these options:</p>
+         		
+         		<ul class="ng-scope">
+         		<li><b>Admin support (desk top based):</b> Managing the phone calls and emails and ordering signs = $150 per property</li>
+         		
+         		<li><b>Field support:</b> open house + admin support or project marketing onsite support = $1,000 +GST</li>
+         		
+         		<li>Specific scope of service = $ by negotiation</li>
+         		</ul>
+         		
+         		<p class="ng-scope">For other ‘seller’ services, please do your own research and obtain your own pricing.</p>
+         				
+   </div>
+  </div>
+</div> 
+   
+   <div class="panel panel-default ng-isolate-scope" is-open="toggleStatus.third">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+  						<i class="pull-left glyphicon ng-scope glyphicon-plus" ng-class="{'glyphicon glyphicon-plus':  !toggleStatus.third, 'glyphicon glyphicon-minus': toggleStatus.third}"></i><span class="ng-scope">
+  						Industry professionals representing buyers – indicative service fees
+					
+        </span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+        <accordion-heading class="ng-scope"></accordion-heading>
+         
+         <p class="ng-scope">Within the CPx process, ‘buyers agents’, ‘real estate agents’, ‘property investment coaches’ (see industry professionals section above) may be appointed to represent the buyer.</p>
+
+         <p class="ng-scope">The effort required to short-list and provide administrative support per property is exactly the same regardless of the property sale price.</p>  
+          
+         <p class="ng-scope">Scope of service may include these options:</p>
+   
+          <ul class="ng-scope">
+         		<li><b>Basic:</b> includes administrative support, short listing properties on CPx and providing reports = $1,000 +GST</li>
+         		
+         		<li><b>Comprehensive:</b> Research, compare and short list properties most suited as per the buyers needs. This service is not limited to properties listed on CPx = $4,500 +GST</li>
+         		
+         		<li>Specific scope of service = $ by negotiation</li>
+         </ul>
+   
+          <p class="ng-scope">For other ‘buyer’ services, please do your own research and obtain your own pricing.</p>  
+   </div>
+  </div>
+</div> 
+   
+</div></accordion>
+  
+  
+  <p><b>No fee for introduction or ‘finding an industry professional’:</b> CPx has a policy about sharing agent ‘selling-fees’ and referral fees: CPx does not introduce sellers or buyers to industry professionals. CPx merely makes the marketplace available to enable sellers, buyers and industry professional to do so themselves. Therefore, CPx does not charge a fee when a seller or buyer finds a suitable industry professional. Please see page <a href="#!/industry/working-with-cpx" target="_blank" title="Working with CPx">‘Working with CPx’</a>  for more details on what charges are applicable to industry professionals.</p>
+  
+  <p><b>Agreements:</b> Please ensure appropriate agreements covering the scope of service are established between yourself and the industry professionals. <a href="https://confidis.com.au" target="_blank" title="https://confidis.com.au">https://confidis.com.au</a> offers an independent trust account and a service to manage online agreements.</p>
+  
+  </div></div><!-- end ngIf: pid == 'find-industry-professionals' -->
+	        <!-- ngIf: pid == 'view-directory' --> 
+			<!-- ngIf: pid == 'submit-service-request' -->
+			
+			
+			
+			
+			<!-- <div class="cpxend">&nbsp;</div> -->
+
+
+		</div>
+		<div class="col-sm-4 col-xs-12  rightmenu">
+			<div marketplacemenu=""><div class="navbar navbar-default navbar-static-top nomargin navbar-header">
+	<div class="navbar-inner">
+		<div class="hidden-xs">
+			<ul class="nav nav-pills nav-stacked pull-left nopadding">
+				<li class="disabled abouthead"><a>CPx MARKETPLACE</a></li>
+				<li ng-class="{'active': aboutmenu[4].value}" class="active"><a href="#!/marketplace/find-industry-professionals">Find industry professionals</a></li>
+				<li ng-class="{'active': aboutmenu[10].value}"><a href="#!/marketplace/view-directory">View directory</a></li>
+				<li ng-class="{'active': aboutmenu[18].value}"><a href="#!/marketplace/submit-service-request">Submit service request</a></li>
+				<li ng-class="{'active': aboutmenu[13].value}"><a href="#!/contact">Contact us for more information</a></li>
+				<li><a href="#!/blog/blogindex/subid">Blog</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+			<div class="col-sm-12 col-xs-12 input-group downloadbutton">
+
+			</div>
+			
+
+			  <!-- ngIf: pid == 'what-is-cpx' -->
+			  
+			  <!-- ngIf: pid == 'independent-process' -->
+			  
+			    <!-- ngIf: pid == 'independent-property-review' -->
+			  
+			   <!-- ngIf: pid == 'what-is-graded' -->
+			  
+			  
+			   <!-- ngIf: pid == 'find-industry-professionals' --><div class="col-sm-12 sideheader ng-scope" ng-if="pid == 'find-industry-professionals'">
+			  	<i>Independent representation and significant cost savings</i>
+			  </div><!-- end ngIf: pid == 'find-industry-professionals' -->
+			  
+			  <!-- ngIf: pid == 'FAQs' -->
+			  
+			  
+			 <!--  <div class="col-sm-12 nopadding" ng-if="pid == 'FAQs'">
+			  	<a class="thumbnail">
+		            <img src="images/FAQ-image.jpg" class="thumbnail img-responsive ">
+		        </a>
+			  </div>
+			  
+			  
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'what-is-cpx'">
+			  	<a class="thumbnail">
+		            <img src="images/whatisCPx.jpg" class="thumbnail img-responsive ">
+		        </a>
+			  </div>
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'independent-process'">
+			  	<a class="thumbnail">
+		            <img src="images/independentprocess.jpg" class="thumbnail img-responsive ">
+		        </a>
+			  </div>
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'independent-property-review'">
+			  	<a class="thumbnail">
+		            <img src="images/independentpropertyreview.jpg" class="thumbnail img-responsive ">
+		        </a>
+			  </div>
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'what-is-graded'">
+			  	<a class="thumbnail">
+		            <img src="images/whatisgraded.jpg" class="thumbnail img-responsive ">
+		        </a>
+			  </div> -->
+			  
+			  <!-- ngIf: pid == 'find-industry-professionals' --><div class="col-sm-12 nopadding ng-scope" ng-if="pid == 'find-industry-professionals'">
+			  	<a class="thumbnail">
+		            <img src="images/findindustryprofessionals.jpg" class="thumbnail img-responsive " alt="findindustryprofessionals.jpg">
+		        </a>
+			  </div><!-- end ngIf: pid == 'find-industry-professionals' -->
+			  
+			  <!-- <div class="row sideblog" ng-if="pid == 'press-releases' || pid == 'cpx-announcements'">
+				  <div class="col-sm-12 side-archive">Archives</div>
+				  <div class="col-sm-12">
+				  	<table class="archive-table">
+				  	<tr><td>2015</td><td><a href="">(2)</a></td></tr>
+				  	<tr><td>2014</td><td><a href="">(2)</a></td></tr>
+				  	<tr><td>2013</td><td><a href="">(2)</a></td></tr>
+				  	<tr><td>2012</td><td><a href="">(2)</a></td></tr>
+				  </table>
+				  </div>
+			  </div>
+			  
+			  <div class="row sideblog" ng-if="pid == 'press-releases' || pid == 'Publications'">
+			  	<div class="col-sm-12 side-rss">RSS feeds</div>
+				  <div class="col-sm-12 side-link"><a href="">CPx process - an australia first</a></div>
+				  <div class="col-sm-12 side-link"><a href="">CPx process - an australia first</a></div>
+				  
+				  <div class="col-sm-12 side-email">Email releases:</div>
+					  <div class="col-sm-12">Receive an email notification of latest Official communication from CPx</div>
+					  <div class="col-sm-12 side-emailtext">
+					  <input type="text" class="form-control" placeholder="Type your email address here...">
+					  </div>
+					  <div class="col-sm-12">
+					  	<button type="submit" class="btn btn-success">Create notification alert</button>
+					  </div>
+			  </div> -->
+			  
+		</div>
+	</div>
+</div>
+		</div>
+		<div footer=""><div class="logo-border pad-bot"></div>
+        
+<div class="container">
+	<div class="row">
+      
+      <div class="col-md-8">
+       <div class="row">
+         
+		<div class="col-sm-4 col-xs-12">
+			<div class="pad-bot5">&nbsp;</div>
+			<div class="fbold">PROPERTIES</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedview();" href="#!/view-graded-properties" title="View graded properties">View graded properties</a>
+			</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedlist();" href="#!/list-your-property-on-cpx/list-property" title="List your property on CPx">List your property on CPx</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">REPORTS</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedorder();" href="#!/order-independent-reports" title="Order independent reports">Order independent reports</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">CPx MARKETPLACE</div>
+			<div>
+				<a class="footer-data inactive-a" href="#!/marketplace/find-industry-professionals" title="Find industry professionals">Find industry professionals</a>
+			</div>
+
+		</div>
+				<div class="col-sm-4 col-xs-12">
+					<div class=" pad-bot5">&nbsp;</div>
+					<div class=" fbold">ABOUT</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-cpx" title="What is CPx?">What is CPx?</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-process" title="Independent process">Independent process</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-property-review" title="Independent property review(ipr)">Independent property review
+							(ipr)</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-graded" title="What is graded?">What is graded?</a>
+					</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class=" fbold">LEGALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/privacy" title="Privacy">Privacy</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/terms-and-conditions" title="Terms &amp; conditions">Terms &amp; conditions</a>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12 ">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">BLOG</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/press-releases/subid" title="Press releases">Press releases</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/Publications/subid" title="Publications">Publications</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/cpx-announcements/subid" title="CPx announcements">CPx announcements</a>
+				</div>
+				<div class="">
+					<a class="footer-data inactive-a" href="#!/blog/FAQs/subid" title="Frequently Asked Questions">FAQs</a>
+				</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">INDUSTRY PROFESSIONALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/industry/working-with-cpx" title="Working with CPx">Working with CPx</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="http://graded.centralpropertyexchange.com.au/login?ReturnUrl=/" target="_blank" title="Business login">Business
+							login</a>
+					</div>
+
+				</div>
+        
+        </div></div>
+        
+		<div class="col-sm-4 col-xs-12 mailformcontainer">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">CONTACT</div>
+			<div>
+				<a ng-click="shownothing = true" href="#!/contact" class="footer-data inactive-a" title="Contact us">Online form</a>
+			</div>
+
+
+			<div>
+				<span class="footer-data inactive-a">Telephone: +61 2 8006
+					1979</span>
+			</div>
+			<div>
+
+				<span class="footer-data inactive-a">Mobile/cell: +61 410 510
+					997</span>
+
+			</div>
+			<div class=" footemail">
+				<a class="footer-data inactive-a" href="mailto:contact@centralpropertyexchange.com" title="Contact us via email">Email:
+					contact@centralpropertyexchange.com</a>
+			</div>
+          <div>&nbsp;</div>
+			
+   
+
+    
+     <div class="email-update">
+     <form action="//landlordcentral.us2.list-manage.com/subscribe/post?u=44d30abfcde67c3847612b5cb&amp;id=4583813c3e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate ng-pristine ng-valid ng-valid-email" target="_blank" novalidate="">
+      <div class="fbold updatetextpad">EMAIL UPDATES</div> 
+       <div>
+        <span class="footer-data inactive-a"><p class="registertext">Register your email to receive industry news and insights from CPx.</p></span>
+       </div>
+       	   	   
+        <div class="type-email clearfix">
+         <span class="pull-left"><input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Type your email address here" class="input-bg ng-pristine ng-untouched ng-valid ng-valid-email" ng-model="registrationForm.email"> </span>
+         <span class="pull-right"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="btn sub-btn" ng-click="resetform()"> </span>
+       </div>
+       <p class="bot-txt">You will be sent a verification email to activate your registration.</p>
+    </form>
+    </div>        
+            
+            
+		</div>
+ 
+  
+  
+  
+
+	</div>
+</div>
+
+		
+    <div class="bottom-line"></div></div>
+		</div>
+	</div>
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+	
+    <script src="js/jquery.1.11.2/jquery-1.11.2.min.js"></script>
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+	<script src="js/angularjs/1.3.10/angular.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-route.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-resource.min.js"></script>
+    
+	<!-- Our Website Javascripts -->
+	<script src="js/app/constants.js"></script>
+	<script src="js/app/main.js"></script>
+	<script src="js/app/controllers.js"></script>
+	<script src="js/app/directives.js"></script>
+	<script src="js/app/services.js"></script>
+	<script src="js/app/filters.js"></script>
+	
+	
+	
+	<!-- below needs to be loaded before angular-google-maps.min.js -->
+    <!-- Directives for bootstrap -->
+    <script src="js/thirdparty/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <!-- overloaded some code from  ui-bootstrap-tpls-0.12.0-->
+    <script src="js/thirdparty/overloaded-ui-bootstrap-tpls-0.12.0.js"></script>
+    <!-- Directives for tab menu -->
+    <script src="js/thirdparty/df-tab-menu.js"></script>
+	<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script><script src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/main.js"></script>
+	<script src="js/thirdparty/lodash.min.js"></script>
+	<script src="js/thirdparty/angular-google-maps.min.js"></script>
+	<script src="js/thirdparty/angular-filter.js"></script>
+	
+	<script src="js/thirdparty/decimal-places.js"></script>
+	<script src="js/thirdparty/open-exchange-rates.js"></script>
+	<script src="js/thirdparty/angular-sanitize.js"></script>
+	<script src="js/thirdparty/ng-map.min.js"></script>
+	<script src="js/thirdparty/Chart.js"></script>
+	<script src="js/thirdparty/angular-chart.js"></script>
+	<script src="js/thirdparty/nsPopover.js"></script>
+	
+	  <script src="http://platform.twitter.com/widgets.js"></script>
+	  <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true"></script>
+	
+  
+</body></html>

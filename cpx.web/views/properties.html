@@ -1,0 +1,531 @@
+
+<div ng-if="showloading" id="loading"> 
+    <span><img alt="logo" src="images/new_template/ajax-loader.gif"> </span>
+    
+    <div>Refining search</div> 
+</div>
+
+
+<header2 selectedmenu="selectedmenu"></header2>
+
+<div class="container">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 queaction" ng-show="propertiesSuggestionBoxIsVisible">
+        <div class="alert alert-block fade in" style="background:#ffffcc;border-color: #ffffab;">
+            <button type="button" class="close close-sm" data-dismiss="alert" ng-click="ShowHidePropertiesSuggestionBox()">
+                <i class="fa fa-times"></i>
+            </button>
+            <h4>
+                <span>{{'TOP_LINE' | translate }} <a style="font-size: 14px;" class="link" href="http://www.jll.com.au/australia/en-au/services/investors-developers/valuations-and-advisory/mortgage-services" target="_blank" title="JLL">JLL</a></span> 
+                
+                <span class="alt-3 right-msg">
+				
+				<a class="link alt-link" style="font-size: 14px;" href="#!/about/independent-property-review" target="_blank" title="Independent property review (ipr)">{{'WHAT_IS_IPR' | translate}}</a>
+                        <script type="text/ng-template" id="myModalContent.html">
+                           
+   						   <div class="modal-body">
+							<p>A seller or agent may opt to pass on some or all the &lsquo;Selling-fee&rsquo; directly to a buyer via a saving:</p>
+        					<ul style="list-style-type:square;">
+            					<li>
+                					If applicable CPx will advertise the property for-sale-price in the following manner. 
+										<ul>
+											<li><b>Listed price:</b> this is the property for-sale-price includes the Selling-fees.</li>
+											<li><b>CPx price:</b> this is the property for-sale-price less the Saving.</li>
+											<li><b>Saving:</b> this is the portion nominated on what the buyer can save.</li>
+										</ul>
+            					</li>
+								<li>
+									Where a saving is not applicable, only the &lsquo;Listed price&rsquo; will display against the property
+								</li>
+								<li>
+									Buyers are advised that the CPx price will be the declared contract buy/ sold price.
+								</li>
+        					</ul>
+        					
+    						</div>
+    						<div class="modal-footer">
+        						<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    						</div>
+				        </script>
+					<a class="link alt-link" style="font-size: 14px;" href="javascript:void(0);" ng-click="open()">{{'WHAT_IS_LISTED_PRICE' | translate}}</a>
+                </span>
+                
+            </h4>
+            
+            <h4 style="padding-top: 10px;">You may request a FREE ipr and grade report on any listed property</h4> 
+            
+
+        </div>
+        
+    </div>
+</div>
+<div class="container">
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dropdownrate text-center">
+        
+        <span class="smalldd">
+            Currency <a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion"><img src="images/new_template/hint_icon.png" alt="" /></a> 
+                                
+                <span style="padding-left: 8px;">
+                <img src="images/blank.gif" class="flag flag-{{countryflag}}" alt="country flag" />    
+    
+                <select style="width: 53px;"
+    				ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+    				ng-change="updateValueAll(from, to, properties)" ng-model="to.currency"
+    				placeholder="Please Enter a Currency..." class="currencyselector" id="{{islisttype}}_curr_dropdown_{{item.id}}">
+                </select>
+                </span>
+                
+        </span>
+        
+        <span class="bigdd">
+        
+        <a><img src="images/blank.gif" class="flag flag-{{countryflag}}" alt="country flag"></a>
+                      
+		<select id="Select1"
+		ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+		ng-change="updateValueAll(from, to, properties);animate('on');update(searchcriteria,false,sortcriteria.option,loancriteria,'converter')"
+		ng-model="to.currency" placeholder="Please Enter a Currency..."
+		class="searchcurrencysel"></select>
+        <a href="#!/blog/FAQs/currency-conversion" target="_blank" title="FAQ - Currency conversion">
+            <img src="images/new_template/hint_icon.png" alt="" />
+        </a>
+        </span>
+        
+        <div class="shortlist_div_btn " id="shortlist_div" ng-if="shortlistcount != 0">               
+            <a  href="#!/shortlist" title="View shortlist" class="editbtnall editbtnall_two">{{ 'VIEW_SHORLIST_BTN' | translate }} [ {{count}} ]</a>
+        </div>
+        
+        <div class="row" style="padding-top: 20px;text-decoration: underline;font-size: 12px;">
+            <a ng-click="showhideallsearches();"  href="javascript:void(0);"  title="Show/Hide all searches">{{showallsearches_Text}}</a>
+        </div>
+        
+    </div>
+        
+</div>
+
+<div class="container">
+    <div class="advancesearch col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="advancesearchmain">
+                    <div class="advancesearchtitle">
+                        <h3 class="info-title-text" >Search</h3>
+                        <a href="javascript:void(0);" ng-click="changeSearch(0); ">
+                        <img class="icfo_short_icon pull-right" src="images/new_template/short_icon.png" alt="icon" ng-if="groups[0].isopen"/>
+                        <img class="icfo_short_icon pull-right" src="images/new_template/short_icon-open.png" alt="icon" ng-if="!groups[0].isopen"/>
+                        </a>
+                    </div>
+                    <div class="advancesearchlist" >
+                        <div class="well infowell"  >
+                            <div class="Propertytype"  ng-if="groups[0].isopen">
+                                <h4>Property type:</h4>
+                                <select id="Select2" ng-init="searchcriteria.type = 'Any'"
+    								ng-model="searchcriteria.type"
+    								ng-options="typeopt.label as typeopt.label for typeopt in propType | unique: 'label' : false | orderBy:'label' "
+    								ng-change="animate('on','type');">
+    								<option value="">Any</option>
+    								<!--     <option>Any</option>
+    									    <option>residential</option>
+    									    <option>commercial</option>
+    									    <option>office</option> -->
+                                </select>
+                                
+                                <div class="propertyname">
+                                    <input type="text" 	placeholder="Suburb, state" ng-model="searchcriteria.searchtext" ng-blur="animate('on','searchtext');"  />
+                                </div>
+                                <div class="propertyname">
+                                    <input type="text" 	placeholder="Property id  or property name" ng-model="searchcriteria.searchid" ng-blur="animate('on','searchid');"  />
+                                </div>
+                                
+                                <div class="PropertyID">
+                                    <input type="text" placeholder="Publisher" ng-model="searchcriteria.publisher" ng-blur="animate('on','publisher');"  />
+                                </div>
+                            </div>
+                            <div class="Pricecurrency" ng-if="groups[0].isopen">
+                                <h4 class="infopricecurrency">Price - currency: &nbsp;<img src="images/blank.gif" class="flag flag-{{countryflag}}" alt="country flag"/></h4>
+                                <div class="minmax">
+                                    <div class="mindiv">
+                                        <p>Min ({{countrylabel}})</p>
+                                        <input type="text" placeholder="Any" ng-model="searchcriteria.minprice" ng-blur="animate('on','minprice'); "  />
+                                    </div>
+                                    <div class="maxdiv">
+                                        <p>Max ({{countrylabel}})</p>
+                                        <input type="text" placeholder="Any"	ng-model="searchcriteria.maxprice" ng-blur="animate('on','maxprice');"  />
+                                    </div>
+                                </div>
+                                <div class="minmaxbed">
+                                    <div class="mindiv">
+                                        <p>Min beds:</p>
+                                        <select id="sel1" ng-init="searchcriteria.minbeds = 'Any'"
+        									ng-model="searchcriteria.minbeds"
+        									ng-options="bedopt.beds as bedopt.beds for bedopt in allproperties | unique: 'beds' | orderBy:'beds'"
+        									ng-change="animate('on','minbeds');">
+        									<option value="">Any</option>
+        									<!--    <option>1</option>
+    									    <option>2</option>
+    									    <option>3</option>
+    									    <option>4</option> -->
+                                        </select>
+                                    </div>
+                                    <div class="maxdiv">
+                                        <p>Max beds:</p>
+                                        <select id="sel2" ng-init="searchcriteria.maxbeds = 'Any'"
+        									ng-model="searchcriteria.maxbeds"
+        									ng-options="bedopt.beds as bedopt.beds for bedopt in allproperties | unique: 'beds' | orderBy:'beds'"
+        									ng-change="animate('on','maxbeds');">
+        									<option value="">Any</option>
+        									<!--  	    <option>2</option>
+    												    <option>3</option>
+    												    <option>4</option> -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="advancesearchmain">
+                <div class="advancesearchtitle">
+                    <h3 class="info-title-text" >Affordability Search <a href="#!/blog/FAQs/loan-search" style="color:black;text-decoration: underline;" target="_blank" title="FAQ- Affordability Search Grossary of Terms"><img src="images/new_template/hint_icon.png" alt="" /></a></h3>
+                    <a href="javascript:void(0);" ng-click="changeSearch(1); " >
+                    <img class="icfo_short_icon pull-right" src="images/new_template/short_icon.png" alt="icon" ng-if="groups[1].isopen"/>
+                    <img class="icfo_short_icon pull-right" src="images/new_template/short_icon-open.png" alt="icon" ng-if="!groups[1].isopen"/>
+                    </a>
+                </div>
+                <div class="advancesearchlist" >
+                    <div class="well infowell " >
+                        <div class="Propertytype" ng-if="groups[1].isopen">
+                        
+                            <h4>Currency <a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion"><img src="images/new_template/hint_icon.png" alt="" /></a> 
+                            
+                                <span style="padding-left: 40px;">
+                                <img src="images/blank.gif" class="flag flag-{{countryflag}}" alt="country flag" />    
+            
+                                <select style="width: 53px;"
+                    				ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+                    				ng-change="updateValueAll(from, to, properties)" ng-model="to.currency"
+                    				placeholder="Please Enter a Currency..." class="currencyselector" id="{{islisttype}}_curr_dropdown_{{item.id}}">
+                                </select>
+                                </span>
+                                </h4>
+                            
+                        
+                            <h4>Monthly amount you can afford</h4>
+                            <div class="PropertyID" style="margin-top:5px">
+                                <input type="text" placeholder="Any" ng-model="searchcriteria.repay" ng-blur="animate('on','repay');"/>
+                            </div>
+                        </div>
+                        <div class="Pricecurrency" ng-if="groups[1].isopen">
+                            <h4 class="infopricecurrency">Cash amount</span></h4>
+                            <div class="minmax Cashamount">
+                                <select id="Cashamount" id="sel"  ng-model="loancriteria.type" ng-change="updateloanInfo(searchcriteria,false,sortcriteria.option,loancriteria,'converter');">
+    								<option value="$">$</option>
+    								<option value="%">%</option>
+                                </select>
+                                <input type="text" placeholder="Any" ng-model="loancriteria.loancash" ng-blur="updateloanInfo(searchcriteria,false,sortcriteria.option,loancriteria,'converter');" ng-mousedown="loancriteria.lvr = undefined" />
+                            </div>
+                            
+                            
+                            <div class="minmax">
+                                <div class="mindiv">
+                                    <p class="coustp">Loan to value (LVR) </p>
+                                    <input class="costSearch" type="text" ng-model="loancriteria.lvr" ng-blur="updateloanInfo(searchcriteria,false,sortcriteria.option,loancriteria,'converter');" placeholder="Any" ng-mousedown="loancriteria.loancash = undefined" /> <label for="sel">%</label>
+                                </div>
+                                
+                                <div class="mindivcosts" style="padding-left: 20px;">
+                                    <p class="coustp">Costs</p>
+                                    <input class="costSearch" type="text" placeholder="5" ng-model="loancriteria.inputcost" ng-blur="updateloanInfo(searchcriteria,false,sortcriteria.option,loancriteria,'converter');"/> <label for="sel">%</label>
+                                </div>
+                                
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="advancesearchmain">
+                    <div class="advancesearchtitle">
+                        <h3 class="info-title-text">Investment Search</h3>
+                        <a href="javascript:void(0);" ng-click="changeSearch(2); " title="COMING SOON">
+                            <img class="icfo_short_icon pull-right" src="images/new_template/short_icon.png" alt="icon" ng-if="groups[2].isopen"/>
+                            <img class="icfo_short_icon pull-right" src="images/new_template/short_icon-open.png" alt="icon" ng-if="!groups[2].isopen"/>
+                        </a>
+                    </div>
+                    <div class="InvestmentSearch" >
+                        <div class=" well infowell" >
+                            <div class="InvestmentSearchmap Pricecurrency" ng-if="groups[2].isopen && 0">
+                                <h4 class="infopricecurrency">Taxable income:</h4>
+                                <div class="minmax Cashamount infopricecurrencymin">
+                                    <input type="text" placeholder="$120,000.00" />
+                                    <input type="text" placeholder="50%" />
+                                </div>
+                                <h4 class="infopricecurrency">Partners income:</h4>
+                                <div class="minmax Cashamount infopricecurrencymin">
+                                    <input type="text" placeholder="$120,000.00" />
+                                    <span>50%</span>
+                                </div>
+                                <div class="Investmentreadio">
+                                    <h4 class="infopricecurrency">Ownership:</h4>
+                                    <label class="">
+                                        <input name="radioGroup" id="radio1" value="option1" checked="" type="radio" /> Single
+                                    </label>
+                                    <label class="">
+                                        <input name="radioGroup" id="radio2" value="option2" type="radio" /> Joint
+                                    </label>
+                                    <label class="">
+                                        <input name="radioGroup" id="radio3" value="option3" type="radio" /> Company
+                                    </label>
+                                    <label class="">
+                                        <input name="radioGroup" id="radio4" value="option4" type="radio" /> SMSF, Self Manage Super Funds/Company
+                                    </label>
+                                </div>
+                                <div class="Investmentchackbox">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="" checked="" />Australian Resident</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<div class="container ">
+   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" style="margin: 10px 0;"> 
+   
+   <span class=" smsf graded  ">
+		<!-- <button type="button" class="btn btn-default">SMSF</button> -->
+		<label class="btn btn-primary " ng-change="animate('on','grade');"
+			ng-model="searchcriteria.grade" btn-checkbox>Graded</label> 
+		<a href="#!/about/what-is-graded" target="_blank" class="fkquestion" title="WHAT IS GRADED"><img src="images/new_template/hint_icon.png" alt="" /></a>
+	</span>
+   
+    <span class=" smsf domacom  maxbed">
+		<!-- <button type="button" class="btn btn-default">SMSF</button> -->
+		<label class="btn btn-primary " ng-change="animate('on','domacom');"
+			ng-model="searchcriteria.domacom" btn-checkbox>DomaCom</label> 
+		<a href="#!/blog/FAQs/domacom-fractional-property-investing" target="_blank" class="fkquestion" title="FAQ - DomaCom Fractional Property Investing"><img src="images/new_template/hint_icon.png" alt="" /></a>
+	</span>
+   
+	<span class=" smsf smsf1  ">
+		<!-- <button type="button" class="btn btn-default">SMSF</button> -->
+		<label class="btn btn-primary " ng-change="animate('on','left');"
+			ng-model="searchcriteria.left" btn-checkbox>SMSF</label> 
+		<a href="#!/blog/FAQs/self-managed-super-fund-smsf" target="_blank" class="fkquestion" title="FAQ- Self Managed Super Fund (SMSF)"><img src="images/new_template/hint_icon.png" alt="" /></a>
+	</span>
+	
+    <span class="   saving"style="margin-top: inherit;"  >
+		
+		<label class="btn btn-primary " ng-change="animate('on','saving');"
+			ng-model="searchcriteria.saving" btn-checkbox>Saving</label> 
+	</span>
+    
+    <span class="   vendor   "style="margin-top: inherit;"  >
+		
+		<label class="btn btn-primary " ng-change="animate('on','vendorfinance');"
+			ng-model="searchcriteria.vendorfinance" btn-checkbox>Vendor Finance</label> 
+	</span>
+    
+    <span class="  smsf established   maxbed"style="margin-top: inherit;"  ng-show="IsVisibleestablished">
+		
+		<label class="btn btn-primary " ng-change="animate('on','established');showhidenewhomeland();"
+			ng-model="searchcriteria.established" btn-checkbox>Established</label> 
+	</span>
+
+    <span class="smsf new   maxbed"style="margin-top: inherit;" ng-show = "IsVisiblenew">
+		<!-- <button type="button" class="btn btn-default">SMSF</button> -->
+		<label class="btn btn-primary " ng-change="animate('on','newprop');showhideestablished();"
+			ng-model="searchcriteria.newprop" btn-checkbox>New</label> 
+	</span>
+    
+    <span class="smsf homeland  maxbed"style="margin-top: inherit;" ng-show = "IsVisiblehomeland">
+		<!-- <button type="button" class="btn btn-default">SMSF</button> -->
+		<label class="btn btn-primary " ng-change="animate('on','homeland');showhideestablishednew();"
+			ng-model="searchcriteria.homeland" btn-checkbox>Home + Land</label> 
+	</span>
+
+	<span class=" smsf underoffer " style="margin-top: inherit;" ng-show = "IsVisibleUnderoffer">
+		<!-- <button type="button" class="btn btn-default">SMSF</button> -->
+		<label class="btn btn-primary " ng-change="animate('on','underoffer');showhidesold();"
+			ng-model="searchcriteria.underoffer"  btn-checkbox>Under Offer</label> 
+	</span>
+	<span class=" smsf sold   maxbed"style="margin-top: inherit;" ng-show = "IsVisibleSold">
+		<!-- <button type="button" class="btn btn-default">SMSF</button> -->
+		<label class="btn btn-primary " ng-change="animate('on','sold');showhideunderoffer();"
+			ng-model="searchcriteria.sold" btn-checkbox>Sold</label>
+	</span>
+
+    
+    
+    
+    </div>
+
+</div>
+
+<div class="container btn-container">
+    <div class="resetbtn text-center">
+        <a ng-if="showreset" href="javascript:void(0);" class="resetbtn_one" ng-click="reset(searchcriteria,sortcriteria,loancriteria);"></a>
+       <!--
+        <a href="javascript:void(0);" class="resetbtn_two"  ng-click="update(searchcriteria,false,sortcriteria.option,loancriteria,'converter')"	ng-class="{'updateanimate': animatebtn}"></a>
+        -->
+        
+    </div>
+</div>
+
+<div class="container">
+    <div class="gridmap">
+        <div class="gridmapdiv pull-left">
+            <ul class="list-inline">
+                <li tooltip-html="gridTooltip"  ng-click="propertyview('grid');">
+                    <span id="grid" class="selectedlist">
+                        Grid
+                    </span>
+                </li>
+                <li tooltip-html="mapTooltip" ng-click="propertyview('map');"> 
+                    <span id="map">
+                        Map
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="filtersection pull-right">
+            <select id="sel1"
+				ng-model="searchcriteria.gradefilter"
+				ng-init="searchcriteria.gradefilter = ''"
+				ng-options="uniarr.value as uniarr.label for uniarr in uniarr"
+				ng-change="update(searchcriteria,false,sortcriteria.option,loancriteria,'converter')">
+				
+				<option value="">Grade Filter: show all </option>
+				
+				
+				<!-- <option value="lome">Filter by Any: grade</option> -->
+				
+				   <!-- <option>AA - a score equal or above 275</option>
+					    <option>A - a score equal or above 215</option>
+					    <option>B - a score equal or above 155</option>
+					    <option>C - a score equal or above 95</option>
+					    <option>D - a score less than 95</option> -->
+					 
+			</select>
+            </select>
+            <select id="sel1"
+					ng-init="sortcriteria.option = 1"
+					ng-model="sortcriteria.option"
+					ng-change="update(searchcriteria,false,sortcriteria.option,loancriteria,'converter')">
+					<option value = "1">Sort by: Relevance</option>
+					<option value = "2">Sort by: Beds max to min</option>
+					<option value = "3">Sort by: Beds min to max</option>
+					<option value = "4">Sort by: Price max to min</option>
+					<option value = "5">Sort by: Price min to max</option>
+					<option disabled></option>
+					<option value = "6">Sort by: Grade AA to D</option>
+					<option value = "7">Sort by: Grade D to AA</option>
+					<option disabled></option>
+					<option value = "4">Sort by: Monthly repayments max to min</option>
+					<option value = "5">Sort by: Monthly repayments min to max</option>
+					<option value = "4">Sort by: LVR max to min</option>
+					<option value = "5">Sort by: LVR min to max</option>
+					<option value = "4">Sort by: Estimated total max to min</option>
+					<option value = "5">Sort by: Estimated total min to max</option>
+					<option value = "4">Sort by: Loan amount max to min</option>
+					<option value = "5">Sort by: Loan amount min to max</option>
+					<option value = "4">Sort by: Cash amount max to min</option>
+					<option value = "5">Sort by: Cash amount min to max</option>
+					
+				</select>
+        </div>
+    </div>
+    <div class="mapandgrid">
+        <div id="nogradediv" ng-if="totalItems==0" ng-include='"views/nograde.html"'></div>
+        <div id="listdiv" ng-if="viewid == 'grid' && totalItems" ng-include='"views/gridview.html"'></div>
+        
+        <div id="mapdiv" ng-if="viewid == 'map'" ng-include='"views/mapview.html"'></div>
+    </div>
+</div>
+
+<div class="maphide" ng-if="viewid != 'nograde'">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 property-request-box">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 sl-Property-Request">
+
+                    <div class="SubmitPropertyRequest text-center">
+                        <div class="submityourrequest">
+                            <h4>Finding the right property</h4>
+                            <p >To assist with making your purchase decision why not request a FREE Independent Property Review (ipr) which includes a grade in a 6 page report</p>
+                            
+                            <p>You may request a FREE ipr and Grade report on any listed property</p>
+                            <a href="#!/about/what-is-graded"  title="WHAT IS GRADED"  class="submitrequest">What is graded?</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 sr-Property-Request">
+                    <div class="ListyourPropertyonCPx text-center">
+                        <h4>Looking after your best interest</h4>
+                        <p >Engage independent advisors, banks, financial planners, accountants, mortgage brokers, investment organisations, solicitors; to serve your best interest</p>
+                        
+                        <a href="#!/service_request" ng-click="clearPropertyID();toggle_enquire_servicerequest('');"  title="SUBMIT SERVICE REQUEST" class="submitrequest">Click here to submit a Service Request</a>
+                        <p>to one or many independent professionals; to help evaluate and buy a property</p>
+                    </div>
+
+                </div>
+                                
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 property-request-box">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 sl-Property-Request">
+
+                    <div class="SubmitPropertyRequest text-center">
+                        <div class="submityourrequest">
+                            <h4>Can’t find the property you want?</h4>
+                            
+                            <p>Tell us what you want in a property and we will source suitable options to be independently reviewed and graded by JLL for you for FREE!</p>
+                            <a href="#!/submit_property_request" ng-click="checkClickedorder();" title="SUBMIT PROPERTY REQUEST"  class="submitrequest">Click here to submit your Property Request</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 sr-Property-Request">
+                    <div class="ListyourPropertyonCPx text-center">
+                        <h4>Buyers and Professionals want independent facts!</h4>
+                        
+                        <p>Did you know there are over 100,000 financial professionals representing milions of clients who maybe your best source for property buyers?</p>
+                        <p><a href="#!/list_ur_property" ng-click="checkClickedlist();" title="LIST YOUR PROPERTY ON CPx" class="submitrequest">List your property for FREE</a> on CPx today and tap into a significant market.</p>
+                        
+                    </div>
+
+                </div>
+                                
+            </div>
+        </div>
+    </div>
+    <div class="container"  ng-if="viewid == 'grid'">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-pagination text-center">
+            
+            <pagination total-items="totalItems" items-per-page = "itemsPerPage" ng-model="paginationdata.currPage" ng-change="pageChanged(paginationdata.currPage);update(searchcriteria,true,sortcriteria.option,loancriteria,'converter')"  max-size="maxSize" class="pagination-sm"  rotate="false" previous-text = "&lt;&nbsp;&nbsp;PREVIOUS&nbsp;&nbsp;&#124;" next-text = "&#124;&nbsp;&nbsp;NEXT&nbsp;&nbsp;&gt;"></pagination> 
+        </div>
+    </div>
+</div>

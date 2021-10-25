@@ -1,0 +1,115 @@
+<div class="row footer">
+    <div class="container">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+        <div class="logofooter">
+            <a href="#!/" title="Home page"><img src="images/new_template/logo-footer.png"/></a>
+            <p>
+                <a ng-click="shownothing = true" href="#!/contact" class="footer-data inactive-a" title="Contact us">Online form</a><br/>
+                Telephone: +61 2 8006 1979<br />
+                Mobile: +61 410 510 997<br />
+                Email: <a href="mailto:contact@centralpropertyexchange.com.au" title="Contact us via email">contact@centralpropertyexchange.com.au</a>
+            </p>
+            <a href="https://www.facebook.com/centralpropertyexchange" target="_blank" style="margin-right:10px;"><img src="images/new_template/icon_face_footer.png" /></a>
+            <a href="https://twitter.com/cpxnews" target="_blank"><img src="images/new_template/icon_twitter_footer.png" /></a>
+        </div>
+        <div class="sitemap">
+            <div>
+                <div>
+                    <h2>ABOUT</h2>
+                    <ul>
+                        <li><a href="#!/about/what-is-cpx" ng-click="checkClicked6();"	title="What is CPx?">What is CPx?</a></li>
+                        <li><a href="#!/about/independent-process"ng-click="checkClicked6();"	title="Independent process">Independent process</a></li>
+                        <li><a href="#!/about/independent-property-review"ng-click="checkClicked6();"	title="Independent property review(ipr)">Independent Property Review (ipr)</a></li>
+                        <li><a href="#!/about/what-is-graded"ng-click="checkClicked6();"	title="What is graded?">What is Graded?</a></li>
+                        <li><a href="#!/list-your-property-on-cpx/list-property"ng-click="checkClicked6();"	title="Why list your property on CPx?">Why list your property on CPx?</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>BLOG</h2>
+                    <ul>
+                        <li><a href="#!/blog/press-releases/subid" ng-click="checkClickedblog();" title="Press releases">Press releases</a></li>
+                        <li><a href="#!/blog/Publications/subid" ng-click="checkClickedblog();"  title="Publications">Publications</a></li>
+                        <li><a href="#!/blog/cpx-announcements/subid" ng-click="checkClickedblog();"  title="CPx announcements">CPx announcements</a></li>
+                        <li><a href="#!/blog/FAQs/subid" ng-click="checkClickedblog();"  title="Frequently Asked Questions">FAQs</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <h2>PROPERTIES</h2>
+                    <ul>
+                        <li><a ng-click="checkClickedview();" href="#!/view-graded-properties/graded" title="View graded properties">View graded properties</a></li>
+                        <li><a ng-click="checkClickedview();" href="#!/view-graded-properties/affordable" title="Find affordable properties">Find affordable properties</a></li>
+                        <li><a ng-click="checkClickedorder();" href="#!/submit_property_request" title="Submit property request">Submit property request</a></li>
+                        <li><a ng-click="checkClickedlist();" href="#!/list_ur_property" title="List your property on CPx">List your property on CPx</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>REPORTS</h2>
+                    <ul>
+                        <li><a ng-click="" href="#!/order-independent-reports" title="Order independent reports">Order reports</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>LEGALS</h2>
+                    <ul>
+                        <li><a href="#!/privacy" title="Privacy">Privacy</a></li>
+                        <li><a href="#!/terms-and-conditions" title="Terms &amp; conditions">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div>
+                <div>
+                    <h2>PROFESSIONALS</h2>
+                    <ul>
+                        <li><a href="#!/industry/working-with-cpx"	title="Working with CPx">Working with CPx</a></li>
+                        <li><a href="#!/industry/free-publish-your-listings" title="Working with CPx">FREE - publish your listings</a></li>
+                        <li><a href="#!/industry/listing-affiliate"	title="Working with CPx">Listing affiliate</a></li>
+                        <li><a href="#!/submit-free-membership-form"	target="_blank" title="Submit free membership request">Submit free membership request</a></li>
+                        <li><a href="http://graded.centralpropertyexchange.com.au/login?ReturnUrl=/" target="_blank" title="Business login">Business login</a></li>
+                        <li><a href="#!/public-speaking-profiles/profileindex"	target="_blank" title="Public speaking profiles">Public speaking profiles</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>CPx MARKETPLACE</h2>
+                    <ul>
+                        <li><a href="#!/marketplace/find-industry-professionals" title="Find industry professionals">Find industry professionals</a></li>
+                        <li><a ng-click="clearPropertyID();goToServiceRequest();" href="javascript:void(0);" title="Submit service request">Submit service request</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>ADVERTISE</h2>
+                    <ul>
+                        <li><a href="#!/contact">Advertise with us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div><!--sitemap-->
+
+        <div class="newsletter">
+            <h2>SUBSCRIBE</h2>
+            <p>Subscribe to receive news and insights from CPx:</p>
+            <form action="//landlordcentral.us2.list-manage.com/subscribe/post?u=44d30abfcde67c3847612b5cb&amp;id=4583813c3e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <input class="clearfield" type="email" id="mce-EMAIL" placeholder="Type your email address here" class="input-bg" ng-model="registrationForm.email" title="Email Address:"/>
+                
+                <input class="submit" type="submit" title="" value="" name="subscribe" id="mc-embedded-subscribe" class="btn sub-btn" ng-click="resetform()"/>
+                
+            </form>
+            <p>You will be sent a verification email to activate your registration.</p>
+        </div>
+     
+
+         
+
+</div>
+
+
+    </div><!--container-->
+</div>

@@ -1,0 +1,185 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 lists-properties" style="margin-top:25px;" >
+   <div class="row" >
+       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" ng-class="$even ? 'panel-rightpad panel-clearleft' : 'panel-leftpad'" style="margin-top:25px;" ng-repeat ="item in properties">
+           <div class="Propertydetails">
+               <div class="Propertydetailsdiv">
+                    
+                    <span ng-include='"templates/product_tile_list.html"'></span>
+                    
+                   
+                   
+                   <div class="Propertydetailslink" >
+                    <alert ng-if="item.id == alertid" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)" style="background:#ffffcc;border-color: #ffffab;" class="alertbox">{{alert.msg}}</alert>
+                    
+                       <div class="pull-left">
+                           <a href="#!/details/{{properties[$index].id}}"  ng-if="!groups[1].isopen">More details</a> 
+    	       		      <a href="#!/details/{{properties[$index].id}}" ng-if="groups[1].isopen" ng-click="gotoloantab()">More details</a>
+                       </div>
+                       <div class="pull-right">
+                           <a href="javascript:void(0);" ng-click="addtoshortlist(item);addAlert(item.id);">Add</a>
+                           <a href="#!/shortlist"  title="View shortlist">View shortlist</a>
+                       </div>
+
+                   </div>
+                                   
+                   <div class="DownloadFreeipr" ng-show="{{item.gradestatus != 0}}" ng-if="groups[0].isopen">
+                       <a class="editbtnall dwonloadpdfBuy" href="javascript:void(0);" ng-click="go(item.iprs[0].downloadUri)">Download <b>FREE</b> ipr</a>
+                       <propertygrade item="item"></propertygrade>
+                   </div>
+                   
+                   <div class="DownloadFreeipr" ng-show="{{item.gradestatus == 0}}" ng-if="groups[0].isopen">
+                       
+                       	<a ng-click="passrequestfreeipr(item.id)" href="#!/request-free-ipr" target="_blank" title="Request a free ipr" class="editbtnall Requestjprgrad"> Request a <b>FREE</b> ipr</a>
+                   </div>
+                                                         
+                   <div class="DownloadFreeiprProper" ng-if="groups[1].isopen">
+                       <div class="gridbig">
+                           <div class="pull-left" style="padding-right: 10px;">
+                               <ul class="list-inline">
+                                   <li>
+                                       <span><a class="popoverlink monthlyrepay" ns-popover ns-popover-template="popoverIO" ns-popover-trigger="mouseenter" ns-popover-placement="top" ns-popover-theme="ns-popover-tooltip-theme" ns-popover-hide-on-inside-click=true>Monthly repayments<span > (IO - {{item.sponsors.IO.intrest_rate}}%)</span> </a></span>
+                                       <span class="pull-right" ng-if="!item.conv_IOrepayments"><span ng-if="!item.currencylabel">$</span>{{item.IOrepayments | currency:"":0}}</span>
+                                       <span class="pull-right" ng-if="item.conv_IOrepayments"><span ng-if="!item.currencylabel">$</span>{{item.conv_IOrepayments | currency:"":0}}</span>
+                                   </li>
+                               </ul>
+                               <ul class="list-inline">
+                                   <li>
+                                       <span><a class="popoverlink monthlyrepay" ns-popover ns-popover-template="popoverPI" ns-popover-trigger="mouseenter" ns-popover-placement="bottom" ns-popover-theme="ns-popover-tooltip-theme" ns-popover-hide-on-inside-click=true>Monthly repayments<span> (PI - {{item.sponsors.PI.intrest_rate}}%)</span></a></span>
+                                       <span class="pull-right" ng-if="!item.conv_PIrepayments"><span ng-if="!item.currencylabel">$</span>{{item.PIrepayments | currency:"":0}}</span>
+                                       <span class="pull-right" ng-if="item.conv_PIrepayments"><span ng-if="!item.currencylabel">$</span>{{item.conv_PIrepayments | currency:"":0}}</span>
+                                   </li>
+                               </ul>
+
+                           </div>
+                           <div class=" pull-right" style="padding-left: 10px;">
+                               <ul class="list-inline">
+                                   <li>
+                                       <span class="pull-left">Loan to value (LVR)</span>
+                                       <span class="pull-right" style="padding-left: 5px;">{{item.lvrdisplay | currency:"":1}}%</span>
+                                   </li>
+                               </ul>
+                               <ul class="list-inline">
+                                   <li>
+                                       <span>Loan amount &nbsp;<img src="images/blank.gif" class="flag flag-{{countryflag}}" alt="country flag"/>({{countrylabel}})</span>
+                                       <span class="pull-right" style="padding-left: 5px;" ng-if="!item.conv_loanamt"><span ng-if="!item.currencylabel">$</span>{{item.loanamt | currency:"":0}}</span>
+                                       <span class="pull-right" style="padding-left: 5px;"  ng-if="item.conv_loanamt"><span ng-if="!item.currencylabel">$</span>{{item.conv_loanamt | currency:"":0}}</span>
+                                   </li>
+                               </ul>
+                               <ul class="list-inline">
+                                   <li>
+                                       <span>Cash amount - {{item.cashpercent | currency:"":1}}%</span>
+                                       <span class="pull-right" style="padding-left: 5px;" ng-if="!item.conv_cashamt"><span ng-if="!item.currencylabel">$</span>{{item.cashamt | currency:"":0}}</span>
+                                       <span class="pull-right" style="padding-left: 5px;" ng-if="item.conv_cashamt"><span ng-if="!item.currencylabel">$</span>{{item.conv_cashamt | currency:"":0}}</span>
+                                   </li>
+                               </ul>
+                           </div>
+
+                       </div>
+                   </div>
+                    
+                    <div class="DownloadFreeiprProper gridbigdetails" style="border: 4px solid #213975;" ng-if="groups[2].isopen && 0">
+                        <div class="gridbig">
+                            <div class="pull-left" style="padding-right: 10px;">
+                                <ul class="list-inline">
+                                    <li>
+                                        <span>Cashflow </span>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <span>Market rent/lease</span>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <span>Rental yield</span>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <span>Capital growth</span>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <span>Population changes</span>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#" class="Downloadreport" style="color:#24407b;">Download investment report</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class=" pull-right" style="padding-left: 10px;">
+
+                                <ul class="list-inline">
+                                    <li>
+                                        <span class="pull-right"><span style="color:#ff0000">-$45</span>  per week</span>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <span class="pull-right">$450 per week</span>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <span class="pull-right">Gross 6.33% | net 2.57%</span>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <span class="pull-right">10.21% p.a. (Historical 2001-13)</span>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <span class="pull-right">1.89% p.a. (Historical 2001-13)</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                                                                                                
+               </div>
+           </div>
+       </div>
+       
+   </div>                   
+</div>
+
+
+<script type="text/ng-template" id="popoverPI">
+<div class="triangle" style="top: -7px !important;"></div>
+		<div class="ns-popover-tooltip ratepopover">
+		<div><b>Sponsored</b></div></br>
+		<div>
+		Principal and Interest (PI) rate is sponsored this week by: </br><br/> 
+		<div class="col-sm-2" style="padding-left:0px;padding-right:0px;">
+			<img class="sponsorFavicon" src="{{baseAmazonUrl+'/'+item.sponsors.PI.logo[0].path}}">
+		</div>
+		<div class="col-sm-10" style="padding-right:0px;"><p>{{item.sponsors.PI.sponsor_name}}</p></div>
+		</div></br>
+		<div style="text-align:left;"><a href="{{item.sponsors.PI.url}}" target="_blank" analytics-on="click" analytics-event="betterchoice.com.au" analytics-label="CPx->Listing-PI">Enquire</a></div>
+		</div>	
+		</script>
+		
+		<script type="text/ng-template" id="popoverIO">
+<div class="triangle" style="bottom: -7px !important;"></div>
+		
+		<div class="ns-popover-tooltip ratepopover">
+		<div><b>Sponsored</b></div></br>
+		<div>
+	    Interest only (IO) rate is sponsored this week by: </br><br/>
+		<div class="col-sm-2" style="padding-left:0px;padding-right:0px;">
+			<img class="sponsorFavicon" src="{{baseAmazonUrl+'/'+item.sponsors.IO.logo[0].path}}">
+		</div>
+		<div class="col-sm-10" style="padding-right:0px;"><p>{{item.sponsors.IO.sponsor_name}}</p></div>
+	 	
+		</div></br>
+		<div style="text-align:left;"><a href="{{item.sponsors.IO.url}}" target="_blank" analytics-on="click" analytics-event="betterchoice.com.au" analytics-label="CPx->Listing-IO">Enquire</a></div>
+		</div>	
+		</script>			 		

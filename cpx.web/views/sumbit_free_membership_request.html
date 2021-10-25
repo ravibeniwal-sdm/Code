@@ -1,0 +1,108 @@
+<header2></header2>
+<div class="container-fluid cpxpage">
+	<div class="row">
+		<div class="col-sm-12 col-xs-12 cpxbg" align="left">
+			<h1 class="fronthead container" >Submit free membership request</h1>
+		</div>
+	</div>
+</div>
+<div class="container cpxcontent" >
+	<div class="row datacontainer">
+		<div class="col-sm-8 col-xs-12 contactfields">
+		<div>
+		  <alert dismiss-on-timeout="15000" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+		</div>
+		
+		<form name="myForm">
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your name <i class="required-text asterisk">*</i></label>
+				   <input type="text" class="form-control" ng-model="contact.name"  ng-required='!contact.name'/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your email <i class="required-text asterisk">*</i></label>
+				   <input type="email" class="form-control" ng-model="contact.email" ng-required='!contact.email'/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Subject</label>
+				   <input type="text" class="form-control"  ng-model="contact.subject" ng-init="contact.subject='Industry professionals new membership request'"/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your details</label>
+				 <textarea class="form-control" 
+				  style="height: 220px;" ng-model="contact.message" placeholder="Please send us the details and a link to your website.
+
+The following professions/services are welcome to take up free membership:
+Buyer's agents
+Real estate agents
+Financial planners
+Mortgage brokers
+Property investment coaches
+legal representatives(solocitors)
+SMSF
+Accountants
+Immigration agents"></textarea>
+				</div>
+			</div>
+			
+			<div class="contactinput">
+				<div class="form-group">		 
+				   <input type="hidden" class="form-control" name="subjectmail" ng-model="contact.dummysubject" ng-init="contact.dummysubject='Submit free membership request'"/>
+				</div>
+			</div>			
+			
+			<div class="contactinput">
+				<div class="form-group">		 
+				  <!-- <div style= "padding-bottom:25px;" theme="light" class="g-recaptcha" data-sitekey="6LeeeAoTAAAAADJtB95fd7tDeXLMk1kajrFd6d37"></div>  -->
+				 <div vc-recaptcha key="'6LeeeAoTAAAAADJtB95fd7tDeXLMk1kajrFd6d37'" ng-model="respone4" theme="'light'" on-create="setWidgetId(widgetId);"></div>  
+				  
+				</div>
+			</div>					
+			
+			
+			<div class="col-sm-2 nopadding">
+				<button type="submit" class="btn btn-default btn-lg btn-block" ng-click='(!contact.name || !contact.email)?" ":sendContactEmail();'>SEND</button>
+			</div>
+			<!-- <div ng-if="pid == 'working-with-cpx'" ng-include='"views/working-with-cpx.html"'></div>
+	        <div ng-if="pid == 'view-directory'"ng-include='"views/view-directory.html"'></div> 
+			<div ng-if="pid == 'Contact_us_for_more'"ng-include='"views/contact_us.html"'></div> -->
+			
+			
+			</form>
+
+
+		</div>
+		<div class="col-sm-4 col-xs-12  rightmenu" >
+			 <div class="static-content">
+			 	<p><b>Industry professionals free membership request</b><br/><br/> If your business philosophy shares our core values, we encourage you to take up free membership as one of our industry professionals. In doing so, you will receive:</p>
+			 	<ol>
+			 		<li>Free membership</li>
+			 		<li>Free referrals</li>
+			 		<li>Free PropertyCompass login, giving access to investment reports and sales tracking</li>
+			 	</ol>
+			 	<p><div><b>Telephone:</b> +61 2 8006 1979</div>
+			 	<div><b>Mobile/cell:</b> +61 410 510 997</div>
+			 	<div><b>Email:</b> contact@centralpropertyexchange.com.au</div>
+			 	<div><b>Skype:</b> property.compass</div></p>
+			 	
+			 </div>	                  
+
+			  <div class="col-sm-12 sideheader">
+			  	<span ng-if="pid == 'working-with-cpx'" >Free membership, No referral fees</span>
+			  	<span ng-if="pid == 'view-directory'" >Free membership, No referral fees</span>
+			  	<span ng-if="pid == 'Contact_us_for_more'" >Free membership, No referral fees</span>
+			  </div>
+			  <div class="col-sm-12 nopadding">
+			  	<a class="thumbnail">
+		            <img src="images/workingwithCPx.jpg" class="thumbnail img-responsive " alt="whatisCPx.jpg">
+		        </a>
+			  </div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,39 @@
+<h4>Grade - ipr history</h4>
+<div class="gradetablediv">          
+	 <table class="table table-hover" >
+		<thead>
+		  <tr>
+			<th class="first">Grade</th>
+			<th>Score</th>
+			<th>Price Assessed</th>
+			<th>Rent / lease</th>
+			<th>Publish date</th>
+			<th>Days old</th>
+            <th>Beds</th>
+            <th>Bath</th>
+            <th>Car</th>
+            <th>View</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr ng-repeat="history in ipr_history" class="even">
+			<td><span class="table-col">{{history.grade}}</span></td>
+			<td><span class="table-col">{{history.score}}</span></td>
+			<td><span class="table-col">{{history.price_assessed}}</span></td>
+            <td><span class="table-col">{{history.weekly_rent}}</span></td>
+            <td><span class="table-col">{{history.publish_date}}</span></td>
+            <td><span class="table-col">{{history.days_old}}</span></td>
+            <td><span class="table-col">{{history.bed}}</span></td>
+            <td><span class="table-col">{{history.bath}}</span></td>
+            <td><span class="table-col">{{history.cars}}</span></td>
+            <td  >
+                <span class="table-col" >
+                     
+                    <a ng-if="!grade_table_status[history.id].isopen" ng-click="show_grade_table(history.id,property_id)" href="javascript:void(0);">View</a>
+                </span>
+            </td>
+		  </tr>
+		
+		</tbody>
+	 </table>
+ </div>

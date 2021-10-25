@@ -1,0 +1,23 @@
+<div class="gradetablediv">          
+	 <table class="table table-hover" >
+		<thead>
+		  <tr>
+			<th class="first">Attributes</th>
+			<th>Poor</th>
+			<th>Below average</th>
+			<th>Average</th>
+			<th>Above average</th>
+			<th>Excellent</th>
+		  </tr>
+		</thead>
+		<tbody ng-repeat="item in ipr_history" >
+		  <tr ng-repeat="pgrade in item.grade_table_arr" class="even" ng-if="grade_table_status[item.id].isopen">
+			<td><span class="table-col">{{pgrade.attr_name}}</span></td>
+			
+			<td ng-repeat="pgrade2 in gradevalues" class="table-td"><img src="images/new_template/tabright_images.png" alt="tick image" ng-hide={{pgrade.attr_val}}!={{pgrade2}}></td>
+			
+		  </tr>
+		
+		</tbody>
+	 </table>
+ </div>

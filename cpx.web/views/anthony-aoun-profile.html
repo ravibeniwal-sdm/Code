@@ -1,0 +1,178 @@
+ <script type="text/ng-template" id="mymailcontent2.html">
+      
+  <div class="modal-body sharemailbody">                       
+       <form name="myForm">
+     <label class="title" for="yourname">Email to a friend</label><br>
+			
+            <div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your email<i class="required-text asterisk">*</i></label>
+				   <input type="text" class="form-control" ng-model="sharemail.youremail" ng-required='!sharemail.youremail'/>
+				</div>
+			</div>
+
+
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">To email<i class="required-text asterisk">*</i></label>
+				   <input type="email" class="form-control" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" ng-model="sharemail.toemail" ng-required='!sharemail.toemail'/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Subject</label>
+				   <input type="text" class="form-control" ng-init="sharemail.subject = subject" ng-model="sharemail.subject"/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your message</label>
+				 <textarea class="form-control" style="width:100%; height: 170px;" ng-init="sharemail.message = txtmsg" ng-model="sharemail.message"></textarea>
+			<br>				
+			This email was sent by:&nbsp;<span style="font-size: 12px" ng-bind="sharemail.youremail"></span>
+			</div>
+			</div>
+
+<div class="modal-footer sharemail">
+			<div class="col-sm-2 nopadding">
+				<button type="submit" class="btn btn-default btn-lg btn-block" ng-click='(!(sharemail.toemail && sharemail.youremail))?" ":sendEmail();'>SEND</button>
+			</div>
+
+            <button class="btncancle btn-warning btn-lg" ng-click="cancel()">Cancel</button>
+		</div>	
+			
+			
+			</form>
+</div>
+</script>
+
+    	
+<div class="col-sm-12 nopadding">
+	
+		<div class="col-sm-7 noleftpad">
+			<h3 style="margin-top:0px;">Anthony Aoun</h3>
+		</div>
+   
+		<div class="col-sm-5 col-xs-12 fl-rpage ">
+			<div class="top-social btn-social-icon fl-r xs-center share-anchor">
+				<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('publicspeaking')" popover="Take a print" popover-trigger="mouseenter"></a>
+				<a ng-click="openfaqmail('profone')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+				<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fpublic-speaking-profiles%2f{{pid}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fpublic-speaking-profiles%2f{{pid}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+				<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/public-speaking-profiles/anthonyaoun')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+				<a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fpublic-speaking-profiles%2f{{pid}}" target="_blank"  share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+				<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/profileshare?profileid={{pid}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=PUBLIC-SPEAKING-PROFILES-{{pid}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+				<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/profileshare?img=http://centralpropertyexchange.com.au/images/Logo.png%26name=INDUSTRY PROFESSIONALS-{{pid}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fpublic-speaking-profiles%2f{{pid}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+			</div>
+		</div>
+		
+		<div class="col-sm-12 noleftpad">
+		
+			<dl class="dl-horizontal">
+			  <dt style="width:auto;">Director of: </dt>
+			  <dd style="margin-left: 90px;">Confidis.com.au</dd>
+			  <dd style="margin-left: 90px;">Aoun.co</dd>
+			  <dd style="margin-left: 90px;">Landlordcentral.com.au</dd>
+			</dl>
+			
+			<dl class="dl-horizontal">
+			  <dt style="width:auto;">Brands: </dt>
+			  <dd style="margin-left: 90px;">centralpropertyexchange.com.au [CPx]</dd>
+			  <dd style="margin-left: 90px;">propertycompass.com.au </dd>
+			  
+			</dl>
+			
+		
+		</div>
+		
+		<div class="col-sm-12 col-xs-12 noleftpad">
+			<h4><i>Changing the Australian residential real estate industry through curiosity and inventiveness.</i></h4>
+		</div>
+		<div class="clearout"></div>
+		
+		<div class="col-md-12 noleftpad" style="text-align: justify;">
+            <img style='float:left;margin-right:15px;margin-bottom:10px' src="images/CPxPublicSpeakingProfilesAnthonyAoun.png" />
+            <p>Anthony Aoun is a business innovator and consultant with over 22 years experience in business 
+            development and more than 16 years experience in residential real estate. </p>
+            <p>Recognising the need for property buyers to have disclosure and evaluation tools when purchasing 
+            investment property, Anthony set about disrupting the real estate industry to create a level playing field. </p>
+            <p>As a result he founded PropertyCompass.com.au to match investors with property in minutes, Confidis.com.au an 
+            independent trust account for the secure receipt, management and disbursement of deposits and commissions, and 
+            CentralPropertyExchange.com.au [CPx], Australia&rsquo;s first independent buyer-focused real estate advertising website. 
+            Anthony was also the Founder and Managing Director of a large investment property marketing business, with more than 
+            50 staff and offices in New South Wales, Queensland, Victoria and Indonesia.</p>
+            
+            <dl class="dl-horizontal">
+			  <dt style="width:auto;">Presentations: &nbsp;</dt>
+			  <dd style="margin-left: auto">Providing cutting edge insight into property, Anthony has been has been featured on 
+			  Qantas Talking Business with Alan Kohler, hosted a property program on SBS radio and was invited on a national road 
+			  show with <a target="_blank" href="http://www.beacongroup.com.au/" style="color: #337ab7;text-decoration:underline;" >Beacon Group</a>.</dd>
+  
+			</dl>
+			
+			<dl class="dl-horizontal">
+			  <dt style="width:auto;">Business Consulting: &nbsp;</dt>
+			  <dd style="margin-left: auto;">With an ability to identify trends and opportunities, Anthony assisted in the concept 
+			  of <a target="_blank" href="http://propdata.com.au/" style="color: #337ab7;text-decoration:underline;" >Propdata </a> a web-based business that enables independent analysis for the 
+			  property market and <a target="_blank" href="http://www.gnorizo.co" style="color: #337ab7;text-decoration:underline;" >Gnorizo </a> an executive coaching business.</dd>
+			</dl>
+			
+			<dl class="dl-horizontal">
+			  <dt style="width:auto;">Personal Consulting: &nbsp;</dt>
+			  <dd style="margin-left: auto;">With over 16 years experience in national and international property sales, Anthony 
+			  coached a new <a target="_blank" href="http://www.mcgrath.com.au/" style="color: #337ab7;text-decoration:underline;" >McGrath Franchise Group</a> real estate agent with no prior 
+			  real estate experience to become a nationally renowned agent in twelve months.</dd>
+			</dl>
+			
+			<dl class="dl-horizontal">
+			  <dt style="width:auto;">Presentation style: &nbsp;</dt>
+			  <dd style="margin-left: 90px;">Professional, light-hearted, humorous, engaging and thought provoking</dd>			  
+			</dl>
+			
+			<dl class="dl-horizontal">
+			  <dt style="width:auto;">Favorite word: &nbsp;</dt>
+			  <dd style="margin-left: 90px;">Otipemsiwak, meaning &lsquo;Those who own themselves&rsquo; </dd>			  
+			</dl>
+			
+			<dl class="dl-horizontal">
+			  <dt style="width:auto;">Philosophy: &nbsp;</dt>
+			  <dd style="margin-left: 90px;">Every day we are given a new opportunity to positively contribute to the wellbeing 
+			  of our family, community, state and country through our actions. </dd>			  
+			</dl>
+			
+			<h5>Areas of Expertise</h5>
+			<ul>
+				<li>Business Development and Change</li>
+				<li>Property Investing</li>
+				<li>Residential Real Estate Trends</li>
+				<li>Digital Disruption</li>
+				<li>Customer Service</li>
+				<li>Shifting Attitudes</li>
+				<li>Innovative Thinking</li>
+			</ul>
+        </div>
+        
+        <div class="col-sm-12 col-xs-12 noleftpad">
+		<address>
+		  <h5><b>Media Contact</b></h5>
+		  For more information or to have Anthony Aoun speak in your next event/conference please contact:<br>
+		  Amanda Jesnoewski<br>
+		  
+		  <p style="cursor:pointer;margin:0px;" title="Phone">M: 0433 502 114</p>
+		  <p style="cursor:pointer;" title="Email">E: <a href="mailto:#">amanda@velocitymedia.com.au</a></p> 
+		</address>
+		</div>
+</div>
+
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({appId: '351998031650844', status: true, cookie: true,
+        xfbml: true});
+    };
+    (function() {
+        var e = document.createElement('script'); e.async = true;
+        e.src = document.location.protocol +
+        '//connect.facebook.net/en_US/all.js';
+        document.getElementById('fb-root').appendChild(e);
+    }());
+  </script>

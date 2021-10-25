@@ -1,0 +1,6 @@
+///////////////  Command to Concatenate and Minify All Controller's js ////////////
+
+type ..\..\js\app\constants.js ..\..\js\app\main.js ..\..\js\app\directives.js ..\..\js\app\filters.js ..\..\js\app\services.js ..\..\js\app\Controllers\DetailsController.js ..\..\js\app\Controllers\HomePageController.js ..\..\js\app\Controllers\PropertiesController.js ..\..\js\app\Controllers\ModalInstanceController.js ..\..\js\app\Controllers\ModalMailController.js ..\..\js\app\Controllers\FaqMailController.js ..\..\js\app\Controllers\AboutController.js ..\..\js\app\Controllers\OrderController.js ..\..\js\app\Controllers\ListController.js ..\..\js\app\Controllers\ErrorPageController.js ..\..\js\app\Controllers\ContactsController.js ..\..\js\app\Controllers\ShortlistController.js ..\..\js\app\Controllers\DefaultController.js ..\..\js\app\Controllers\FbController.js ..\..\js\app\Controllers\PrintController.js ..\..\js\app\Controllers\ProductileController.js ..\..\js\app\Controllers\CurrencyController.js ..\..\js\app\Controllers\EnquiryFormsController.js ..\..\js\app\Controllers\LogoSlideController.js> ..\..\js\app\Controllers\allone.js
+
+java -jar yuicompressor-2.4.7.jar ..\..\js\app\Controllers\allone.js  -o ..\..\js\app\Controllers\allone.min.js
+

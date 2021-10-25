@@ -1,0 +1,204 @@
+<header2></header2>
+<div class="ServiceRequest">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row ServiceRequest_title text-center">
+                
+                <h3 class="fronthead container">{{header}}</h3>
+            </div>
+        </div>
+        
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 queaction queactionsucess">
+		  <alert dismiss-on-timeout="15000" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index);">{{alert.msg}}</alert>
+		</div>
+         
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 startform">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="Serviceform">
+                    
+                    
+                    
+                        <form role="form" id="contact-form" class="contact-form">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Your name <i class="required-text asterisk">*</i></label>
+                                        <input type="text" class="form-control" ng-model="contact.name"  ng-required='!contact.name'/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Your email <i class="required-text asterisk">*</i></label>
+                                        <input type="email" class="form-control"  ng-model="contact.email" ng-required='!contact.email'/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Your role <i class="required-text asterisk">*</i></label>
+                                        <select class="form-control"  ng-model="contact.role" ng-required='!contact.role' title="Please select a role from the list">
+                                            <option ng-selected="'Please select role'" value="">About you: Please select role</option>
+                                            <option value="Accountant">Accountant</option>
+                                            <option value="Buyer">Buyer</option>
+                                            <option value="Buyer agent/ Advocate">Buyer agent/ Advocate</option>
+                                            <option value="Bank">Bank</option>
+                                            <option value="Financial planner">Financial planner</option>
+                                            <option value="Mortgage broker">Mortgage broker</option>
+                                            <option value="Real estate agent">Real estate agent</option>
+                                            <option value="SMSF">SMSF</option>
+                                            <option value="Solicitor/ Conveyancer">Solicitor/ Conveyancer</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Subject</label>
+                                        <input name="subject" type="text" class="form-control box_g" ng-model="contact.subject" readonly="true" ng-init="contact.subject=subject"  tabindex="-1"/>
+                                        <input name="pass_params" type="hidden" class="form-control box_g" ng-model="contact.pass_params" readonly="true" ng-init="contact.pass_params=pass_params"  />
+                                        <input name="propertyIds" type="hidden" class="form-control box_g" ng-model="contact.propertyIds" readonly="true" ng-init="contact.propertyIds=currid"  />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Your message:</label>
+                                        <div class="div_g">
+                                        <span ng-model="contact.links1" ng-bind-html="contact.links1 = link1"></span>
+                                        <span ng-model="contact.links" ng-bind-html="contact.links = link"></span>
+                                        </div>
+                                        
+                                        
+                                        <textarea class="form-control textarea" rows="3" style="width:100%; height: 220px;font-size: 12px;border-radius:0px;color: black;"   placeholder="Type your comments here..." ng-model="contact.message"></textarea>                                        
+                                                                                                                                                                
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contactinput">
+                				<div class="form-group">		 
+                				   <input type="hidden" class="form-control" name="subjectmail" ng-model="contact.dummysubject" ng-init="contact.dummysubject='Contact us request form'"/>
+                                   <input type="hidden" class="form-control" name="propertyIds" ng-model="contact.propertyIds"/>
+                				</div>
+                			</div>			
+                
+                            <alert dismiss-on-timeout="15000" ng-repeat="alertcap in alertcaps" type="{{alertcap.type}}" close="closeAlertcap($index);">{{alertcap.msg}}</alert>
+                            
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 robotdiv">
+                                <div class="row robotdivrow">
+                                    <div vc-recaptcha key="'6LeeeAoTAAAAADJtB95fd7tDeXLMk1kajrFd6d37'" ng-model="respone5" theme="'light'" on-create="setWidgetId(widgetId);"></div>   
+                                </div>
+                            </div>
+                            
+                            <div class="row" ng-if="pid == 'domacom' || pid == 'affordassist'">
+                                <div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
+                                    <button type="submit" ng-click=" sendContactEmail();" class="sendbtn">SEND</button>
+                                </div>
+                            </div>
+                            
+                            <div class="row" ng-if="pid == 'traditional' || pid == 'smsf' || pid == 'vendorfinance'" >
+                                <div class="col-md-12 col-md-12 col-sm-12 col-xs-12 byepropertymain">
+                                    
+                                        <div class="text-center byepropertymaindiv">
+                                           
+                                            
+                                            <button type="submit" ng-click=" sendContactEmail();" class="sendbtn-large-blue">Submit your expression of interest to the property owner/ agent and their team</button>
+                                        </div>
+                                        <div class="text-center byepropertymaindiv">
+                                            
+                                            
+                                            <button type="submit" ng-click=" sendContactEmail('1');" class="sendbtn-large-green">Submit your expression of interest & make payment towards the purchase of this property </button>
+                                        </div>
+                                        <a id="newWindow" href="https://confidis.com.au/addfunds/client/71346346" target="_blank"></a>
+                                    
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service-rq-right" ng-if="pid == 'traditional' || pid == 'smsf' || pid == 'vendorfinance'">
+                
+                    <div class="well servicerightside" ng-if="(pid == 'vendorfinance' ) && vendorfinanceflag == true">
+                        
+                        <p style="color:#282828;" ><strong>Note:</strong> This property does have a Vendor Finance flag; the property owner/ agent will be advised of your purchase preference. CPx Admin will manage this process and revert back to you shortly.</p>               
+                        
+                    </div>
+                    
+                    <div class="well servicerightside" ng-if="(pid == 'vendorfinance' ) && vendorfinanceflag == false">
+                        
+                        <p style="color:#282828;" ><strong>Note:</strong> This property does not have a Vendor Finance flag; the property owner/ agent will be advised of your purchase preference. CPx Admin will manage this process and revert back to you shortly.</p>           
+                        
+                    </div>
+                    
+                    
+                    <div class="well servicerightside" ng-if="(pid == 'smsf') && smsfflag == true">
+                        
+                        <p style="color:#282828;" ><strong>Note:</strong> This property does have a SMSF flag; the property owner/ agent will be advised of your purchase preference. CPx Admin will manage this process and revert back to you shortly.</p>               
+                        
+                    </div>
+                    
+                    <div class="well servicerightside" ng-if="(pid == 'smsf') && smsfflag != true">
+                        
+                        <p style="color:#282828;" ><strong>Note:</strong> This property does not have a SMSF flag; the property owner/ agent will be advised of your purchase preference. CPx Admin will manage this process and revert back to you shortly.</p>           
+                        
+                    </div>
+                    
+                    
+                    
+                    
+                    <div class="well servicerightside">
+                        <a href="https://confidis.com.au/" target="_blank"><img class="images img-responsive page9right" src="https://confidis.com.au/wp-content/uploads/2014/08/Confidis-platform-logo.png" /></a>
+        			  	<br>
+        				<a class="page91p" href="https://confidis.com.au/contact/" target="_blank">Contact Confidis</a>
+                        <br><br>
+                        <p style="color:#282828;"><strong>Note:</strong> You may opt to make a payment/ deposit towards the property; these funds will be managed by Confidis.<br><br>Confidis Pty Ltd is an Independent Trust Account; able to receipt, manage and disburse monies on behalf of parties by agreement. It is the ideal service for individuals, agents, developers, conveyancers, professionals, trade groups, property sellers and buyers.</p>                           
+                    </div>
+                     
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service-rq-right" ng-if="pid == 'domacom'">
+                    <div class="well servicerightside">
+                        <a href="https://domacom.com.au/" target="_blank"><img class="images img-responsive page9right" src="images/new_template/domacomlogo.png" /></a>
+        			  	<br>
+                        
+        				<a class="page91p" href="http://www.domacom.com.au/contact-us/" target="_blank">Contact Domacom</a>
+                         <br>   <br>
+                        
+                        <p style="color:#282828;" ng-if="domacomflag == true">
+        				<b>Note:</b> This property does have a DomaCom flag; the property owner/ agent will be advised of your purchase preference. DomaCom Pty Ltd will manage this process and revert back to you shortly.
+        				</p>
+                        <p style="color:#282828;" ng-if="domacomflag == false">  
+        				<b>Note:</b> This property does not have a DomaCom flag; the property owner/ agent will be advised of your purchase preference. DomaCom Pty Ltd will manage this process and revert back to you shortly.
+        				</p>
+                                                
+                    </div>
+                     
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service-rq-right" ng-if="pid == 'affordassist'">
+                    <div class="well servicerightside">
+                        <img class="images img-responsive page9right" src="images/new_template/AffordAssist-Logo.png" />
+        			  	<br>
+                        
+        				<a class="page91p" href="http://www.affordassist.com/contact-us/" target="_blank">Contact AffordAssist</a>
+                         <br>   <br>
+                        
+                        <p style="color:#282828;" ng-if="vendorfinanceflag == true">
+        				<b>Note:</b> This property does have a Vendor Finance flag; the property owner/ agent will be advised of your purchase preference. AffordAssist will manage this process and revert back to you shortly.
+        				</p>
+                        <p style="color:#282828;" ng-if="vendorfinanceflag == false">  
+        				<b>Note:</b> This property does not have a Vendor Finance flag; the property owner/ agent will be advised of your purchase preference. AffordAssist will manage this process and revert back to you shortly.
+                        </p>
+                        
+                                                
+                    </div>
+                     
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

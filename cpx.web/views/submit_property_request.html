@@ -1,0 +1,110 @@
+<header2 ></header2>
+<div class="ServiceRequest">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row ServiceRequest_title text-center">
+                <h3>Submit property request</h3>
+            </div>
+        </div>
+        
+		 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 queaction queactionsucess">
+		  <alert dismiss-on-timeout="15000" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index);">{{alert.msg}}</alert>
+		</div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 startform">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <div class="Serviceform">
+                        <form name="myForm">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+
+                                        <label class="">Your name <i class="required-text asterisk">*</i></label>
+				                        <input type="text" class="form-control" ng-model="contact.name" required='!contact.name'/>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Your email <i class="required-text asterisk">*</i></label>
+				                        <input type="email" class="form-control"  ng-model="contact.email" required='!contact.email'/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Your role <i class="required-text asterisk">*</i></label>
+                    				   <select class="form-control"  ng-model="contact.role" ng-required='!contact.role' title="Please select a role from the list">
+                                            <option ng-selected="'Please select role'" value="">About you: Please select role</option>
+                                            <option value="Accountant">Accountant</option>
+                                            <option value="Buyer">Buyer</option>
+                                            <option value="Buyer agent/ Advocate">Buyer agent/ Advocate</option>
+                                            <option value="Bank">Bank</option>
+                                            <option value="Financial planner">Financial planner</option>
+                                            <option value="Mortgage broker">Mortgage broker</option>
+                                            <option value="Real estate agent">Real estate agent</option>
+                                            <option value="SMSF">SMSF</option>
+                                            <option value="Solicitor/ Conveyancer">Solicitor/ Conveyancer</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Subject</label>
+				                        <input type="text" class="form-control box_g"  ng-model="contact.subject" ng-init="contact.subject='Property request'" readonly="true" tabindex="-1"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        
+                                         <label class="">Your property request summary</label>
+                                          <div class="div_g" ng-model="contact.links" ng-bind-html="contact.links = link" ></div>
+                                             <textarea class="form-control textarea" style="width:100%; height: 220px; padding-left: 4px !important;border-radius:0px;" ng-model="contact.message"  ng-init="contact.message='Please provide a summary of what you are looking for. Example:
+Price range
+SMSF suitable
+House or unit
+Location
+Other relevant criteria
+Or simply paste a link here'" onclick="this.value=''"></textarea>
+                                             
+                                       <input type="hidden" class="form-control" name="subjectmail" ng-model="contact.dummysubject" ng-init="contact.dummysubject='Submit property request'"/>      
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <alert dismiss-on-timeout="15000" ng-repeat="alertcap in alertcaps" type="{{alertcap.type}}" close="closeAlertcap($index);">{{alertcap.msg}}</alert>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 robotdiv">
+                                <div class="row robotdivrow">
+                                    <div vc-recaptcha key="'6LeeeAoTAAAAADJtB95fd7tDeXLMk1kajrFd6d37'" ng-model="respone1" theme="'light'" on-create="setWidgetId(widgetId);" on-success="setResponse(response)"></div>  
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
+                                    <button type="submit" ng-click="sendContactEmail()" class="sendbtn">Send</button>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service-rq-right">
+                    
+                    <div class="well servicerightside">
+                        <h4 >Can not find the property you want?</b></h4>
+                         
+                        <p>Tell us what you want in a property and we will source suitable options to be independently reviewed and graded by <a  href="http://www.jll.com.au/australia/en-au/services/investors-developers/valuations-and-advisory/mortgage-services" target="_blank" title="JLL" style="color: #86b84c !important;;">JLL</a> for you for FREE!</p>
+                        
+                    </div>
+                    
+                    <div class="cont-btn"><a href="#!/contact">Contact us for more information </a></div>
+                    
+                    <div class="servicerightsideimg">
+                        <img src="images/whatisCPx.jpg" class="thumbnail img-responsive " alt="whatisCPx.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

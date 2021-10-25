@@ -1,0 +1,422 @@
+/* GALLERY */
+
+#_mg_listing_gallery .slick-frame {
+	overflow: hidden;
+	opacity: 1;
+}
+
+#_mg_listing_gallery .slick-frame .frame:focus {
+	outline: none;
+}
+
+#_mg_listing_gallery .slick-frame .frame {
+	background-color: black;
+}
+
+#_mg_listing_gallery .slick-frame .frame img {
+	/*width: 750px;*/
+	height: 570px;
+	opacity: 0.5;
+	transition: opacity 500ms;
+	-webkit-transition: opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-ms-transition: opacity 500ms;
+}
+
+._mg_mini_form .cell.label {
+
+    width: 70%!important;
+
+}
+
+#_mg_listing_gallery .slick-frame .frame.slick-center img {
+	opacity: 1;
+}
+
+#_mg_listing_gallery .slick-dots {
+	position: relative;
+	top: -30px;
+	margin: 0 auto;
+	max-width: 750px;
+	padding: 0px 20px;
+	height: 0;
+	text-align: right;
+}
+
+#_mg_listing_gallery .slick-dots li {
+	display: inline-block;
+	vertical-align: top;
+	width: 10px; height: 10px;
+	background: transparent url(../../images/slick/carousel_dot_off.png) no-repeat center;
+	background-size: contain;
+	margin-right: 8px;
+	cursor: pointer;
+}
+
+#_mg_listing_gallery .slick-dots li.slick-active {
+	background-image: url(../../images/slick/carousel_dot_on.png);
+}
+
+#_mg_listing_gallery .slick-dots li button {
+	opacity: 0;
+}
+
+#_mg_listing_detail .share ._mg_social_icon {
+	margin-right: 16px;
+	width: 18px;
+}
+
+#_mg_listing_detail .feature-list li {
+	margin: 0px 40px 10px 0px;
+	display: inline-block;
+	vertical-align: top;
+	list-style: none;
+}
+
+#_mg_listing_detail .feature-list li:last-of-type {
+	margin-right: 0px;
+}
+
+#_mg_listing_detail .feature-list .concierge { width: 60px; }
+#_mg_listing_detail .feature-list .pool { width: 44px; }
+#_mg_listing_detail .feature-list .bath { width: 47px; }
+#_mg_listing_detail .feature-list .ceilings { width: 54px; }
+#_mg_listing_detail .feature-list .fireplace { width: 50px; }
+
+
+
+
+#_mg_listing_detail .feature-list-heading { margin-bottom: 15px; }
+
+#_mg_listing_detail ul.detail-list {
+	margin-bottom: 0;
+}
+
+#_mg_new-development .feature-list > li{
+    font-size:14px;
+    line-height:1;
+}
+
+/* TIMES */
+
+#_mg_listing_times h1 {
+	font-size: 30px;
+	text-align: center;
+	margin: 0px 0px 40px 0px;
+}
+
+#_mg_listing_times .align {
+	border-bottom: 1px solid #DCDCDC;
+}
+
+#_mg_listing_times .grid {
+	margin: 0px -5px;
+	text-align: center;
+}
+
+#_mg_listing_times .cell {
+	width: 100px;
+	margin: 5px;
+	background-color: white;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+#_mg_listing_times .cell .date {
+	font-family: 'Proxima Nova SemiBold';
+	border-bottom: 1px solid #DCDCDC;
+	padding: 15px 0px;
+}
+
+#_mg_listing_times .cell .time {
+	padding: 15px 0px;
+	padding-left: 24px;
+}
+
+#_mg_listing_times .cell .type {
+	padding: 10px 0px;
+}
+
+#_mg_listing_times .cell .type {
+	background-color: #dcdcdc;
+}
+
+#_mg_listing_times .cell .hover {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-color: #F57D1F;
+	width: 100%; height: 100%;
+	
+	transform: translateX(100%);
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	
+	transition: transform 500ms;
+	-webkit-transition: -webkit-transform 500ms;
+	-moz-transition: -moz-transform 500ms;
+	-ms-transition: -ms-transform 500ms;
+}
+
+#_mg_listing_times .cell .hover img {
+	width: 62px;
+	position: relative;
+	top: 50%;
+	margin-top: -32px;
+}
+
+#_mg_listing_times .cell:hover .hover {
+	transform: translateX(0%);
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+}
+
+#_mg_listing_times .cell span {
+	color: #323232;
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+}
+
+#_mg_listing_times .cell.auction span {
+	color: #F57D1F;
+}
+
+#_mg_listing_times .cell.auction .type {
+	background-color: #F57D1F;
+}
+
+#_mg_listing_times .cell.auction .type-mode {
+	color: white;
+}
+
+#_mg_listing_times .cell .day-name { font-size: 12px; }
+#_mg_listing_times .cell .day-number { font-size: 36px; }
+#_mg_listing_times .cell .month-name { font-size: 12px; }
+#_mg_listing_times .cell .time-start { font-size: 14px; text-align: left; text-transform: none; }
+#_mg_listing_times .cell .time-finish { font-size: 14px; text-align: left; text-transform: none; }
+#_mg_listing_times .cell .type-mode { font-size: 12px; font-family: 'Proxima Nova SemiBold'; }
+
+#_mg_listing_times .cell .tab {
+	display: none;
+	position: absolute;
+	top: 0; left: 0;
+	width: 50px; height: 50px;
+	background: transparent url(/Content/artwork/_mg_listing_calendar_m.png) center no-repeat;
+	background-size: 17px;
+}
+
+#_mg_listing_times .cell.auction .tab {
+	background-image: url(/Content/artwork/_mg_listing_calendar_m_o.png);
+}
+
+/* AGENTS */
+
+#_mg_listing_agents .align {
+	border-bottom: 1px solid #DCDCDC;
+}
+
+#_mg_listing_agents .grid {
+	text-align: center;
+}
+
+
+#_mg_footer_form .align {
+	text-align: center;
+}
+
+#_mg_footer_form .label {
+	width: 40%;
+}
+
+
+
+ul.feature-dash-list  
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: left;
+margin-bottom:20px;
+}
+
+ul.feature-dash-list > li { 
+display: inline-block; 
+}
+
+ul.feature-dash-list > li 
+{
+text-decoration: none;
+padding: .2em 1em;
+color: #000;
+font-size:16px;
+padding-top:10px;
+margin-right:2px;
+margin-bottom:2px;
+line-height:2.4;
+white-space:nowrap;
+}
+
+ul.feature-dash-list  > li > a:hover
+{
+color: #fff;
+background-color: #369;
+}
+
+
+@media screen and (max-width: 750px) {
+
+
+
+    #_mg_listing_times > div > h1 {
+
+        text-align:center;
+
+
+    }
+	/* GALLERY */
+	
+	#_mg_listing_gallery .slick-frame {
+		max-height: 600px;
+       
+	}
+  @media only screen and (min-width: 751px) {
+    /* tablets and desktop */
+    #_mg_listing_gallery .slick-frame .frame img {
+		/*width: 320px;*/
+		height: 200px;
+	}
+}
+	@media only screen and (max-width: 750px) {
+        #_mg_listing_gallery .slick-frame .frame img {
+            height: 300px; 
+        opacity: 1;
+        }
+		   
+
+}
+	#_mg_listing_gallery .slick-dots {
+		max-width: 320px;
+	}
+
+	/* TIMES */
+	
+	#_mg_listing_times h1 {
+		font-size: 25px;
+		text-align: left;
+		margin: 0px 0px 20px 0px;
+	}
+	
+	#_mg_listing_times .grid {
+		margin: 0px;
+	}
+	
+	#_mg_listing_times .cell {
+		width: auto;
+		display: block;
+		margin: 0px 0px 2px 0px;
+		height: 50px;
+		padding: 10px 100px 10px 50px
+	}
+	
+	#_mg_listing_times .cell .date,
+	#_mg_listing_times .cell .time {
+		padding: 0;
+		text-align: left;
+		border: 0;
+	}
+	
+	#_mg_listing_times .cell .type {
+		position: absolute;
+		top: 0; right: 0; bottom: 0;
+		height: 50px;
+		width: 100px;
+		text-align: center;
+		padding-top: 17px;
+	}
+	
+	#_mg_listing_times .cell .hover {
+		display: none;
+	}
+	
+	#_mg_listing_times .cell span {
+		color: #323232;
+		text-transform: uppercase;
+		display: inline-block;
+		padding: 0px 2px;
+	}
+	
+	#_mg_listing_times .cell.auction span {
+		color: #F57D1F;
+	}
+	
+	#_mg_listing_times .cell .day-number,
+	#_mg_listing_times .cell .time-start,
+	#_mg_listing_times .cell .time-finish {
+		font-size: 12px;
+	}
+	
+	#_mg_listing_times .cell .time-start,
+	#_mg_listing_times .cell .time-finish {
+		color: #969696
+	}
+
+	#_mg_listing_times .cell .tab {
+		display: block;
+	}
+	
+	#_mg_listing_detail ul.detail-list {
+		display: block;
+		width: 100%;
+	}
+	#_mg_listing_detail ul.detail-list.detail-list-first {
+		margin-bottom: 0;
+	}
+	
+	#_mg_footer_form ._mg_field.large { font-size: 18px; }
+
+}
+
+  /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+      #_mg_listing_gallery .slick-frame .frame img {
+ 
+    max-width: 768px;
+	opacity:0.7;
+}
+
+#_mg_listing_gallery .slick-frame .frame.slick-active img {
+	opacity: 1;
+}
+    }
+
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+       #_mg_listing_gallery .slick-frame .frame img {
+ opacity:0.7;
+    max-width: 480px;
+
+}
+#_mg_listing_gallery .slick-frame .frame.slick-active img {
+	opacity: 1;
+	
+}
+
+    }
+
+  
+	
+	 @media only screen and (max-width : 320px) {
+        #_mg_listing_gallery .slick-frame .frame img {
+ opacity:0.7;
+    max-width: 320px;
+}
+#_mg_listing_gallery .slick-frame .frame.slick-active img {
+	opacity: 1;
+}
+    }

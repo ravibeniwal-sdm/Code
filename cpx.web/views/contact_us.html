@@ -1,0 +1,136 @@
+<header2 selectedmenu="selectedmenu"></header2>
+<div class="ServiceRequest">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row ServiceRequest_title text-center">
+                <h3>Contact</h3>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-show="SuggestionBoxIsVisible">
+            <div class="row">
+                <div class="queaction col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="alert alert-block fade in" style="background:#ffffcc;border-color: #ffffab;">
+                        <button type="button" class="close close-sm" data-dismiss="alert" ng-click="ShowHideSuggestionBox()">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <h4>
+                            <span><strong>Please note:</strong> If you want to direct an enquiry to the property owner/ agent, please use the enquiry  form instead. <a href="#" style="color: #86b84c;" onClick="javascript:history.go(-1); return false; " class="link01"> Click to go back </a> </span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 queaction queactionsucess">
+		  <alert dismiss-on-timeout="15000" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index);">{{alert.msg}}</alert>
+		</div>
+		
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 startform">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 service-rq-left">
+                    <div class="Serviceform">
+                        <form name="myForm">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+
+                                        <label class="">Your name <i class="required-text asterisk">*</i></label>
+                                        <input type="text" class="form-control" ng-model="contact.name"  ng-required='!contact.name'/>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Your email <i class="required-text asterisk">*</i></label>
+                                        <input type="email" class="form-control"  ng-model="contact.email" ng-required='!contact.email'/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="yourname">Your role <i class="required-text asterisk">*</i></label>
+                    				   <select class="form-control"  ng-model="contact.role" ng-required='!contact.role' title="Please select a role from the list">
+                                            <option ng-selected="'Please select role'" value="">About you: Please select role</option>
+                                            <option value="Accountant">Accountant</option>
+                                            <option value="Buyer">Buyer</option>
+                                            <option value="Buyer agent/ Advocate">Buyer agent/ Advocate</option>
+                                            <option value="Bank">Bank</option>
+                                            <option value="Financial planner">Financial planner</option>
+                                            <option value="Mortgage broker">Mortgage broker</option>
+                                            <option value="Real estate agent">Real estate agent</option>
+                                            <option value="SMSF">SMSF</option>
+                                            <option value="Solicitor/ Conveyancer">Solicitor/ Conveyancer</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Subject</label>
+				                        <input type="text" class="form-control box_g"  ng-model="contact.subject" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        
+                                         <label class="">Your message</label>
+                                          <div class="div_g" ng-model="contact.links" ng-bind-html="contact.links = link" ></div>
+                                             
+                                             <textarea class="form-control textarea" rows="3" style="width:100%; height: 220px;font-size: 12px;border-radius:0px;" ng-init="contact.message = link" ng-model="contact.message">{{link}}</textarea>
+                                             
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contactinput">
+                				<div class="form-group">		 
+                				   <input type="hidden" class="form-control" name="subjectmail" ng-model="contact.dummysubject" ng-init="contact.dummysubject='Contact us request form'"/>
+                				</div>
+                			</div>
+                            
+                            <alert dismiss-on-timeout="15000" ng-repeat="alertrec in alertcaps" type="{{alertrec.type}}" close="closeAlertrec($index);">{{alertrec.msg}}</alert>
+                            
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 robotdiv">
+                                <div class="row robotdivrow">
+                                    <div vc-recaptcha key="'6LeeeAoTAAAAADJtB95fd7tDeXLMk1kajrFd6d37'" ng-model="respone5" theme="'light'" on-create="setWidgetId(widgetId);"></div>   
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
+                                    <button type="submit" ng-click=" sendContactEmail();" class="sendbtn">Send</button>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="well servicerightside Listyourpropertyright">
+    
+                        <p>We welcome all comments and questions, and we endeavour to get back to you within minutes, if we can. We're probably online right now and you may like to chat via Skype with us.</p>
+                        <br />
+                        
+                        <p></p><div><b>Telephone:</b> +61 2 8006 1979</div>
+        			 	<div><b>Mobile/cell:</b> +61 410 510 997</div>
+        			 	<div style="word-wrap:break-word;"><b>Email:</b> contact@centralpropertyexchange.com.au</div>
+        			 	<div><b>Skype:</b> property.compass</div><p></p>
+                    </div>
+
+					
+                   
+                    <div class="well servicerightside Listyourpropertyright">
+                        <p>Key management are based in Sydney and Perth Australia</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 cont-img">
+                    <img src="images/contact.jpg" class="thumbnail img-responsive " alt="contact icon">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

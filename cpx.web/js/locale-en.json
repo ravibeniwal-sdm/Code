@@ -1,0 +1,18 @@
+{
+		  "HEADLINE": "What an awesome module!",
+		 "PARAGRAPH": "Srsly!",
+		  "PASSED_AS_TEXT": "Hey there! I\"m passed as text value!",
+		  "PASSED_AS_ATTRIBUTE": "I\"m passed as attribute value, cool ha?",
+		  "PASSED_AS_ATTRIBUTE": "Beginners! I\"m interpolated!",
+		  "PASSED_AS_ATTRIBUTE": "Hi {{name}}",
+		  "MISSING_TRANSLATION": "Oops! I have not been translated into german...",
+		  "BUTTON_LANG_DE": "german",
+		  "BUTTON_LANG_EN": "english",
+		  	  "TOP_LINE" : "All properties are independently reviewed and graded by",
+		  	 "WHAT_IS_IPR"   : "What is an ipr, grade and score?",
+		  	 "WHAT_IS_LISTED_PRICE" : "What is Listed price, CPx price and Saving?",
+		  	 "SUBMIT_PROPERTY_REQUEST_BTN" : "Submit property request",
+		  	 "VIEW_SHORLIST_BTN" : "View shortlist",
+		  	 "ENQUIRE_BTN" : "Enquire",
+             "SERVICE_REQUEST_BTN" : "Service request"             
+		}

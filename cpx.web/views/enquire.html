@@ -1,0 +1,216 @@
+<header2 selectedmenu="selectedmenu"></header2>
+<div class="ServiceRequest">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row ServiceRequest_title text-center">
+                <h3>Enquire</h3>
+            </div>
+        </div>
+        
+       
+        
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-show="SuggestionBoxIsVisible">
+            <div class="row">
+                <div class="queaction col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="alert alert-block fade in" style="background:#ffffcc;border-color: #ffffab;">
+                        <button type="button" class="close close-sm" data-dismiss="alert" ng-click="ShowHideSuggestionBox()">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <h4>
+                            <span ng-if="toggle_val == ''">
+                            <strong>Please note:</strong> If you prefer to work with an independent industry professional to help with evaluating / buying property, please use the service request form instead. <a href="#" onClick="javascript:history.go(-1); return false; " class="link01"> Click to go back </a>  
+                            </span>
+                            
+                            <span ng-if="toggle_val != '' && toggle_val == 'to'">
+                            <strong>Please note:</strong> If you prefer to work with an independent industry professional to help with evaluating / buying property, <a href="#!/service_request" ng-click="toggle_enquire_servicerequest('to'); " class="link01"> please click here </a> to use the service request form instead.   
+                            </span>
+                            
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 queaction queactionsucess">
+		  <alert dismiss-on-timeout="15000" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index);">{{alert.msg}}</alert>
+		</div>
+        
+		
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 startform">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 service-rq-left">
+                    <div class="Serviceform">
+                        <form name="myForm">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+
+                                        <label class="">Your name <i class="required-text asterisk">*</i></label>
+                                        <input type="text" class="form-control" ng-model="contact.name"  ng-required='!contact.name'/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Your email <i class="required-text asterisk">*</i></label>
+                                        <input type="email" class="form-control"  ng-model="contact.email" ng-required='!contact.email'/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="yourname">Your role <i class="required-text asterisk">*</i></label>
+                        				   <select class="form-control"  ng-model="contact.role" ng-required='!contact.role' title="Please select a role from the list">
+                                                <option ng-selected="'Please select role'" value="">About you: Please select role</option>
+                                                <option value="Accountant">Accountant</option>
+                                                <option value="Buyer">Buyer</option>
+                                                <option value="Buyer agent/ Advocate">Buyer agent/ Advocate</option>
+                                                <option value="Bank">Bank</option>
+                                                <option value="Financial planner">Financial planner</option>
+                                                <option value="Mortgage broker">Mortgage broker</option>
+                                                <option value="Real estate agent">Real estate agent</option>
+                                                <option value="SMSF">SMSF</option>
+                                                <option value="Solicitor/ Conveyancer">Solicitor/ Conveyancer</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Subject</label>
+                                        <input name="subject" type="text" class="form-control box_g" ng-model="contact.subject" readonly="true" tabindex="-1"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        
+                                         <label class="">Your message</label>
+                                          <div class="div_g" ng-model="contact.links" ng-bind-html="contact.links = link" >{{link}}</div>
+                                             
+                                             
+                                             <textarea class="form-control textarea" style="display: none;" ng-init="contact.links = link" ng-model="contact.links">{{link}}</textarea>
+                 
+                                            <textarea class="form-control textarea" style="width:100%; height: 220px;font-size: 12px;border-radius:0px;color: black;"   placeholder="Type your comments here..." ng-model="contact.message"></textarea>
+                                             
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contactinput">
+                				<div class="form-group">		 
+                				   <input type="hidden" class="form-control" name="subjectmail" ng-model="contact.dummysubject" ng-init="contact.dummysubject='Contact us request form'"/>
+                                   <input type="hidden" class="form-control" name="propertyIds" ng-model="contact.propertyIds"/>
+                				</div>
+                			</div>
+                            
+                            
+                            <alert dismiss-on-timeout="15000" ng-repeat="alertrec in alertrecs" type="{{alertrec.type}}" close="closeAlertrec($index);">{{alertrec.msg}}</alert>
+                            
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 robotdiv">
+                                <div class="row robotdivrow">
+                                    <div vc-recaptcha key="'6LeeeAoTAAAAADJtB95fd7tDeXLMk1kajrFd6d37'" ng-model="respone5" theme="'light'" on-create="setWidgetId(widgetId);"></div>   
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
+                                    <button type="submit" ng-click=" sendContactEmail();" class="sendbtn-large-green">Send enquiry to the property owner/ agent and their team</button>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service-rq-right auction_header" ng-show="currentproperty.auction_date.length">
+                    <div class="well servicerightside " style="background:#e9f4dd;border:1px solid #d1d1d1;">
+                            <p ><strong>Auction</strong>
+                                <span style="float: right;" ng-if="auctionstatus=='yes'"><strong>{{days}} days to go</strong> </span> </p>
+                                Auction scheduled for {{auctionDate}}
+                                
+                            
+                            
+                            <span ng-if='auction_add!=""'> 
+                              Auction scheduled for <b>{{auctionDate}}</b> at {{auction_add}} 
+                            </span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service-rq-right" ng-hide= "!currentproperty.inspectionTimes.length">
+                    <div class="well servicerightside right_panel_header">
+                        <p><strong>Inspections</strong></p>
+                        
+                        <table border="1" width="100%" >
+                        <tr ng-repeat="inspect in inspect3">
+                            <td style="padding: 2px;"><strong>{{inspect.label}} </strong></td>
+                            <td style="padding: 2px;">{{inspect.time}}</td>
+                        </tr>
+                        </table>
+                        
+                    </div>
+                </div>                     
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 service-rq-right">
+                    <div ng-show="contactexist==true" class="well servicerightside hr_style">  
+                        <div  class="right_panel_header">
+                            <p><strong>Contacts</strong></p>
+                          </div>               
+                        <div ng-show="currentproperty.contact.length!=0" >
+                            <div ng-repeat="contact in currentproperty.contact" class="tabemail">
+                                
+                                <div ng-if="(contact.display_val == undefined || contact.display_val) && (contact.type =='listingAgent')" class="right_panel_content">
+                                    <p ng-show = "contact.name.length!=0">
+                                        <strong>Contact: </strong>{{contact.name}}
+                                    </p>
+                                    <p ng-show = "contact.email.length!=0">
+                                        <strong>Email: </strong>{{contact.email}}
+                                    </p>
+                                    <p ng-if="contact.telephone | isArray"  ng-repeat="tel in contact.telephone" >
+                                      <span ng-show="tel.telephone!=''" class="capital_char">  <strong>{{tel.telephoneType}}: </strong>{{tel.telephone}}</span>
+                                    </p>
+                                    <p ng-if="!(contact.telephone | isArray)" >
+                                      <span ng-show="contact.telephone!=''">  <strong>Mobile: </strong>{{contact.telephone}}</span>
+                                    </p>
+                                    
+                                    <p ng-if="!(contact.telephone | isArray)" ng-show = "contact.telephone[0] == NULL">
+                                      <span ng-show="contact.telephone!=''">  <strong>Mobile: </strong>{{contact.telephone}}</span>
+                                    </p>
+                                    
+                                     <hr ng-if != "$last" />
+                                </div>
+                                
+                            </div>  
+                            
+                            <div ng-show="ownerexist==true" class="right_panel_header2">
+                                <hr ng-show="contactexist==true"/>
+                                <p><strong>Owner</strong></p>
+                              </div>
+                                                                              
+                            <div ng-repeat="contact in currentproperty.contact" class="tabemail">
+                                <div ng-if="(contact.display_val !== undefined) && (contact.display_val) && (contact.type =='vendorDetails')" class="right_panel_content">
+                                    <p ng-show = "contact.name.length!=0">
+                                        <strong>Contact: </strong>{{contact.name}}
+                                    </p>
+                                    <p ng-show = "contact.email.length!=0" style="word-wrap: break-word;">
+                                        <strong>Email: </strong>{{contact.email}}
+                                    </p>
+                                    <p ng-if="contact.telephone | isArray"  ng-repeat="tel in contact.telephone">
+                                      <span ng-show="tel.telephone!=''" class="capital_char">  <strong>{{tel.telephoneType}}: </strong>{{tel.telephone}}</span>
+                                    </p>
+                                    <p ng-if="!(contact.telephone | isArray)"  >
+                                      <span ng-show="contact.telephone!=''">  <strong>Mobile: </strong>{{contact.telephone}}</span>
+                                    </p>
+                                    <p ng-if="!(contact.telephone | isArray)" ng-show = "contact.telephone[0] == NULL">
+                                      <span ng-show="contact.telephone!=''">  <strong>Mobile: </strong>{{contact.telephone}}</span>
+                                    </p>    
+                                    
+                                     <hr ng-if != "$last" />
+                                </div>
+                                
+                        </div>
+                    </div>
+                                           
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

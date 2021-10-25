@@ -1,0 +1,80 @@
+<style>
+.scrollable .items > div > a > img, .slick-slide > a> img{
+    /*width: 100%;*/
+    cursor: pointer;
+    position: relative;
+    
+    /*max-width: 100px;
+    max-height: 45px;*/
+}
+
+
+
+
+</style>
+
+
+<section class="variable slider logoSlider">
+   
+<!--
+<div>
+       <a href="http://www.jll.com.au/australia/en-au/services/investors-developers/valuations-and-advisory/mortgage-services" target="_blank"><img  src="images/jll.png" /></a>
+    </div>
+    <div>
+      <a href="http://www.bis.com.au/" target="_blank"><img  src="images/BSlogo.jpg" /></a>
+    </div>
+    <div>
+      <a href="http://www.emafinance.com.au/" target="_blank"><img  src="images/finance.png" /></a>
+    </div>
+    <div>
+      <a href="https://confidis.com.au/ " target="_blank"><img   src="images/Confidis-platform-logo.png" /></a>
+    </div>
+    <div>
+      <a href="http://www.amplanners.com.au/" target="_blank" ><img  src="images/amp-sd-logo.png" /></a>
+    </div>
+    
+    <div>
+        <a href="http://www.domacom.com.au/" target="_blank"><img  src="images/domacom-logo.png"/></a>
+    </div>
+    <div>
+        <a href="http://investinproperty.id.au/ " target="_blank"><img   style=" max-width: 250px;padding-top: 3px;padding-right:50px;" src="images/ProperT-Banner-728x137.png" /></a>
+    </div>
+    
+    <div>
+        <a href="http://www.wickhamrealtygroup.com/" target="_blank" ><img  src="images/11389lg.png" /></a>
+    </div>
+    <div>
+        <a href="http://afinplan.com.au/" target="_blank" ><img style="  max-width: 200px;padding-top: 3px;" src="images/afplanning.png" /></a>
+    </div>
+    <div>
+        <a href=" http://www.betterchoice.com.au/ " target="_blank" ><img   src="images/bchl-logo.png" /></a>
+    </div>
+    <div>
+        <a href="http://www.businessaccounting.com.au/" target="_blank"><img   src="images/bba_logo.png" /></a>
+    </div>
+    <div>
+        <a href="http://www.propertycompass.com.au/" target="_blank"><img  src="images/property-compass.png" /></a>
+    </div>
+    <div>
+        <a href="http://www.terryloftusrealestate.com.au/" target="_blank"><img    src="images/terrylotusre-logo.png" /></a>
+    </div>
+    <div>
+        <a href="http://www.villaworld.com.au/ " target="_blank" ><img  src="images/VW-logo.png" /></a>
+    </div>
+    <div>
+        <a href="http://www.mcpgroup.com.au/" target="_blank" ><img  src="images/mcp_logo.gif" /></a>
+    </div>
+-->
+
+
+    <div ng-repeat="endorsements in endorsement_list">
+   
+        <a href="{{endorsements.url}}" target="_blank" >
+            <img src="{{baseAmazonUrl}}/{{endorsements.logo['0'].path}}" ng-if="endorsements.text == ''" ng-style="{ 'max-width' : ((endorsements.logo_width > 0) ? endorsements.logo_width+'px' : 'auto'), 'max-height' : ((endorsements.logo_height > 0) ? endorsements.logo_height+'px' : 'auto')  }"  />
+            <span ng-if="endorsements.text != ''">{{endorsements.text}}</span>
+        </a>
+    </div>
+
+    
+    
+  </section>

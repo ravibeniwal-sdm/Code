@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<!-- <title>Central property exchange</title> -->
+    <title ng-bind="title">Central Property Exchange </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav.jpg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" media="screen,print" href="css/bootstrap-3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.5.0/css/font-awesome.min.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/custom.css" /> -->
+	<link rel="stylesheet" type="text/css" href="css/customone.min.css" /> 
+	
+  </head>
+  <body ng-app="landlordWebApp" class="">
+  
+  <div ng-controller="printCtrl">
+  
+  <div class="container blogprint">
+      
+      <div> 
+       <div>
+       <a class="fl-l" href="#!/"><img src="images/Logo.png"
+       alt="CPx" class="logoscreen"></a>
+       </div>
+       <div class="cpxname">
+       <p>&#169 CentralPropertyExchange.com.au [CPx]</p>
+       </div>
+      </div>
+  
+<div ng-if="currentpage == 'press1'" ng-include='"views/press1.html"'></div>
+<div ng-if="currentpage == 'press2'" ng-include='"views/press2.html"'></div>
+<div ng-if="currentpage == 'press3'" ng-include='"views/press3.html"'></div>
+<div ng-if="currentpage == 'press4'" ng-include='"views/press4.html"'></div>
+<div ng-if="currentpage == 'press5'" ng-include='"views/press5.html"'></div>
+<div ng-if="currentpage == 'press6'" ng-include='"views/press6.html"'></div>
+<div ng-if="currentpage == 'press7'" ng-include='"views/press7.html"'></div>
+<div ng-if="currentpage == 'press8'" ng-include='"views/press8.html"'></div>
+<div ng-if="currentpage == 'press9'" ng-include='"views/press9.html"'></div>
+<div ng-if="currentpage == 'press10'" ng-include='"views/press10.html"'></div>
+<div ng-if="currentpage == 'press11'" ng-include='"views/press11.html"'></div>
+<div ng-if="currentpage == 'press12'" ng-include='"views/press12.html"'></div>
+
+<div ng-if="currentpage == 'cpxannou1'" ng-include='"views/cpxannou1.html"'></div>
+<div ng-if="currentpage == 'cpxannou2'" ng-include='"views/cpxannou2.html"'></div>
+<div ng-if="currentpage == 'cpxannou3'" ng-include='"views/cpxannou3.html"'></div>
+<div ng-if="currentpage == 'cpxannou4'" ng-include='"views/cpxannou4.html"'></div>
+
+<div ng-if="currentpage == 'faq1'" ng-include='"views/faq1.html"'></div>
+<div ng-if="currentpage == 'faq2'" ng-include='"views/faq2.html"'></div>
+<div ng-if="currentpage == 'faq3'" ng-include='"views/faq3.html"'></div>
+<div ng-if="currentpage == 'faq4'" ng-include='"views/faq4.html"'></div>
+<div ng-if="currentpage == 'faq5'" ng-include='"views/faq5.html"'></div>
+<div ng-if="currentpage == 'faq6'" ng-include='"views/faq6.html"'></div>
+<div ng-if="currentpage == 'faq7'" ng-include='"views/faq7.html"'></div>
+<div ng-if="currentpage == 'faq8'" ng-include='"views/faq8.html"'></div>
+<div ng-if="currentpage == 'faq9'" ng-include='"views/faq9.html"'></div>
+<div ng-if="currentpage == 'faq10'" ng-include='"views/faq10.html"'></div>
+<div ng-if="currentpage == 'faq11'" ng-include='"views/faq11.html"'></div>
+<div ng-if="currentpage == 'faq12'" ng-include='"views/faq12.html"'></div>
+<div ng-if="currentpage == 'faq13'" ng-include='"views/faq13.html"'></div>
+<div ng-if="currentpage == 'faq14'" ng-include='"views/faq14.html"'></div>
+<div ng-if="currentpage == 'faq15'" ng-include='"views/faq15.html"'></div>
+<div ng-if="currentpage == 'faq16'" ng-include='"views/faq16.html"'></div>
+<div ng-if="currentpage == 'publicspeaking'" ng-include='"views/profile1.html"'></div>
+    
+	</div>
+	</div>
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+	
+    <script src="js/jquery.1.11.2/jquery-1.11.2.min.js"></script>
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+	<script src="js/angularjs/1.3.10/angular.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-route.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-resource.min.js"></script>
+    
+	<!-- Our Website Javascripts -->
+	 <script src="js/app/constants.js"></script>
+	<script src="js/app/main.js"></script>
+	<!-- <script src="js/app/controllers.js"></script> -->
+	<script src="js/app/directives.js"></script>
+	<script src="js/app/services.js"></script>
+	<script src="js/app/filters.js"></script> 
+	
+	<!-- <script src="js/app/Controllers/all.min.js"></script> -->
+	
+	
+	
+	<script src="js/app/Controllers/DetailsController.js"></script>
+	<script src="js/app/Controllers/HomePageController.js"></script>
+	<script src="js/app/Controllers/PropertiesController.js"></script>
+	<script src="js/app/Controllers/ModalInstanceController.js"></script>
+	<script src="js/app/Controllers/ModalMailController.js"></script>
+	<script src="js/app/Controllers/FaqMailController.js"></script>
+	<script src="js/app/Controllers/AboutController.js"></script>
+	<script src="js/app/Controllers/OrderController.js"></script>
+	<script src="js/app/Controllers/ListController.js"></script>
+	<script src="js/app/Controllers/ErrorPageController.js"></script>
+	<script src="js/app/Controllers/ContactsController.js"></script>
+	<script src="js/app/Controllers/ShortlistController.js"></script>
+	<script src="js/app/Controllers/DefaultController.js"></script>
+	<script src="js/app/Controllers/FbController.js"></script>
+	<script src="js/app/Controllers/PrintController.js"></script>
+	<script src="js/app/Controllers/ProductileController.js"></script>
+	<script src="js/app/Controllers/CurrencyController.js"></script>
+	<script src="js/app/Controllers/EnquiryFormsController.js"></script>
+	<script src="js/app/Controllers/LogoSlideController.js"></script>  
+	
+	
+	
+	<!--  <script src="js/app/Controllers/allone.min.js"></script> -->
+	<script src="js/app/Controllers/admin-list-property.js"></script> 
+	
+	
+	<script src="js/lib/pdf.js"></script>
+	<script src="js/thirdparty/angular-pdf.js"></script>
+	
+	<!-- below needs to be loaded before angular-google-maps.min.js -->
+    <!-- Directives for bootstrap -->
+    <script src="js/thirdparty/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <!-- overloaded some code from  ui-bootstrap-tpls-0.12.0-->
+    <script src="js/thirdparty/overloaded-ui-bootstrap-tpls-0.12.0.js"></script>
+    <!-- Directives for tab menu -->
+    <script src="js/thirdparty/df-tab-menu.js"></script>
+	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+	<script src='js/thirdparty/lodash.min.js'></script>
+	<script src='js/thirdparty/angular-google-maps.min.js'></script>
+	<script src='js/thirdparty/angular-filter.js'></script>
+	
+	<script src="js/thirdparty/ng-map.min.js"></script>
+	<script src='js/thirdparty/decimal-places.js'></script>
+	<script src='js/thirdparty/open-exchange-rates.js'></script>
+	<script src='js/thirdparty/angular-sanitize.js'></script>
+	
+	<script src='js/thirdparty/Chart.js'></script>
+	<script src="js/thirdparty/angular-chart.js"></script>
+	<script src="js/thirdparty/nsPopover.js"></script>
+	
+	<script type="text/javascript" src="js/thirdparty/jquery.flexisel.js"></script>
+	
+	
+	<script src='js/thirdparty/angular-translate.js'></script>
+	<script src='js/thirdparty/angular-translate-loader-url.js'></script>
+	<script src='js/thirdparty/angular-translate-loader-static-files.js'></script>
+	
+	<script src='js/thirdparty/ui-bootstrap-tpls-0.13.3.js'></script>
+	
+	<script src="js/thirdparty/angular-file-upload.min.js"></script>
+	
+	 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+	  <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+		  <script src="https://www.google.com/recaptcha/api.js"></script>
+	  <script src='js/thirdparty/angulartics-google-analytics.min.js'></script>
+	 <script src='js/thirdparty/angulartics.min.js'></script>
+	  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65727956-1', 'none');
+ 	
+</script>
+	
+	 <script src="js/thirdparty/angular-recaptcha.js"></script>  
+	  
+	 <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+	 
+	  <script src="http://platform.twitter.com/widgets.js"></script>
+	  <script src="https://apis.google.com/js/platform.js" async defer></script>
+	
+  </body>
+</html>

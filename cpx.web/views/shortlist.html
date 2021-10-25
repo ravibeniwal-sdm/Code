@@ -1,0 +1,1038 @@
+<header2></header2>
+<div class="container">
+	<div >
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sortlist-title">
+			<h3>Shortlisted Properties [{{shortlistcount}}]</h3>
+		</div>
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shortlist-header">
+	<div class="row">
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 grade-select">
+			<select class="form-control" id="sel1"
+				ng-init="viewValue = 'standard'" ng-model="viewValue"
+				ng-change="onGlobalViewChange()">
+				<option value="none">Select view</option>
+				<option value="standard">Grade</option>
+				<option value="loan">Affordability</option>
+				<!-- <option value="investment">Investment view</option>  -->
+				<option value="hide">Hide view</option>
+			</select>
+		</div>
+
+
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+
+			<div class="form-group">
+                
+                <span class="smalldd">
+                    Currency <a href="#!/blog/FAQs/currency-conversion" target="_blank" title="FAQ - Currency conversion"><img src="images/new_template/hint_icon.png" alt="" /></a> 
+                                        
+                        <span style="padding-left: 8px;">
+                        <img src="images/blank.gif" class="flag flag-{{countryflag}}" alt="country flag" />    
+            
+                       <select style="width: 53px;"
+    					ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+    					ng-change="updateValueAll(from, to, properties, true);animate('on');"
+    					ng-model="to.currency" placeholder="Please Enter a Currency..."
+    					class="searchcurrencysel search-st"></select> 
+                        </span>
+                        
+                </span>
+                
+                <span class="bigdd">            
+				    <a><img src="images/blank.gif" class="flag flag-{{countryflag}}" alt="country flag"/></a> 
+                    
+                    <select ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+    					ng-change="updateValueAll(from, to, properties, true);animate('on');"
+    					ng-model="to.currency" placeholder="Please Enter a Currency..."
+    					class="searchcurrencysel search-st">
+                    </select> 
+                        
+                        <a href="#!/blog/FAQs/currency-conversion" target="_blank" title="FAQ - Currency conversion">
+                            <img src="images/new_template/hint_icon.png" alt="" />
+                        </a>
+                 </span>                
+			</div>
+
+
+
+			<!-- <select
+				ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+				ng-change="updateValue(from, to, property)" ng-model="to.currency"
+				placeholder="Please Enter a Currency..." class="currencyselector"></select> <a href="#!/blog/FAQs/currency-conversion" target="_blank"
+				class="fkquestion" title="FAQ - Currency conversion">?</a> -->
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 link-band">
+			<div>
+				<ul class="list-inline">
+					<li><a href="#!/view-graded-properties"
+						title="View graded properties">Add more properties</a></li>
+					<!-- li><a href="">Edit 'base-scenario' for all shortlisted properties</a></li>
+			  		<li><a href="">Print investment report</a></li-->
+					<li><a href="#!/service_request" ng-click="passall();toggle_enquire_servicerequest('');"
+						title="Service request on all shortlisted properties">Service request on
+							all shortlisted properties</a></li>
+					<li><a href="" ng-click="clearlist()">Clear shortlist</a></li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div >
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shortlist-tile"
+			ng-repeat="property in properties">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shortlist-item">
+				<div >
+					<div class="col-sm-12">
+					
+						
+                         <h4 ng-show="property.address[0].display =='yes'">{{property.address[0].LotNumber}} {{property.address[0].subNumber}}<span ng-if="property.address[0].subNumber != null && property.address[0].StreetNumber != ''">/{{property.address[0].StreetNumber}}</span><span ng-if="property.address[0].subNumber == null"> {{property.address[0].StreetNumber}}</span> {{property.address[0].street}}, {{property.address[0].suburb.text}}, {{property.address[0].city}} {{property.address[0].state}} {{property.address[0].postcode}}</h4>
+                        <h4 ng-show="property.address[0].display =='no'">Address available on request</h4>
+                        
+                        
+					</div>
+					
+					<div class="col-sm-4">
+						<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+							<!--  							<div class="product-markup pull-right smsfpos">
+			<span class="label label-default smsf flaglabel" ng-if="property.smsf == true && flagsvisible == true">SMSF</span>
+		</div>	
+		<div class="product-markup pull-right depositpos">
+			<span class="label label-default deposit flaglabel" ng-if="property.deposit == true && flagsvisible == true">Deposit</span>
+		</div>
+		<div class="product-markup pull-right soldpos">	
+			<span class="label label-default sold flaglabel" ng-if="property.sold == true && flagsvisible == true">Sold</span>
+		</div>
+		<div class="product-markup pull-right domapos">	
+			<span class="label label-default domacom flaglabel" ng-if="property.domacom == true && flagsvisible == true">DomaCom</span>
+		</div>
+		<div class="product-markup pull-right gradesoonpos">	
+			<span class="label label-default gradecomingsoonshortlist flaglabelgrade" ng-if="!(property.ipr.length>0) && flagsvisible == true">GRADE COMING SOON</span>
+		</div> -->
+
+
+
+
+
+
+							<a ng-click="setsShortlistStatus(true);" href="#!/details/{{property.id}}" class="" title="CLICK FOR DETAILS"> 
+                                <img src="{{property.validImages[0].url}}" class="thumbnail img-responsive " alt="property thumbnail image">
+							</a>
+							<!--  	<div class="hideflags" ng-click="hideshowflags();"><a href="">{{showhidetext}} flags</a></div> -->
+
+
+						</div>
+
+						<div
+							class="product-markup pull-right col-lg-12 col-sm-12 col-xs-12 nopadding"
+							ng-if="flagsvisible == true">
+							
+                                <span class="label label-default smsf flaglabel" ng-if="property.smsf == true" style="padding: 11px 5px !important;">SMSF</span> 
+                                <span class="Gradebtn ng-scope"  ng-if="property.gradestatus == 2">Grade<span class="badge">{{property.grade}}</span></span>
+								<span class="Gradebtn ng-scope"  ng-if="property.gradestatus == 0 && !isViewSelected('standard', property.id)" ><a  href="javascript:void(0);" ng-click="selectView('standard', property.id)" class="img-responsive" title="CLICK FOR DETAILS">Not Graded</a></span>
+                                <span class="Gradebtn ng-scope"  ng-if="property.gradestatus == 0 && isViewSelected('standard', property.id)" ><a  href="javascript:void(0);"  class="img-responsive" title="CLICK FOR DETAILS">Not Graded</a></span>
+								<span class="label label-default underoffer flaglabel" ng-if="property.deposit=='yes'" style="padding: 11px 5px !important;">Under Offer</span>
+								<span class="label label-default sold flaglabel" ng-if="property.sold == true" style="padding: 11px 5px !important;">Sold</span> 
+                                <span class="label label-default domacom flaglabel" ng-if="property.domacom == true" style="padding: 11px 5px !important;">DomaCom</span>
+                                <span class="label label-default vendor flaglabel" ng-if="property.vendorfinance == true" style="padding: 11px 5px !important;">Vendor Finance</span>
+                                <span class="label label-default saving flaglabel" ng-if="property.saving != 0" style="padding: 11px 5px !important;">Saving</span>     
+                                <span class="label label-default gradecomingsoonshortlist flaglabel" ng-if="property.gradestatus == 1" style="padding: 11px 5px !important;">Grade Coming Soon</span>
+                                <span class="label label-default established flaglabel" ng-if="property.established == 'yes'" style="padding: 11px 5px !important;">Established</span>
+                                <span class="label label-default newf flaglabel" ng-if="property.newConstruction == 'yes'" style="padding: 11px 5px !important;">New</span>
+                                <span class="label label-default homeland flaglabel" ng-if="property.homelandpackage == 'yes'" style="padding: 11px 5px !important;">Home + Land</span>
+								
+						</div>
+					</div>
+
+					<div class="col-sm-8 nopadding text-fo">
+						<div class="col-sm-12 nopadding">
+							<div class="col-sm-6">
+								<div class="col-xs-12 nopadding "><strong>Beds</strong> 
+									{{property.beds}} | <strong>Bath</strong> {{property.bath}} | <strong>Car</strong>
+									{{property.cars}}</div>
+								<div ng-show = "property.gradestatus != 0" class="col-xs-12 nopadding">
+                                {{property.name}} {{property.category}}
+                                </div>
+								<div ng-show = "property.gradestatus==0" class="col-xs-12 nopadding">{{property.category}}</div>	
+                                
+                                <div ng-show = "(property.displayprice=='yes' && property.viewprice.length == 0 && property.saving == 0)" class="col-xs-12 nopadding saperator">
+                                    
+                                    <div >
+					                   <div class="col-sm-8 col-xs-8 nopadding ">Listed price</div>
+									
+                                    
+                                        <div ng-if="!(property.short_currlabel)">
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="property.short_convlisted">{{property.short_convlisted
+    											| currency:"$":0}}</div>
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="!property.short_convlisted">{{property.listedprice |
+    											currency:"$":0}}</div>
+    									</div>
+    
+    									<div ng-if="(property.short_currlabel)">
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="property.short_convlisted">{{property.short_convcpx
+    											| currency:"":0}}</div>
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="!property.short_convlisted">{{property.listedprice |
+    											currency:"":0}}</div>
+    									</div>
+                                    </div>
+                                    
+								</div>
+                                
+								<div ng-show = "property.saving != 0"class="col-xs-12 nopadding saperator">
+                                    
+                                    <div >
+					                   <div class="col-sm-8 col-xs-8 nopadding ">Listed price</div>
+									
+                                    
+                                        <div ng-if="!(property.short_currlabel)">
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="property.short_convlisted">{{property.short_convlisted
+    											| currency:"$":0}}</div>
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="!property.short_convlisted">{{property.listedprice |
+    											currency:"$":0}}</div>
+    									</div>
+    
+    									<div ng-if="(property.short_currlabel)">
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="property.short_convlisted">{{property.short_convcpx
+    											| currency:"":0}}</div>
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="!property.short_convlisted">{{property.listedprice |
+    											currency:"":0}}</div>
+    									</div>
+                                    </div>
+                                    
+                                    <div>
+    									<div class="col-sm-8 col-xs-8 nopadding  "> CPx price</div>
+    									
+                                        <div ng-if="!(property.short_currlabel)">
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="property.short_convcpx">{{property.short_convcpx
+    											| currency:"$":0}}</div>
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="!property.short_convcpx">{{property.cpxprice |
+    											currency:"$":0}}</div>
+    									</div>
+    
+    									<div ng-if="(property.short_currlabel)">
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="property.short_convcpx">{{property.short_convcpx
+    											| currency:"":0}}</div>
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="!property.short_convcpx">{{property.cpxprice |
+    											currency:"":0}}</div>
+    									</div>
+                                    </div>
+                                    
+                                    <div >
+    									<div class="col-sm-8 col-xs-8 nopadding ">Saving </div>
+    									
+                                        <div ng-if="!(property.short_currlabel)">
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="property.short_convsaving">{{property.short_convsaving
+    											| currency:"$":0}}</div>
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="!property.short_convsaving">{{property.saving |
+    											currency:"$":0}}</div>
+    									</div>
+    
+    									<div ng-if="(property.short_currlabel)">
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="property.short_convsaving">{{property.short_convsaving
+    											| currency:"":0}}</div>
+    										<div class="col-sm-4 col-xs-4 nopadding  "
+    											ng-if="!property.short_convsaving">{{property.saving |
+    											currency:"":0}}</div>
+    									</div> 
+                                    </div>
+                                     
+                                    <div >
+                                        <div class="col-sm-8 col-xs-8 nopadding ">Currency <a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion"><img src="images/new_template/hint_icon.png" alt="" /></a>  </div> 
+                                        
+                                        <div >
+    										<img src="images/blank.gif" class="flag flag-{{countryflag}} newclass" alt="country flag" />    
+                    
+                                            <select style="width: 50px;"
+                                				ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+                                				ng-change="updateValueAll(from, to, properties)" ng-model="to.currency"
+                                				placeholder="Please Enter a Currency..." class="currencyselector" id="{{islisttype}}_curr_dropdown_{{item.id}}">
+                                            </select>
+    									</div>
+                                 </div>
+                                                                                                              
+								</div>                      
+								                            
+								 <!-- <div ng-show = "property.gradestatus==0" class="col-sm-12 nopadding saperator">
+									 <div class="col-sm-8 col-xs-8 nopadding  fbold">
+											Offers from <span ng-if="(property.short_currlabel)">({{property.short_currlabel}})</span>
+											<span ng-if="!(property.short_currlabel)">(AUD)</span>
+	                                   
+									</div>
+									<div ng-if="!(property.short_currlabel)">
+											<div class="col-sm-4 col-xs-4 nopadding  fbold"
+												ng-if="property.short_convcpx">{{property.short_convcpx
+												| currency:"$":0}}</div>
+											<div class="col-sm-4 col-xs-4 nopadding  fbold"
+												ng-if="!property.short_convcpx">{{property.cpxprice |
+												currency:"$":0}}</div>
+										</div>
+	
+										<div ng-if="(property.short_currlabel)">
+											<div class="col-sm-4 col-xs-4 nopadding  fbold"
+												ng-if="property.short_convcpx">{{property.short_convcpx
+												| currency:"":0}}</div>
+											<div class="col-sm-4 col-xs-4 nopadding  fbold"
+												ng-if="!property.short_convcpx">{{property.cpxprice |
+												currency:"":0}}</div>
+										</div>
+								</div>  -->
+								
+                                
+								<div ng-show = "property.saving==0" class="col-sm-12 nopadding saperator">
+									<div class="col-sm-8 col-xs-8 nopadding  fbold" ng-if="property.viewprice.length != 0 && property.saving == 0">
+											{{property.viewprice}}
+	
+									</div>
+                                    
+                                    <div class="col-sm-8 col-xs-8 nopadding  fbold" ng-if="property.displayprice != 'yes' && property.viewprice.length == 0 && property.saving == 0">
+											Price on Request
+	
+									</div>
+								</div>
+
+								<div class="col-xs-12 nopadding saperator">
+									<div ng-if="property.IsHouseLandPackage == 'yes'"
+										class="col-sm-8 col-xs-8 nopadding">
+                                        House size <span ng-if="(property.areaunit != '') && (!(property.buildingarea == 'na' || property.buildingarea == 0 || !(property.buildingarea)))">({{property.areaunit}})</span>
+                                        </div>
+									<div ng-if="property.IsHouseLandPackage == 'no'"
+										class="col-sm-8 col-xs-8 nopadding">
+                                        Internal size <span ng-if="(property.areaunit != '') && (!(property.buildingarea == 'na' || property.buildingarea == 0 || !(property.buildingarea)))">({{property.areaunit}})</span>
+                                        </div>
+
+									<div class="col-sm-4 col-xs-4 nopadding"
+										ng-if="!(property.buildingarea == 'na' || property.buildingarea == 0)">{{property.buildingarea}}</div>
+									<div class="col-sm-4 col-xs-4 nopadding"
+										ng-if="(property.buildingarea == 'na' || property.buildingarea == 0)">To
+										be confirmed</div>
+									<div ng-if="property.IsHouseLandPackage == 'yes'"
+										class="col-sm-8 col-xs-8 nopadding">
+                                        Land size <span ng-if="(property.areaunit != '') && (!(property.landarea == 'na' || property.landarea == 0 || !(property.landarea)))">({{property.areaunit}})</span>
+                                        </div>
+									<div ng-if="property.IsHouseLandPackage == 'no'"
+										class="col-sm-8 col-xs-8 nopadding">
+                                        External size <span ng-if="(property.areaunit != '') && (!(property.landarea == 'na' || property.landarea == 0 || !(property.landarea)))">({{property.areaunit}})</span>
+                                        </div>
+									<div class="col-sm-4 col-xs-4 nopadding"
+										ng-if="!(property.landarea == 'na' || property.landarea == 0)">{{property.landarea}}</div>
+									<div class="col-sm-4 col-xs-4 nopadding"
+										ng-if="(property.landarea == 'na' || property.landarea == 0 || !(property.landarea))">To
+										be confirmed</div>
+								</div>
+
+								<div ng-show = "property.gradestatus!=0" class="col-xs-12 nopadding saperator">
+									<div class="col-sm-8 col-xs-8 nopadding">Market
+										rent/lease</div>
+									<div class="col-sm-4 col-xs-4 nopadding"
+										ng-if="property.marketrent">{{property.marketrent
+										|currency:"$":0}} per week</div>
+									<div class="col-sm-4 col-xs-4 nopadding"
+										ng-if="!property.marketrent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;per
+										week</div>
+								</div>
+							</div>
+
+							<div id="fb-root"></div>
+							<script>
+								window.fbAsyncInit = function() {
+									FB.init({
+										appId : '351998031650844',
+										status : true,
+										cookie : true,
+										xfbml : true
+									});
+								};
+								(function() {
+									var e = document.createElement('script');
+									e.async = true;
+									e.src = document.location.protocol
+											+ '//connect.facebook.net/en_US/all.js';
+									document.getElementById('fb-root')
+											.appendChild(e);
+								}());
+							</script>
+
+
+
+							<script type="text/ng-template" id="mymailcontent.html">
+      
+  <div class="modal-body sharemailbody">                       
+       <form name="myForm">
+     <label class="title" for="yourname">Email to a friend</label><br>
+			
+            <div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your email<i class="required-text asterisk">*</i></label>
+				   <input type="text" class="form-control" ng-model="sharemail.youremail" ng-required='!sharemail.youremail'/>
+				</div>
+			</div>
+
+
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">To email<i class="required-text asterisk">*</i></label>
+				   <input type="email" class="form-control" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" ng-model="sharemail.toemail" ng-required='!sharemail.toemail'/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Subject</label>
+				   <input type="text" class="form-control" ng-init="sharemail.subject = subject" ng-model="sharemail.subject"/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your message</label>
+				 <textarea class="form-control" style="width:100%; height: 170px;" ng-init="sharemail.message = txtmsg" ng-model="sharemail.message"></textarea>
+			<br>				
+			This email was sent by:&nbsp;<span style="font-size: 12px" ng-bind="sharemail.youremail"></span>
+			</div>
+			</div>
+
+<div class="modal-footer sharemail">
+			<div class="col-sm-2 nopadding">
+				<button type="submit" class="btn btn-default btn-lg btn-block" ng-click='(!(sharemail.toemail && sharemail.youremail))?" ":sendEmail();'>SEND</button>
+			</div>
+
+            <button class="btncancle btn-warning btn-lg" ng-click="cancel()">Cancel</button>
+		</div>	
+			
+			
+			</form>
+</div>
+    	</script>
+							<div class="col-sm-6">
+
+								<ul class="list-unstyled buttons-list">
+									<li><a type="button" class="icon-button"
+										href="#!/details/{{property.id}}"
+										title="CLICK FOR DETAILS"> <span
+											class="fa fa-question icon" aria-hidden="true"></span> More
+											details
+									</a></li>
+                                    <li ng-if="property.gradestatus == 0"><a type="button" class="icon-button"
+										href="#!/request-free-ipr"
+										title="Request a FREE ipr" target="_blank"> <span
+											class="fa fa-info icon" aria-hidden="true"></span> Request a <strong>FREE</strong> ipr
+									</a></li>
+                                    
+                                   
+                                    
+									<li><a href="#!/buy_this_property"
+										type="button"
+										class="icon-button"
+										title="Buy this property"> <span
+											class="fa fa-usd icon" aria-hidden="true"></span> Buy
+											this property
+									</a></li>
+									<li><a type="button" class="icon-button"
+										href="#!/enquire" ng-click="passenquiry(property.id);toggle_enquire_servicerequest('to');"
+										title="Enquire"> <span class="glyphicon icon text-icon" style="font-weight: bold;"
+											aria-hidden="true">@</span> Enquire
+									</a></li>
+                                    <li><a type="button" class="icon-button"
+										href="#!/service_request"  ng-click="passenquiry(property.id);toggle_enquire_servicerequest('to');" 
+										title="Service request"> <span class="fa fa-graduation-cap icon"
+											aria-hidden="true"></span> Service request
+									</a></li>
+                                    
+                                    
+									<li><a type="button" class="icon-button"
+										href="javascript:void(0);" ng-click="removeItem($index)"> <span
+											class="fa fa-times icon" aria-hidden="true"></span>
+											Remove property
+									</a></li>
+									<li><a class="btn btn-social-icon btn-print top-icon"
+										href="./print.html" target="_blank"
+										ng-click="passid(property.id)" popover="Take a print"
+										popover-trigger="mouseenter"></a> <a
+										ng-click="open2(property)"
+										class="btn btn-social-icon btn-mail top-icon"
+										popover="Share via email" popover-trigger="mouseenter"></a> <a
+										class="btn btn-social-icon btn-pin top-icon"
+										href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fdetails%2f{{property.id}};media={{property.images[0].url}};description={{property.address[0].StreetNumber}} {{property.address[0].street}}, {{property.address[0].suburb}}, {{property.address[0].city}} {{property.address[0].state}} {{property.address[0].postcode}} http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fdetails%2f{{property.id}}"
+										target="_blank" popover="Share via pinterest"
+										popover-trigger="mouseenter"></a> <a ng-controller="fbCtrl"
+										ng-click="share(property)"
+										class="btn btn-social-icon btn-fb top-icon"
+										popover="Share via facebook" popover-trigger="mouseenter"></a>
+										<a share-square="true"
+										class="btn btn-social-icon btn-twt top-icon"
+										href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fdetails/{{property.id}}"
+										target="_blank" share-title="" popover="Share via twitter"
+										popover-trigger="mouseenter"></a> <a
+										href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/propertydetails?id={{property.id}}%26img={{property.images[0].url}}%26name=CPx%26type=sample"
+										target="_blank"
+										class="btn btn-social-icon btn-gogpls top-icon"
+										popover="Share via google+" popover-trigger="mouseenter"></a>
+										<a class="btn btn-social-icon btn-linkedin top-icon"
+										href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/propertydetails?id={{property.id}}%26img={{property.images[0].url}}%26name=CPx%26type=samplee&title={{property.name}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fdetails/{{property.id}}"
+										target="_blank" popover="Share via linkedin"
+										popover-trigger="mouseenter"></a></li>
+								</ul>
+
+
+							</div>
+							
+							<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 tabs sortlist-tabs">
+							<div >
+								<div class="btn-tabs tab1" ng-click="selectView('standard', property.id)" >
+									<div class="tab standard-view">
+										Grade
+										<div class="pull-right shortlistviewlink" ng-if="!isViewSelected('standard', property.id)">
+											[&nbsp;view&nbsp;]
+										</div>
+									</div>
+								</div>
+                                
+                                
+                                
+								<div class="btn-tabs tab2" ng-click="selectView('loan', property.id);">
+									<div class="tab loan-view">
+										Affordability
+										<div class="pull-right shortlistviewlink" ng-if="!isViewSelected('loan', property.id)">
+											[&nbsp;view&nbsp;]
+										</div>
+									</div>
+								</div>
+								<!-- 							<div class="col-xs-4 tab3" ng-click="selectView('investment', property.id)"><div class="col-xs-12 tab investment-view">Investment view <div class="pull-right" ng-if="!isViewSelected('investment', property.id)">[&nbsp;<a >open</a>&nbsp;]</div></div></div> -->
+							</div>
+						</div>
+							
+						</div>
+
+						
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shortlist-view standard-view" style="border:5px solid #555555;"
+				ng-if="isViewSelected('standard', property.id) && property.gradestatus > 0">
+
+
+				<div>
+					<div class="col-sm-12 col-xs-12 gradetop">
+					<div class="row">
+						<div class="col-sm-12" ng-show="property.gradestatus==2 || property.gradestatus==1">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gradetop">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left g-de-left">
+                                        <div class="row tabbingGrade" ng-include="'views/property_details_grade.html'" ng-init="ipr_history = property.ipr_history;grade_table_status = property.grade_table_status;"></div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right g-de-right">
+                                        <div class="row tabbingGrade text-right">
+                                            <a href="#!/about/independent-property-review" target="_blank" class="" style="color:#7cb33c">What is an ipr, grade and score?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gradetable nopadding" ng-include="'views/grade_table.html'" ng-init="ipr_history = property.ipr_history;grade_table_status = property.grade_table_status;;grade_table_arr = property.grade_table_arr;"></div>
+                            
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gradedesc"  ng-if="property.observation != ''">
+                                <div class="row gradedesctitle">
+                                    <h4>Property Observations</h4>
+                                    <p>{{property.observation}}</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gradetable nopadding"  ng-if="property.ipr_history.length != 0" ng-include="'views/grade_history.html'" ng-init="ipr_history = property.ipr_history;grade_table_status = property.grade_table_status;property_id=property.id"></div>
+                            </div>
+                        
+						</div>
+					</div>
+
+					
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding table-overflow">
+					<gradetable grades="property.ipr[0].propertyGrade"
+						gradevalues="gradevalues"></gradetable>
+				</div>
+
+			</div>
+
+           	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shortlist-view standard-view" style="border:5px solid #555555;"
+				ng-if="isViewSelected('standard', property.id) && property.gradestatus==0">
+
+
+				<div>
+					<div class="col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="col-sm-12" ng-show="property.gradestatus==0">
+								<h4 class="tabtitletetx">This property has NOT been graded</h4> 
+								
+								<p class="nongradebox">To assist with making your purchase decision why not request a FREE Independent 
+								Property Review (ipr) which includes a grade in a 6 page report on this property.</p>
+								
+								<p class="nongradebox">The grade works like a hotel star rating.  It provides the disclosure buyers/ advisors 
+								need to find the right property.  Properties are independently reviewed and graded by <a class="inactive-a" href="http://www.jll.com.au/australia/en-au/services/investors-developers/valuations-and-advisory/mortgage-services" target="_blank">JLL</a> </p>
+								 
+								 <p class="nongradebox">Please, only request an ipr from the owner/ agent if you are interested in their property</p> 
+								 
+								<div class="input-group top-button2 btn-social-icon scr-pad xs-center" style="width:154px;padding-top: 20px; float: none;
+">
+								  <!-- <span class="input-group-addon top-span1 nopadding" style="background:#25427C" aria-hidden="true">
+									<span class="star-color">i</span>
+								  </span> -->
+									<a href="#!/request-free-ipr" target="_blank" title="Request a free ipr" class="editbtnall Requestjprgrad"> Request a <b>FREE</b> ipr</a>
+								</div> 
+								 
+								 <p class="dis-link" style="padding-bottom: 5px;padding-top: 30px;"><a class="" href="#!/blog/FAQs/why-grade-a-property"  title="Why grade a property?" target="_blank">Why grade a property?</a>  
+								<a class="" href="#!/about/independent-property-review" target="_blank"   title="Independent property review(ipr)">What is an ipr,
+									grade and score?</a>  
+								 <a class="" href="./docs/sample-CPx-ipr.pdf"  	 title="See the sample ipr" target="_blank">Sample ipr and grade report</a></p>
+				
+
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+				
+
+			</div>
+            
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xs-12 shortlist-view loan-view" ng-if="isViewSelected('loan', property.id)">
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xs-12">
+				<div class="row">
+					<ul class="list-unstyled addscenariobtn">
+                    
+						<li>
+                            
+                          <a style="padding-right: 10px;" ng-click="toggle();setiscreate(property);" title="Add loan scenario" href="javascript:void(0);" class="acolor margin-b"><img src="images/new_template/Affordabilityadd.png"  /></a>
+                        </li>
+					</ul>
+					<ul class="flagul">
+					   <span>Currency <a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion"><img src="images/new_template/hint_icon.png" alt="" /></a> 
+                                
+                            <span style="padding-left: 10px;">
+                               <img src="images/blank.gif" class="flag flag-{{countryflag}}" alt="country flag"/>                                
+                            <select style="width: 50px;"
+                    				ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+                    				ng-change="updateValueAll(from, to, properties);update(searchcriteria,false,sortcriteria.option,loancriteria,'converter')" ng-model="to.currency"
+                    				placeholder="Please Enter a Currency..." class="currencyselector" id="{{islisttype}}_curr_dropdown_{{item.id}}">
+                                </select> 
+                            </span>
+
+                        </span>
+                        
+                         
+					</ul>
+					</div>
+				</div>
+				
+				<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12  nopadding" style="text-align:right; ">
+					<span><a  href="#!/blog/FAQs/loan-search"> <p class="acolor right-tt">Glossary + Instructions</p></a></span>
+				</div>
+
+
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 noleftpad">
+				<div class="row">
+					<ul class="list-inline">
+                        <li>
+                            <span class="BaseIOrate">Base IO rate, sponsored by:</span>
+                        </li>
+                        <li>
+                            <a href="http://www.betterchoice.com.au/" target="_blank" analytics-on="click" analytics-event="betterchoice.com.au" analytics-label="CPx->Details-PI" class="BetterChoice">Better Choice Home Loans</a>
+                        </li>
+                        <li>
+                            <span class="BasePI">Base PI rate, sponsored by:</span>
+                        </li>
+                        <li>
+                            <a href="http://www.betterchoice.com.au/" target="_blank" analytics-on="click" analytics-event="betterchoice.com.au" analytics-label="CPx->Details-PI" class="BetterChoiceHome">Better Choice Home Loans</a>
+                        </li>
+                    
+                    </ul>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-xs-12 loanform nopadding">
+
+					<div collapse="!isCollapsedflag">
+						<div class="well">
+
+							<div class="col-sm-12 col-xs-12 marbot20 headertext">
+								<b>Amend loan values to <span ng-if="iscreate">create</span><span
+									ng-if="!iscreate">edit</span> a scenario
+								</b>: 
+                                
+                                 <span ng-show="property.address[0].display =='yes'">{{property.address[0].LotNumber}} {{property.address[0].subNumber}}<span ng-if="property.address[0].subNumber != null && property.address[0].StreetNumber != ''">/{{property.address[0].StreetNumber}}</span><span ng-if="property.address[0].subNumber == null"> {{property.address[0].StreetNumber}}</span> {{property.address[0].street}}, {{property.address[0].suburb.text}}, {{property.address[0].city}} {{property.address[0].state}} {{property.address[0].postcode}}</span>
+                                    <span ng-show="property.address[0].display =='no'">Address available on request</span>
+                                
+                                
+                                
+                                
+							</div>
+
+							<div class="col-sm-12 col-xs-12 marbot20">
+
+								<div class="col-sm-6 col-xs-12 floatleft">
+
+
+									<div class="form-group">
+										<label class="col-sm-6 col-xs-12 control-label">Scenario name</label>
+										<div class="col-sm-6 col-xs-12">
+											<input type="text" class="form-control"
+												placeholder="Scenario name" ng-model="property.scena.name" ng-disabled="editflag == 0 || editflag == 1"/>
+										</div>
+
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="col-sm-12 col-xs-12 marbot20">
+
+								<div class="col-sm-6 col-xs-12">
+
+									<div class="form-group">
+										<label class="col-sm-6 col-xs-12 control-label">Loan to value
+											(LVR) %</label>
+										<div class="col-sm-6 col-xs-12">
+
+											<input type="text" class="form-control"
+												ng-model="property.scena.lvr" placeholder="Any"
+												ng-mousedown="property.scena.cashamount = undefined" />
+										</div>
+
+									</div>
+								</div>
+
+
+
+								<div class="col-sm-6 col-xs-12">
+
+									<div class="form-group">
+										<label class="col-sm-6 col-xs-12 control-label">Cash amount</label>
+										<div class="col-sm-6 col-xs-12">
+
+											<div class="col-sm-3 col-xs-3 cashtype">
+												<select class="form-control" id="sel"
+													ng-model="property.scena.cashtype"
+													ng-init="property.scena.cashtype = '$'">
+													<option value="$">$</option>
+													<option value="%">%</option>
+												</select>
+
+											</div>
+
+
+
+											<div class="col-sm-3 col-xs-3 cashamt">
+												<input type="text" class="form-control" placeholder="Any"
+													ng-model="property.scena.cashamount"
+													ng-mousedown="property.scena.lvr = undefined">
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+								
+
+							</div>
+
+							<div class="col-sm-12 col-xs-12 marbot20">
+
+								<div class="col-sm-6 col-xs-12">
+									<div class="form-group">
+										<label class="col-sm-6 col-xs-12 control-label">Loan type</label>
+										<div class="col-sm-6 col-xs-12">
+											<select class="form-control" id="sel1"
+												ng-model="property.scena.loantype"
+												ng-init="property.scena.loantype='IO'"
+												ng-change="isIOselected(property.scena.loantype,property)" ng-disabled="editflag == 0 || editflag == 1">
+												<option value="IO">Interest only (IO)</option>
+												<option value="PI">Principal and Interest (PI)</option>
+											</select>
+										</div>
+
+									</div>
+
+
+								</div>
+								
+								<div class="col-sm-6 col-xs-12">
+
+									<div class="form-group">
+										<label class="col-sm-6 col-xs-12 control-label">Interest rate
+											(%)</label>
+										<div class="col-sm-6 col-xs-12">
+											<input type="text" class="form-control" placeholder="Any"
+												ng-model="property.scena.interestrate" ng-disabled="editflag == 0 || editflag == 1">
+										</div>
+
+									</div>
+
+
+								</div>
+								
+								
+								
+
+							</div>
+
+
+
+							<div class="col-sm-12 col-xs-12 marbot20">
+
+								<div class="col-sm-6 col-xs-12">
+									<div class="form-group">
+										<label class="col-sm-6 col-xs-12 control-label">Loan term</label>
+										<div class="col-sm-6 col-xs-12">
+											<input type="text" class="form-control" 
+												ng-model="property.scena.loanterm" />
+										</div>
+
+									</div>
+
+
+								</div>
+								<div class="col-sm-6 col-xs-12">
+
+									<div class="form-group">
+										<label class="col-sm-6 col-xs-12 control-label">Costs (%)</label>
+										<div class="col-sm-6 col-xs-12">
+											<input type="text" class="form-control" placeholder="Any"
+												ng-model="property.scena.costper">
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-sm-12 col-xs-12 marbot20 ">
+
+
+								<button type="submit" class="btn btn-default loanformbtn"
+									ng-click="submitscenario(property,property.scena);toggle();">SAVE</button>
+								<button type="submit"
+									class="btn btn-default loanformbtn cancelbtn"
+									ng-click="clearscenario(property,property.scena,editflag);toggle();">CANCEL</button>
+
+							</div>
+
+
+
+
+
+						</div>
+					</div>
+
+
+				</div>
+
+
+
+
+
+
+				<div class="col-sm-12 col-xs-12 nopadding">
+					<alert ng-repeat="alert in alerts" type="{{alert.type}}">{{alert.msg}}</alert>
+				</div>
+
+
+				<div class="col-sm-12 col-xs-12 tablecontainer nopadding">
+
+
+					<div class="table-responsive">
+						<table class="table table-bordered grading-table">
+							<thead>
+								<tr class="table-heading">
+									<th class="first">Scenario name</th>
+									<th>LVR</th>
+									<th>Cash amount</th>
+									<th>Loan type</th>
+									<th>Interest rate</th>
+									<th>Loan term</th>
+									<th>Monthly repayments</th>
+									<th>Costs (%)</th>
+									<th>Estimated total</th>
+									<th>Loan amount</th>
+									<th></th>
+
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="even"
+									ng-repeat="scenario in property.scenarios track by $index">
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.namechanged}"><span>{{scenario.name}}</span></td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.lvrchanged}">{{scenario.lvr
+										| currency:"":1}}%</td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.cashamountchanged}"><span
+										ng-if="scenario.conv_cashamount"><span
+											ng-if="!property.short_currlabel">$</span>{{scenario.conv_cashamount
+											| currency:"":0}}</span> 
+											<span ng-if="!scenario.conv_cashamount"><span
+											ng-if="!property.short_currlabel">$</span>{{scenario.cashamount
+											| currency:"":0}}</span> - {{scenario.cashpercent |
+										currency:"":1}}%</td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.loantypechanged}">{{scenario.loantype}}</td>
+
+									<td ng-if="scenario.name == 'Base IO'" class="tablecell" ns-popover=true ns-popover-template="popoverIO" ns-popover-trigger="mouseenter" ns-popover-placement="top" ns-popover-theme="ns-popover-tooltip-theme" ns-popover-hide-on-inside-click=true
+										ng-class="{'yellotd': scenario.intratechanged}"><u>{{scenario.intrate}}</u><span
+										ng-if="scenario.intrate"><u>%</u></span></td>
+										
+										
+										<td ng-if="scenario.name == 'Base PI'" class="tablecell" ns-popover=true ns-popover-template="popoverPI" ns-popover-trigger="mouseenter" ns-popover-placement="bottom" ns-popover-theme="ns-popover-tooltip-theme" ns-popover-hide-on-inside-click=true
+										ng-class="{'yellotd': scenario.intratechanged}"><u>{{scenario.intrate}}</u><span
+										ng-if="scenario.intrate"><u>%</u></span></td>
+										
+										
+										<td  ng-if="scenario.name != 'Base IO' && scenario.name != 'Base PI'" class="tablecell"
+										ng-class="{'yellotd': scenario.intratechanged}">{{scenario.intrate}}<span
+										ng-if="scenario.intrate">%</span></td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.loantermchanged}">{{scenario.loanterm}}</td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.repaymentschanged}"><span
+										ng-if="scenario.conv_repayments"><span
+											ng-if="!property.short_currlabel">$</span>{{scenario.conv_repayments
+											| currency:"":0}}</span> <span ng-if="!scenario.conv_repayments"><span ng-if="!property.short_currlabel">$</span>{{scenario.repayments
+											| currency:"":0}}</span></td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.costchanged}"><span
+										ng-if="scenario.conv_costprice"><span
+											ng-if="!property.short_currlabel">$</span>{{scenario.conv_costprice
+											| currency:"":0}}</span> <span ng-if="!scenario.conv_costprice"><span ng-if="!property.short_currlabel">$</span>{{scenario.costprice
+											| currency:"":0}}</span> - {{scenario.cost | currency:"":0}}%</td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.estimatechanged}"><span
+										ng-if="scenario.conv_estimate"><span
+											ng-if="!property.short_currlabel">$</span>{{scenario.conv_estimate
+											| currency:"":0}}</span> <span ng-if="!scenario.conv_estimate"><span ng-if="!property.short_currlabel">$</span>{{scenario.estimate
+											| currency:"":0}}</span></td>
+
+									<td class="tablecell"
+										ng-class="{'yellotd': scenario.loanamtchanged}"><span
+										ng-if="scenario.conv_loanamt"><span
+											ng-if="!property.short_currlabel">$</span>{{scenario.conv_loanamt
+											| currency:"":0}}</span> <span ng-if="!scenario.conv_loanamt"><span ng-if="!property.short_currlabel">$</span>{{scenario.loanamt
+											| currency:"":0}}</span></td>
+
+									<td class="tablecell editdelete"><span
+										ng-click="editscenario(scenario,property,$index);toggle();"
+										popover="Edit scenario" popover-trigger="mouseenter"><img
+											src="images/Edit button_green.jpg" alt="edit button"></img></span> <span
+										ng-click="deletescenario(property,$index)"
+										popover="Delete scenario" popover-trigger="mouseenter" ng-class="{'hidedelete': (scenario.name == 'Base PI' || scenario.name == 'Base IO')}"><img
+											src="images/Delete button_red.jpg" alt="delete button"></img></span>
+
+									</td>
+
+
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+
+
+				</div>
+
+
+
+				<div class="col-sm-12 col-xs-12 tablecontainer">
+					<label>Loan amount</label>
+					<canvas id="line" class="chart chart-line chartcanvas"
+						data="property.data" labels="property.labels" legend="true"
+						series="property.series" click="onClick" height="130px"></canvas>
+						
+					<label class="xaxis">Years</label>
+				</div>
+
+
+
+
+
+
+
+
+
+
+			</div>
+			<!-- <div class="col-sm-12 shortlist-view investment-view" ng-if="isViewSelected('investment', property.id)">
+				This is investment view
+				</div> -->
+		</div>
+
+	</div>
+</div>
+
+<script type="text/ng-template" id="popoverPI">
+<div class="triangle" style="top: -7px !important;"></div>
+		<div class="ns-popover-tooltip ratepopover">
+		<div><b>Sponsored</b></div></br>
+		<div>
+		Principal and Interest (PI) rate is sponsored this week by: </br><br/> 
+		<div class="col-sm-2" style="padding-left:0px;padding-right:0px;">
+			<img class="sponsorFavicon" src="{{baseAmazonUrl+'/'+property.sponsors.PI.logo[0].path}}">
+		</div>
+		<div class="col-sm-10" style="padding-right:0px;"><p>{{property.sponsors.PI.sponsor_name}}</p></div>
+		</div></br>
+		<div style="text-align:left;"><a href="{{property.sponsors.PI.url}}" target="_blank" analytics-on="click" analytics-event="betterchoice.com.au" analytics-label="CPx->Listing-PI">Enquire</a></div>
+		</div>	
+		</script>
+		
+		<script type="text/ng-template" id="popoverIO">
+<div class="triangle" style="bottom: -7px !important;"></div>
+		
+		<div class="ns-popover-tooltip ratepopover">
+		<div><b>Sponsored</b></div></br>
+		<div>
+	    Interest only (IO) rate is sponsored this week by: </br><br/>
+		<div class="col-sm-2" style="padding-left:0px;padding-right:0px;">
+			<img class="sponsorFavicon" src="{{baseAmazonUrl+'/'+property.sponsors.IO.logo[0].path}}">
+		</div>
+		<div class="col-sm-10" style="padding-right:0px;"><p>{{property.sponsors.IO.sponsor_name}}</p></div>
+	 	
+		</div></br>
+		<div style="text-align:left;"><a href="{{property.sponsors.IO.url}}" target="_blank" analytics-on="click" analytics-event="betterchoice.com.au" analytics-label="CPx->Listing-IO">Enquire</a></div>
+		</div>	
+		</script>				 		
+	

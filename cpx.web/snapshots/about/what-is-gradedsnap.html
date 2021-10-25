@@ -1,0 +1,491 @@
+<html ng-app="landlordWebApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <title class="ng-binding">Central Property Exchange | Real Estate Report| What is graded</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav.jpg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/custom2.css">
+	<link rel="stylesheet" type="text/css" href="css/nsPopover.css">
+	
+	
+ 	 <meta name="keywords" content="CPx,Graded,Price risk,Real estate,New concept,National valuers,Save money,Property score,Property grade,Individualised service,Comparing properties,Property demographics,Historical growth rate,Propell National Valuers,The world of real estate,General property search,Property across Australia,Offers buyers several benefits">
+ 	 <meta name="description" content="Central Property Exchange – Scored And Graded Individual Property Reports - Buy And Sell Residential And Investment Properties – A Smart New Concept In The World Of Real Estate.">
+ 
+  </head>
+  <body data-status="ready" data-twttr-rendered="true">
+  
+    <div class="container-fluid">
+    	<div class="row">
+    	<div class="waitprocess ng-hide" align="center" id="wait-payment-process" ng-show="loading">
+	  		<img src="images/payment_process.GIF" alt="CPx" ng-click="checkClicked4()">
+	   	</div>
+		<div header=""><div class="container-fluid logo-border">
+	<div class="row">
+		<div class="navbar navbar-default navbar-static-top header-bar"></div>
+		<div class="container pad-bot" style="padding-left: 0px; padding-right: 0px;">
+			<div class="navbar navbar-default navbar-static-top nomargin navbar-header mynavbar" style="width: 100%;">
+				<div class="navbar-inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+										<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+									</button>
+									<a class="fl-l" href="#!/" title="Home page"><img src="images/Logo.png" alt="CPx" class="logoscreen" ng-click="checkClicked4()"></a>
+
+								</div>
+								<div class="hidden-xs fl-l">
+									<ul class="nav navbar-nav nav pull-right nopadding">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+									</ul>
+								</div>
+								<div class="visible-xs collapse" collapse="!isCollapsed" style="height: 0px;">
+									<ul class="nav navbar-nav">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+		<!-- ngView:  --><div ng-view="" class="ng-scope"><div class="container-fluid cpxpage ng-scope">
+	<div class="row">
+		<div class="col-sm-12 col-xs-12 cpxbg" align="left">
+			<!-- ngIf: pid == 'what-is-cpx' -->
+			<!-- ngIf: pid == 'independent-process' -->
+			<!-- ngIf: pid == 'independent-property-review' -->
+			<!-- ngIf: pid == 'what-is-graded' --><h1 class="fronthead container ng-scope" ng-if="pid == 'what-is-graded'">What is graded?</h1><!-- end ngIf: pid == 'what-is-graded' -->
+			
+			
+		</div>
+	</div>
+</div>
+
+<div class="container cpxcontent ng-scope">
+	<div class="row collapsedmenu visible-xs">
+		<div aboutmenucollapsed=""><div class="navbar navbar-default navbar-static-top nomargin navbar-header">
+
+	<div class="navbar-inner hiddenaboutmenu">
+		<div class="navbar-header ">
+
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+				<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-toggle pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">ABOUT</a>
+		</div>
+		<div class="visible-xs collapse" collapse="!isCollapsed" style="height: 0px;">
+			<ul class="nav nav-pills nav-stacked">
+
+				<li ng-class="{'active': aboutmenu[0].value}"><a ng-click="isCollapsed = !isCollapsed" href="#!/about/what-is-cpx">What
+						is CPx?</a></li>
+				<li ng-class="{'active': aboutmenu[1].value}"><a ng-click="isCollapsed = !isCollapsed" href="#!/about/independent-process">Independent process</a></li>
+				<li ng-class="{'active': aboutmenu[2].value}"><a ng-click="isCollapsed = !isCollapsed" href="#!/about/independent-property-review">Independent property
+						review(ipr)</a></li>
+				<li ng-class="{'active': aboutmenu[3].value}" class="active"><a ng-click="isCollapsed = !isCollapsed" href="#!/about/what-is-graded">What
+						is graded</a></li>
+				<li ng-class="{'active': aboutmenu[13].value}"><a ng-click="isCollapsed = !isCollapsed" href="#!/contact">Contact us for more information</a></li>
+				<li><a ng-click="isCollapsed = !isCollapsed" href="#!/blog/blogindex/subid">Blog</a></li>
+			</ul>
+		</div>
+	</div>
+</div></div>
+	</div>
+	<div class="row datacontainer">
+		
+
+		<div class="col-sm-8 col-xs-12 maincontent">
+
+			<!-- ngIf: pid == 'what-is-cpx' -->
+	        <!-- ngIf: pid == 'independent-process' --> 
+			<!-- ngIf: pid == 'independent-property-review' -->
+			<!-- ngIf: pid == 'what-is-graded' --><!-- ngInclude: "views/what_is_graded.html" --><div ng-if="pid == 'what-is-graded'" ng-include="&quot;views/what_is_graded.html&quot;" class="ng-scope"><div class="static-content ng-scope">
+
+<p>Graded is a smart, new concept in the world of real estate.</p>
+
+<p>The objective of this unique approach is to create a level playing field when comparing properties, and to screen out potential biased information and marketing hype that may cloud good decision-making.</p>
+
+<p>The grade is built using proprietary-algorithms and been developed in collaboration with <a href="http://propell.com.au" target="_blank" class="bluelink" title="Propell National Valuers">Propell National Valuers</a> and Landlord Central. This is an individualised service not a system auto-generated product. This means years of real estate knowledge and professional experience form part of the service delivery.  </p>
+
+<p>Being a national-service, by design; each property across Australia is assessed via the same standard and offers buyers several benefits:</p>
+
+<ul>
+
+<li>save time;</li>
+
+<li>save money; and more so</li>
+
+<li>provides unbiased disclosure on a property.</li>
+
+</ul>
+
+<p>Property attributes are assessed and scored to determine a grade, please see below for details. </p>
+
+
+ <accordion class="static-accordian"><div class="panel-group" ng-transclude="">
+
+   
+    <div class="panel panel-default ng-isolate-scope" is-open="viewgradedstatus[0].value">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+  						<i class="pull-left glyphicon ng-scope glyphicon-plus" ng-class="{'glyphicon glyphicon-plus':  !viewgradedstatus[0].value, 'glyphicon glyphicon-minus': viewgradedstatus[0].value}"></i><span class="ng-scope">
+  						Score
+					
+        </span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+        <accordion-heading class="ng-scope"></accordion-heading>
+         				<p class="ng-scope">A score is a number assigned to a property. It’s established by assessing a property against pre-determined attributes. The attributes include: historical growth rate; price risk; demographics; internal floor plan flow; street scape and traffic flow; parking; and, outdoor space. </p>
+   
+                      <p class="ng-scope">Each attribute has an associated weighting. Each attribute is scored between Poor (low score) and Excellent (high score). This also determines placement of the tick. Higher scores are more favorable. The sum of the scores for all of the attributes is the total property score. </p>       
+   
+                        <p class="ng-scope">The total points scored are categorised to determine the ‘grade’ of the property.</p>
+                        
+                       <img src="images/Score.png" class="img-responsive ng-scope" alt="Score.png">
+                            
+   </div>
+  </div>
+</div> 
+   
+   <a id="grade" class="ng-scope"></a>
+   <div class="panel panel-default ng-isolate-scope" is-open="viewgradedstatus[1].value">
+  <div class="panel-heading" ng-click="toggleOpen()">
+    <h4 class="panel-title">
+      <a href="" class="accordion-toggle" accordion-transclude="heading">
+  						<i class="pull-left glyphicon ng-scope glyphicon-plus" ng-class="{'glyphicon glyphicon-plus':  !viewgradedstatus[1].value, 'glyphicon glyphicon-minus': viewgradedstatus[1].value}"></i><span class="ng-scope">
+  						Grade
+					
+        </span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+        <accordion-heading class="ng-scope"></accordion-heading>
+        <img src="images/CPx-Property-Grades.png" class="img-responsive pull-right ng-scope" alt="grades">
+						<p class="ng-scope">A grade represents a range of scores. There are five grade categories: AA; A; B; C; and D. The total points scored determines into which grade the property fits. </p>   
+                    
+                        <p class="ng-scope">Since the score of a property is the accumulation of seven attributes; a grade therefore does not indicate a good or bad purchase. It simply shows how the property performs against all seven attributes.</p>
+                       
+                         <p class="ng-scope"><b>Which grade is best for me?</b> It all depends on what YOU are looking for! One attribute could be more important to you than the others. It is recommended you look at the individual property attributes to determine which attributes contributed to the overall score. </p>
+                       
+                           
+                       
+                         <p class="ng-scope">Example 1: an ‘AA’ Grade property will have scored highly on all attributes.</p>
+                       
+                         <p class="ng-scope">Example 2: you may be predominately interested in the ‘Price Risk’ attribute. In this example, although a property may be assigned with a ‘D’ grade, this property may in fact suit your needs, as it has scored well in the ‘Price Risk’ attribute. This is shown by a tick under excellent in this attribute.</p>
+                       
+                         <p class="ng-scope"><i>Please see image for Example 2, below</i></p> 
+                       
+                       <img src="images/Grade-Example2.png" class="img-responsive ng-scope" alt="Grade-Example2.png">
+                       
+                       <br class="ng-scope">
+                       <p class="ng-scope">In essence a ‘D’ grade property is highly worth considering!</p>
+                          
+                       <p class="ng-scope">The grade assists when conducting a general property search. When you search for a property ALL of the attributes are displayed with a tick. This allows you to review all the attributes against your personal needs.</p>   
+                            
+   </div>
+  </div>
+</div> 
+   
+   
+  </div></accordion>
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div><!-- end ngIf: pid == 'what-is-graded' -->
+			
+			
+			
+			<div class="cpxend">&nbsp;</div>
+
+
+		</div>
+		<div class="col-sm-4 col-xs-12  rightmenu">
+			<div aboutmenu=""><div class="navbar navbar-default navbar-static-top nomargin navbar-header">
+	<div class="navbar-inner">
+		<div class="hidden-xs">
+			<ul class="nav nav-pills nav-stacked pull-left nopadding">
+				<li class="disabled abouthead"><a>ABOUT</a></li>
+				<li ng-class="{'active': aboutmenu[0].value}"><a href="#!/about/what-is-cpx">What is CPx?</a></li>
+				<li ng-class="{'active': aboutmenu[1].value}"><a href="#!/about/independent-process">Independent process</a></li>
+				<li ng-class="{'active': aboutmenu[2].value}"><a href="#!/about/independent-property-review">Independent property
+						review(ipr)</a></li>
+				<li ng-class="{'active': aboutmenu[3].value}" class="active"><a href="#!/about/what-is-graded">What is graded?</a></li>
+				<li ng-class="{'active': aboutmenu[13].value}"><a href="#!/contact">Contact us for more information</a></li>
+				<li><a href="#!/blog/blogindex/subid">Blog</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+			<!-- <div class="col-sm-12 col-xs-12 input-group downloadbutton">
+				 <a href="docs/CPxBrochure2Feb2015.pdf" target="_blank" class="btn btn-primary btn-lg btn-block nopadding noborder" type="button">
+					<span class="input-group-addon " style="padding: 0px;">
+						<span class=" glyphicon glyphicon-arrow-down star-color pull-left"></span>
+				  		<span class="buttonheading pull-left">Download brochure</span>
+				  		<span class="input-group-addon top-span1 nopadding pull-right btn-pdf" aria-hidden="true"></span>
+				  	</span>
+				 </a>
+			</div>
+			<div class="col-sm-12 col-xs-12 input-group videobutton">
+				 <a href="#!/" class="btn btn-primary btn-lg btn-block nopadding noborder" type="button" ng-click="go(properties[$index + 1].ipr[0].url)">
+					<span class="input-group-addon " style="padding: 0px;">
+						<span class=" glyphicon glyphicon-play star-color pull-left"></span>
+				  		<span class="buttonheading pull-left">View video</span>
+				  		<span class="input-group-addon btn-youtube top-span1 nopadding pull-right " aria-hidden="true"></span>
+				  	</span>
+				 </a>
+			</div> -->
+
+			  <!-- ngIf: pid == 'what-is-cpx' -->
+			  
+			  <!-- ngIf: pid == 'independent-process' -->
+			  
+			    <!-- ngIf: pid == 'independent-property-review' -->
+			  
+			   <!-- ngIf: pid == 'what-is-graded' --><div class="col-sm-12 sideheader ng-scope" ng-if="pid == 'what-is-graded'">
+			  	<i>A smart, New concept in the world of real estate</i>
+			  </div><!-- end ngIf: pid == 'what-is-graded' -->
+			  
+			  
+			   <!-- ngIf: pid == 'find-industry-professionals' -->
+			  
+			  <!-- ngIf: pid == 'FAQs' -->
+			  
+			  
+			  <!-- ngIf: pid == 'FAQs' -->
+			  
+			  
+			  
+			  <!-- ngIf: pid == 'what-is-cpx' -->
+			  
+			  <!-- ngIf: pid == 'independent-process' -->
+			  
+			  <!-- ngIf: pid == 'independent-property-review' -->
+			  
+			  <!-- ngIf: pid == 'what-is-graded' --><div class="col-sm-12 nopadding ng-scope" ng-if="pid == 'what-is-graded'">
+			  	<a class="thumbnail">
+		            <img src="images/whatisgraded.jpg" class="thumbnail img-responsive " alt="whatisgraded.jpg">
+		        </a>
+			  </div><!-- end ngIf: pid == 'what-is-graded' -->
+			  
+			  <!-- ngIf: pid == 'find-industry-professionals' -->
+			  
+		</div>
+	</div>
+</div>
+		</div>
+		<div footer=""><div class="logo-border pad-bot"></div>
+        
+<div class="container">
+	<div class="row">
+      
+      <div class="col-md-8">
+       <div class="row">
+         
+		<div class="col-sm-4 col-xs-12">
+			<div class="pad-bot5">&nbsp;</div>
+			<div class="fbold">PROPERTIES</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedview();" href="#!/view-graded-properties" title="View graded properties">View graded properties</a>
+			</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedlist();" href="#!/list-your-property-on-cpx/list-property" title="List your property on CPx">List your property on CPx</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">REPORTS</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedorder();" href="#!/order-independent-reports" title="Order independent reports">Order independent reports</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">CPx MARKETPLACE</div>
+			<div>
+				<a class="footer-data inactive-a" href="#!/marketplace/find-industry-professionals" title="Find industry professionals">Find industry professionals</a>
+			</div>
+
+		</div>
+				<div class="col-sm-4 col-xs-12">
+					<div class=" pad-bot5">&nbsp;</div>
+					<div class=" fbold">ABOUT</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-cpx" title="What is CPx?">What is CPx?</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-process" title="Independent process">Independent process</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-property-review" title="Independent property review(ipr)">Independent property review
+							(ipr)</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-graded" title="What is graded?">What is graded?</a>
+					</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class=" fbold">LEGALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/privacy" title="Privacy">Privacy</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/terms-and-conditions" title="Terms &amp; conditions">Terms &amp; conditions</a>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12 ">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">BLOG</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/press-releases/subid" title="Press releases">Press releases</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/Publications/subid" title="Publications">Publications</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/cpx-announcements/subid" title="CPx announcements">CPx announcements</a>
+				</div>
+				<div class="">
+					<a class="footer-data inactive-a" href="#!/blog/FAQs/subid" title="Frequently Asked Questions">FAQs</a>
+				</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">INDUSTRY PROFESSIONALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/industry/working-with-cpx" title="Working with CPx">Working with CPx</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="http://graded.centralpropertyexchange.com.au/login?ReturnUrl=/" target="_blank" title="Business login">Business
+							login</a>
+					</div>
+
+				</div>
+        
+        </div></div>
+        
+		<div class="col-sm-4 col-xs-12 mailformcontainer">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">CONTACT</div>
+			<div>
+				<a ng-click="shownothing = true" href="#!/contact" class="footer-data inactive-a" title="Contact us">Online form</a>
+			</div>
+
+
+			<div>
+				<span class="footer-data inactive-a">Telephone: +61 2 8006
+					1979</span>
+			</div>
+			<div>
+
+				<span class="footer-data inactive-a">Mobile/cell: +61 410 510
+					997</span>
+
+			</div>
+			<div class=" footemail">
+				<a class="footer-data inactive-a" href="mailto:contact@centralpropertyexchange.com" title="Contact us via email">Email:
+					contact@centralpropertyexchange.com</a>
+			</div>
+          <div>&nbsp;</div>
+			
+   
+
+    
+     <div class="email-update">
+     <form action="//landlordcentral.us2.list-manage.com/subscribe/post?u=44d30abfcde67c3847612b5cb&amp;id=4583813c3e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate ng-pristine ng-valid ng-valid-email" target="_blank" novalidate="">
+      <div class="fbold updatetextpad">EMAIL UPDATES</div> 
+       <div>
+        <span class="footer-data inactive-a"><p class="registertext">Register your email to receive industry news and insights from CPx.</p></span>
+       </div>
+       	   	   
+        <div class="type-email clearfix">
+         <span class="pull-left"><input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Type your email address here" class="input-bg ng-pristine ng-untouched ng-valid ng-valid-email" ng-model="registrationForm.email"> </span>
+         <span class="pull-right"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="btn sub-btn" ng-click="resetform()"> </span>
+       </div>
+       <p class="bot-txt">You will be sent a verification email to activate your registration.</p>
+    </form>
+    </div>        
+            
+            
+		</div>
+ 
+  
+  
+  
+
+	</div>
+</div>
+
+		
+    <div class="bottom-line"></div></div>
+		</div>
+	</div>
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+	
+    <script src="js/jquery.1.11.2/jquery-1.11.2.min.js"></script>
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+	<script src="js/angularjs/1.3.10/angular.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-route.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-resource.min.js"></script>
+    
+	<!-- Our Website Javascripts -->
+	<script src="js/app/constants.js"></script>
+	<script src="js/app/main.js"></script>
+	<script src="js/app/controllers.js"></script>
+	<script src="js/app/directives.js"></script>
+	<script src="js/app/services.js"></script>
+	<script src="js/app/filters.js"></script>
+	
+	
+	
+	<!-- below needs to be loaded before angular-google-maps.min.js -->
+    <!-- Directives for bootstrap -->
+    <script src="js/thirdparty/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <!-- overloaded some code from  ui-bootstrap-tpls-0.12.0-->
+    <script src="js/thirdparty/overloaded-ui-bootstrap-tpls-0.12.0.js"></script>
+    <!-- Directives for tab menu -->
+    <script src="js/thirdparty/df-tab-menu.js"></script>
+	<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script><script src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/main.js"></script>
+	<script src="js/thirdparty/lodash.min.js"></script>
+	<script src="js/thirdparty/angular-google-maps.min.js"></script>
+	<script src="js/thirdparty/angular-filter.js"></script>
+	
+	<script src="js/thirdparty/decimal-places.js"></script>
+	<script src="js/thirdparty/open-exchange-rates.js"></script>
+	<script src="js/thirdparty/angular-sanitize.js"></script>
+	<script src="js/thirdparty/ng-map.min.js"></script>
+	<script src="js/thirdparty/Chart.js"></script>
+	<script src="js/thirdparty/angular-chart.js"></script>
+	<script src="js/thirdparty/nsPopover.js"></script>
+	
+	  <script src="http://platform.twitter.com/widgets.js"></script>
+	  <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true"></script>
+	
+  
+</body></html>

@@ -1,0 +1,136 @@
+<div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+        FB.init({appId: '351998031650844', status: true, cookie: true,
+        xfbml: true});
+    };
+    (function() {
+        var e = document.createElement('script'); e.async = true;
+        e.src = document.location.protocol +
+        '//connect.facebook.net/en_US/all.js';
+        document.getElementById('fb-root').appendChild(e);
+    }());
+  </script>
+<header2 selectedmenu="selectedmenu"></header2>
+<div class="container-fluid cpxpage">
+	<div class="row">
+		<div class="col-sm-12 col-xs-12 cpxbg" align="left">
+			<h1 class="fronthead container" ng-if="pid == 'what-is-cpx'">What is CPx?</h1>
+			<h1 class="fronthead container" ng-if="pid == 'independent-process'">Independent process</h1>
+			<h1 class="fronthead container" ng-if="pid == 'independent-property-review'">Independent property review (ipr)</h1>
+			<h1 class="fronthead container" ng-if="pid == 'what-is-graded'">What is graded?</h1>
+			
+			
+		</div>
+	</div>
+</div>
+
+<div class="container cpxcontent" >
+	<div class="row collapsedmenu visible-xs">
+		<div aboutmenucollapsed></div>
+	</div>
+	<div class="row datacontainer">
+		
+
+		<div class="col-sm-8 col-xs-12 maincontent">
+
+			<div ng-if="pid == 'what-is-cpx'" ng-include='"views/what_is_cpx.html"'></div>
+	        <div ng-if="pid == 'independent-process'"ng-include='"views/independent_process.html"'></div> 
+			<div ng-if="pid == 'independent-property-review'"ng-include='"views/independent_property_review.html"'></div>
+			<div ng-if="pid == 'what-is-graded'"ng-include='"views/what_is_graded.html"'></div>
+			
+			
+			
+			<div class="cpxend">&nbsp;</div>
+
+
+		</div>
+		<div class="col-sm-4 col-xs-12  rightmenu" >
+			<div aboutmenu></div>
+			<!-- <div class="col-sm-12 col-xs-12 input-group downloadbutton">
+				 <a href="docs/CPxBrochure2Feb2015.pdf" target="_blank" class="btn btn-primary btn-lg btn-block nopadding noborder" type="button">
+					<span class="input-group-addon " style="padding: 0px;">
+						<span class=" glyphicon glyphicon-arrow-down star-color pull-left"></span>
+				  		<span class="buttonheading pull-left">Download brochure</span>
+				  		<span class="input-group-addon top-span1 nopadding pull-right btn-pdf" aria-hidden="true"></span>
+				  	</span>
+				 </a>
+			</div>
+			<div class="col-sm-12 col-xs-12 input-group videobutton">
+				 <a href="#!/" class="btn btn-primary btn-lg btn-block nopadding noborder" type="button" ng-click="go(properties[$index + 1].ipr[0].url)">
+					<span class="input-group-addon " style="padding: 0px;">
+						<span class=" glyphicon glyphicon-play star-color pull-left"></span>
+				  		<span class="buttonheading pull-left">View video</span>
+				  		<span class="input-group-addon btn-youtube top-span1 nopadding pull-right " aria-hidden="true"></span>
+				  	</span>
+				 </a>
+			</div> -->
+
+			  <div class="col-sm-12 sideheader" ng-if="pid == 'what-is-cpx'">
+			  	<i>Property through an independent lens</i>
+			  </div>
+			  
+			  <div class="col-sm-12 sideheader" ng-if="pid == 'independent-process'">
+			  	<i>A fresh approach to buying property</i>
+			  </div>
+			  
+			    <div class="col-sm-12 sideheader" ng-if="pid == 'independent-property-review'">
+			  	<i>Independent commentary on properties available for sale</i>
+			  </div>
+			  
+			   <div class="col-sm-12 sideheader" ng-if="pid == 'what-is-graded'">
+			  	<i>A smart, New concept in the world of real estate</i>
+			  </div>
+			  
+			  
+			   <div class="col-sm-12 sideheader" ng-if="pid == 'find-industry-professionals'">
+			  	<i>Independent representation and significant cost savings</i>
+			  </div>
+			  
+			  <div class="col-sm-12 sideheader" ng-if="pid == 'FAQs'">
+			  	<i>Be informed, get your questions answered</i>
+			  </div>
+			  
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'FAQs'">
+			  	<a class="thumbnail">
+		            <img src="images/FAQ-image.jpg" class="thumbnail img-responsive " alt="FAQ-image.jpg">
+		        </a>
+			  </div>
+			  
+			  
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'what-is-cpx'">
+			  	<a class="thumbnail">
+		            <img src="images/whatisCPx.jpg" class="thumbnail img-responsive " alt="whatisCPx.jpg">
+		        </a>
+			  </div>
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'independent-process'">
+			  	<a class="thumbnail">
+		            <img src="images/independentprocess.jpg" class="thumbnail img-responsive " alt="independentprocess.jpg">
+		        </a>
+			  </div>
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'independent-property-review'">
+			  	<a class="thumbnail">
+		            <img src="images/independentpropertyreview.jpg" class="thumbnail img-responsive " alt="independentpropertyreview.jpg">
+		        </a>
+			  </div>
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'what-is-graded'">
+			  	<a class="thumbnail">
+		            <img src="images/whatisgraded.jpg" class="thumbnail img-responsive " alt="whatisgraded.jpg">
+		        </a>
+			  </div>
+			  
+			  <div class="col-sm-12 nopadding" ng-if="pid == 'find-industry-professionals'">
+			  	<a class="thumbnail">
+		            <img src="images/findindustryprofessionals.jpg" class="thumbnail img-responsive " alt="findindustryprofessionals.jpg">
+		        </a>
+			  </div>
+			  
+		</div>
+	</div>
+</div>
+		

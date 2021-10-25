@@ -1,0 +1,167 @@
+<header2></header2>
+<div class="ServiceRequest">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row ServiceRequest_title text-center">
+                <h3>Request free ipr and grade report</h3>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 queaction queactionsucess">
+		  <alert dismiss-on-timeout="15000" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index);">{{alert.msg}}</alert>
+		</div>
+        
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 startform">
+            <div class="row">
+                	
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <h4>Personal information</h4>
+                    <div class="Serviceform">
+                       <form name="myForm" id="dk" ng-class="{'submitted': submitted}">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Your name<i class="required-text asterisk">*</i></label>
+				                        <input type="text" class="form-control" ng-model="contact.name"  ng-required='!contact.name'/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Your email<i class="required-text asterisk">*</i></label>
+				                        <input type="email" class="form-control" ng-model="contact.email" ng-required='!contact.email'/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Your role<i class="required-text asterisk">*</i></label>
+                    					    <select class="form-control" id="sel1"  ng-model="contact.requestformrole" title="Please select a role from the list"  required> 
+                    							<option value="" disabled>Please select role</option>
+                    							<option value="Accountant">Accountant</option>
+                    							<option value="Buyer">Buyer</option>
+                    							<option value="Buyer agent/ Advocate">Buyer agent/ Advocate</option>
+                    							<option value="Bank">Bank</option>
+                    							<option value="Financial planner">Financial planner</option>
+                    							<option value="Mortgage broker">Mortgage broker</option>
+                    							<option value="Real estate agent">Real estate agent</option>
+                    							<option value="SMSF">SMSF</option>
+                    							<option value="Solicitor/ Conveyancer">Solicitor/ Conveyancer</option>
+                    									
+                    						</select>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Suburb/city <i class="required-text asterisk">*</i></label>
+				                        <input type="text" class="form-control" ng-model="contact.requestformplace" placeholder='suburb/ city' required/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Country <i class="required-text asterisk">*</i></label>
+				                        <input type="text" class="form-control" ng-model="contact.requestformstate" title="Please fill in this field."  ng-init="contact.requestformstate='Australia'" >
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="">Subject</label>
+                                        <input name="subject" type="text" class="form-control box_g" ng-model="contact.requestformsubject" ng-init="contact.requestformsubject=requestformsubject" readonly="true" tabindex="-1"/>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contactinput">
+                				<div class="form-group">		 
+                				   <input type="hidden" class="form-control" name="subjectmail" ng-model="contact.dummysubject" ng-init="contact.dummysubject='Request for ipr and grade report on your CPx listed property'"/>
+                				</div>
+                			</div>	
+                            
+                            <hr class="formhr" />
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="Yourmessage">
+                                        <h4 > <strong>Your message</strong></h4><br />
+                                        <p>Dear property owner/ agent, <br /><br />Great news! A <span>{{contact.requestformrole}} </span>   from <span> {{contact.requestformplace}}</span>  , <span> {{contact.requestformstate}}</span>  has expressed interest in your property: http://centralpropertyexchange.com.au/#!/details/ <span> {{currpropid}}</span> </p>
+                                        <p>To assist in making their purchase decision this <span>{{contact.requestformrole}}</span> has requested an Independent Property Review (ipr) which includes your property's grade in a 6 page report on your CPx listed property.</span></p>
+                                        <p>The grade works like a hotel star rating. It provides the disclosure buyers/ advisors need to find the right property.</p>
+                                        <p>Properties are independently reviewed and graded by <span>JLL</span></p>
+                                        <p>The completed ipr and Grade report will be posted against your property and will be available FREE to download by potential buyers/ advisors. The ipr will also be emailed to you and may assist you in further marketing your property.</p>
+                                        <p class="Providingbuyers"><strong>Providing buyers/ advisors with this independent information may assist you in selling your property.</strong></p>
+                                        <p>Please respond with a <strong>YES</strong> or <strong>NO</strong> to this request as soon as possible to avoid losing a potential buyer. A copy of your response will be sent to the interested <span>{{contact.requestformrole}}</span>.</p>
+
+                                        <br />
+                                        <p>More details: <a href="#!/blog/FAQs/why-grade-a-property" title="Why grade a property?" target="_blank"> Why grade a property?</a>  |  <a href="#!/about/independent-property-review" target="_blank"  title="Independent property review(ipr)">What is an ipr, grade and score?</a>  |  <a href="docs/sample-CPx-ipr.pdf"  title="See the sample ipr" target="_blank">Sample ipr and grade report</a>  |  <a href="#!/list-your-property-on-cpx/list-property#rate"  title="Rates" target="_blank">Rates</a></p>
+                                        <br />
+
+                                    </div>
+                                    <div class="contactdetalis">
+                                        <p>Regards, </p>
+                                        <p>CPx Administration</p><br />
+                                        <div class="">
+                    						<img src="http://centralpropertyexchange.com.au/images/CPxLogo-email.jpg">
+                    					</div><br>
+                                        <p>Telephone: +61 2 8006 1979</p>
+                                        <p>Mobile/cell: +61 410 510 997</p>
+                                        <p>Email: <a href="mailto:#">contact@centralpropertyexchange.com.au</a></p>
+                                        <p>Web: centralpropertyexchange.com.au</p>
+                                        <p>Skype: property.compass</p>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                            <hr class="formhr" />
+                            
+                            <div class="col-sm-12 nopadding">
+                			 <alert dismiss-on-timeout="15000" ng-repeat="alertcap in alertcaps" type="{{alertcap.type}}" close="closeAlertcap($index);">{{alertcap.msg}}</alert>
+                             </div>
+                            
+                            
+                            
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 robotdiv">
+                                <div class="row robotdivrow">
+                                    <div vc-recaptcha key="'6LeeeAoTAAAAADJtB95fd7tDeXLMk1kajrFd6d37'" ng-model="respone5" theme="'light'" on-create="setWidgetId(widgetId);"></div>   
+                                </div>
+                            </div>	
+                            
+                            <div class="row">
+                                <div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
+                                    <button type="submit" class="sendbtn" ng-click="submitted= true;sendRequestIprFormEmail();">SEND</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="well servicerightside">
+                        <h4 >What happens next?</h4>
+                        <p><strong>An email will be sent to the owner/ agent notifying them of your request; and</strong></p>
+                        <p><strong>1)</strong> You will receive a copy of this email request;</p>
+                        <p><strong>2)</strong> You will be notified if the owner/ agent agrees to supply the ipr report;</p>
+                        <p><strong>3)</strong> If your request is accepted, allow 2 to 5 days for delivery</p>
+                        <p><strong>4)</strong> The ipr report will be attached to the online property information.</p>
+                        <p><strong>Your personal details remain anonymous.</strong></p>
+                    </div>
+                    <div class="download-btn">
+        				<div><a href="#!/contact" target="_blank">Contact us for more information</a></div>	
+        			</div>
+                    <div class="col-sm-12 sideheader">
+        			  	<span ng-if="pid == 'working-with-cpx'" >Free membership, No referral fees</span>
+        			  	<span ng-if="pid == 'view-directory'" >Free membership, No referral fees</span>
+        			  	<span ng-if="pid == 'Contact_us_for_more'" >Free membership, No referral fees</span>
+        			  </div>
+                      
+                      
+                      <div class="servicerightsideimg" style="padding-top: 20px;">
+                        <img src="images/whatisgraded.jpg" class="img-responsive "  alt="Request free ipr">
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>

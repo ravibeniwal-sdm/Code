@@ -1,0 +1,1168 @@
+<html ng-app="landlordWebApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <title class="ng-binding">Central Property Exchange | Independent Real Estate Sales| Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav.jpg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/custom2.css">
+	<link rel="stylesheet" type="text/css" href="css/nsPopover.css">
+	
+	
+ 	 <meta name="keywords" content="CPx,Real estate,Buy property,Sell property,Investment property,Property Sydney,No agent,Advertise property,Graded properties,Real estate advertising,Property Melbourne,No agent fees,Real estate sales,Buy real estate,Independently reviewed and graded properties,Independent real estate sales,Central Property Exchange">
+ 	 <meta name="description" content="Central Property Exchange – Independent Real Estate Sales  –  Residential and Investment Properties  – A Fresh Approach to Buying Property">
+ 
+  <script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/common.js" style=""></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/util.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/stats.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttp%3A%2F%2Flocalhost%2Flandlord%2Flandlord%2F%23!%2F&amp;5e1&amp;callback=_xdc_._qqsvtj&amp;token=3128"></script></head>
+  <body data-status="ready" data-twttr-rendered="true">
+  
+    <div class="container-fluid">
+    	<div class="row">
+    	<div class="waitprocess ng-hide" align="center" id="wait-payment-process" ng-show="loading">
+	  		<img src="images/payment_process.GIF" alt="CPx" ng-click="checkClicked4()">
+	   	</div>
+		<div header=""><div class="container-fluid logo-border">
+	<div class="row">
+		<div class="navbar navbar-default navbar-static-top header-bar"></div>
+		<div class="container pad-bot" style="padding-left: 0px; padding-right: 0px;">
+			<div class="navbar navbar-default navbar-static-top nomargin navbar-header mynavbar" style="width: 100%;">
+				<div class="navbar-inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+										<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+									</button>
+									<a class="fl-l" href="#!/" title="Home page"><img src="images/Logo.png" alt="CPx" class="logoscreen" ng-click="checkClicked4()"></a>
+
+								</div>
+								<div class="hidden-xs fl-l">
+									<ul class="nav navbar-nav nav pull-right nopadding">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+									</ul>
+								</div>
+								<div class="visible-xs collapse" collapse="!isCollapsed" style="height: 0px;">
+									<ul class="nav navbar-nav">
+										<li class="header-link"><a ng-click="checkClicked1(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ViewGradedClicked}" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW GRADED PROPERTIES</a></li>
+										<li class="header-link"><a ng-click="checkClicked2(); isCollapsed = !isCollapsed" class="headerlinks" ng-class="{'active-a': ListClicked}" href="#!/list-your-property-on-cpx/list-property" title="LIST YOUR PROPERTY ON CPx">LIST YOUR PROPERTY ON CPx</a></li>
+										<li class="header-link"><a ng-click="checkClicked3(); isCollapsed = !isCollapsed" class="headerlinks " ng-class="{'active-a': OrderClicked}" href="#!/order-independent-reports" title="ORDER INDEPENDENT REPORTS">ORDER
+												INDEPENDENT REPORTS</a></li>
+										<li class="header-link"><a ng-click="checkClicked5(); isCollapsed = !isCollapsed" class="headerlinks headerlastlink" ng-class="{'active-a': BlogClicked}" href="#!/blog/blogindex/subid" title="BLOG">BLOG</a></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+		<!-- ngView:  --><div ng-view="" class="ng-scope"><div class="container-fluid logo-border ng-scope" id="homepage">
+	<div class="row">
+		<div class="col-sm-12 col-xs-12 homebg" align="center">
+			<h1 class="fronthead">A FRESH APPROACH TO BUYING PROPERTY</h1>
+			<p class="frontsubhead">Get free, instant access to independently reviewed and graded properties</p>
+		</div>
+	</div>
+</div>
+
+<div class="container ng-scope" id="homecontent">
+	<div class="row videocontainer">
+		<div class="col-sm-4 col-xs-12">
+			<div class="embed-responsive embed-responsive-4by3">
+			<iframe width="420" height="315" src="//www.youtube.com/embed/1ByzPkie6U0" frameborder="0" allowfullscreen=""></iframe>
+			</div>
+		</div>
+		<div class="col-sm-8 col-xs-12 videotag">
+			<div align="left" class="leftarrowhead">REAL ESTATE, IT'S DIFFERENT NOW!</div>
+			<div align="left" class="welcomecontent">
+			<p>CPx is all about independent real estate sales.</p>
+			<p>CPx provides <b>graded</b> properties with <b>no</b> real estate agent 'selling-fees' where both sellers and buyers get fair and <b>independent</b> representation.</p>
+			<p>CPx is a real estate advertising platform with a difference.  It is an Australian first!  <a href="#!/about/what-is-cpx" target="_blank" title="What is CPx?">more</a></p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			 <div justified="false" class="hometab ng-isolate-scope">
+  <ul class="nav nav-tabs" ng-class="{'nav-stacked': vertical, 'nav-justified': justified}" ng-transclude="">
+				<li ng-class="{active: active, disabled: disabled}" heading="FEATURED PROPERTIES" class="ng-isolate-scope active">
+  <a href="" ng-click="select()" tab-heading-transclude="" class="ng-binding">FEATURED PROPERTIES</a>
+</li>
+				<li ng-class="{active: active, disabled: disabled}" heading="LATEST PROPERTIES" class="ng-isolate-scope" disabled="disabled">
+  <a href="" ng-click="select()" tab-heading-transclude="" class="ng-binding">LATEST PROPERTIES</a>
+</li>
+			</ul>
+  <div class="tab-content">
+    <!-- ngRepeat: tab in tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    
+					<div class="row ng-scope">
+						<div class="col-sm-12 tab-container">
+							<!-- ngRepeat: itemP in (filteredItems = (properties | filter:{ featured: true })) --><!-- ngIf: $index<3 --><div class="col-sm-4 product-tile-container ng-scope" ng-repeat="itemP in (filteredItems = (properties | filter:{ featured: true }))" ng-if="$index&lt;3">
+								<producttile showgrade="true" item="itemP" ishomepage="true" class="ng-isolate-scope"><!-- ngIf: !formap --><div class="col-sm-12 col-xs-12 product-tile forgrid ng-scope" ng-if="!formap">
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+
+		
+		
+		<a href="#!/details/4931" class="thumbnail" title="CLICK TO SEE ALL DETAILS"> 
+		<!-- <img src="{{item.images[0].url}}" class="thumbnail img-responsive "> -->
+		<listslider item="item" class="ng-isolate-scope">  <div class="llslider" ng-style="styleHeight()" resizeimg="" style="height: 197px;">
+    <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="myInterval" style="height:197px;">
+    <ol class="carousel-indicators" ng-show="slides.length &gt; 1">
+        <!-- ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+      <!-- ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65341" alt="listpage slider images" class="img-responsive" style="max-height:197px;" src="http://cdn.cpx.net.au/image?id=65341">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope active" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65342" alt="listpage slider images" class="img-responsive" style="max-height:197px;" src="http://cdn.cpx.net.au/image?id=65342">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65340" alt="listpage slider images" class="img-responsive" style="max-height:197px;" src="http://cdn.cpx.net.au/image?id=65340">
+      </div>
+      </div><!-- end ngRepeat: image in item.images -->
+    </div>
+    <a class="left carousel-control" ng-click="prev()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" ng-click="next()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+  </div>
+ 
+</listslider>
+		</a> 
+		
+		<div class="col-lg-12 col-sm-12 col-xs-12 nopadding product-markup pull-right">
+   <!-- ngIf: item.smsf == true --><span class="label label-default smsf flaglabel ng-scope" ng-if="item.smsf == true">SMSF</span><!-- end ngIf: item.smsf == true -->
+  
+   <!-- ngIf: item.deposit == true -->
+  
+   <!-- ngIf: item.sold == true -->
+  
+   <!-- ngIf: item.domacom == true -->
+  
+   <!-- ngIf: !(item.ipr.length>0) -->
+  </div>
+		
+
+	</div>
+	
+	
+	
+  <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">    
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding botm-space2">
+		<div class="col-sm-6 fl-l nopadding fbold ng-binding">Beds 1 |
+			Bath 1 | Car 1</div>
+		<div class="col-sm-6 fl-r nopadding fbold ng-binding">
+			Ormond, VIC</div>
+	</div>
+
+	<div class="col-lg-12 col-sm-12 col-xs-12 fl-lpage nopadding prop-content ng-binding">
+		538 North, Apartment</div>
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">&nbsp;</div>
+
+	<div class="col-lg-6 col-sm-6 col-xs-12 nopadding">
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Listed price
+			(AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$375,000</div>
+
+			<!-- ngIf: !ishomepage -->
+
+			<!-- ngIf: ishomepage --><div class="col-sm-8 col-xs-8 nopadding fl-lpage fbold ng-scope" ng-if="ishomepage">
+				CPx price <select ng-options="currency as currency.label for currency in currencies | filter : $viewValue" ng-change="updateValue(from, to, item)" ng-model="to.currency" placeholder="Please Enter a Currency..." class="currencyselector ng-pristine ng-untouched ng-valid"><option value="0" selected="selected" label="BGN Bulgarian Lev (1.39 / AUD)">BGN Bulgarian Lev (1.39 / AUD)</option><option value="1" label="BRL Brazilian Real (2.38 / AUD)">BRL Brazilian Real (2.38 / AUD)</option><option value="2" label="CAD Canadian Dollar (0.96 / AUD)">CAD Canadian Dollar (0.96 / AUD)</option><option value="3" label="CHF Swiss Franc (0.74 / AUD)">CHF Swiss Franc (0.74 / AUD)</option><option value="4" label="CNY Chinese Yuan (4.89 / AUD)">CNY Chinese Yuan (4.89 / AUD)</option><option value="5" label="CZK Czech Republic Koruna (19.38 / AUD)">CZK Czech Republic Koruna (19.38 / AUD)</option><option value="6" label="DKK Danish Krone (5.28 / AUD)">DKK Danish Krone (5.28 / AUD)</option><option value="7" label="EUR Euro (0.71 / AUD)">EUR Euro (0.71 / AUD)</option><option value="8" label="GBP British Pound Sterling (0.50 / AUD)">GBP British Pound Sterling (0.50 / AUD)</option><option value="9" label="HKD Hong Kong Dollar (6.12 / AUD)">HKD Hong Kong Dollar (6.12 / AUD)</option><option value="10" label="HRK Croatian Kuna (5.34 / AUD)">HRK Croatian Kuna (5.34 / AUD)</option><option value="11" label="HUF Hungarian Forint (217.52 / AUD)">HUF Hungarian Forint (217.52 / AUD)</option><option value="12" label="IDR Indonesian Rupiah (10,360.06 / AUD)">IDR Indonesian Rupiah (10,360.06 / AUD)</option><option value="13" label="ILS Israeli New Sheqel (3.05 / AUD)">ILS Israeli New Sheqel (3.05 / AUD)</option><option value="14" label="INR Indian Rupee (50.18 / AUD)">INR Indian Rupee (50.18 / AUD)</option><option value="15" label="JPY Japanese Yen (95.51 / AUD)">JPY Japanese Yen (95.51 / AUD)</option><option value="16" label="KRW South Korean Won (863.19 / AUD)">KRW South Korean Won (863.19 / AUD)</option><option value="17" label="MXN Mexican Peso (11.98 / AUD)">MXN Mexican Peso (11.98 / AUD)</option><option value="18" label="MYR Malaysian Ringgit (2.84 / AUD)">MYR Malaysian Ringgit (2.84 / AUD)</option><option value="19" label="NOK Norwegian Krone (5.98 / AUD)">NOK Norwegian Krone (5.98 / AUD)</option><option value="20" label="NZD New Zealand Dollar (1.08 / AUD)">NZD New Zealand Dollar (1.08 / AUD)</option><option value="21" label="PHP Philippine Peso (35.03 / AUD)">PHP Philippine Peso (35.03 / AUD)</option><option value="22" label="PLN Polish Zloty (2.90 / AUD)">PLN Polish Zloty (2.90 / AUD)</option><option value="23" label="RON Romanian Leu (3.15 / AUD)">RON Romanian Leu (3.15 / AUD)</option><option value="24" label="RUB Russian Ruble (39.16 / AUD)">RUB Russian Ruble (39.16 / AUD)</option><option value="25" label="SEK Swedish Krona (6.56 / AUD)">SEK Swedish Krona (6.56 / AUD)</option><option value="26" label="SGD Singapore Dollar (1.05 / AUD)">SGD Singapore Dollar (1.05 / AUD)</option><option value="27" label="THB Thai Baht (26.36 / AUD)">THB Thai Baht (26.36 / AUD)</option><option value="28" label="TRY Turkish Lira (2.03 / AUD)">TRY Turkish Lira (2.03 / AUD)</option><option value="29" label="USD United States Dollar (0.79 / AUD)">USD United States Dollar (0.79 / AUD)</option><option value="30" label="ZAR South African Rand (9.29 / AUD)">ZAR South African Rand (9.29 / AUD)</option><option value="31" selected="selected" label="AUD Australian Dollar (1.00 / AUD)">AUD Australian Dollar (1.00 / AUD)</option></select>
+
+				<a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion">?</a>
+			</div><!-- end ngIf: ishomepage -->
+
+			<!-- ngIf: ishomepage --><div ng-if="ishomepage" class="ng-scope">
+			<!-- ngIf: !(item.currencylabel_home) --><div ng-if="!(item.currencylabel_home)" class="ng-scope">
+		<!-- ngIf: (item.convertedcpx_home) -->
+		<!-- ngIf: !(item.convertedcpx_home) --><div class="col-sm-4 col-xs-4 nopadding fl-rpage fbold ng-binding ng-scope" ng-if="!(item.convertedcpx_home)">$362,875</div><!-- end ngIf: !(item.convertedcpx_home) -->
+		</div><!-- end ngIf: !(item.currencylabel_home) -->
+		
+		<!-- ngIf: (item.currencylabel_home) -->
+		</div><!-- end ngIf: ishomepage -->
+
+
+
+			<!-- ngIf: !ishomepage -->
+		
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Saving (AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$12,125</div>
+	</div>
+	<!-- ngIf: (showgrade && item.ipr.length > 0) --><div class="col-sm-6 fl-lpage tilegrade ng-scope" ng-if="(showgrade &amp;&amp; item.ipr.length &gt; 0)">
+		<propertygrade item="item" class="ng-isolate-scope"><div class="col-sm-8 col-xs-7 grade-text ">
+	<span class="fbold" style="font-size: 20px;">GRADE</span>
+</div>
+<div class="col-sm-4 col-xs-5  grade-box">
+	<div class="gradecicle ng-binding Bcircle" ng-class="selectgradecolor(item.grade)">B</div>
+</div></propertygrade>
+	</div><!-- end ngIf: (showgrade && item.ipr.length > 0) -->
+</div>
+
+</div><!-- end ngIf: !formap -->
+
+
+<!-- ngIf: formap --></producttile>
+							</div><!-- end ngIf: $index<3 --><!-- end ngRepeat: itemP in (filteredItems = (properties | filter:{ featured: true })) --><!-- ngIf: $index<3 --><div class="col-sm-4 product-tile-container ng-scope" ng-repeat="itemP in (filteredItems = (properties | filter:{ featured: true }))" ng-if="$index&lt;3">
+								<producttile showgrade="true" item="itemP" ishomepage="true" class="ng-isolate-scope"><!-- ngIf: !formap --><div class="col-sm-12 col-xs-12 product-tile forgrid ng-scope" ng-if="!formap">
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+
+		
+		
+		<a href="#!/details/4942" class="thumbnail" title="CLICK TO SEE ALL DETAILS"> 
+		<!-- <img src="{{item.images[0].url}}" class="thumbnail img-responsive "> -->
+		<listslider item="item" class="ng-isolate-scope">  <div class="llslider" ng-style="styleHeight()" resizeimg="" style="height: 197px;">
+    <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="myInterval" style="height:197px;">
+    <ol class="carousel-indicators" ng-show="slides.length &gt; 1">
+        <!-- ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+      <!-- ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65529" alt="listpage slider images" class="img-responsive" style="max-height:197px;" src="http://cdn.cpx.net.au/image?id=65529">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope active" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65530" alt="listpage slider images" class="img-responsive" style="max-height:197px;" src="http://cdn.cpx.net.au/image?id=65530">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65528" alt="listpage slider images" class="img-responsive" style="max-height:197px;" src="http://cdn.cpx.net.au/image?id=65528">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65532" alt="listpage slider images" class="img-responsive" style="max-height:197px;" src="http://cdn.cpx.net.au/image?id=65532">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65531" alt="listpage slider images" class="img-responsive" style="max-height:197px;" src="http://cdn.cpx.net.au/image?id=65531">
+      </div>
+      </div><!-- end ngRepeat: image in item.images -->
+    </div>
+    <a class="left carousel-control" ng-click="prev()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" ng-click="next()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+  </div>
+ 
+</listslider>
+		</a> 
+		
+		<div class="col-lg-12 col-sm-12 col-xs-12 nopadding product-markup pull-right">
+   <!-- ngIf: item.smsf == true --><span class="label label-default smsf flaglabel ng-scope" ng-if="item.smsf == true">SMSF</span><!-- end ngIf: item.smsf == true -->
+  
+   <!-- ngIf: item.deposit == true -->
+  
+   <!-- ngIf: item.sold == true -->
+  
+   <!-- ngIf: item.domacom == true --><span class="label label-default domacom flaglabel ng-scope" ng-if="item.domacom == true">DomaCom</span><!-- end ngIf: item.domacom == true -->
+  
+   <!-- ngIf: !(item.ipr.length>0) -->
+  </div>
+		
+
+	</div>
+	
+	
+	
+  <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">    
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding botm-space2">
+		<div class="col-sm-6 fl-l nopadding fbold ng-binding">Beds 3 |
+			Bath 2 | Car 1</div>
+		<div class="col-sm-6 fl-r nopadding fbold ng-binding">
+			Roxburgh Park, VIC</div>
+	</div>
+
+	<div class="col-lg-12 col-sm-12 col-xs-12 fl-lpage nopadding prop-content ng-binding">
+		EDEN PARK, House</div>
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">&nbsp;</div>
+
+	<div class="col-lg-6 col-sm-6 col-xs-12 nopadding">
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Listed price
+			(AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$365,000</div>
+
+			<!-- ngIf: !ishomepage -->
+
+			<!-- ngIf: ishomepage --><div class="col-sm-8 col-xs-8 nopadding fl-lpage fbold ng-scope" ng-if="ishomepage">
+				CPx price <select ng-options="currency as currency.label for currency in currencies | filter : $viewValue" ng-change="updateValue(from, to, item)" ng-model="to.currency" placeholder="Please Enter a Currency..." class="currencyselector ng-pristine ng-untouched ng-valid"><option value="0" selected="selected" label="BGN Bulgarian Lev (1.39 / AUD)">BGN Bulgarian Lev (1.39 / AUD)</option><option value="1" label="BRL Brazilian Real (2.38 / AUD)">BRL Brazilian Real (2.38 / AUD)</option><option value="2" label="CAD Canadian Dollar (0.96 / AUD)">CAD Canadian Dollar (0.96 / AUD)</option><option value="3" label="CHF Swiss Franc (0.74 / AUD)">CHF Swiss Franc (0.74 / AUD)</option><option value="4" label="CNY Chinese Yuan (4.89 / AUD)">CNY Chinese Yuan (4.89 / AUD)</option><option value="5" label="CZK Czech Republic Koruna (19.38 / AUD)">CZK Czech Republic Koruna (19.38 / AUD)</option><option value="6" label="DKK Danish Krone (5.28 / AUD)">DKK Danish Krone (5.28 / AUD)</option><option value="7" label="EUR Euro (0.71 / AUD)">EUR Euro (0.71 / AUD)</option><option value="8" label="GBP British Pound Sterling (0.50 / AUD)">GBP British Pound Sterling (0.50 / AUD)</option><option value="9" label="HKD Hong Kong Dollar (6.12 / AUD)">HKD Hong Kong Dollar (6.12 / AUD)</option><option value="10" label="HRK Croatian Kuna (5.34 / AUD)">HRK Croatian Kuna (5.34 / AUD)</option><option value="11" label="HUF Hungarian Forint (217.52 / AUD)">HUF Hungarian Forint (217.52 / AUD)</option><option value="12" label="IDR Indonesian Rupiah (10,360.06 / AUD)">IDR Indonesian Rupiah (10,360.06 / AUD)</option><option value="13" label="ILS Israeli New Sheqel (3.05 / AUD)">ILS Israeli New Sheqel (3.05 / AUD)</option><option value="14" label="INR Indian Rupee (50.18 / AUD)">INR Indian Rupee (50.18 / AUD)</option><option value="15" label="JPY Japanese Yen (95.51 / AUD)">JPY Japanese Yen (95.51 / AUD)</option><option value="16" label="KRW South Korean Won (863.19 / AUD)">KRW South Korean Won (863.19 / AUD)</option><option value="17" label="MXN Mexican Peso (11.98 / AUD)">MXN Mexican Peso (11.98 / AUD)</option><option value="18" label="MYR Malaysian Ringgit (2.84 / AUD)">MYR Malaysian Ringgit (2.84 / AUD)</option><option value="19" label="NOK Norwegian Krone (5.98 / AUD)">NOK Norwegian Krone (5.98 / AUD)</option><option value="20" label="NZD New Zealand Dollar (1.08 / AUD)">NZD New Zealand Dollar (1.08 / AUD)</option><option value="21" label="PHP Philippine Peso (35.03 / AUD)">PHP Philippine Peso (35.03 / AUD)</option><option value="22" label="PLN Polish Zloty (2.90 / AUD)">PLN Polish Zloty (2.90 / AUD)</option><option value="23" label="RON Romanian Leu (3.15 / AUD)">RON Romanian Leu (3.15 / AUD)</option><option value="24" label="RUB Russian Ruble (39.16 / AUD)">RUB Russian Ruble (39.16 / AUD)</option><option value="25" label="SEK Swedish Krona (6.56 / AUD)">SEK Swedish Krona (6.56 / AUD)</option><option value="26" label="SGD Singapore Dollar (1.05 / AUD)">SGD Singapore Dollar (1.05 / AUD)</option><option value="27" label="THB Thai Baht (26.36 / AUD)">THB Thai Baht (26.36 / AUD)</option><option value="28" label="TRY Turkish Lira (2.03 / AUD)">TRY Turkish Lira (2.03 / AUD)</option><option value="29" label="USD United States Dollar (0.79 / AUD)">USD United States Dollar (0.79 / AUD)</option><option value="30" label="ZAR South African Rand (9.29 / AUD)">ZAR South African Rand (9.29 / AUD)</option><option value="31" selected="selected" label="AUD Australian Dollar (1.00 / AUD)">AUD Australian Dollar (1.00 / AUD)</option></select>
+
+				<a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion">?</a>
+			</div><!-- end ngIf: ishomepage -->
+
+			<!-- ngIf: ishomepage --><div ng-if="ishomepage" class="ng-scope">
+			<!-- ngIf: !(item.currencylabel_home) --><div ng-if="!(item.currencylabel_home)" class="ng-scope">
+		<!-- ngIf: (item.convertedcpx_home) -->
+		<!-- ngIf: !(item.convertedcpx_home) --><div class="col-sm-4 col-xs-4 nopadding fl-rpage fbold ng-binding ng-scope" ng-if="!(item.convertedcpx_home)">$355,000</div><!-- end ngIf: !(item.convertedcpx_home) -->
+		</div><!-- end ngIf: !(item.currencylabel_home) -->
+		
+		<!-- ngIf: (item.currencylabel_home) -->
+		</div><!-- end ngIf: ishomepage -->
+
+
+
+			<!-- ngIf: !ishomepage -->
+		
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Saving (AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$10,000</div>
+	</div>
+	<!-- ngIf: (showgrade && item.ipr.length > 0) --><div class="col-sm-6 fl-lpage tilegrade ng-scope" ng-if="(showgrade &amp;&amp; item.ipr.length &gt; 0)">
+		<propertygrade item="item" class="ng-isolate-scope"><div class="col-sm-8 col-xs-7 grade-text ">
+	<span class="fbold" style="font-size: 20px;">GRADE</span>
+</div>
+<div class="col-sm-4 col-xs-5  grade-box">
+	<div class="gradecicle ng-binding Bcircle" ng-class="selectgradecolor(item.grade)">B</div>
+</div></propertygrade>
+	</div><!-- end ngIf: (showgrade && item.ipr.length > 0) -->
+</div>
+
+</div><!-- end ngIf: !formap -->
+
+
+<!-- ngIf: formap --></producttile>
+							</div><!-- end ngIf: $index<3 --><!-- end ngRepeat: itemP in (filteredItems = (properties | filter:{ featured: true })) --><!-- ngIf: $index<3 --><div class="col-sm-4 product-tile-container ng-scope" ng-repeat="itemP in (filteredItems = (properties | filter:{ featured: true }))" ng-if="$index&lt;3">
+								<producttile showgrade="true" item="itemP" ishomepage="true" class="ng-isolate-scope"><!-- ngIf: !formap --><div class="col-sm-12 col-xs-12 product-tile forgrid ng-scope" ng-if="!formap">
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+
+		
+		
+		<a href="#!/details/4941" class="thumbnail" title="CLICK TO SEE ALL DETAILS"> 
+		<!-- <img src="{{item.images[0].url}}" class="thumbnail img-responsive "> -->
+		<listslider item="item" class="ng-isolate-scope">  <div class="llslider" ng-style="styleHeight()" resizeimg="" style="height: 197px;">
+    <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="myInterval" style="height:197px;">
+    <ol class="carousel-indicators" ng-show="slides.length &gt; 1">
+        <!-- ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+      <!-- ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65527" alt="listpage slider images" class="img-responsive" style="max-height:197px;" src="http://cdn.cpx.net.au/image?id=65527">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope active" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65983" alt="listpage slider images" class="img-responsive" style="max-height:197px;" src="http://cdn.cpx.net.au/image?id=65983">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65526" alt="listpage slider images" class="img-responsive" style="max-height:197px;" src="http://cdn.cpx.net.au/image?id=65526">
+      </div>
+      </div><!-- end ngRepeat: image in item.images -->
+    </div>
+    <a class="left carousel-control" ng-click="prev()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" ng-click="next()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+  </div>
+ 
+</listslider>
+		</a> 
+		
+		<div class="col-lg-12 col-sm-12 col-xs-12 nopadding product-markup pull-right">
+   <!-- ngIf: item.smsf == true --><span class="label label-default smsf flaglabel ng-scope" ng-if="item.smsf == true">SMSF</span><!-- end ngIf: item.smsf == true -->
+  
+   <!-- ngIf: item.deposit == true -->
+  
+   <!-- ngIf: item.sold == true -->
+  
+   <!-- ngIf: item.domacom == true --><span class="label label-default domacom flaglabel ng-scope" ng-if="item.domacom == true">DomaCom</span><!-- end ngIf: item.domacom == true -->
+  
+   <!-- ngIf: !(item.ipr.length>0) -->
+  </div>
+		
+
+	</div>
+	
+	
+	
+  <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">    
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding botm-space2">
+		<div class="col-sm-6 fl-l nopadding fbold ng-binding">Beds 4 |
+			Bath 2 | Car 2</div>
+		<div class="col-sm-6 fl-r nopadding fbold ng-binding">
+			Truganina, VIC</div>
+	</div>
+
+	<div class="col-lg-12 col-sm-12 col-xs-12 fl-lpage nopadding prop-content ng-binding">
+		PARKVIEW, House</div>
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">&nbsp;</div>
+
+	<div class="col-lg-6 col-sm-6 col-xs-12 nopadding">
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Listed price
+			(AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$410,000</div>
+
+			<!-- ngIf: !ishomepage -->
+
+			<!-- ngIf: ishomepage --><div class="col-sm-8 col-xs-8 nopadding fl-lpage fbold ng-scope" ng-if="ishomepage">
+				CPx price <select ng-options="currency as currency.label for currency in currencies | filter : $viewValue" ng-change="updateValue(from, to, item)" ng-model="to.currency" placeholder="Please Enter a Currency..." class="currencyselector ng-pristine ng-untouched ng-valid"><option value="0" selected="selected" label="BGN Bulgarian Lev (1.39 / AUD)">BGN Bulgarian Lev (1.39 / AUD)</option><option value="1" label="BRL Brazilian Real (2.38 / AUD)">BRL Brazilian Real (2.38 / AUD)</option><option value="2" label="CAD Canadian Dollar (0.96 / AUD)">CAD Canadian Dollar (0.96 / AUD)</option><option value="3" label="CHF Swiss Franc (0.74 / AUD)">CHF Swiss Franc (0.74 / AUD)</option><option value="4" label="CNY Chinese Yuan (4.89 / AUD)">CNY Chinese Yuan (4.89 / AUD)</option><option value="5" label="CZK Czech Republic Koruna (19.38 / AUD)">CZK Czech Republic Koruna (19.38 / AUD)</option><option value="6" label="DKK Danish Krone (5.28 / AUD)">DKK Danish Krone (5.28 / AUD)</option><option value="7" label="EUR Euro (0.71 / AUD)">EUR Euro (0.71 / AUD)</option><option value="8" label="GBP British Pound Sterling (0.50 / AUD)">GBP British Pound Sterling (0.50 / AUD)</option><option value="9" label="HKD Hong Kong Dollar (6.12 / AUD)">HKD Hong Kong Dollar (6.12 / AUD)</option><option value="10" label="HRK Croatian Kuna (5.34 / AUD)">HRK Croatian Kuna (5.34 / AUD)</option><option value="11" label="HUF Hungarian Forint (217.52 / AUD)">HUF Hungarian Forint (217.52 / AUD)</option><option value="12" label="IDR Indonesian Rupiah (10,360.06 / AUD)">IDR Indonesian Rupiah (10,360.06 / AUD)</option><option value="13" label="ILS Israeli New Sheqel (3.05 / AUD)">ILS Israeli New Sheqel (3.05 / AUD)</option><option value="14" label="INR Indian Rupee (50.18 / AUD)">INR Indian Rupee (50.18 / AUD)</option><option value="15" label="JPY Japanese Yen (95.51 / AUD)">JPY Japanese Yen (95.51 / AUD)</option><option value="16" label="KRW South Korean Won (863.19 / AUD)">KRW South Korean Won (863.19 / AUD)</option><option value="17" label="MXN Mexican Peso (11.98 / AUD)">MXN Mexican Peso (11.98 / AUD)</option><option value="18" label="MYR Malaysian Ringgit (2.84 / AUD)">MYR Malaysian Ringgit (2.84 / AUD)</option><option value="19" label="NOK Norwegian Krone (5.98 / AUD)">NOK Norwegian Krone (5.98 / AUD)</option><option value="20" label="NZD New Zealand Dollar (1.08 / AUD)">NZD New Zealand Dollar (1.08 / AUD)</option><option value="21" label="PHP Philippine Peso (35.03 / AUD)">PHP Philippine Peso (35.03 / AUD)</option><option value="22" label="PLN Polish Zloty (2.90 / AUD)">PLN Polish Zloty (2.90 / AUD)</option><option value="23" label="RON Romanian Leu (3.15 / AUD)">RON Romanian Leu (3.15 / AUD)</option><option value="24" label="RUB Russian Ruble (39.16 / AUD)">RUB Russian Ruble (39.16 / AUD)</option><option value="25" label="SEK Swedish Krona (6.56 / AUD)">SEK Swedish Krona (6.56 / AUD)</option><option value="26" label="SGD Singapore Dollar (1.05 / AUD)">SGD Singapore Dollar (1.05 / AUD)</option><option value="27" label="THB Thai Baht (26.36 / AUD)">THB Thai Baht (26.36 / AUD)</option><option value="28" label="TRY Turkish Lira (2.03 / AUD)">TRY Turkish Lira (2.03 / AUD)</option><option value="29" label="USD United States Dollar (0.79 / AUD)">USD United States Dollar (0.79 / AUD)</option><option value="30" label="ZAR South African Rand (9.29 / AUD)">ZAR South African Rand (9.29 / AUD)</option><option value="31" selected="selected" label="AUD Australian Dollar (1.00 / AUD)">AUD Australian Dollar (1.00 / AUD)</option></select>
+
+				<a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion">?</a>
+			</div><!-- end ngIf: ishomepage -->
+
+			<!-- ngIf: ishomepage --><div ng-if="ishomepage" class="ng-scope">
+			<!-- ngIf: !(item.currencylabel_home) --><div ng-if="!(item.currencylabel_home)" class="ng-scope">
+		<!-- ngIf: (item.convertedcpx_home) -->
+		<!-- ngIf: !(item.convertedcpx_home) --><div class="col-sm-4 col-xs-4 nopadding fl-rpage fbold ng-binding ng-scope" ng-if="!(item.convertedcpx_home)">$400,000</div><!-- end ngIf: !(item.convertedcpx_home) -->
+		</div><!-- end ngIf: !(item.currencylabel_home) -->
+		
+		<!-- ngIf: (item.currencylabel_home) -->
+		</div><!-- end ngIf: ishomepage -->
+
+
+
+			<!-- ngIf: !ishomepage -->
+		
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Saving (AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$10,000</div>
+	</div>
+	<!-- ngIf: (showgrade && item.ipr.length > 0) --><div class="col-sm-6 fl-lpage tilegrade ng-scope" ng-if="(showgrade &amp;&amp; item.ipr.length &gt; 0)">
+		<propertygrade item="item" class="ng-isolate-scope"><div class="col-sm-8 col-xs-7 grade-text ">
+	<span class="fbold" style="font-size: 20px;">GRADE</span>
+</div>
+<div class="col-sm-4 col-xs-5  grade-box">
+	<div class="gradecicle ng-binding Bcircle" ng-class="selectgradecolor(item.grade)">B</div>
+</div></propertygrade>
+	</div><!-- end ngIf: (showgrade && item.ipr.length > 0) -->
+</div>
+
+</div><!-- end ngIf: !formap -->
+
+
+<!-- ngIf: formap --></producttile>
+							</div><!-- end ngIf: $index<3 --><!-- end ngRepeat: itemP in (filteredItems = (properties | filter:{ featured: true })) -->
+						</div>	
+					</div>
+				</div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    
+				
+					<div class="row ng-scope">
+						<div class="col-sm-12 tab-container">
+							<!-- ngRepeat: itemP in (filteredItems = (properties | filter:{ latest: true } |orderBy: sortdate :true)) --><!-- ngIf: $index<3 --><div class="col-sm-4 product-tile-container ng-scope" ng-repeat="itemP in (filteredItems = (properties | filter:{ latest: true } |orderBy: sortdate :true))" ng-if="$index&lt;3">
+								<producttile showgrade="true" item="itemP" class="ng-isolate-scope"><!-- ngIf: !formap --><div class="col-sm-12 col-xs-12 product-tile forgrid ng-scope" ng-if="!formap">
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+
+		
+		
+		<a href="#!/details/4941" class="thumbnail" title="CLICK TO SEE ALL DETAILS"> 
+		<!-- <img src="{{item.images[0].url}}" class="thumbnail img-responsive "> -->
+		<listslider item="item" class="ng-isolate-scope">  <div class="llslider" ng-style="styleHeight()" resizeimg="" style="height: 0px;">
+    <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="myInterval" style="height:0px;">
+    <ol class="carousel-indicators" ng-show="slides.length &gt; 1">
+        <!-- ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+      <!-- ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope active left" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65527" alt="listpage slider images" class="img-responsive" style="max-height:0px;" src="http://cdn.cpx.net.au/image?id=65527">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope next left" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65983" alt="listpage slider images" class="img-responsive" style="max-height:0px;" src="http://cdn.cpx.net.au/image?id=65983">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65526" alt="listpage slider images" class="img-responsive" style="max-height:0px;" src="http://cdn.cpx.net.au/image?id=65526">
+      </div>
+      </div><!-- end ngRepeat: image in item.images -->
+    </div>
+    <a class="left carousel-control" ng-click="prev()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" ng-click="next()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+  </div>
+ 
+</listslider>
+		</a> 
+		
+		<div class="col-lg-12 col-sm-12 col-xs-12 nopadding product-markup pull-right">
+   <!-- ngIf: item.smsf == true --><span class="label label-default smsf flaglabel ng-scope" ng-if="item.smsf == true">SMSF</span><!-- end ngIf: item.smsf == true -->
+  
+   <!-- ngIf: item.deposit == true -->
+  
+   <!-- ngIf: item.sold == true -->
+  
+   <!-- ngIf: item.domacom == true --><span class="label label-default domacom flaglabel ng-scope" ng-if="item.domacom == true">DomaCom</span><!-- end ngIf: item.domacom == true -->
+  
+   <!-- ngIf: !(item.ipr.length>0) -->
+  </div>
+		
+
+	</div>
+	
+	
+	
+  <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">    
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding botm-space2">
+		<div class="col-sm-6 fl-l nopadding fbold ng-binding">Beds 4 |
+			Bath 2 | Car 2</div>
+		<div class="col-sm-6 fl-r nopadding fbold ng-binding">
+			Truganina, VIC</div>
+	</div>
+
+	<div class="col-lg-12 col-sm-12 col-xs-12 fl-lpage nopadding prop-content ng-binding">
+		PARKVIEW, House</div>
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">&nbsp;</div>
+
+	<div class="col-lg-6 col-sm-6 col-xs-12 nopadding">
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Listed price
+			(AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$410,000</div>
+
+			<!-- ngIf: !ishomepage --><div class="col-sm-8 col-xs-8 nopadding fl-lpage fbold ng-scope" ng-if="!ishomepage">
+				CPx price <!-- ngIf: (item.currencylabel) -->
+				<!-- ngIf: !(item.currencylabel) --><span ng-if="!(item.currencylabel)" class="ng-scope">(AUD)</span><!-- end ngIf: !(item.currencylabel) -->
+
+				<!-- <select
+        	ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+          
+          ng-change="updateValue(from, to, item)"
+          ng-model="to.currency"
+          placeholder="Please Enter a Currency..."
+          class="currencyselector"></select> -->
+
+				<a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion">?</a>
+
+			</div><!-- end ngIf: !ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+
+
+			<!-- ngIf: !ishomepage --><div ng-if="!ishomepage" class="ng-scope">
+			<!-- ngIf: !(item.currencylabel) --><div ng-if="!(item.currencylabel)" class="ng-scope">
+		<!-- ngIf: (item.convertedcpx) -->
+		<!-- ngIf: !(item.convertedcpx) --><div class="col-sm-4 col-xs-4 nopadding fl-rpage fbold ng-binding ng-scope" ng-if="!(item.convertedcpx)">$400,000</div><!-- end ngIf: !(item.convertedcpx) -->
+		</div><!-- end ngIf: !(item.currencylabel) -->
+		
+		<!-- ngIf: (item.currencylabel) -->
+		</div><!-- end ngIf: !ishomepage -->
+		
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Saving (AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$10,000</div>
+	</div>
+	<!-- ngIf: (showgrade && item.ipr.length > 0) --><div class="col-sm-6 fl-lpage tilegrade ng-scope" ng-if="(showgrade &amp;&amp; item.ipr.length &gt; 0)">
+		<propertygrade item="item" class="ng-isolate-scope"><div class="col-sm-8 col-xs-7 grade-text ">
+	<span class="fbold" style="font-size: 20px;">GRADE</span>
+</div>
+<div class="col-sm-4 col-xs-5  grade-box">
+	<div class="gradecicle ng-binding Bcircle" ng-class="selectgradecolor(item.grade)">B</div>
+</div></propertygrade>
+	</div><!-- end ngIf: (showgrade && item.ipr.length > 0) -->
+</div>
+
+</div><!-- end ngIf: !formap -->
+
+
+<!-- ngIf: formap --></producttile>
+							</div><!-- end ngIf: $index<3 --><!-- end ngRepeat: itemP in (filteredItems = (properties | filter:{ latest: true } |orderBy: sortdate :true)) --><!-- ngIf: $index<3 --><div class="col-sm-4 product-tile-container ng-scope" ng-repeat="itemP in (filteredItems = (properties | filter:{ latest: true } |orderBy: sortdate :true))" ng-if="$index&lt;3">
+								<producttile showgrade="true" item="itemP" class="ng-isolate-scope"><!-- ngIf: !formap --><div class="col-sm-12 col-xs-12 product-tile forgrid ng-scope" ng-if="!formap">
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+
+		
+		
+		<a href="#!/details/4942" class="thumbnail" title="CLICK TO SEE ALL DETAILS"> 
+		<!-- <img src="{{item.images[0].url}}" class="thumbnail img-responsive "> -->
+		<listslider item="item" class="ng-isolate-scope">  <div class="llslider" ng-style="styleHeight()" resizeimg="" style="height: 0px;">
+    <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="myInterval" style="height:0px;">
+    <ol class="carousel-indicators" ng-show="slides.length &gt; 1">
+        <!-- ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+      <!-- ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope active left" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65529" alt="listpage slider images" class="img-responsive" style="max-height:0px;" src="http://cdn.cpx.net.au/image?id=65529">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope next left" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65530" alt="listpage slider images" class="img-responsive" style="max-height:0px;" src="http://cdn.cpx.net.au/image?id=65530">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65528" alt="listpage slider images" class="img-responsive" style="max-height:0px;" src="http://cdn.cpx.net.au/image?id=65528">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65532" alt="listpage slider images" class="img-responsive" style="max-height:0px;" src="http://cdn.cpx.net.au/image?id=65532">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65531" alt="listpage slider images" class="img-responsive" style="max-height:0px;" src="http://cdn.cpx.net.au/image?id=65531">
+      </div>
+      </div><!-- end ngRepeat: image in item.images -->
+    </div>
+    <a class="left carousel-control" ng-click="prev()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" ng-click="next()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+  </div>
+ 
+</listslider>
+		</a> 
+		
+		<div class="col-lg-12 col-sm-12 col-xs-12 nopadding product-markup pull-right">
+   <!-- ngIf: item.smsf == true --><span class="label label-default smsf flaglabel ng-scope" ng-if="item.smsf == true">SMSF</span><!-- end ngIf: item.smsf == true -->
+  
+   <!-- ngIf: item.deposit == true -->
+  
+   <!-- ngIf: item.sold == true -->
+  
+   <!-- ngIf: item.domacom == true --><span class="label label-default domacom flaglabel ng-scope" ng-if="item.domacom == true">DomaCom</span><!-- end ngIf: item.domacom == true -->
+  
+   <!-- ngIf: !(item.ipr.length>0) -->
+  </div>
+		
+
+	</div>
+	
+	
+	
+  <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">    
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding botm-space2">
+		<div class="col-sm-6 fl-l nopadding fbold ng-binding">Beds 3 |
+			Bath 2 | Car 1</div>
+		<div class="col-sm-6 fl-r nopadding fbold ng-binding">
+			Roxburgh Park, VIC</div>
+	</div>
+
+	<div class="col-lg-12 col-sm-12 col-xs-12 fl-lpage nopadding prop-content ng-binding">
+		EDEN PARK, House</div>
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">&nbsp;</div>
+
+	<div class="col-lg-6 col-sm-6 col-xs-12 nopadding">
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Listed price
+			(AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$365,000</div>
+
+			<!-- ngIf: !ishomepage --><div class="col-sm-8 col-xs-8 nopadding fl-lpage fbold ng-scope" ng-if="!ishomepage">
+				CPx price <!-- ngIf: (item.currencylabel) -->
+				<!-- ngIf: !(item.currencylabel) --><span ng-if="!(item.currencylabel)" class="ng-scope">(AUD)</span><!-- end ngIf: !(item.currencylabel) -->
+
+				<!-- <select
+        	ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+          
+          ng-change="updateValue(from, to, item)"
+          ng-model="to.currency"
+          placeholder="Please Enter a Currency..."
+          class="currencyselector"></select> -->
+
+				<a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion">?</a>
+
+			</div><!-- end ngIf: !ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+
+
+			<!-- ngIf: !ishomepage --><div ng-if="!ishomepage" class="ng-scope">
+			<!-- ngIf: !(item.currencylabel) --><div ng-if="!(item.currencylabel)" class="ng-scope">
+		<!-- ngIf: (item.convertedcpx) -->
+		<!-- ngIf: !(item.convertedcpx) --><div class="col-sm-4 col-xs-4 nopadding fl-rpage fbold ng-binding ng-scope" ng-if="!(item.convertedcpx)">$355,000</div><!-- end ngIf: !(item.convertedcpx) -->
+		</div><!-- end ngIf: !(item.currencylabel) -->
+		
+		<!-- ngIf: (item.currencylabel) -->
+		</div><!-- end ngIf: !ishomepage -->
+		
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Saving (AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$10,000</div>
+	</div>
+	<!-- ngIf: (showgrade && item.ipr.length > 0) --><div class="col-sm-6 fl-lpage tilegrade ng-scope" ng-if="(showgrade &amp;&amp; item.ipr.length &gt; 0)">
+		<propertygrade item="item" class="ng-isolate-scope"><div class="col-sm-8 col-xs-7 grade-text ">
+	<span class="fbold" style="font-size: 20px;">GRADE</span>
+</div>
+<div class="col-sm-4 col-xs-5  grade-box">
+	<div class="gradecicle ng-binding Bcircle" ng-class="selectgradecolor(item.grade)">B</div>
+</div></propertygrade>
+	</div><!-- end ngIf: (showgrade && item.ipr.length > 0) -->
+</div>
+
+</div><!-- end ngIf: !formap -->
+
+
+<!-- ngIf: formap --></producttile>
+							</div><!-- end ngIf: $index<3 --><!-- end ngRepeat: itemP in (filteredItems = (properties | filter:{ latest: true } |orderBy: sortdate :true)) --><!-- ngIf: $index<3 --><div class="col-sm-4 product-tile-container ng-scope" ng-repeat="itemP in (filteredItems = (properties | filter:{ latest: true } |orderBy: sortdate :true))" ng-if="$index&lt;3">
+								<producttile showgrade="true" item="itemP" class="ng-isolate-scope"><!-- ngIf: !formap --><div class="col-sm-12 col-xs-12 product-tile forgrid ng-scope" ng-if="!formap">
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">
+
+		
+		
+		<a href="#!/details/4931" class="thumbnail" title="CLICK TO SEE ALL DETAILS"> 
+		<!-- <img src="{{item.images[0].url}}" class="thumbnail img-responsive "> -->
+		<listslider item="item" class="ng-isolate-scope">  <div class="llslider" ng-style="styleHeight()" resizeimg="" style="height: 0px;">
+    <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="myInterval" style="height:0px;">
+    <ol class="carousel-indicators" ng-show="slides.length &gt; 1">
+        <!-- ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope active"></li><!-- end ngRepeat: slide in slides track by $index --><li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)" class="ng-scope"></li><!-- end ngRepeat: slide in slides track by $index -->
+    </ol>
+    <div class="carousel-inner" ng-transclude="">
+      <!-- ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope active left" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65341" alt="listpage slider images" class="img-responsive" style="max-height:0px;" src="http://cdn.cpx.net.au/image?id=65341">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope next left" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65342" alt="listpage slider images" class="img-responsive" style="max-height:0px;" src="http://cdn.cpx.net.au/image?id=65342">
+      </div>
+      </div><!-- end ngRepeat: image in item.images --><div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="image in item.images" active="slide.active">
+      <div class="ng-scope">
+    
+        <img ng-src="http://cdn.cpx.net.au/image?id=65340" alt="listpage slider images" class="img-responsive" style="max-height:0px;" src="http://cdn.cpx.net.au/image?id=65340">
+      </div>
+      </div><!-- end ngRepeat: image in item.images -->
+    </div>
+    <a class="left carousel-control" ng-click="prev()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" ng-click="next()" ng-show="slides.length &gt; 1"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+  </div>
+ 
+</listslider>
+		</a> 
+		
+		<div class="col-lg-12 col-sm-12 col-xs-12 nopadding product-markup pull-right">
+   <!-- ngIf: item.smsf == true --><span class="label label-default smsf flaglabel ng-scope" ng-if="item.smsf == true">SMSF</span><!-- end ngIf: item.smsf == true -->
+  
+   <!-- ngIf: item.deposit == true -->
+  
+   <!-- ngIf: item.sold == true -->
+  
+   <!-- ngIf: item.domacom == true -->
+  
+   <!-- ngIf: !(item.ipr.length>0) -->
+  </div>
+		
+
+	</div>
+	
+	
+	
+  <div class="col-lg-12 col-sm-12 col-xs-12 nopadding">    
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding botm-space2">
+		<div class="col-sm-6 fl-l nopadding fbold ng-binding">Beds 1 |
+			Bath 1 | Car 1</div>
+		<div class="col-sm-6 fl-r nopadding fbold ng-binding">
+			Ormond, VIC</div>
+	</div>
+
+	<div class="col-lg-12 col-sm-12 col-xs-12 fl-lpage nopadding prop-content ng-binding">
+		538 North, Apartment</div>
+	<div class="col-lg-12 col-sm-12 col-xs-12 nopadding">&nbsp;</div>
+
+	<div class="col-lg-6 col-sm-6 col-xs-12 nopadding">
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Listed price
+			(AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$375,000</div>
+
+			<!-- ngIf: !ishomepage --><div class="col-sm-8 col-xs-8 nopadding fl-lpage fbold ng-scope" ng-if="!ishomepage">
+				CPx price <!-- ngIf: (item.currencylabel) -->
+				<!-- ngIf: !(item.currencylabel) --><span ng-if="!(item.currencylabel)" class="ng-scope">(AUD)</span><!-- end ngIf: !(item.currencylabel) -->
+
+				<!-- <select
+        	ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+          
+          ng-change="updateValue(from, to, item)"
+          ng-model="to.currency"
+          placeholder="Please Enter a Currency..."
+          class="currencyselector"></select> -->
+
+				<a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion">?</a>
+
+			</div><!-- end ngIf: !ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+			<!-- ngIf: ishomepage -->
+
+
+
+			<!-- ngIf: !ishomepage --><div ng-if="!ishomepage" class="ng-scope">
+			<!-- ngIf: !(item.currencylabel) --><div ng-if="!(item.currencylabel)" class="ng-scope">
+		<!-- ngIf: (item.convertedcpx) -->
+		<!-- ngIf: !(item.convertedcpx) --><div class="col-sm-4 col-xs-4 nopadding fl-rpage fbold ng-binding ng-scope" ng-if="!(item.convertedcpx)">$362,875</div><!-- end ngIf: !(item.convertedcpx) -->
+		</div><!-- end ngIf: !(item.currencylabel) -->
+		
+		<!-- ngIf: (item.currencylabel) -->
+		</div><!-- end ngIf: !ishomepage -->
+		
+		<div class="col-sm-8 col-xs-8 nopadding fl-lpage">Saving (AUD)</div>
+		<div class="col-sm-4 col-xs-4 nopadding fl-rpage ng-binding">$12,125</div>
+	</div>
+	<!-- ngIf: (showgrade && item.ipr.length > 0) --><div class="col-sm-6 fl-lpage tilegrade ng-scope" ng-if="(showgrade &amp;&amp; item.ipr.length &gt; 0)">
+		<propertygrade item="item" class="ng-isolate-scope"><div class="col-sm-8 col-xs-7 grade-text ">
+	<span class="fbold" style="font-size: 20px;">GRADE</span>
+</div>
+<div class="col-sm-4 col-xs-5  grade-box">
+	<div class="gradecicle ng-binding Bcircle" ng-class="selectgradecolor(item.grade)">B</div>
+</div></propertygrade>
+	</div><!-- end ngIf: (showgrade && item.ipr.length > 0) -->
+</div>
+
+</div><!-- end ngIf: !formap -->
+
+
+<!-- ngIf: formap --></producttile>
+							</div><!-- end ngIf: $index<3 --><!-- end ngRepeat: itemP in (filteredItems = (properties | filter:{ latest: true } |orderBy: sortdate :true)) -->		
+						</div>
+					</div>
+					
+				
+				</div><!-- end ngRepeat: tab in tabs -->
+  </div>
+</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<a type="button" class="btn btn-link main-button" ng-click="checkClickedview();" href="#!/view-graded-properties" title="VIEW GRADED PROPERTIES">VIEW ALL PROPERTIES</a>
+		</div>
+	</div>
+	
+</div>
+		</div>
+		<div footer=""><div class="logo-border pad-bot"></div>
+        
+<div class="container">
+	<div class="row">
+      
+      <div class="col-md-8">
+       <div class="row">
+         
+		<div class="col-sm-4 col-xs-12">
+			<div class="pad-bot5">&nbsp;</div>
+			<div class="fbold">PROPERTIES</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedview();" href="#!/view-graded-properties" title="View graded properties">View graded properties</a>
+			</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedlist();" href="#!/list-your-property-on-cpx/list-property" title="List your property on CPx">List your property on CPx</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">REPORTS</div>
+			<div>
+				<a class="footer-data inactive-a" ng-click="checkClickedorder();" href="#!/order-independent-reports" title="Order independent reports">Order independent reports</a>
+			</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">CPx MARKETPLACE</div>
+			<div>
+				<a class="footer-data inactive-a" href="#!/marketplace/find-industry-professionals" title="Find industry professionals">Find industry professionals</a>
+			</div>
+
+		</div>
+				<div class="col-sm-4 col-xs-12">
+					<div class=" pad-bot5">&nbsp;</div>
+					<div class=" fbold">ABOUT</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-cpx" title="What is CPx?">What is CPx?</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-process" title="Independent process">Independent process</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/independent-property-review" title="Independent property review(ipr)">Independent property review
+							(ipr)</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/about/what-is-graded" title="What is graded?">What is graded?</a>
+					</div>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+					<div class=" fbold">LEGALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/privacy" title="Privacy">Privacy</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/terms-and-conditions" title="Terms &amp; conditions">Terms &amp; conditions</a>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-12 ">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">BLOG</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/press-releases/subid" title="Press releases">Press releases</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/Publications/subid" title="Publications">Publications</a>
+				</div>
+				<div>
+					<a class="footer-data inactive-a" href="#!/blog/cpx-announcements/subid" title="CPx announcements">CPx announcements</a>
+				</div>
+				<div class="">
+					<a class="footer-data inactive-a" href="#!/blog/FAQs/subid" title="Frequently Asked Questions">FAQs</a>
+				</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+			<div class=" fbold">INDUSTRY PROFESSIONALS</div>
+					<div>
+						<a class="footer-data inactive-a" href="#!/industry/working-with-cpx" title="Working with CPx">Working with CPx</a>
+					</div>
+					<div>
+						<a class="footer-data inactive-a" href="http://graded.centralpropertyexchange.com.au/login?ReturnUrl=/" target="_blank" title="Business login">Business
+							login</a>
+					</div>
+
+				</div>
+        
+        </div></div>
+        
+		<div class="col-sm-4 col-xs-12 mailformcontainer">
+			<div class=" pad-bot5">&nbsp;</div>
+			<div class=" fbold">CONTACT</div>
+			<div>
+				<a ng-click="shownothing = true" href="#!/contact" class="footer-data inactive-a" title="Contact us">Online form</a>
+			</div>
+
+
+			<div>
+				<span class="footer-data inactive-a">Telephone: +61 2 8006
+					1979</span>
+			</div>
+			<div>
+
+				<span class="footer-data inactive-a">Mobile/cell: +61 410 510
+					997</span>
+
+			</div>
+			<div class=" footemail">
+				<a class="footer-data inactive-a" href="mailto:contact@centralpropertyexchange.com" title="Contact us via email">Email:
+					contact@centralpropertyexchange.com</a>
+			</div>
+          <div>&nbsp;</div>
+			
+   
+
+    
+     <div class="email-update">
+     <form action="//landlordcentral.us2.list-manage.com/subscribe/post?u=44d30abfcde67c3847612b5cb&amp;id=4583813c3e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate ng-pristine ng-valid ng-valid-email" target="_blank" novalidate="">
+      <div class="fbold updatetextpad">EMAIL UPDATES</div> 
+       <div>
+        <span class="footer-data inactive-a"><p class="registertext">Register your email to receive industry news and insights from CPx.</p></span>
+       </div>
+       	   	   
+        <div class="type-email clearfix">
+         <span class="pull-left"><input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Type your email address here" class="input-bg ng-pristine ng-untouched ng-valid ng-valid-email" ng-model="registrationForm.email"> </span>
+         <span class="pull-right"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="btn sub-btn" ng-click="resetform()"> </span>
+       </div>
+       <p class="bot-txt">You will be sent a verification email to activate your registration.</p>
+    </form>
+    </div>        
+            
+            
+		</div>
+ 
+  
+  
+  
+
+	</div>
+</div>
+
+		
+    <div class="bottom-line"></div></div>
+		</div>
+	</div>
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+	
+    <script src="js/jquery.1.11.2/jquery-1.11.2.min.js"></script>
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+	<script src="js/angularjs/1.3.10/angular.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-route.min.js"></script>
+	<script src="js/angularjs/1.3.10/angular-resource.min.js"></script>
+    
+	<!-- Our Website Javascripts -->
+	<script src="js/app/constants.js"></script>
+	<script src="js/app/main.js"></script>
+	<script src="js/app/controllers.js"></script>
+	<script src="js/app/directives.js"></script>
+	<script src="js/app/services.js"></script>
+	<script src="js/app/filters.js"></script>
+	
+	
+	
+	<!-- below needs to be loaded before angular-google-maps.min.js -->
+    <!-- Directives for bootstrap -->
+    <script src="js/thirdparty/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <!-- overloaded some code from  ui-bootstrap-tpls-0.12.0-->
+    <script src="js/thirdparty/overloaded-ui-bootstrap-tpls-0.12.0.js"></script>
+    <!-- Directives for tab menu -->
+    <script src="js/thirdparty/df-tab-menu.js"></script>
+	<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script><script src="http://maps.gstatic.com/maps-api-v3/api/js/21/0/main.js"></script>
+	<script src="js/thirdparty/lodash.min.js"></script>
+	<script src="js/thirdparty/angular-google-maps.min.js"></script>
+	<script src="js/thirdparty/angular-filter.js"></script>
+	
+	<script src="js/thirdparty/decimal-places.js"></script>
+	<script src="js/thirdparty/open-exchange-rates.js"></script>
+	<script src="js/thirdparty/angular-sanitize.js"></script>
+	<script src="js/thirdparty/ng-map.min.js"></script>
+	<script src="js/thirdparty/Chart.js"></script>
+	<script src="js/thirdparty/angular-chart.js"></script>
+	<script src="js/thirdparty/nsPopover.js"></script>
+	
+	  <script src="http://platform.twitter.com/widgets.js"></script>
+	  <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true"></script>
+	
+  
+</body></html>

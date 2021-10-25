@@ -1,0 +1,11 @@
+<span ng-repeat="item in ipr_history" >
+    <span ng-if="grade_table_status[item.id].isopen" class="Gradebtn" style="font-weight: normal;">Grade<span class="badge">{{item.grade}}</span></span>
+    <span ng-if="grade_table_status[item.id].isopen" class="tabScore">&nbsp;&nbsp;Score<strong>&nbsp;{{item.score}}</strong></span>
+    
+    <span  class="dwonloadpdf" ng-if="grade_table_status[item.id].isopen">
+        <a  style="width: auto !important;" href="javascript:void(0);" ng-click="go(item.document_url)" class="editbtnall dwonloadpdfBuy right-pdficon"><strong>Download free ipr</strong></a>                      
+        
+    	<a  style="margin-bottom:3px !important; border:none;"  href="javascript:void(0);" ng-click="go(item.document_url)" class="btn btn-social-icon btn-pdf top-icon"></a>
+                                                  
+    </span>
+</span>

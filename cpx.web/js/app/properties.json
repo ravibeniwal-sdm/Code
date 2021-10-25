@@ -1,0 +1,195 @@
+{"properties": 
+
+
+
+
+
+[
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+	 "id":"4931",
+	 "name":"538 North",
+	 "date_created": "2015-03-30T11:35:44",  
+	 "featured": true,
+	 "latest": true,
+	 "type":"residential",
+	 "category":"Apartment",
+	 "listedprice":"375000.0",
+	 "cpxprice":"362875.0",
+	 "saving":"12125.0",
+	 "beds":"1",
+	 "bath":"1",
+	 "cars":"1",
+	 "observation":"This is a new 1 bedroom, 1 bathroom unit of a boutique size and comments relate, where relevant, to the market completion of the property, advised as early 2016. The unit area totals 59 sqm, comprising 50 sqm of living and 9 sqm balcony with secure car parking in a car stacker. This is a small size for a 1 bedroom apartment. The floor plan is a standard rectangle design, on the edge of the building on level 1, adjacent the lift well. The bathroom contains a shower, knee bath, WC and hand basin. The unit will face south, away from the roadway.",
+	 "buildingarea":"50",
+	 "landarea":"9",
+	 "marketrent":"320.0","320.0"
+	 "IsHouseLandPackage":"no",
+	 
+	 "coords": {
+       "latitude": "-37.903855",
+       "longitude": "145.0388196"
+   },
+	 
+	 "address":[{"StreetNumber":"1.15","LotNumber":"","street":"538 North Rd","suburb":"Ormond","state":"VIC","postcode":"3204","country":"Australia"}],
+	 "smsf":true,
+	 "sold":false,
+	 "deposit":false,
+	 "domacom":false,
+	 "images":[{"id":"0","url":"http://cdn.cpx.net.au/image?id=65341"},
+	        {"id":"1","url":"http://cdn.cpx.net.au/image?id=65342"},
+	        {"id":"2","url":"http://cdn.cpx.net.au/image?id=65340"}
+	        ],
+	        
+	 
+	 "grade":"A",
+	 "gradelabel":"Filter by grade: A - a score equal or above 210",
+	 "score":null,
+	 "ReviewId":"fe5d7f3f-383d-4170-a349-c200167d8499",
+	 "ReviewDataUri":"http://api.propdata.com.au/review/fe5d7f3f-383d-4170-a349-c200167d8499",
+	 
+	 "ipr":[
+	      {
+		 
+	     "url":"http://cdn.cpx.net.au/reports/independent/ipr/download/fe5d7f3f-383d-4170-a349-c200167d8499",	 
+		 "propertyGrade":[{"name":"Historical growth rate","value":"4"},
+		                {"name":"Price risk","value":"5"},
+		                {"name":"Demographics","value":"3"},
+		                {"name":"Internal floor plan flow","value":"3"},
+		                {"name":"Street scape/traffic flow","value":"2"},
+		                {"name":"Parking","value":"3"},
+		                {"name":"Outdoor space","value":"1"}
+		                ]                
+	 }
+	      
+	 ],        
+	 
+	 "estimate":[],
+	 
+	 "contract":[{"url":"http://static.centralpropertyexchange.com.au/538North/NorthRdOrmondCOS.pdf"}],
+	 
+	 "sale_summary":[],
+	 
+	 "history":[{"url":"http://www.centralpropertyexchange.com.au/docs/3204-historical-growth.pdf"}],
+	 
+	 "how_to_buy":[],
+	
+	 "loan_cal":[],
+
+	 "invest_cal":[],
+	 
+	 "support_info":[{"Title":"Brochure","Uri":"http://static.centralpropertyexchange.com.au/538North/Brochure-538North.pdf"},
+	 {"Title":"Inclusions","Uri":"http://static.centralpropertyexchange.com.au/538North/Inclusions.pdf"},
+	 {"Title":"Floorplans","Uri":"http://cdn.cpx.net.au/image?id=65343"}
+	 ]
+},
+
+
+
+
+
+{
+"id": "5067",
+"name": "One Whitsundays",
+"date_created": "",
+"featured": true,
+"latest": true,
+"type": "residential",
+"category": "apartment",
+"listedprice": 375500,
+"cpxprice": 353970,
+"saving": 21530,
+"beds": "1",
+"bath": "1",
+"cars": "1",
+"observation": "This is a new 1 bedroom unit and comments relate, where relevant, to the market completion of the property. The unit area totals 69sqm comprising 55sqm of living area and 14sqm of balcony. This is an average size for a 1 bedroom apartment. There is a single car space in a secure car parking area. The floor plan is above average and the apartment is well appointed and stylish. The apartment is located in a tourist focused holiday sea-side destination area. The property is a modern design and is being marketed as a prestige development. This property would appeal to investors looking for a holiday rental property or to professional couples. The One Whitsunday Resort, Spa and Conference Centre development has a number of high quality design features including pool, bbq, tennis court, games room and gymnasium.",
+"buildingarea": "55",
+"landarea": "14",
+"marketrent": 770,
+"IsHouseLandPackage": "no",
+"coords": {"latitude": "-20.2687204","longitude": "148.7184564"},
+"address": [{"LotNumber": null,"StreetNumber": "C,D 1","street": "Whisper Bay","suburb": "Airlie Beach","state": "QLD","country": "Australia","postcode": "4802"}],
+"smsf": true,
+"sold": false,
+"deposit": false,
+"domacom": true,
+
+"images": [{"id": 0,"url": "http://cdn.cpx.net.au/image?id=67240"},
+		   {"id": 1,"url": "http://cdn.cpx.net.au/image?id=67241"},
+		   {"id": 2,"url": "http://cdn.cpx.net.au/image?id=67242"},
+		   {"id": 3,"url": "http://cdn.cpx.net.au/image?id=67243"},
+		   {"id": 4,"url": "http://cdn.cpx.net.au/image?id=67244"},
+		   {"id": 5,"url": "http://cdn.cpx.net.au/image?id=67245"},
+		   {"id": 6,"url": "http://cdn.cpx.net.au/image?id=67239"}
+],
+
+"grade": "B",
+"gradelabel": "Filter by grade: B - a score equal or above 155",
+"score":205,
+
+"ipr": [
+	   {
+		"url": "http:\/\/cdn.cpx.net.au\/reports\/independent\/ipr\/download\/094341ea-839c-4c00-9d85-68a86f872a94",
+		"propertyGrade": [{"name": "Historical growth rate","value": 2},
+						  {"name": "Price risk","value": 3},
+						  {"name": "Demographics","value": 3},
+						  {"name": "Internal floor plan flow","value": 3},
+						  {"name": "Street scape\/traffic flow","value": 2},
+						  {"name": "Parking","value": 3},
+						  {"name": "Outdoor space","value": 1}
+		]
+		 }				  
+       ],
+      
+
+"estimate": [],  
+
+ "contract":[{"url":"http://static.centralpropertyexchange.com.au.s3.amazonaws.com/Jo%20Brown/Completecontract-09092014.pdf"}],
+
+"sale_summary": [],
+"history": [],
+"how_to_buy": [],
+"loan_cal": [],
+"invest_cal": [],
+"support_info": [{"Title": "Floor plans","Uri": "http:\/\/static.centralpropertyexchange.com.au.s3.amazonaws.com\/Jo%20Brown\/ONE-Floorplans-All.pdf"},
+				 {"Title": "Disclosure statement","Uri": "http:\/\/static.centralpropertyexchange.com.au.s3.amazonaws.com\/Jo%20Brown\/DisclosureStatementcomplete09092014.pdf"},
+			 	 {"Title": "Marketing Brochure","Uri": "http:\/\/static.centralpropertyexchange.com.au.s3.amazonaws.com\/Jo%20Brown\/One-Whitsundays-Marketing-Brochure.pdf"},
+	 	 		 {"Title": "Zero deposit funding","Uri": "http:\/\/propzero.com.au\/"}]
+
+}
+
+
+
+
+
+		
+														
+														
+														
+														
+	
+
+]}

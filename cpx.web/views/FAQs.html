@@ -1,0 +1,1158 @@
+ <script type="text/ng-template" id="mymailcontent.html">
+      
+  <div class="modal-body sharemailbody">                       
+       <form name="myForm">
+     <label class="title" for="yourname">Email to a friend</label><br>
+			
+            <div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your email<i class="required-text asterisk">*</i></label>
+				   <input type="text" class="form-control" ng-model="sharemail.youremail" ng-required='!sharemail.youremail'/>
+				</div>
+			</div>
+
+
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">To email<i class="required-text asterisk">*</i></label>
+				   <input type="email" class="form-control" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" ng-model="sharemail.toemail" ng-required='!sharemail.toemail'/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Subject</label>
+				   <input type="text" class="form-control" ng-init="sharemail.subject = subject" ng-model="sharemail.subject"/>
+				</div>
+			</div>
+			<div class="contactinput" style="display:none;">
+				<div class="form-group">
+					<input type="text" class="form-control" ng-init="sharemail.from = 'faq'" ng-model="sharemail.from"/>
+					<input type="text" class="form-control" ng-init="sharemail.absurl = absurl" ng-model="sharemail.absurl"/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your message</label>
+				 <textarea class="form-control" style="width:100%; height: 170px;" ng-init="sharemail.message = txtmsg" ng-model="sharemail.message"></textarea>
+			<br>				
+			This email was sent by:&nbsp;<span style="font-size: 12px" ng-bind="sharemail.youremail"></span>
+			</div>
+			</div>
+
+<div class="modal-footer sharemail">
+			<div class="col-sm-2 nopadding">
+				<button type="submit" class="btn btn-default btn-lg btn-block" ng-click='(!(sharemail.toemail && sharemail.youremail))?" ":sendEmail();'>SEND</button>
+			</div>
+
+            <button class="btncancle btn-warning btn-lg" ng-click="cancel()">Cancel</button>
+		</div>	
+			
+			
+			</form>
+</div>
+    	</script>
+<div class="static-content">
+<accordion class="static-accordian faqaccordian">
+   
+   <a id="one"></a>
+    <accordion-group is-open="status[0].value" class="firstpanelchild">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[0].value, 'glyphicon glyphicon-minus': status[0].value}"></i>
+  						<ul style="list-style-type:decimal;">
+	  						<li>
+	  						How does the CPx website traffic compare to major real estate advertising websites, which claim millions of hits / page views per month?
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq1')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('one')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[0].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[0].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/how-cpx-traffic-compare')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[0].url}}" target="_blank"  share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[0].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[0].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[0].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[0].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[0].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					Comparing hits or page views is secondary when the real question is, "what is the buyer's experience?" Please allow us to explain.  
+         					A part of the reason why there are so many hits or page views on these sites is because the information is NOT independent or consistent. 
+         					Buyers are forced to make numerous enquiries in their efforts to short list suitable properties.  
+         					This traditional process can be frustrating for the seller and buyer.  
+         					On CPx, the independent listing process mitigates unnecessary enquiries.
+         				</p>
+         				<p>
+         					Another major point to consider, is that buyers come from trusted sources.  For example, when seeking the services of a professional, 
+         					a buyer would generally seek guidance from their network.
+         				</p>
+         				<p>
+         					Since the information on CPx is independent, buyer's agents (including the financial services industry) would be the key users of CPx 
+         					and are in a better position to offer support in identifying suitable and unbiased information on properties for their clients.
+         				</p>
+         				<p>
+         					The independent process (including the ipr and property grade) allows for finding suitable properties easily and quickly.
+         				</p>
+         				<p>
+         					<b>Advertising revenue at stake:</b> having a large number of hits or page views does not equate to sales or, even, enquiries. For example, 
+         					there are many advertising sites in Australia (some offering free listings), but these sites do not offer any advantage over the existing 
+         					traditional and 'out-dated' advertising sites. The number of hits and page views are used by these major real estate sites BECAUSE it sounds 
+         					impressive and helps to justify advertising fees. 
+         				</p>
+         				<p>
+         					From a practical perspective, it only takes one committed buyer for a sale. There are roughly 500,000 properties sold every year in Australia. 
+         					Therefore, one might argue having several millions of hits per month is an inefficient and ineffective process, 
+         					ie: a lot of noise when compared to a little result.
+         				</p>
+         				<p>
+         					<b>Bottom line:</b> it isn't the number of hits or page views that ultimately find a buyer, rather the total experience, 
+         					which is why CPx's independent process is better for sellers, buyers and industry professionals!
+         				</p>
+   </accordion-group> 
+   
+   <a id="two"></a>
+   <accordion-group is-open="status[1].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[1].value, 'glyphicon glyphicon-minus': status[1].value}"></i>
+  						<ul>
+	  						<li value="2">
+	  						How does CPx marketing attract property buyers?
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq2')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('two')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[1].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[1].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/how-cpx-attract-property-buyers')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[1].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[1].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[1].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[1].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[1].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[1].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								
+								</div>
+							</div>
+						</div>
+         				<p>
+         					CPx being the ONLY independent platform in Australia makes the service very attractive for... 
+         				</p>
+         				<p>
+         					<b>A new audience - financial services:</b> In addition to being very attractive to traditional buyers: CPx's independent process by its very 
+         					nature appeals to the financial services (financial planners, self managed super funds and mortgage brokers). With the knowledge that 
+         					CPx properties are graded, with no added real estate agent 'selling-fees' and an independent process, financial service providers can now 
+         					confidently add properties to their service offering.
+         				</p>
+         				<p>
+         					CPx is a brand managed by Landlord Central Pty Ltd. Landlord Central has over the years, built a business network of several thousand businesses.
+         					This network will be given free access to CPx.  The network data-base consists of financial planners, mortgage brokers, accountants, 
+         					buyer's agents and real estate agents.
+         				</p>
+         				<b>Marketing to buyers and industry professionals</b>
+         				<ul style="list-style-type: decimal;">
+         					<li>
+         						CPx has a national marketing plan designed to attract direct buyers, this includes:
+         						<ul>
+         							<li>
+         								plans for digital on line marketing; and 
+         							</li>
+         							<li>
+         								a small national TV campaign.
+         							</li>
+         						</ul>
+         					</li>
+         					<li>
+         						Business targeted campaign managed by the CPx sales team will run in parallel to further increase the size of the business network.
+         					</li>
+         				</ul>
+         				<p>
+         					CPx's is the only platform in Australia that offers a national standard for listing properties ready for sale. Within the national standard are 
+         					key mandates all properties listed on CPx must comply with (two of which include the following). This CPx advantage creates repeat CPx website users.
+         				</p>
+         				<ul style="list-style-type: circle;">
+         					<li>
+         						A national listing standard: It is mandatory to have an Independent Property Review (ipr) for every property listed. 
+         						This mitigates potential bias and allows for apples with apples comparisons.
+         					</li>
+         					<li>
+         						Significant savings: It is mandatory all properties are listed with NO real estate agents 'selling-fees': Real estate agent and marketing 
+         						fees may range between $10,000 to $35,000 ('selling-fees' vary greatly across Australia). This is a significant saving for the property 
+         						seller and buyer!
+         					</li>
+         				</ul>
+         				
+   </accordion-group> 
+   
+   <!-- For 3rd accordion  -->
+   <a id="three"></a>
+	<accordion-group is-open="status[2].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[2].value, 'glyphicon glyphicon-minus': status[2].value}"></i>
+  						<ul>
+	  						<li value="3">
+	  						Can I list/ advertise with CPx when my property is already listed with an agent or project marketing  company?
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq3')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('three')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[2].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[2].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/advertise-with-cpx')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[2].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[2].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[2].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[2].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[2].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[2].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								
+								</div>
+							</div>
+						</div>
+         				<p>
+         					Yes. If your property is listed by an agent with an open-agency agreement then having your property on CPx will be an additional advertising medium.
+         				</p>
+         				<p>
+         					Where you have an exclusive agency agreement CPx recommends you wait until the exclusive period expires before you advertise with CPx.
+         				</p>
+         				Types of agency and marketing agreements<br>
+						The two main types of agreements used to list a property by a real estate agent include:
+						<ul style="list-style-type: lower-alpha;">
+							<li>
+								Open agency (non-exclusive); and
+							</li>
+							<li>
+								Exclusive agency.
+							</li>
+						</ul>
+						<p>The commercial terms and obligations within these agreements are imposed on the property seller thus, a thorough understanding is recommended.</p>
+						<ul style="list-style-type: lower-alpha;">
+							<li>
+								<b>Non-exclusive also known as open agency agreement:</b> allows the property seller to appoint unlimited agents, marketers, (or others) in their effort to sell their property. 
+								The selling-fee is ONLY payable to the agent (or party) that procured the property buyer.
+								<ul style="list-style-type: circle;">
+									<li>
+										Terms: are simple and flexible for the property seller (vendor); in essence any party that procures a buyer will be paid the selling-fee.
+									</li>
+								</ul>
+							</li>
+							<li>
+								<b>Exclusive agency agreement:</b> Unless there are special conditions within this agreement; then regardless of who procures the property buyer, 
+								the agent with the exclusive agency agreement is also entitled to the selling-fee noted in the agreement.
+								<ul style="list-style-type: circle;">
+									<li>
+										Some agents use exclusive agreements as a promise of better results. This may result in a controlled process with limited buyer opportunities. 
+										Why? Because it is NOT common practice for real estate agents to share a property listing with other parties claiming to have a buyer.
+									</li>
+									<li>
+										Terms: are rigid for the property seller (vendor). During the agreement period the seller must rely on the one party to procure a buyer.  
+									</li>
+								</ul>
+							</li>
+							
+						</ul>
+						
+         				<p>
+         					<b>CPx recommends:</b> that a vendor considers using an open agency agreement rather than an exclusive agreement, as open agency agreements pose greater 
+         					flexibility. By having your property available via multiple mediums allows all parties to bring forward a potential buyer. A fee is only payable on 
+         					results; to the entity that procured the buyer.  
+         				</p>
+         				
+         				<p>
+         					<b>Better still:</b> properties listed on CPx do not have a selling-fee and do not need an agency agreement; this is an ideal property medium for 
+         					purchasing properties for: the financial services industry; buyer's agents; and international buyers/agents. Unlike the traditional advertising 
+         					sites CPx marketplace, allows everybody to trade.
+         				</p>
+         				
+         				<p>
+         					<b>CPx governance:</b> please note if the property is already listed with an agent, then the selling-fees MUST be declared prior to listing/ advertising 
+         					on CPx. The CPx price is the listed price minus the selling-fees. Buyers are advised that they may purchase the property at the CPx price 
+         					(CPx price is the lower price). 
+         				</p>
+   </accordion-group>    
+   
+   
+   
+   <!-- For 4th accordian  -->
+   <a id="four"></a>
+ 	<accordion-group is-open="status[3].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[3].value, 'glyphicon glyphicon-minus': status[3].value}"></i>
+  						<ul>
+	  						<li value="4">
+	  						 Must I have a real estate licence to list/ advertise on CPx?
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq4')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('four')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[3].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[3].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/real-estate-licence')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[3].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[3].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[3].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[3].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[3].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[3].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								
+								</div>
+							</div>
+						</div>
+         				<p>
+         					No, anyone can list/ advertise on CPx. CPx does have a governance listing process that must be adhered to. 
+         					Please refer to <a href="#!/list-your-property-on-cpx/list-property" target="_blank" title="List your property on CPx">List your property on CPx</a> and 
+         					for more information please visit <a href="#!/about/independent-process" target="_blank" title="Independent process">Independent process</a>  and review the Governance section.
+         				</p>
+   </accordion-group> 
+   
+   <!-- For 5th accordian  -->
+   <a id="five"></a>
+ 	<accordion-group is-open="status[4].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[4].value, 'glyphicon glyphicon-minus': status[4].value}"></i>
+  						<ul>
+	  						<li value="5">
+	  						How does CPx compare to vendor direct advertising sites?
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq5')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('five')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[4].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[4].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/cpx-vs-direct-vendor')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[4].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[4].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[4].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[4].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[4].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[4].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				This style of property advertising is on the increase in Australia for a number of reasons;
+         				<ul style="list-style-type: lower-alpha;">
+         					<li>
+         						Vendors want the option to sell their own property without assistance or associated traditional selling-fees payable to an agent. 
+         					</li>
+         					<li>
+         						The advertising rates/ monthly subscriptions for some advertising sites in Australia are unaffordable for small agents. 
+         						In their effort to find a new medium for advertising, these agents are collaborating with the vendor's advertising sites, 
+         						to list their client's properties.
+         					</li>
+         					<li>
+         						Vendors are recognising that listing a property is a small part of the entire sales process; 
+         						hence they can do it themselves, thereby CPx makes their property available to a wider audience.
+         					</li>
+         				</ul>
+         				<p>
+         					<b>The CPx advantage</b>
+         				</p>
+         				CPx offers these fundamental advancements:
+         				<ul style="list-style-type: decimal;">
+         					<li>
+         						<p><b>National listing standard.</b> In CPx, it is mandatory to have an Independent Property Review (ipr) for every property listed.</p>
+         						<p>
+         							An ipr involves assigning a grade and independent information to each property. This information is compiled by 
+         							<a href="http://www.jll.com.au/australia/en-au/services/investors-developers/valuations-and-advisory/mortgage-services" target="_blank" title="JLL">JLL</a> 
+         							This third-party information is made available on all the listed properties in-place-of the vendor/agent supplied description.
+         						</p>
+         						
+         							A free ipr can be downloaded for every property listed. For this reason CPx is able to provide a national listing standard. 
+         							This national standard:
+         						
+         						<ul style="list-style-type: circle;">
+         							<li>
+         								Provides up-to date third-party consistent property information; and
+         							</li>
+         							<li>
+         								Mitigates selling agent and vendor bias.
+         							</li>
+         						</ul>
+         					</li>
+         					<li>
+         						<b>The properties listed on CPx do not include a real estate agent 'selling-fee'.</b> This is indicated by the use of the following labels:
+         						<ul style="list-style-type: circle;">
+         							<li>
+         								<b>Listed price:</b> means the property for-sale-price is inclusive of the Real Estate Agents Selling-Fees.
+         								<ul style="list-style-type: circle;">
+	         								<li>
+	         									<b>CPx price:</b> means the property for-sale-price is less the Selling-Fees.
+	         								</li>
+	         								<li>
+	         									<b>Savings:</b> means the real estate agent 'Selling-Fee' where applicable.
+	         								</li>
+         								</ul>
+         							</li>
+         						</ul>
+         					</li>
+         				</ul>
+         				<p>
+         					The CPX process is and Australian FIRST, unique to CPx and fair for the seller and buyer.
+         				</p>
+         				<p>
+         					For more information please visit 
+         					<a href="#!/about/independent-process " target="_blank" title="Independent process">Independent process and review 
+         					the Governance section.</a> 
+         				</p>
+   </accordion-group>  
+   
+   <!-- For 6th accordian  -->
+   <a id="six"></a>
+ 	<accordion-group is-open="status[5].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[5].value, 'glyphicon glyphicon-minus': status[5].value}"></i>
+  						<ul>
+	  						<li value="6">
+	  						Why are there a small number of properties listed on CPx?
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq6')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('six')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[5].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[5].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/less-properties')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[5].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[5].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[5].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[5].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[5].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[5].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					Unlike other real estate sites, where the information presented with the listed properties is inconsistent. And, even more-concerning relevant 
+         					information may be omitted from the listing information. Also, whilst having a large number of properties on a single list is great, with 
+         					NO mandatory national listing standard in place, this traditional process FAILS to deliver an informed experience for the buyer. <br>For more 
+         					information please 
+         					<a href="#!/" target="_blank" title="CPx video on Home page">click here to watch video.</a>.
+         				</p>
+         				<p>
+         					The quality and type of information on CPx adheres to strict national guidelines that provide buyers with rich independent information, 
+         					allowing them to make an informed decision. 
+         				</p>
+         				<b>CPx has a governance process;</b> an Australian First! It is mandatory that all properties listed on CPx must comply with:
+         				<ul>
+         					<li>
+         						<b>No real estate agent 'selling-fee':</b> In the traditional process, the property for-sale-price includes a real estate agent 
+         						'selling-fee'. Properties listed on CPx, do not include this traditional 'selling-fee'.
+         					</li>
+         					<li>
+         						<p>
+         						<b>Independent property review (ipr):</b> In CPx, it is mandatory to have an Independent Property Review (ipr) for every property listed. 
+         						The review is valid for three months. In cases where the property remains unsold, a new ipr must be ordered to retain the listing on CPx.
+         						</p>
+         						<p>
+         							An ipr involves assigning a grade and independent information to each property. This information is compiled by 
+         							<a href="http://www.jll.com.au/australia/en-au/services/investors-developers/valuations-and-advisory/mortgage-services" target="_blank" title="JLL">JLL</a> 
+         							This third-party information is made available on all the listed properties in-place-of the vendor/agent supplied description.
+         						</p>
+         					</li>
+         					<li>
+         						<b>Rental estimates</b> (auto-system generated coming soon)
+         					</li>
+         					<li>
+         						<b>No co-agency and no referral fees sharing:</b> The real estate agent 'selling-fee' cannot be shared with another agent or industry professional 
+         						on CPx. Since payment determines service obligation and customer loyalty, sellers and buyers are able to appoint their own independent 
+         						industry professional. This professional then represents the buyer's or seller's needs, ensuring unbiased and independent representation.
+         					</li>
+         					<li>
+         						A copy of the complete <b>contract-of-sale</b> or a contract-of-sale summary is included in the available property information, in that:
+         						<ul style="list-style-type: circle;">
+         							<li>
+         								A copy of the complete contract-of-sale can be made available, saving the cost of purchasing the contract-of-sale summary; or
+         							</li>
+         							<li>
+         								A contract-of-sale summary can be ordered through CPx.
+         							</li>
+         						</ul>
+         					</li>
+         				</ul>
+         				<p>
+         					<b>Being a new service in Australia;</b> CPx beta launch 19th January 2015 and the official launch 2nd Feb 2015. CPx does recognise the importance of 
+         					having properties from across Australia and has committed resources to facilitate new listings which are being added consistently. 
+         					For more information please refer to FAQs 2.
+         				</p>
+         				<p>
+         					A positive aspect of this relatively short list of properties is that viewing these properties on CPx is like viewing a short list of 
+         					featured properties. For example, if there was only one property listed, from an entire business network of thousands of property buyer's 
+         					visiting CPx, increased consideration would be given to this property for purchase, as opposed to other websites 
+         					that require buyers sorting through numerous pages of properties.
+         				</p>
+   </accordion-group> 
+       
+   
+   
+   
+   <!-- For 7th accordian  -->
+   <a id="seven"></a>
+ 	<accordion-group is-open="status[6].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[6].value, 'glyphicon glyphicon-minus': status[6].value}"></i>
+  						<ul>
+	  						<li value="7">
+	  						I am a property developer who uses a network to sell my properties. Will my network be compromised if the same property is also listed for sale on CPx?
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq7')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('seven')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[6].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[6].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/property-developer-network')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[6].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[6].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[6].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[6].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[6].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[6].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         				No. Regardless of the commissions on offer, size or service location of your network, they are presenting their services to procure a buyer.  You only pay the service provider that procured the buyer. Are other service providers within your network being compromised when one of them does procure a buyer?  Of course they are not, as only one party can secure the sale.
+         				</p>
+         				<p>
+         				CPx is an advertising platform and may be viewed as another channel within your network to sell your properties. Some service providers use a percentage of their sales commission as a rebate or referral fee to entice a buyer. CPx, as a business model, transforms these commissions into &#145savings&#146 to the buyer. This selling strategy also makes your property sale price better value for money. 
+         				</p>
+         				<p style="padding-left: 41px;color:#0070CA;">
+         				<b>Try CPx today!  List one property from your entire project and experience the difference.</b>
+         				</p>
+   </accordion-group> 
+   
+   
+   
+   
+   <!-- For 8th accordian  -->
+   <a id="eight"></a>
+ 	<accordion-group is-open="status[7].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[7].value, 'glyphicon glyphicon-minus': status[7].value}"></i>
+  						<ul>
+	  						<li value="8">
+	  						How much of the commission can be retained to offset CPx administration/ listing support fees?
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq8')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('eight')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[7].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[7].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/commission-listing-fees')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[7].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[7].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[7].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[7].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[7].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[7].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         				As per CPx <a href="#!/marketplace/find-industry-professionals" target="_blank" title="find industry professionals">&#145Industry Professionals Representing Sellers - Indicative Service Fees&#146</a> the following fees are recommended: 
+         				</p>
+         				<p>
+						&nbsp;&nbsp;&nbsp;&nbsp;Scope of service may include these options:	
+         				</p>
+         				<ul style="padding-left: 80px;">
+         					<li>
+         						<b>Admin support (desk top based):</b> Managing phone calls, emails and ordering signs<br> 
+							= $150 per property
+         					</li>
+         					<br>
+         					<li>
+         						<p>
+         						<b>Field support:</b> Open house, administration support or project marketing onsite support<br> 
+								= $1,000 +GST per property</p>
+         					</li>
+         					<li>
+         						<b>Specific scope of service: </b>By negotiation
+         					</li>
+         			
+         				</ul>
+         				
+         				<p>Relevant to your own internal operations or business model, you may opt to retain $150, $1,000 or other amount from the commission included in the Listed Price. </p>
+         				
+         				<p>For example: If a commission of $20,000 is included in the Listed Price and you choose to retain $1,000 for fees, then a saving of $19,000 would be declared to the buyer. </p>
+  
+  
+  						<p style="padding-left: 41px;color:#0070CA;">
+         				<b>Try CPx today!  List one property from your entire project and experience the difference.</b>
+         				</p>			
+   </accordion-group> 
+   
+   
+   
+   <!-- For 9th accordian  -->
+   <a id="nine"></a>
+ 	<accordion-group is-open="status[8].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[8].value, 'glyphicon glyphicon-minus': status[8].value}"></i>
+  						<ul>
+	  						<li value="9">
+	  						Is a property with a low Graded score worthwhile advertising on CPx?
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq9')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('nine')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[8].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[8].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/low-grade-advertise')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[8].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[8].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[8].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[8].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[8].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[8].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         				Yes, of course. A Grade is determined by a range of scores that places a property in one of five categories: AA, A, B, C and D. The total points scored determine which of these Grades a property fits into and can assist the vendor with their property pricing.
+         				</p>
+         				<p>
+						The score of a property is comprised of seven comparative attributes, and the resulting Grade does not indicate a good or bad purchase. It simply shows how the property performs related to these seven attributes.
+         				</p>
+   
+         				
+         				<p>Which Grade is best for a buyer? No Grade in particular as one attribute could be more important to a buyer than others. CPx recommends buyers compare individual property attributes to determine which contribute more strongly to the overall score.</p>
+         				
+         				<p>The fact is any Grade of property is worth considering.  It all depends upon what the buyer is looking for.  <a ng-click="gotorate()" href="#!/about/what-is-graded" title="what is graded-Grade">more...</a></p>
+   </accordion-group> 
+   
+   
+   
+   
+   <!-- For 10th accordian  -->
+   <a id="ten"></a>
+ 	<accordion-group is-open="status[9].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[9].value, 'glyphicon glyphicon-minus': status[9].value}"></i>
+  						<ul>
+	  						<li value="10">
+	  						I am a property seller and I want the best price for my property.  Can I achieve this using CPx? 
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq10')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('ten')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[9].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[9].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/best-price-for-property')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[9].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[9].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[9].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[9].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[9].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[9].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         				Yes, you can.  Listing your property with CPx will almost certainly guarantee you the best market price achievable due to the added benefit of not paying agent commissions and advertising fees.  For a low rate [<a ng-click="gotorate2()" href="#!/list-your-property-on-cpx/list-property" title="list-your-property-on-cpx">click to view current rates</a>], you can list your property with CPx at the price you want with the difference being that you get to put all of the sale profit in your pocket.
+         				</p>
+         						
+   </accordion-group> 
+   
+    <!-- For 11th accordian  -->
+   <a id="eleven"></a>
+ 	<accordion-group is-open="status[10].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[10].value, 'glyphicon glyphicon-minus': status[10].value}"></i>
+  						<ul>
+	  						<li value="11">
+	  						DomaCom Fractional Property Investing 
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq11')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('eleven')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[10].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[10].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/domacom-fractional-property-investing')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[10].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[10].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[10].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[10].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[10].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[10].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p><b><i>1. Who are DomaCom and what do they do?</i></b></p> 
+         				<p>DomaCom is a fractional (meaning: share or unit) property investing fund that allows investors to buy units in a property instead of buying the whole property.  This is similar to buying shares but these shares are in property, and are acquired through a regulated Managed Investment Scheme (MIS). DomaCom and its related services manage the properties on behalf of unit holders. DomaCom provides a secure ASIC regulated structure for investors to diversify their unit holdings across a range of properties, without owning the whole property, and therefore, broadening their potential profit and risk. </p>
+         				
+         				<p><b><i>2. How does buying investment property through DomaCom work?</i></b></p>
+         				<p>Through a DomaCom accredited Financial Advisor, investors buy units in properties through a DomaCom public or private &#145book build&#146 (joint property investment).  There is a minimum investment of $20,000, however, this sum can then be spread across a number of properties or fully invested into one property.  How much you invest is up to you.  When over 30%-50% of units in a property are sold, DomaCom organises due diligence on the property.  When units sold reach the property sale price, DomaCom purchases the property and places this investment into a sub-fund, with each investor allocated units in the property relevant to their investment.</p>
+         				
+         				<p><b><i>3. Can I choose my own property to invest in?</i></b></p>
+         				<p>Investors can select which property they would like to buy units in through an established public <b>book build</b>,or their advisor can create a new public or private book build.   If the property has a registered Title, you can buy it through DomaCom.  Properties may include farms, land, off the plan, student accommodation, warehouse units, commercial to aircraft hangers.  Current exclusions are overseas properties, however, will be included in DomaCom&#146s future expansion.</p>
+         				<p>You can diversify your property investment across a range of properties or choose just one.  Your choices may be based upon location, style of property or price, or may be recommended by your advisor.  Book builds are created by fund advisors, however, will need the client base to ensure the property&#146s book build units all sell to enable purchase of the property.  You can also opt to join one of the public book builds if your advisor is unable to create a suitable book build that meets your needs.</p>	
+   
+						<p><b><i>4. How do I earn money from my investment?</i></b></p>
+						<p>Once a property is purchased, a sub-fund is created for the property and investors are allocated units in the sub-fund based upon the value of their investment.  DomaCom proceeds to manage the property, with investors paying a share of ongoing expenses related to usual property ownership and management costs.  Investors receive a share of the property rent and the future capital value of the property with the security of the property title being held by the Custodian of the Fund on behalf of the unit holders.</p>
+						
+						
+						<p><b><i>5. What if I want to sell some or all of my property units?</i></b></p>
+						<p>Basically, you can sell your share in a property at any time through the DomaCom site.  DomaCom has three ways for you to do this.  </p>
+						<ul style="list-style-type: none;">
+						<li>a) At any time a unit holder can sell their share on DomaCom&#146s secondary market to other investors, with first option to purchase being given to other unit holders;</li><br>
+						<li>b) At any time unit holders with a minimum 5% share in a property may choose, by deciding vote, to sell the property, with first option to purchase being given to other unit holders;</li><br>
+						<li>c) After Five years the property reaches an expiry date where unit holders are given the option to vote to hold or sell the property.  It is at this point you can choose to exit your interest in the property with first option to purchase being given to other unit holders.</li><br>
+						
+						</ul>
+						
+						<p><b><i>6. Is fractional investing with DomaCom a safe investment?</i></b></p>
+						<p>Investing is never 100% safe, however, buying units in a range of property/ies is a tangible asset that provides rental income and equity growth.  The benefit of buying units in DomaCom book build properties is the ability to develop a diversified property portfolio instead of investing all your money in one property.  DomaCom also provides a secondary market enabling the sale of units should an investor choose to sell some or all of their interest in a property.</p>
+						
+						   
+   
+   </accordion-group> 
+   
+   
+   
+   
+    <!-- For 12th accordian  -->
+   <a id="twelve"></a>
+ 	<accordion-group is-open="status[11].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[11].value, 'glyphicon glyphicon-minus': status[11].value}"></i>
+  						<ul>
+	  						<li value="12">
+	  						Self Managed Super Fund (SMSF) 
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq12')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('twelve')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[11].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[11].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/self-managed-super-fund-smsf')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[11].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[11].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[11].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[11].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[11].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[11].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p><b><i>1. What is a Self Managed Super Fund (SMSF)?</i></b></p> 
+						<p>A SMSF is a trust fund set up by its members to gain greater control and choice over the investment options of their superannuation monies than is available through traditional superannuation funds. A SMSF operates as a government regulated trust that must have four or less beneficiary members who are also trustees of the fund.  The SMSF has to exist solely for the purpose of growing wealth to provide retirement income for the fund members.  For more information on SMSF go to <a href="https://www.ato.gov.au/super/self-managed-super-funds/" target="_blank" title="SMSF">https://www.ato.gov.au/super/self-managed-super-funds/</a> </p>
+						
+						         				
+         				<p><b><i>2. What are the rules when buying property through a SMSF? </i></b></p>
+						<p>When you set up a SMSF, you and the other fund members are in charge of what you invest in.  When investing in property through your SMSF, the property of choice must be acquired for the sole purpose of growing investment wealth for fund members.  The property must not have any connection to any fund member or their family and it cannot be lived in or rented by a fund member or their family.  It is, however, permitted to purchase a commercial property that is then rented at the market rate by a fund member, with this rent being paid directly to the SMSF.  The purchase of any property through a SMSF must be done in accordance with the super and tax laws and is regulated by the Australian Taxation Office.</p>
+						
+						         				
+         				<p><b><i>3. How do I fund a property purchase through my SMSF?</i></b></p>
+         				<p>Your SMSF may have enough funds for an outright purchase of an investment property, but if not, or you choose to borrow and diversify your investments, then Limited Recourse Borrowing Arrangements (LRBA) can be used to secure the balance of purchase price on a single asset or group of equal value assets.  The property/ies purchased with a LRBA are held in a regulated holding trust with any investment earnings being paid to the SMSF trustees.  In the event the LRBA loan is fully repaid, the SMSF trustees gain ownership of the property and it is then transferred out of the holding trust and into the trust.  LRBA ensures the protection of other unrelated SMSF assets should a loan be defaulted upon.</p>
+								   
+						<p><b><i>4. What kind of properties can be bought through a managed SMSF?</i></b></p>
+						<p>The main rule for buying an investment property through your SMSF is that it is purchased with the sole purpose of building your fund&#146s wealth.  The type of property purchased can be residential, business commercial or rural commercial.  Funds can be used to maintain a property but there are restrictions around renovating a property owned by the fund that must be adhered to.  Examples of property you cannot buy using your SMSF are; contract of sale and a contract for build, holiday homes and your family home.  To abide by the SMSF rules, the fund trustees must always ensure there is no conflict of interest and that any property purchased observes the &#147sole purpose test&#148, <a href="https://www.ato.gov.au/super/self-managed-super-funds/investing/sole-purpose-test/" target="_blank" title="SMSF">https://www.ato.gov.au/super/self-managed-super-funds/investing/sole-purpose-test/</a> </p>						
+						
+						
+						   
+   
+   </accordion-group> 
+   
+   
+   <!-- For 13th accordian  -->
+   <a id="thirteen"></a>
+ 	<accordion-group is-open="status[12].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[12].value, 'glyphicon glyphicon-minus': status[12].value}"></i>
+  						<ul>
+	  						<li value="13">
+	  						Currency conversions 
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq13')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('thirteen')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[12].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[12].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/currency-conversion')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[12].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[12].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[12].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[12].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[12].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[12].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p><b>User rules</b></p> 
+						<ul style="list-style-type: none;">		
+						<li>1. The Currency Conversions [CC] has been created by accessing information from trusted sources; <a href="http://jsonrates.com/" target="_blank" title="http://jsonrates.com/">http://jsonrates.com/</a> is a site operated by Jsonrates (JR). JR and CPx do not guarantee the accuracy of the information contained in the CC, and recommend that readers continue to make their own investigations. The information is a guide to you, and you should not rely solely on the contents of the CC when making any investment decisions.</li>						
+						 <br>        				
+         				<li>2. The information is the copyright of JR and should not be copied or reproduced without the written consent of JR. It is a breach for any person or corporation to use the information in the CC for commercial purpose including the sale of part or all the information contained in the CC. A breach of this user rule provides to JR and CPx or any of its suppliers a cause of action in copyright.</li>
+						  <br>       				
+         				<li>3. The user agrees to not hold liable either CPx or any of its third party suppliers for any loss, claim as a result of a decision of the user or any other person they give the CC to</li>
+
+
+		<div class="col-sm-12 col-xs-12 convertercontainer" ng-controller="currencyCtrl">
+
+			<div class="col-sm-12 col-xs-12 converterheader">
+				<b>Quick Currency Conversion</b>
+			</div>
+
+			<div class="col-sm-12 col-xs-12 padtop10">
+
+				<div class="col-sm-6 col-xs-12 nopadding">
+
+					<div class="form-group col-sm-4 zeroleftpad">
+						<label for="sel2">Amount </label> <input type="text"
+							class="form-control" placeholder="Any" ng-model="value" ng-change="animate('on')"/>
+					</div>
+
+
+
+					<div class="form-group col-sm-8 zeroleftpad">
+						<label for="sel1">From</label> <select class="form-control" ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+								ng-model="from.currency" placeholder="Please Enter a Currency..." ng-change="animate('on')">
+							
+
+						</select>
+					</div>
+
+				</div>
+
+				<div class="col-sm-6 col-xs-12 nopadding">
+
+					<div class="form-group col-sm-8 zeroleftpad">
+						<label for="sel1">To</label> <select class="form-control" ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+								ng-model="to.currency" placeholder="Please Enter a Currency..." ng-change="animate('on')">
+							
+						</select>
+					</div>
+
+
+					<div class="form-group col-sm-4 zeroleftpad convertdiv">
+
+						<button type="submit" class="btn btn-default convertbtn" ng-click="updateValue(from,to,value)" ng-class="{'updateanimate': animatebtn}">Convert</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<div class="col-sm-12 col-xs-12" ng-if="convertedvalue">
+
+				<div class="col-sm-5 col-xs-5 rightalign">
+					<div class="largetext">{{value}} {{from.currency.code}}</div>
+					<div>1 {{from.currency.code}} = {{ratebase_from}} {{to.currency.code}}</div>
+				</div>
+
+
+				<div class="col-sm-2 col-xs-2 largetext centeralign">=</div>
+				<div class="col-sm-5 col-xs-5 leftalign">
+					<div class="largetext">{{convertedvalue | currency:"":2}} {{to.currency.code}}</div>
+					<div>1 {{to.currency.code}} = {{ratebase_to}} {{from.currency.code}}</div>
+				</div>
+
+			</div>
+
+			<div class="col-sm-12 col-xs-12 dateinfo" ng-if="convertedvalue">Rates updated: {{getDatetime | date:'dd-MMM-yyyy'}} at 00:00:00 GMT</div>
+
+
+		</div>
+	</ul>
+   </accordion-group> 
+   
+   
+   
+   <!-- For 14th accordian  -->
+   <a id="fourteen"></a>
+ 	<accordion-group is-open="status[13].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[13].value, 'glyphicon glyphicon-minus': status[13].value}"></i>
+  						<ul>
+	  						<li value="14">
+	  						Confidis Pty Ltd 
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq14')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('fourteen')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[13].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[13].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/confidis-pty-ltd')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[13].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[13].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[13].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[13].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[13].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[13].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p><b><i>1. What does Confidis Pty Ltd do?</i></b></p> 
+						<p>Confidis Pty Ltd provides an independent trust that manages the receipting of deposits and disbursement of commissions and monies for its customers within Australia, and around the world.  By acting as a third party entity, customers can use Confidis to hold and manage the trust account transaction process.  Customers are assured of regulatory compliance and transparency for all parties involved through an annual account audit.  Customers have the ability to log on to their online account to view transaction status at any time. A statement is provided to account holders to track account activity and also a <a href="https://beta.confidis.com.au/addfunds/admin/transactions/funds_certificate_sample" target="_blank" title="Certificate of Funds">Certificate of Funds</a> which underwrites the amounts held in trust.</p>						
+						         				
+         				<p><b><i>2. Why is using Confidis Pty Ltd a good idea?</i></b></p>
+						<p>Errors in the management of trust account funds may lead to unintentional issues with staff, family or customers, or a worst case scenario of investigation by the Department of Fair Trading.   Professionals can risk disqualification from their livelihood through loss of their practicing license due to trust fund breach.  There is an annual independent audit of trust funds where the compliance and efficient disbursement of monies is scrutinised.  Confidis provides dedicated trust fund management to ensure transactions are timely, compliant, safe and accountable.</p>						
+						         				
+         				<p><b><i>3. How can I be sure my money is held safely?</i></b></p>
+						<p>Confidis Pty Ltd holds and manages all trust accounts through one of Australia&#146s leading banks, the Australia and New Zealand Banking Group Limited (ANZ). At any time, you or your designated professional, can log on to your Confidis account and view your trust monies status and account activity. Confidis Pty Ltd is underwritten by AIG Australia.  Further trust account security is provided through a detailed <a href="https://beta.confidis.com.au/addfunds/admin/transactions/funds_certificate_sample" target="_blank" title="Certificate of Funds">Certificate of Funds</a>.</p>
+														   
+						<p><b><i>4. What is a Certificate of Funds?</i></b></p>
+						<p>A Certificate of Funds allows the holder of the account to disburse trust funds to other parties in accordance to transaction amounts detailed in the certificate.  It provides an official detailed record of transactions for transparency in the management of the trust fund, and sets out the terms and conditions related to the holding and disbursing of monies held.  The funds held in trust and noted within the Certificate of Funds are underwritten by AIG Australia. Example: <a href="https://beta.confidis.com.au/addfunds/admin/transactions/funds_certificate_sample" target="_blank" title="Certificate of Funds">Certificate of Funds</a>.</p>						
+						   
+   						
+   						<p><b><i>5. What kind of transactions can a Confidis Pty Ltd account be used for?</i></b></p>
+   						<p>Confidis Pty Ltd is perfect for any situation where monies are required to be held in a trust fund.  Solicitors, real estate agents, conveyancers, builders, trade industries and self managed super funds (SMSF) will all find the independent structure of Confidis to be of benefit to their legal and reportable compliance.</p>
+   						
+   						
+   						
+   						
+   						
+   </accordion-group> 
+   
+   
+   
+   
+   
+   <!-- For 15th accordian  -->
+   <a id="fifteen"></a>
+ 	<accordion-group is-open="status[14].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[14].value, 'glyphicon glyphicon-minus': status[14].value}"></i>
+  						<ul>
+	  						<li value="15">
+	  						Affordability Search Glossary of Terms
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq15')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('fifteen')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[14].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[14].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/loan-search')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[14].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[14].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[14].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[14].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[14].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[14].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div><br/>
+						<p><b>Affordability search</b> is a financial search facility for property buyers, sellers and industry professionals.  Save time and instantly find affordable properties through the use of powerful search criteria options, such as: </p> 
+						
+						<ul class="list">
+						  <li><b>Monthly repayments;</b> how much a budget allows</li>
+						  <li><b>Loan to value ratio (LVR);</b> the loan percentage required</li>
+						  <li><b>Loan amount;</b> borrowing capacity </li>
+						  <li><b>Cash amount;</b> available deposit</li>
+						</ul>
+						
+						<p>By using the <b>Add Loan Scenario</b> option, different loan types and amounts can be graphed and compared to easily demonstrate varying loan scenarios.</p>
+						
+						<p>The below Glossary of Terms is designed to assist with the use of <b>Affordability search</b>.</p>
+						
+						  <table class="table table-bordered">
+						    <thead>
+						      	<div>
+						      		<h2 style="border: 1px solid;border-bottom: none;margin-bottom: 0px;padding-bottom: 10px;text-align: center;border-color: #ddd;padding-top: 10px;">Glossary of Terms</h2>
+						      	</div>
+						      <tr>	
+						        <th class="col-sm-3" style="padding-left:0px;"><b>Add loan scenario</b></th>
+						        <th class="col-sm-9" style="font-weight:normal;padding-left:0px;">Provides options to create your own specific financial loan scenario.</th>				        
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <td><b>Base IO (%)</b></td>
+						        <td><p>The default value Interest Only (IO) rate.  The CPx Base IO is a competitive current market Interest Only rate that is
+						         sponsored by a leading mortgage aggregator / financial institution. This rate is used to calculate the IO monthly repayments
+						          and is a set rate.  To compare other rates choose <b>Add loan scenario.</b> </p></td>		        
+						      </tr>
+						      <tr>
+						        <td><b>Base PI (%)</b></td>
+						        <td><p>The default value Principle & Interest (PI) rate.  The CPx Base PI is a competitive current market Principle & Interest rate
+						         that is sponsored by a leading mortgage aggregator / financial institution. This rate is used to calculate the PI monthly repayments
+						          and is a set rate.  To compare other rates choose <b>Add loan scenario.</b></p></td>			      
+						      </tr>
+						      <tr>
+						        <td><b>Cash amount</b></td>
+						        <td><p>The value amount of cash contributed toward a property purchase. This amount is deducted from the <b>Estimated total</b> to derive the <b>Loan amount.</b>
+						          Entering a <b>Cash amount</b> will overrides/ replaces any values in the <b>Loan to value (LVR) field.</b></p></td>				       
+						      </tr>
+						      <tr>
+						        <td><b>Cash amount - currency</b></td>
+						        <td><p>Provides a choice of countries and their currencies to create an alternative economy loan scenario.  Selecting a <a style="color:#21437D;" href="#!/blog/FAQs/currency-conversion" target="_blank">currency</a> converts all search / filters 
+						        from Australian (AUD) amounts to display in the chosen currency at a current AUD exchange rate.</p>  </td>				       
+						      </tr>	
+						      <tr>
+						        <td><b>Costs (%)</b></td>
+						        <td><p>Property acquisition costs related to a purchase vary across Australia. Purchase costs may include; loan fees, government stamp duty, conveyance fees, 
+						        depreciation report, and overseas buyer&#8217;s premium (taxes).  The CPx default cost value is set at 5%, but can be amended to suit a specific scenario.</p></td>				       
+						      </tr>		
+						      <tr>
+						        <td><b>CPx price</b></td>
+						        <td><p>The CPx price which is the property listed price less the saving of a selling-fee or agent&#8217;s fee, where applicable.</p></td>				       
+						      </tr>
+						      <tr>
+						        <td><b>Estimated total</b></td>
+						        <td><p>If a Saving is not-applicable; it is the property listed (or indicative) price plus Costs. <br/> If a Saving is applicable it is the CPx price plus Costs.</p></td>				       
+						      </tr>	
+						      <tr>
+						        <td><b>Interest rate (%)</b></td>
+						        <td><p></>A monetary percentage rate that is charged on the Loan amount to calculate monthly repayments.</p></td>				       
+						      </tr>	
+						      <tr>
+						        <td><b>Loan amount</b></td>
+						        <td><p>The Estimated total less Cash amount.</p> </td>				       
+						      </tr>	
+						      <tr>
+						        <td><b>Loan term</b></td>
+						        <td><p></>A set period of time relating to the repayment of a Loan amount. This period of time is typically up
+						         to 30 years within Australia. </p> </td>				       
+						      </tr>	
+						      <tr>
+						        <td><b>Loan type</b></td>
+						        <td><p>CPx Loan Search offers a selection of two common loans types being Principle & Interest (PI) and Interest Only (OI) loans.</p>
+						        	<p>PI:  Monthly repayments are calculated on the total repayment of the Loan amount within the nominated Loan term. </p>
+							      	<p>OI:  Monthly repayments are calculated on payment of the interest only, therefore, the Loan amount will not reduce over the Loan term. </p>  
+						        </td>				       
+						      </tr>	
+						      <tr>
+						        <td><b>Loan to value (LVR)</b></td>
+						        <td><p>LVR stands for a Loan to Value ratio and is a percentage figure relating to the value of a loan in relation to the asset purchased by the loan. 
+						        Leading mortgage aggregators / financial institutions determine LVR&#8217;s on the property type / size or method of purchase, such as:</p>
+							        <ul class="list">
+									  <li>Typical property LVR&#8217;s are 80%</li>
+									  <li>Studio units are approximately 60% LVR - studios are typically under 50 square metres</li>
+									  <li>SMSF property purchases are approximately 70% LVR</li>
+									</ul>
+						        <p>Entering a Loan to value (LVR) figure will override / replace any values in the Cash amount field.</p>
+						        </td>				       
+						      </tr>	
+						      <tr>
+						        <td><b>Monthly repayments (IO)</b></td>
+						        <td><p>Interest Only loan repayments that are payable by the month.</p></td>				       
+						      </tr>	
+						      <tr>
+						        <td><b>Monthly repayments (PI)</b></td>
+						        <td><p>Principle & Interest loan repayments that are payable by the month.</p></td>				       
+						      </tr>				
+						      <tr>
+						        <td><b>Scenario name</b></td>
+						        <td><p>A text field that provides the option of a personal identification name
+						         to be added to a specific Loan Scenario for ease of reference.</p></td>				       
+						      </tr>										      						      					      					      						      				      					      
+						    </tbody>
+						  </table>
+
+   </accordion-group> 
+   
+   
+   
+   <!-- For 16th accordian  -->
+   <a id="sixteen"></a>
+   <accordion-group is-open="status[15].value">
+        <accordion-heading >
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !status[15].value, 'glyphicon glyphicon-minus': status[15].value}"></i>
+  						<ul>
+	  						<li value="16">
+	  						Why Grade a Property?
+	  						</li>
+  						</ul>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('faq16')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('sixteen')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[15].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[15].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/FAQs/why-grade-a-property')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[15].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[15].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[15].url}}" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=FAQs%26subid={{status[15].url}}%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=FAQ-{{status[15].url}}&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fFAQs%2f{{status[15].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div><br/>
+						<p>Because property buyers want independent information. </p> 
+						
+						<p>There was once a time when you had to select a hotel without the assistance of a star rating, 
+						buy a car without an ANCAP safety rating, and purchase an appliance without an energy efficiency rating.
+						 You were forced to decide based on marketing hype and emotion. Talk about unreliable! </p>
+						 
+						 <p>Thankfully these industries have since changed. Your rights as a consumer were recognised and 
+						 your protection was prioritised. You now have the ability to make an informed decision and 
+						 appropriately compare before buying.</p>
+						 
+						 <p>But, the truth is you don't have this same level of protection across all services - and buying
+						  a home or investment property is one of them.</p>
+						  
+						 <p>Recognising the long and overdue need for the real estate industry to serve property buyers, 
+						 CPx has created a new industry standard by grading properties and giving buyers access to 
+						 fair and independent information.</p>
+						 
+						 <h4><i>The CPx grade works like a hotel star rating. It provides the disclosure buyers need to
+						  find the right property. </i></h4>
+						 
+						 <div class="clearout"></div>
+						 
+						 <div class="col-sm-12 nopadding">
+						 	<!-- <div class="col-sm-2 AAgrade"><span class="gradecicle Bcircle"></div> -->
+						 	<div class="col-sm-1"></div>
+						 	<div class="col-sm-2 col-xs-12 aligncenter grade-box">
+								<div class="gradecicle AAcircle">AA</div>
+							</div>
+							<div class="col-sm-2 col-xs-12 aligncenter grade-box">
+								<div class="gradecicle Acircle">A</div>
+							</div>
+							<div class="col-sm-2 col-xs-12 aligncenter grade-box">
+								<div class="gradecicle Bcircle">B</div>
+							</div>
+							<div class="col-sm-2 col-xs-12 aligncenter grade-box">
+								<div class="gradecicle Ccircle">C</div>
+							</div>
+							<div class="col-sm-2 col-xs-12 aligncenter grade-box">
+								<div class="gradecicle Dcircle">D</div>
+							</div>						 							 	
+						 </div>
+						 <div class="clearout"></div>
+						 
+						 <p>Acting as an independent property rating system, the CPx property grade allows you to evaluate
+						  individual properties based on historical growth rate, price risk, demographics, internal floor 
+						  plan flow, street scape/traffic flow, parking and outdoor space; so you can evaluate and compare 
+						  properties most suited to you quickly and easily.</p>
+						 
+						
+						
+						<p>Properties are graded by leading property experts at JLL
+						 Pty Ltd, giving you the peace of mind knowing that you are basing your financial 
+						 decisions on independent, accurate information - not just emotion or marketing hype.</p>
+						
+						
+						
+						<p>You have to live with the consequences of your property decision a lot longer than an appliance,
+						 vacation or car, so before you buy your next property, ensure it&#8217;s graded.</p>
+						
+						<p>Want to see it in action? Visit <a href="http://www.centralpropertyexchange.com.au/">http://www.centralpropertyexchange.com.au/ </a>now.</p>
+						
+						<h5><i>Like the hotel industry...one day all properties around the world will be graded.</i></h5>
+
+
+
+
+   </accordion-group> 
+   
+   
+   
+  </accordion>
+   </div>

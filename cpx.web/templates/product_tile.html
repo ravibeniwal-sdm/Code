@@ -1,0 +1,165 @@
+<a  ng-click="checkIfFeatured(item);setsShortlistStatus(false);" href="#!/details/{{item.id}}"  title="CLICK FOR DETAILS">
+    <listslider item="item" inmap="true"></listslider>
+</a>
+
+
+
+<div class="col-lg-12 col-sm-12 col-xs-12 nopadding product-markup pull-right">
+
+    <span class="gradeFlag " ng-if="item.gradestatus == 2" style="display: inline-table;"><span>Grade </span><span class= "gradecicle Bcircle" style="font-size:12px;">{{item.grade}}</span></span>
+    
+    <span class="Gradebtn" ng-if="item.gradestatus == 0" ><a  href="#!/details/{{item.id}}/gradeinfo" class="img-responsive" title="CLICK FOR DETAILS">Not Graded</a></span>     
+    <span class="label label-default underoffer flaglabel" ng-if="item.deposit=='yes'" >Under Offer</span>
+    <span class="label label-default smsf flaglabel" ng-if="item.smsf == true">SMSF</span>
+    <span class="label label-default sold flaglabel" ng-if="item.sold == true">Sold</span>
+    <span class="label label-default domacom flaglabel" ng-if="item.domacom == true">DomaCom</span>
+     <span class="label label-default vendor flaglabel" ng-if="item.vendorfinance == true">Vendor Finance</span>
+   <span class="label label-default saving flaglabel" ng-if="item.saving != 0">Saving</span>    
+    <span class="label label-default gradecomingsoon flaglabelgrade" ng-if="item.gradestatus == 1">Grade Coming Soon</span>
+    
+    <span class="label label-default established flaglabel" ng-if="item.established == 'yes'">Established</span>
+    <span class="label label-default newf flaglabel" ng-if="item.newConstruction == 'yes'">New</span>
+    <span class="label label-default homeland flaglabel" ng-if="item.homelandpackage == 'yes'">Home + Land</span>
+ 
+</div>
+
+<div class="infoproperties">
+    <div class="Cannonvale">
+        
+        <span class="namebed">
+            <strong>Beds </strong>{{item.beds}} | <strong> Bath </strong>{{item.bath}} | <strong> Car </strong>{{item.cars}}
+        </span>
+       
+        <span style="display: block;font-size:14px;margin-top: 6px"><strong>{{item.address[0].suburb.text}}, {{item.address[0].state}}</strong></span>
+    </div>
+    
+    <div class="Ipswich">
+        <span ng-show = "item.gradestatus!=0" style="font-size:14px;">{{item.name}} {{item.category}}</span>
+        <span ng-show = "item.gradestatus==0" style="font-size:14px;">{{item.category}}</span>
+    </div>
+    
+    
+    <div class='actionleft' ng-show = "item.auction_date.length!=0"  >
+		<div ng-show = "auctionstatus == 'yes'"><span><b>Auction {{getAuctionCount(item.auction_date)}} days to go</b></span></div>
+		<div ng-show = "auctionstatus == 'no'" ><span><b>Auction {{days*(-1)}} days ago</b></span></div>
+		<div ng-show = "auctionstatus == 'today'" ><span><b>Auction today</b></span></div>
+	</div>
+    
+    <div class="listing_text" ng-show = "(item.displayprice=='yes' && item.viewprice.length == 0 && item.saving == 0)">
+        <div class="listing_text_left">
+        
+            <span >
+                <span >Listed price</span> 
+            </span>
+            
+            <span >
+        		<span ng-if="!(item.currencylabel)">
+        		  <span  ng-if="(item.convertedlistedprice)">{{item.convertedlistedprice | currency:"$":0}}</span>
+        		  <span  ng-if="!(item.convertedlistedprice)">{{item.listedprice | currency:"$":0}}</span>
+                </span>
+    		
+        		<span ng-if="(item.currencylabel)">
+            		<span  ng-if="(item.convertedlistedprice)">{{item.convertedlistedprice | currency:"":0}}</span>
+            		  <span  ng-if="!(item.convertedlistedprice)">{{item.listedprice | currency:"":0}}</span>
+        		</span>
+    		</span>
+        </div>
+        
+    </div>
+    
+    <div class="listing_text" ng-show = "item.saving != 0">
+        <div class="listing_text_left">
+        
+            <span >
+                <span >Listed price</span> 
+            </span>
+            
+            <span >
+        		<span ng-if="!(item.currencylabel)">
+        		  <span  ng-if="(item.convertedlistedprice)">{{item.convertedlistedprice | currency:"$":0}}</span>
+        		  <span  ng-if="!(item.convertedlistedprice)">{{item.listedprice | currency:"$":0}}</span>
+                </span>
+    		
+        		<span ng-if="(item.currencylabel)">
+            		<span  ng-if="(item.convertedlistedprice)">{{item.convertedlistedprice | currency:"":0}}</span>
+            		  <span  ng-if="!(item.convertedlistedprice)">{{item.listedprice | currency:"":0}}</span>
+        		</span>
+    		</span>
+    
+    
+    
+            
+            
+            <br />
+            
+            
+            
+            <span  >
+    		      CPx price 
+    		</span>
+    
+            <span >
+        		<span ng-if="!(item.currencylabel)">
+            		<span  ng-if="(item.convertedcpx)">{{item.convertedcpx | currency:"$":0}}</span>
+            		<span  ng-if="!(item.convertedcpx)">{{item.cpxprice | currency:"$":0}}</span>
+        		</span>
+        		
+        		<span ng-if="(item.currencylabel)">
+            		<span  ng-if="(item.convertedcpx)">{{item.convertedcpx | currency:"":0}}</span>
+            		<span  ng-if="!(item.convertedcpx)">{{item.cpxprice | currency:"":0}}</span>
+        		</span>
+    		</span>
+    
+    
+    
+            
+            
+            <br />
+            
+            
+            
+            <span  >Saving </span>                       
+             <span >
+        		<span ng-if="!(item.currencylabel)">
+            		<span  ng-if="(item.convertedsavingprice)">{{item.convertedsavingprice | currency:"$":0}}</span>
+            		<span  ng-if="!(item.convertedsavingprice)">{{item.saving | currency:"$":0}}</span>
+        		</span>
+        		
+        		<span ng-if="(item.currencylabel)">
+            		<span  ng-if="(item.convertedsavingprice)">{{item.convertedsavingprice | currency:"":0}}</span>
+            		<span  ng-if="!(item.convertedsavingprice)">{{item.cpxprice | currency:"":0}}</span>
+        		</span>
+    		</span>
+    
+    
+    
+            
+            
+            <br />
+            
+            <span  >
+                    Currency
+                    <a href="#!/blog/FAQs/currency-conversion" target="_blank" class="fkquestion" title="FAQ - Currency conversion"><img src="images/new_template/hint_icon.png" alt="" /></a>
+                    
+            </span>
+            
+            <span  >
+                <img src="images/blank.gif" class="flag flag-{{countryflag}} newclass" alt="country flag" />    
+                
+                <select style="width: 50px;"
+    				ng-options="currency as currency.label for currency in currencies | filter : $viewValue"
+    				ng-change="updateValueAll(from, to, properties)" ng-model="to.currency"
+    				placeholder="Please Enter a Currency..." class="currencyselector" id="{{islisttype}}_curr_dropdown_{{item.id}}"></select>
+            </span>  
+            
+        </div>
+        
+    </div>
+    
+    <div ng-show = "item.saving == 0"  >
+		<div  ng-if="item.viewprice.length != 0" >{{item.viewprice}}</div>
+		<div  ng-if="item.displayprice != 'yes' && item.viewprice.length == 0" >Price on Request</div>	
+		<!-- <div class="col-sm-4 col-xs-4 nopadding fl-rpage"></div> -->
+	</div>	
+    
+</div>

@@ -1,0 +1,818 @@
+<script type="text/ng-template" id="mymailcontent.html">
+      
+  <div class="modal-body sharemailbody">                       
+       <form name="myForm">
+     <label class="title" for="yourname">Email to a friend</label><br>
+			
+            <div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your email<i class="required-text asterisk">*</i></label>
+				   <input type="text" class="form-control" ng-model="sharemail.youremail" ng-required='!sharemail.youremail'/>
+				</div>
+			</div>
+
+
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">To email<i class="required-text asterisk">*</i></label>
+				   <input type="email" class="form-control" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" ng-model="sharemail.toemail" ng-required='!sharemail.toemail'/>
+				</div>
+			</div>
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Subject</label>
+				   <input type="text" class="form-control" ng-init="sharemail.subject = subject" ng-model="sharemail.subject"/>
+				</div>
+			</div>
+			<div class="contactinput" style="display:none;">
+				<div class="form-group">
+					<input type="text" class="form-control" ng-init="sharemail.from = 'pressrelease'" ng-model="sharemail.from"/>
+					<input type="text" class="form-control" ng-init="sharemail.absurl = absurl" ng-model="sharemail.absurl"/>
+				</div>
+			</div>
+
+			<div class="contactinput">
+				<div class="form-group">
+				  <label for="yourname">Your message</label>
+				 <textarea class="form-control" style="width:100%; height: 170px;" ng-init="sharemail.message = txtmsg" ng-model="sharemail.message"></textarea>
+			<br>				
+			This email was sent by:&nbsp;<span style="font-size: 12px" ng-bind="sharemail.youremail"></span>
+			</div>
+			</div>
+
+<div class="modal-footer sharemail">
+			<div class="col-sm-2 nopadding">
+				<button type="submit" class="btn btn-default btn-lg btn-block" ng-click='(!(sharemail.toemail && sharemail.youremail))?" ":sendEmail();'>SEND</button>
+			</div>
+
+            <button class="btncancle btn-warning btn-lg" ng-click="cancel()">Cancel</button>
+		</div>	
+			
+			
+			</form>
+</div>
+    	</script>
+
+
+
+
+
+<div class="static-content">
+
+
+<accordion class="static-accordian pressaccordian">
+	
+		<a id="twelve"></a>
+    <accordion-group is-open="pressstatus[11].value" class="firstpanelchild">
+   
+        <accordion-heading >
+  						
+  						<div class="row">
+	  						<p class="texthead">
+	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[11].value, 'glyphicon glyphicon-minus': pressstatus[11].value}"></i>
+	  						The BEST ALTERNATIVE to realestate.com.au and domain.com.au is...?</p>
+	  						<p class="datehead">19 Apr 2016</p>
+	  					</div>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press12')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('twelve')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[11].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[11].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/best-alternative')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[11].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=self-sufficiency%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-best-alternative" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=best-alternative%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-self-sufficiency&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[11].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				
+         				
+         				
+         				<p><a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CentralPropertyExchange.com.au</a> [<a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CPx</a>] is 'the best alternative' to realestate.com.au and domain.com.au, to <strong>buy / invest</strong> in residential real estate, because…</p>
+      				   
+                         <p>1. A property is more than four walls and a kitchen. It also includes the financial and ownership structures. These making the 'whole experience’ either, a prudent or, a potentially disastrous purchase. Real estate agents or developers may not be in the best position¹ to answer buyer/ investor enquiries relating to:
+                                <ul>
+                                    <li>Self Managed Super Funds (SMSF)</li>
+                                    <li>Fractional ownership via DomaCom</li>
+                                    <li>Affordability (best loan scenario)</li>
+                                    <li>Ownership structures</li>
+                                    <li>Estate planning</li>
+                                    <li>Investment</li>
+                                </ul>
+                            </p>
+                            
+                            <p>2. The traditional real estate sales process fails to accommodate the needs and <strong>interests</strong> of both the buyer and seller: hence the potential for conflict-of-interest exists. For that reason an independent advisor² could be the <strong>best resource</strong> to assist with a property purchase. </p>
+                            
+                            <p>3. <strong>Loan affordability</strong> is the first and a <strong>key-part</strong> in finding a suitable property. Why then frustrate and waste buyers’/ advisors’ time and money with a restrictive suburb-by-suburb ONLY search whilst trying to find affordable properties? <a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CPx</a>  offers an <strong>‘affordability search’</strong>, a unique user-experience which makes it instantly possible to find an affordable property, Australia-wide and in any currency. <img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAjkAAAAJDkwY2RkZjZlLWYyZTUtNDg3Ni1iNjQ1LWNhYjIyYTNhZGMyNw.png" style="width: 720px;height: 233px;" /></p>
+                            
+                            <p>4. Real estate agents no longer hold a monopoly on service delivery. New <strong>cost saving</strong> alternative service-models are being offered. Through <a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CPx</a> clients may now do it themselves [DIY] or engage independent advisors to help them buy, sell or invest.</p>
+                            
+                            <p>5. Property buyers <strong>do not trust</strong> real estate agents; hence they may <strong>not</strong> want to engage or enquire³ with the agent/ developer for additional information/ clarity on the listed property.  <a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CPx</a> offers alternative user-experiences by:
+                                <ul>
+                                    <li>allowing potential buyers/ advisor's to download or request a <strong>FREE</strong>, six page Independent Property Review and Grade Report [ipr] on any listed property; and</li>
+                                    <li>allowing for the submission of a <strong>service-request</strong> to a nominated independent professional(s) to assist with the evaluation and buying process.<br /><img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAk8AAAAJGQzZWIyYTA3LWYyMDctNDU0OC05ZGFkLTE1ZDE5NWFkM2Y5MQ.png" style="width: 720px;height: 288px;" /></li>
+                                    
+                                </ul>
+                            </p>
+                            
+                            <p>6. As property prices increase the opportunity to invest may be limited to a fortunate-few. Also due to the scale of the investment property, investors (or their SMSF) may be exposed to a high level of risk. <a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CPx</a> via <a href="http://domacom.com.au/" target="_blank" style="text-decoration: underline;">DomaCom</a> offers <strong>fractional property ownership</strong>. This means an investor using a minimal amount can benefit by being a stake-holder in a property, whilst minimizing overall investment-portfolio risk exposure.</p>
+                            
+                            <p>7. The property owner, real estate agent/ developer may want to offer a price reduction or saving; <a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CPx</a> allows for this option.<br /><img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAjgAAAAJGU4NDY1NjBlLTQ1OTAtNGJlOC1hMjU4LTYwOWMzMzM4NjQ0OQ.png" style="width: 374px;height: 79px;" /><br /><br />...so if you are looking for an alternative to realestate.com.au and domain.com.au: a NEW USER-EXPERIENCE, to buy, sell or invest in residential real estate;  <a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CentralPropertyExchange.com.au</a> [<a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CPx</a>] is 'the best alternative'. Making <a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CPx</a> the ideal platform for: buyers; sellers; and, independent advisors.<br /><br /><a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CPx</a> is Australia's first <strong>independent</strong> buyer-focused real estate advertising website:<br /><br />Why pay unnecessary advertising, marketing and agent commission fees when you can list property on-line with <a href="http://centralpropertyexchange.com.au/" target="_blank" style="text-decoration: underline;">CPx</a> <strong>ABSOLUTELY FREE</strong>? Yes, there are fees, although these are optional as you can test the water before you spend.  <br /><br /><br /><br /> ¹ There may be several factors preventing a standard real estate agent/ office or developer from assisting buyers. These could include the scope of tools offered by the advertising platform, professional qualifications, independent compliance and many others. <br /><br />² There are over 100,000 financial service professionals (banks, financial planners, mortgage brokers, accountants and solicitors) in Australia, representing <strong>millions</strong> of buyers, whose aim is to assist with <strong>buyers' best interests</strong>. <br /><br />³ Buyers/ advisers may not to refer to an agent/ developer for a number of reasons, one of which may be that they feel that they are being given scripted-answers as opposed to the whole picture. </p>
+                                                        
+             
+         				
+                        
+                       
+         				
+   </accordion-group>	
+	
+	
+
+<accordion class="static-accordian pressaccordian">
+	
+		<a id="eleven"></a>
+    <accordion-group is-open="pressstatus[10].value" >
+   
+        <accordion-heading >
+  						
+  						<div class="row">
+	  						<p class="texthead">
+	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[10].value, 'glyphicon glyphicon-minus': pressstatus[10].value}"></i>
+	  						Self-Sufficiency in the Property Game</p>
+	  						<p class="datehead">4 Apr 2016</p>
+	  					</div>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press11')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('eleven')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[10].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[10].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/self-sufficiency')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[10].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=self-sufficiency%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-self-sufficiency" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=self-sufficiency%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-self-sufficiency&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[10].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				
+         				
+         				
+         				<p>When thinking of buying or selling residential property; what method is best for you?  </p>
+      				   
+                         <ul>
+                            <li>A real estate agent?</li>
+                            <li>A buyer's agent?</li>
+                            <li>For Sale By Owner website?</li>
+                            <li>Investment property specialist?</li>
+                            <li>Fractional ownership?</li>
+                            <li>Other; i.e. social sites?</li>
+                         </ul>
+         				
+                        <p>In isolation, each method is debated and has its critics and supporters, advantages and disadvantages.</p>
+                        
+                        <p>What cannot be argued is that none of the above methods offer an independent process. This means as a buyer or seller you are missing-out on the participation of the financial services industry.  The participation of banks, financial planners, mortgage brokers and accountants who collectively serve millions of clients in Australia alone are not a part of the mix.</p>
+                        
+                        <p>Why limit yourself?</p>
+                        
+                        <p>Driven by a need for fairness, CentralPropertyExchange.com.au (CPx) created Australia’s first independent buyer focused real estate advertising website.  CPx offers a real estate website with a win/win for buyers and sellers with access to independent financial services professionals. </p>
+                        
+                        <p>CPx is about providing a viable alternative to be 'self-sufficient' and a way to compliment your existing strategy.  This in-itself is liberating because you can now have it all! After all… it is YOUR property and your future.  You can now have all bases covered to achieve a timely sale.</p>
+                        
+                        <p>Click here to experience CPx; <a href="http://www.centralpropertyexchange.com.au/" target="_blank">http://www.centralpropertyexchange.com.au/</a></p>
+                       
+         				
+   </accordion-group>
+	
+			<a id="ten"></a>
+    <accordion-group is-open="pressstatus[9].value" >
+   
+        <accordion-heading >
+  						
+  						<div class="row">
+	  						<p class="texthead">
+	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[9].value, 'glyphicon glyphicon-minus': pressstatus[9].value}"></i>
+	  						Amended Act: Under Quoting Loopholes Get Plugged In New &lsquo;&lsquo;Property Stock and Business Agents&rsquo;&rsquo; Act.</p>
+	  						<p class="datehead">21 Dec 2015</p>
+	  					</div>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press10')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('ten')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[9].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[9].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/amended-act')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[9].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=amended-act%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-amended-act" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=amended-act%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-amended-act&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[9].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				
+         				
+         				
+         				<p>Until now, buyers and sellers have been steered by real estate agent guesstimates on the market worth of a property. 
+         				This unquantifiable pricing strategy has left the opportunity open for agents to under-quote a property&#39;s price to 
+         				attract more buyers.  </p>
+         				
+         				<p>This opportunity has now been closed with Bill amendments to the Property, Stock and Business Agents Act that 
+         				were passed through parliament on the 22 October 2015.  The main intent of the Act amendments is to prohibit 
+         				under-quoting by agents and to introduce harsher penalties that will be enforced by The Department of Fair 
+         				Trading in an effort to deter deceptive real estate sales practices. </p>
+         				
+						<p>Victor Dominello, Minister for Innovation and Better Regulations, states the amendments to the Act have been made 
+						to protect buyers and sellers against &lsquo;&lsquo;grossly unfair and unethical practice&rsquo;&rsquo; and that buyers and sellers deserve 
+						disclosure that &lsquo;&lsquo;better reflects community expectations&rsquo;&rsquo;.  </p>
+         				
+         				<p>Agents will need to provide sellers with evidence of the reasonableness of their estimated selling price. Agents 
+         				will also no longer be able to lure potential buyers by listing properties with the words &lsquo;&lsquo;Offers Above&rsquo;&rsquo; 
+         				or similar.The reforms include penalties of up to $22,000, plus forfeiture of any commission or fees from an unethical sale.</p>
+                        
+                       	<p>CPx listed properties are independently reviewed and graded by JLL. 
+                       	An Independent Property Review (ipr) which includes a grade is a 6 page unbiased quantifiable report. 
+                       	The ipr and grade report creates a fair meeting ground for negotiations and a win for both buyers and sellers. </p>
+                        
+       					<p>The transparency provided by the apples to apples property report provides the clarity to property buying 
+       					and selling that the amended Act is seeking to achieve.  Buyers, buying agents and advisors can download or 
+       					request a free ipr and grade report on CPx listed properties.  </p>
+                        
+						<p><a style="text-decoration:underline;color:black;" href="http://www.parliament.nsw.gov.au/prod/parlment/nswbills.nsf/131a07fa4b8a041cca256e610012de17/d6649cd55e17d524ca257eba001e998d?OpenDocument" target="_blank">Link to Act</a></p>
+						
+                       <p><b>Media enquiries:</b></p>
+                        
+                   <!--       <p>For more information or to organise an interview with Anthony Aoun from CPx please contact:</p>
+                        
+                        <p>Amanda Jesnoewski<br>
+                        M: 0433 502 114<br>
+                        E: amanda@velocitymedia.com.au 
+                        
+                        </p> -->
+                        
+                    <address>
+						  <abbr title="Name">Julie Harrington</abbr><br>
+						  <abbr title="company">Ink Plum Marketing Communications</abbr><br>
+						  <abbr title="Mobile">Mobile:</abbr> 0402 336 354<br>
+						  <abbr title="Email">Email: </abbr><a href="mailto:#">julie@inkplum.com.au</a><br>
+						  <abbr title="web">Web: </abbr> http://inkplum.com.au <br>
+					</address>
+                        
+                        
+                       
+         				
+   </accordion-group>
+	
+	
+	
+		<a id="nine"></a>
+    <accordion-group is-open="pressstatus[8].value" >
+   
+        <accordion-heading >
+  						
+  						<div class="row">
+	  						<p class="texthead">
+	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[8].value, 'glyphicon glyphicon-minus': pressstatus[8].value}"></i>
+	  						Power Exchange: Australia&#146s First Independent Buyer Focused Real Estate Website</p>
+	  						<p class="datehead">17 June 2015</p>
+	  					</div>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press9')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('nine')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[8].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[8].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/power-exchange')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[8].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=power-exchange%26name=Press-release-power-exchange" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=power-exchange%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-power-exchange&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[8].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					<b>The real estate industry has long served the seller, but the latest disrupter, <a href="http://centralpropertyexchange.com.au/" target="_blank" title="CPx">centralpropertyexchange.com.au</a>, has their eye on the buyer. </b>
+         				</p>
+         				
+         				
+         				<p>Recognising buyer frustration and the limitations of the financial services industry, <a href="http://centralpropertyexchange.com.au/" target="_blank" title="CPx">centralpropertyexchange.com.au</a> (CPx) Director and Founder, Anthony Aoun, has created a platform where buyers and advisors will finally get the disclosure they want.</p>
+         				
+         				<p>&#147The current real estate model puts the seller and agent in a position of power, which directly clashes with the financial services industry that focuses on protecting buyers. This out-dated approach is no longer workable or sufficient, and it is being less tolerated. This is why new service models and platforms are emerging as alternatives. The real estate industry is changing forever.&#148 Aoun said. 
+         				</p>
+         				
+         				<p>He continues, &#147These changes have been driven by web technology improvements, expectations of astute buyers and investors, the financial services&#146 industry wanting more involvement in direct property purchases, growing demands for independent information, and timing ... it seems that the time for change, is now!&#148</p>
+         				
+         				<p>CPx is playing a significant part in changing the industry paradigm, by offering a new independent service. Properties on CPx are independently graded, helping buyers to easily compare properties, financial advisors to mitigate property transaction risks, and sellers to appeal to a different and growing market.</p>
+                        
+                       	<p>According to Aoun, the financial services industry, representing over 100,000 professionals, will become the next big property player. </p>
+                        
+       					<p>&#147CPx, because of its independent listing process makes it possible for financial services to offer properties to their clients which is an Australian first! Properties are listed with no real estate commissions or high advertising costs; buyers and sellers can bypass traditional real estate agency processes, by dealing directly with each other or appoint an independent representative. Saving both the buyer and seller money on the property transaction.&#148 Aoun said.</p>
+                        
+                        <p>All types of residential properties must adhere to the independent process to be listed for sale on CPx, this includes an Independent Property Review (IPR) on each listing.</p>
+
+						<p>&#147This review gives buyers and advisors the expert commentary of independent Valuers on the location, neighbourhood, rentability and marketability of a property, providing a score and grade for quick and easy property comparisons and accurate due diligence.&#148 Aoun said.</p>	
+							                        
+                        <p>He continues, &#147On CPx both sellers and buyers get fair and independent representation.&#148 </p>
+                        
+                        <p>As the first property platform designed with the buyer in mind, there are a number of new user-experiences to make gathering information and comparing properties easier for buyers and financial services.</p>
+                        
+                        <p>&#147Loan view is one of many examples of the functionality available to buyers and advisors. Searching for properties based on foreign currency and a range of affordability contributors, including monthly repayments, loan to value ratio (LVR), borrowing capacity and available cash-deposit, prevents buyers wasting time searching through unsuitable properties.&#148 Aoun said.</p>
+                        
+                        <p>He continues, &#147CPx is already attracting positive discussions with large national corporations; financial planners, accountants and banks. CPx might just be what buyers and financial advisors have been waiting for.&#148</p>
+                        
+                        <p>Large industry players like Villa World, developers and private residential property sellers are able to list properties on the CPx website for a nominal fee of $550 (inclusive of GST) which also includes the Independent Property Review (IPR).</p>
+                        
+                        <p>To list or search properties head to <a href="http://www.centralpropertyexchange.com.au/" target="_blank" title="CPx">http://www.centralpropertyexchange.com.au</a><br>ENDS</p>
+                        
+                       
+                       	 <p>
+         					<b>Send via email | Email subject:</b><br/>  
+							PRESS RELEASE:  Australia&#146s First Independent Buyer Focused Property Platform
+         				</p>
+                        
+                        <p><b>Media Contact</b></p>
+                        
+                        <p>For more information or to organise an interview with Anthony Aoun from CPx please contact:</p>
+                        
+                        <p>Amanda Jesnoewski<br>
+                        M: 0433 502 114<br>
+                        E: amanda@velocitymedia.com.au 
+                        
+                        </p>
+                        
+                        
+                       
+         				
+   </accordion-group> 
+	
+	
+	
+	
+	
+	
+	
+	<a id="eight"></a>
+    <accordion-group is-open="pressstatus[7].value">
+   
+        <accordion-heading >
+  						
+  						<div class="row">
+	  						<p class="texthead">
+	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[7].value, 'glyphicon glyphicon-minus': pressstatus[7].value}"></i>
+	  						Villa World</p>
+	  						<p class="datehead">7 Apr 2015</p>
+	  					</div>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press8')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('eight')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[7].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[7].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/villa-world')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[7].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=villa-world%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-villa-world" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=villa-world%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-villa-world&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[7].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					<b>Villa World Lists New Homes With CPx.</b>
+         				</p>
+         				<p>ASX listed Queensland property development group, Villa World, has decided to advertise their completed new homes on <a href="http://centralpropertyexchange.com.au/" target="_blank" title="CPx">centralpropertyexchange.com.au</a> (CPx), a ground-breaking property sales website.  CPx offers a forum for buyers and sellers to negotiate directly and so eliminates the traditional practice of engaging a middleman, effectively saving thousands of dollars in fees and commissions.
+           				</p>
+         				<p>
+         				Villa World&#146s National Sales Manager, Robyn Valmadre, commented, &#147At Villa World, we sell our own properties, therefore, the third party cost savings do not apply in our case.  However, CPx offers a new marketplace to reach buyers and investors who are seeking the significant cost savings both Villa World and CPx can offer.  In this way, advertising our homes on CPx is a good fit for us.&#148
+         				</p>
+         				<p>
+						The CPx business model encourages not only buyers and sellers to the site, but also industry professionals such as financial planners, mortgage brokers, accountants, and conveyancers to register their services on the site.  After an industry professional&#146s qualifications are verified by CPx, clients can then choose to engage their services for a fee negotiated between the two parties outside of the CPx site.
+         				</p>
+         				<p>
+						CPx provides an environment where home buyers and investors can buy properties with market transparency and can choose the services they need at an individually negotiated price.  All properties listed on the site require a mandatory Independent Property Report that provides a graded score for easy comparison.  &#147Villa World&#146s business philosophy is win-win, and I can see this same philosophy is inbuilt in the CPx business model&#148, said Ms Valmadre.
+                        </p>
+                        
+                        <p>
+						The innovation of property expert, Anthony Aoun, CPx is a business concept he has been carefully developing to fruition over the past 10 years.  CPx is a meeting place for private, commercial and industry professionals looking to buy and sell property and to assist those in doing so.  &#147We are very excited at the news that Villa World will be listing property on CPx&#148, said Mr Aoun.
+                        </p>
+                        
+       
+                        
+                        <p>
+         					<b>Send via email | Email subject:</b><br/>  
+							PRESS RELEASE:  Villa World to list properties on innovative real estate website. 
+         				</p>
+         				
+   </accordion-group> 
+	
+	
+	
+	
+	
+	
+	
+	
+		<a id="seven"></a>
+    <accordion-group is-open="pressstatus[6].value">
+   
+        <accordion-heading >
+  						
+  						<div class="row">
+	  						<p class="texthead">
+	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[6].value, 'glyphicon glyphicon-minus': pressstatus[6].value}"></i>
+	  						Fractional Property Investing</p>
+	  						<p class="datehead">20 Mar 2015</p>
+	  					</div>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press7')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('seven')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[6].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[6].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/fractional-property-investing')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[6].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=fractional-property-investing%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-fractional-property-investing" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=fractional-property-investing%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-fractional-property-investing&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[6].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					<b>DomaCom collaborates with CentralPropertyExchange.com.au</b>
+         				</p>
+         				<p>
+         				World first regulated fractional property fund DomaCom has announced its support for <a href="http://centralpropertyexchange.com.au/" target="_blank" title="CPx">centralpropertyexchange.com.au</a> (CPx), a ground breaking new property listing portal that allows investors to access property without the middleman.			
+           				</p>
+         				<p>
+						According to General Manager, Sales and Marketing of DomaCom Warren Gibson, CPx provides a better way to access and invest in Australian properties.
+         				</p>
+         				<p>
+						&#147It is the perfect collaboration. DomaCom fractional property fund allows thousands more people in Australia to invest in property without the need to purchase an entire property, and CPx provides access to independently listed properties, saving buyers thousands of dollars in added fees and charges.&#148 Said Mr Gibson.
+         				</p>
+         				<p>
+						He continues, &#147CPx is an Australian first, and it is ideal for our financial services professionals and their clients to buy or sell properties directly.  With key controls in place like Independent Property Reports (IPR) to grade listed properties, both buyers and sellers get fair and independent representation.&#148		
+                        </p>
+                        
+                        <p>
+                        The CPx platform can now be accessed directly from the DomaCom website (<a href="http://www.domacom.com.au/" target="_blank" title="http://www.domacom.com.au/">http://www.domacom.com.au/</a>). 
+                        </p>
+                        
+                        <p><b>About DomaCom</b></br>
+                        DomaCom Australia Limited ACN 153 951 770 launched Australia&#146s first online fund to provide a property investment solution for the SMSF market and other long term investors through the fractional acquisition of units in a unique trust structure that enables investors to choose the property they want. Residential and commercial property Australia wide will be available in this fund from vendors and developers.
+                        </p>
+                        
+                        <p>DomaCom intend to extend the technology to provide an equity release solution for senior Australians to access much needed capital whilst affording the next generation an opportunity for income and capital growth. This elegant solution will match the time horizons of retirees with those of SMSF trustees who want an allocation to property of their choice in locations of their choice.</p>
+                        
+                        
+                        <p>
+         					<b>Send via email | Email subject:</b><br/>  
+							PRESS RELEASE:  DomaCom collaborates with CentralPropertyExchange.com.au 
+         				</p>
+         				
+   </accordion-group> 
+	
+	
+	
+	
+	
+	<a id="six"></a>
+    <accordion-group is-open="pressstatus[5].value">
+   
+        <accordion-heading >
+  						
+  						<div class="row">
+	  						<p class="texthead">
+	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[5].value, 'glyphicon glyphicon-minus': pressstatus[5].value}"></i>
+	  						Buyer&#146s Agents</p>
+	  						<p class="datehead">9 Mar 2015</p>
+	  					</div>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press6')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('six')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[5].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[5].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/buyers-agents')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[5].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=buyers-agents%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-buyers-agents" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=buyers-agents%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-buyers-agents&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[5].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					<b>Agents Get To Add More Value With CPx</b>
+         				</p>
+         				<p>
+         				Agents now have a new way to source properties for their clients through the breakthrough real estate website, <a href="http://centralpropertyexchange.com.au/" target="_blank" title="CPx">centralpropertyexchange.com.au</a> (CPx).  &#147The benefits of buying property through the CPx site are vast and valuable, said Anthony Aoun, property expert and founder of CPx.  Agents and their clients stand to save many thousands of dollars by using our streamlined property transaction process.&#148
+         				<p>
+         				By dealing direct with the vendor, agents save on the fees and charges that are usually paid to the seller&#146s agent.   The buyer&#146s agent can then pass these savings on to their own client, creating an all round value added transaction.   Agents have access to both private and commercially listed properties and can buy one property or a whole portfolio of properties for their clients, potentially saving huge sums of money.
+         				</p>
+         				<p>
+         				CPx encourages agents to use the site with free membership offered for industry professionals.  Agents can apply to be listed as an Independent Professional on the site allowing site users to choose their services.  Once a professional&#146s industry qualifications are verified, they are then listed as a service provider for referral.   CPx charges no fee for referrals, with agent fees being negotiated directly between the client and the service provider outside of the site. 
+         				</p>
+         				<p>
+						&#147The most efficient way of finding properties to buy is now online&#148, said Mr Aoun.  All properties listed on CPx require a mandatory Independent Property Report (IPR) which provides a property grade, score and commentary for reference.  In this way the agent can compare apples-with-apples and negotiate with the vendor from a transparent position.  CPx is an innovative way to expand agency business.
+                        </p>
+                        
+                        <p>
+         					<b>Send via email | Email subject:</b><br/>  
+							PRESS RELEASE:  New property website adds to real estate agent&#146s playing field. 
+         				</p>
+         				
+   </accordion-group> 
+	
+	
+	
+	
+	
+	 <a id="five"></a>
+    <accordion-group is-open="pressstatus[4].value">
+   
+        <accordion-heading >
+  						
+  						<div class="row">
+	  						<p class="texthead">
+	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[4].value, 'glyphicon glyphicon-minus': pressstatus[4].value}"></i>
+	  						Financial Services</p>
+	  						<p class="datehead">6 Mar 2015</p>
+	  					</div>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press5')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('five')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[4].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[4].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/financial-services')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[4].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=financial-services%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-financial-services" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=financial-services%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-financial-services&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[4].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					<b>Finance Professionals Benefit With CPx</b>
+         				</p>
+         				<p>
+						The real estate trade has now changed, with the introduction of a new way to source properties for clients and investors at <a href="http://centralpropertyexchange.com.au/" target="_blank" title="CPx">centralpropertyexchange.com.au</a> (CPx).  This real estate website is the innovation of property expert, Anthony Aoun, who says, &#147CPx evolves the traditional property marketplace by dealing direct with the vendor or buyer, efficiently saving thousands of dollars in fees and charges&#148.          				</p>
+         				<p>
+         				CPx offers free membership to industry professionals such as financial planners, mortgage brokers, accountants and other client representatives.  These professionals can also apply to be listed as an Independent Professional on the site where customers can choose to use their services.   Once a professional's industry qualifications are verified, they are listed as a service provider for referral.
+         				</p>
+         				<p>
+         				CPx charges no fee for referrals, and services fees are negotiated directly between the customer and the provider outside of the site, effectively making CPx a new source for business.  Customers also review service providers and in so doing, rank professionals on their services through site feedback.  This helps to ensure only quality service providers are referred to customers and are associated with the site.
+         				</p>
+         				<p>
+                        Commercial builders, investors and independent vendors can use the CPx site to list their properties off the plan, to turn-key investments or to simply sell their property.  All properties listed require a mandatory Independent Property Review (ipr) which provides a property grade, score and commentary for buyer's and seller's reference.  &#147At CPx we bring transparency to the real estate trade process.&#148, said Mr Aoun.
+                        </p>
+                        
+                        <p>
+         					<b>Send via email | Email subject:</b><br/>  
+							PRESS RELEASE:  New property website expands financial services opportunities. 
+         				</p>
+         				
+   </accordion-group> 
+	
+	
+	
+	
+	
+	
+	
+	
+	  <a id="one"></a>
+    <accordion-group is-open="pressstatus[3].value">
+   
+        <accordion-heading >
+  						
+  						<div class="row">
+	  						<p class="texthead">
+	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[3].value, 'glyphicon glyphicon-minus': pressstatus[3].value}"></i>
+	  						Property Buyers</p>
+	  						<p class="datehead">4 Feb 2015</p>
+	  					</div>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press4')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('one')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[3].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[3].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/property-buyers')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[3].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=property-buyers%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-property-buyers" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=property-buyers%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-property-buyers&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[3].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					<b>Be In Charge When You Buy Property Through CPx.</b>
+         				</p>
+         				<p>
+                          The traditional method of buying property listed through real estate agents has changed forever with the introduction of <a href="http://centralpropertyexchange.com.au/" target="_blank" title="CPx">centralpropertyexchange.com.au</a> (CPx), an online property listing website.  CPx enables vendors to independently list their property for sale, effectively cutting out the middle-man and saving sellers and buyers thousands of dollars in added fees and charges.
+         				</p>
+         				<p>
+         					Founder of CPx, Anthony Aoun, said, "Until now, buyers have been on an unfair playing field".  Generally the buyer liaises with an agent who works for the vendor to get the highest price, leaving the buyer self-represented.   The property price is also inflated to incorporate agent commissions, advertising outlay and selling fees, all costing the buyer more money to purchase the property than is necessary.
+         				</p>
+         				<p>
+         				Buyers can now be confident of a fair and transparent process with all properties listed on CPx requiring a mandatory independent report.  This report compares a property against other similar geographical properties to achieve a current market guide, enabling the buyer to compare value and to make an informed choice.  Buyers are able to directly negotiate with the seller to achieve an agreed sale price.
+         				</p>
+         				<p>
+                        Buyers who prefer leaving negotiations to a professional in their field can choose to involve an independent representative to act on their behalf.  Agents are encouraged to register their services on CPx, with the price for their services being separately negotiated with the buyer outside of the site.  There are no set agent fees.  "We have created a ground-breaking way to buy and sell property", said Mr Aoun.         				
+                        </p>
+                        
+                        <p>
+         					<b>Send via email | Email subject:</b><br/>  
+							PRESS RELEASE:  New property website saves buyers thousands of dollars. 
+         				</p>
+         				
+   </accordion-group> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="two"></a>
+	<accordion-group is-open="pressstatus[0].value">
+	
+        <accordion-heading >
+        				<div class="row">
+	  						<p class="texthead">
+  							<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[0].value, 'glyphicon glyphicon-minus': pressstatus[0].value}"></i>
+	  						Residential Builders and Developers
+	  						</p>
+	  						<p class="datehead">20 Jan 2015</p>
+	  					</div>
+  						
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press1')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('two')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[0].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[0].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/residential-builders-and-developers')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[0].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=residential-builders-and-developers%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-residential-builders-and-developers" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=residential-builders-and-developers%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-residential-builders-and-developers&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[0].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					<b>List your properties with CPx and reap the rewards.</b>
+         				</p>
+         				<p>
+         					Builders and developers now have access to a new way to sell their properties and increase their overall profits.  
+         					By listing with <a href="http://centralpropertyexchange.com.au/" target="_blank" title="CPx">centralpropertyexchange.com.au</a> (CPx), vendor's can take control and bypass the traditional real estate agency or agent method 
+         					by dealing direct with the buyer and eliminating fixed sales commissions.
+         				</p>
+         				<p>
+         					All properties listed on the CPx site are required to have a mandatory Independent Property Report (IPR).  
+         					This is obtained through an external provider and determines a graded property guide for current market positioning. 
+         					"The CPx process is remarkably simple", said CPx founder, Anthony Aoun.  
+         					Properties can be listed on the site for a $550 fee (inc GST) with the vendor choosing how their sale is handled.
+         				</p>
+         				<p>
+         					This new property selling process in effect, cuts out the middle-man.  The seller deals direct with the buyer, or the seller can appoint 
+         					their own independent professional to handle the sale for them.  CPx has a list of qualified independent professionals to choose from with 
+         					fees negotiated outside of the site between the two parties.  Sellers are also free to use their own trusted professional.
+         				</p>
+         				<p>
+         					The CPx site is designed to make the selling transaction simple, fair and transparent for all parties involved.  
+         					The vendor can list their property at the price they choose. The IPR acts as a market guide and the seller and buyer (or their agents) 
+         					then negotiate directly on the sale price.  This process removes second-hand communications and therefore ensures clarity and speed in 
+         					the transaction.
+         				</p>
+         				<p>
+         					Mr Aoun is excited to be at the helm of CPx and describes the innovative online business as, "the future of real estate trading".  
+         					He goes on to say, "Everyone's a winner with CPx".   Buyers and sellers will save thousands of dollars on needless advertising and 
+         					sales commission fees.  Agents can also participate by registering to act as an independent professional on the site, 
+         					and so creating their own business.
+         				</p>
+         				<p>
+         					<b>Send via email | Email subject:</b><br/>  
+							PRESS RELEASE:  New property website adds thousands to your profits. 
+         				</p>
+         				
+   </accordion-group> 
+	<a id="three"></a>
+	<accordion-group is-open="pressstatus[1].value">
+	
+        <accordion-heading >
+        			<div class="row">
+  						<p class="texthead">
+  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[1].value, 'glyphicon glyphicon-minus': pressstatus[1].value}"></i>
+	  						Private Residential Property Sellers
+  						</p>
+  						<p class="datehead">19 Jan 2015</p>
+  					</div>
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press2')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('three')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[1].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[1].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/private-residential-property-sellers')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[1].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=private-residential-property-sellers%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-private-residential-property-sellers" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=private-residential-property-sellers%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-private-residential-property-sellers&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[1].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					<b>Cut out the middle-man and save thousands.</b>
+         				</p>
+         				<p>
+         					Real estate agent's high advertising and sales commission fees can now be eliminated with the introduction of an innovative online way of 
+         					buying and selling property.  At <a href="http://centralpropertyexchange.com.au/" target="_blank" title="CPx">centralpropertyexchange.com.au</a> (CPx), vendor's can list their property for sale and bypass the traditional 
+         					real estate agency method by dealing direct with the buyer.  
+         				</p>
+         				<p>
+         					For a nominal $550 listing fee, sellers will potentially save thousands of dollars in unnecessary cost.   Sellers and buyers can be confident of 
+         					a fair and transparent transaction with all properties listed requiring a mandatory independent report.  This report compares a property against 
+         					other similar geographical properties to achieve a current market guide, but the vendor can list at whatever price they want.
+         				</p>
+         				<p>
+         					This break from traditional practices is the idea of property expert, Anthony Aoun of CPx.  "The property market place has changed.  
+         					Our online service embraces this change by providing a forum where vendors can sell without the influence of a middle-man involved.  
+         					People stand to save many thousands of dollars as a result.", said Mr Aoun.  
+         				</p>
+         				<p>
+         					With most people only changing properties once or twice in their lifetime, some vendors may choose to involve an independent 
+         					representative to act on their behalf.   Mr Aoun stressed that agents were welcome to participate in the CPx site through application. 
+         					"This is the future of real estate buying and selling.", said Mr Aoun.  The vendor chooses a representative, and the agent and vendor 
+         					then negotiate their own fee for professional services.  There is no set fee.
+         				</p>
+         				<p>
+         					<b>Send via email | Email subject:</b><br/>  
+							PRESS RELEASE:  New property website eliminates high selling fees. 
+         				</p>
+   </accordion-group>  
+	
+	 <a id="four"></a>
+    <accordion-group is-open="pressstatus[2].value">
+   
+        <accordion-heading >
+  						
+  						<div class="row">
+	  						<p class="texthead">
+	  						<i class="pull-left glyphicon"  ng-class="{'glyphicon glyphicon-plus':  !pressstatus[2].value, 'glyphicon glyphicon-minus': pressstatus[2].value}"></i>
+	  						CPx Launch</p>
+	  						<p class="datehead">7 Jan 2015</p>
+	  					</div>
+					
+        </accordion-heading>
+        				<div class="row">
+							<div class="col-sm-12 col-xs-12 fl-rpage ">
+				   				<div class="top-social btn-social-icon fl-r scr-pad xs-center">
+									<a class="btn btn-social-icon btn-print top-icon" href="./blogprint.html" target="_blank" ng-click="setprintpage('press3')" popover="Take a print" popover-trigger="mouseenter"></a>
+									<a ng-click="openfaqmail('four')" class="btn btn-social-icon btn-mail top-icon" popover="Share via email" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-pin top-icon" href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[2].url}};media=http://centralpropertyexchange.com.au/images/Logo.png;description= http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[2].url}}" target="_blank" popover="Share via pinterest" popover-trigger="mouseenter"></a>
+									<a ng-controller="fbCtrlblog" ng-click="share('http://centralpropertyexchange.com.au/#!/blog/press-releases/cpx-launch')" class="btn btn-social-icon btn-fb top-icon" popover="Share via facebook" popover-trigger="mouseenter"></a>
+						            <a share-square="true" class="btn btn-social-icon btn-twt top-icon" href="//twitter.com/intent/tweet?text=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[2].url}}" target="_blank" share-title="" popover="Share via twitter" popover-trigger="mouseenter"></a>			
+									<a href="https://plus.google.com/share?url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=cpx-launch%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-cpx-launch" target="_blank" rel="nofollow" class="btn btn-social-icon btn-gogpls top-icon" popover="Share via google+" popover-trigger="mouseenter"></a>
+									<a class="btn btn-social-icon btn-linkedin top-icon" href="http://www.linkedin.com/shareArticle?mini=true&url=http://centralpropertyexchange.com.au/blogshare?blogtype=press-releases%26subid=cpx-launch%26img=http://centralpropertyexchange.com.au/images/Logo.png%26name=Press-release-cpx-launch&summary=http%3a%2f%2fwww.centralpropertyexchange.com.au%2f%23!%2fblog%2fpress-releases%2f{{pressstatus[2].url}}" target="_blank" popover="Share via linkedin" popover-trigger="mouseenter"></a>
+								</div>
+							</div>
+						</div>
+         				<p>
+         					<b>Buy And Sell Property For Less With CPx</b>
+         				</p>
+         				<p>
+         				Traditional high sales commissions and advertising fees can now be eliminated when buying and selling property with CPx.  An innovative online real estate website, <a href="http://centralpropertyexchange.com.au/" target="_blank" title="CPx">centralpropertyexchange.com.au</a> or CPx, enables the user to cut out the middle-man by dealing direct with the buyer or seller effectively saving thousands of dollars in unnecessary fees and charges.  Founded by property expert, Anthony Aoun, CPx is a business concept he has been carefully developing over the past 10 years.
+         				</p>
+         				<p>
+         				&#147The conventional real estate marketplace has now changed to an online marketplace.&#148, said Mr Aoun.  CPx is a meeting place for private, commercial and professionals looking to buy and sell property.  With key controls in place such as Independent Property Reports (IPR) to grade listed properties for fair comparison, and qualifying professional credentials of service providers who choose to list themselves on the site, CPx aims for an honest open approach for all site users.
+         				</p>
+         				<p>Currently in its launch phase, CPx is growing its property gallery with a limited time incentive of 10% off the regular $550 property listing price.  This is the only fee required to list a property with the site.  There are no further advertising fees, referral fees or commissions to pay when listing and selling a property through CPx.  Independent agents and other professionals may list their services, and be employed by site users to assist in buying or selling, however, these relationships are negotiated separately outside of the site with fees agreed at their discretion.</p>
+         				<p>
+         				&#147CPx is a real estate industry first.  With the increasing move to online transactions, it makes sense that searching for and buying property online is a natural and easy progression. The main difference is, it is up to the buyer or seller to choose whether or not they include a third party professional.&#147, states Mr Aoun.    Once firmly established in Australia, the CPx business model is envisaged to expand to include other countries.
+         				</p>
+         				
+         				<p>
+         					<b>Send via email | Email subject:</b><br/>  
+							PRESS RELEASE:  New property website hailed as the future of the real estate industry. 
+         				</p>
+         				
+   </accordion-group> 
+         
+   
+   
+  </accordion>
+   </div>

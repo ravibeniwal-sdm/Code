@@ -1,0 +1,54 @@
+<!--
+<div class="slidersecrion" >
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li ng-class="{ 'active'   : slide.id == 0,'' : slide.id != 0}" ng-repeat="slide in currentimages" data-target="#myCarousel" data-slide-to="{{slide.id}}" class="active"></li>
+            
+        </ol>
+        
+        <div class="carousel-inner" role="listbox" ng-style="styleHeight()" resizeimg>
+
+            <div ng-class="{ 'item active'   : slide.id == 0,'item' : slide.id != 0}" ng-repeat="slide in currentimages" alt="detailspage slider images" class="img-responsive" style="max-height:{{windowHeight}}px;">
+                <img ng-src="{{slide.url}}" class="img-responsive" style="max-height:{{windowHeight}}px;"/>
+            </div>
+        </div>
+
+        
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+-->
+
+<!--
+<section class="slidersecrion  " >
+
+    <div ng-class="{ 'item active'   : slide.id == 0,'item' : slide.id != 0}" ng-repeat="slide in currentimages" alt="detailspage slider images" class="img-responsive" style="max-height:{{windowHeight}}px;">
+        <img ng-src="{{slide.url}}" class="img-responsive" style="max-height:{{windowHeight}}px;"/>
+    </div>
+    
+</section>
+-->
+
+<div id='bounds'>
+        <div id='slide'>
+            <script src="js/slick/listing.js" type="text/javascript"></script>
+            <section id='_mg_listing_gallery'>
+                <div class='align w-full'>
+                    <div class='slick-frame'>
+                        <div class='frame' ng-repeat="slide in currentimages">
+                        <img ng-src="{{slide.url}}"/>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section> 
+        </div>
+    </div>

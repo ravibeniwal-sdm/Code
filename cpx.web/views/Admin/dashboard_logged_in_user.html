@@ -1,0 +1,1675 @@
+
+
+<div class="container cpxcontent " style="overflow-x: hidden;" ng-controller="dashBoardCtrl">
+
+
+	<div class="row row-offcanvas row-offcanvas-left">
+
+
+	 <sidemenu></sidemenu> 
+		<div class="col-sm-12 col-xs-12 content ">
+
+
+			<div class="clearout"></div>
+			<div class="pull-left">
+				<!-- <button type="button" ng-click="toggleClass()" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button> -->
+				<button ng-click="toggleClass();"
+					class="c-hamburger c-hamburger--htla is-active">
+					<span>toggle menu</span>
+				</button>
+			</div>
+			<div class="form-head col-sm-6 col-xs-6">
+				<h2>List your property on CPx</h2>
+					
+			</div>
+
+			<div class="form-head-btn col-sm-3 col-xs-6" style="">
+
+				<button type="button" class="btn btn-lg border-btn">Need
+					assistance?</button>
+			</div>
+
+			<div class="clearout"></div>
+
+
+			<div class="col-sm-2 col-xs-12 completion-status">
+				<label class="form-label">Completeness status</label>
+				<progressbar class="form-progress-bar" animate="false" max="100"
+					value="30">
+				<b>30%</b></progressbar>
+			</div>
+			<div class="col-sm-4 col-xs-12 nopadding">
+				<div class="col-sm-6 col-xs-6 publish-date">
+					<label class="form-label">Publish date</label> 
+					
+						<a href="#" tooltip="Your property will be published once the Independent 
+						Property Review (ipr) is complete; please allow 2-5 days. An Independent Property Review (ipr) is 
+						ordered immediately upon receipt of payment or 5 days prior (where applicable) to a selected date. 
+						A date cannot be amended once the Independent Property Review (ipr) has been ordered." 
+						tooltip-class="customClass" tooltip-trigger="mouseenter" tooltip-placement="bottom">
+							<span class="fkquestion">?</span>
+						</a>
+					
+					<div class="input-group">
+						<input type="text" required ng-model="item.publishDateDate"
+							date-disabled="disabled(date, mode)" placeholder="dd-mm-yyyy "class="form-control"
+							datepicker-popup="dd-MMMM-yyyy" is-open="datePicker1" /> <span
+							class="input-group-btn calender-btn">
+							<button type="button" class="btn btn-primary star-color"
+								ng-click="openPicker($event, 'datePicker1')">
+								<i class="fa fa-calendar"></i>
+							</button>
+						</span>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-6 publish-date">
+					<label class="form-label">Expiration date</label> <input
+						type="text" class="form-control " placeholder="dd/mm/yyyy"  disabled>
+					<!-- ngIf: isOpen -->
+				</div>
+
+			</div>
+
+			<div class="form-group screen-options col-sm-2">
+				<label for="">Screen Options</label><br /> <select
+					class="form-control">
+					<option value="Residential" selected="">Form</option>
+					<option value="Commercial">Wizard</option>
+					<option value="Office">Screen</option>
+					<option value="Office">List</option>
+				</select>
+			</div>
+			<!-- <div class="col-sm-4 col-xs-12 " style="padding-left:0px;padding-right:0px;">
+					<div class="col-sm-12 col-xs-12 fl-rpage" style="padding-left:0px;padding-right:0px;padding-top:11px;">
+						<div class="col-sm-5">
+						<div class="input-group top-button1 btn btn-social-icon scr-pad xs-center">
+							<span class="input-group-addon top-span1 nopadding" style="background: #25427C" aria-hidden="true" id="basic-addon1">
+								<span class="glyphicon glyphicon-plus star-color"></span>
+							</span> <a href="#!/shortlist" title="View shortlist"><button class="btn-default btn btn-icon pull-left top-spbtn nopadding ng-binding" type="button" style="height:26px;">Clone property</button></a>
+						</div>
+						</div>
+						<div class="col-sm-5 col-sm-push-1">
+						<div class="input-group top-button1 btn btn-social-icon scr-pad xs-center">
+							<span class="input-group-addon top-span1 nopadding" style="background: #25427C" aria-hidden="true" id="basic-addon1">
+								<span class="glyphicon glyphicon-search star-color"></span>
+							</span> <a href="#!/shortlist" title="View shortlist"><button class="btn-default btn btn-icon pull-left top-spbtn nopadding ng-binding" type="button" style="height:26px;">Preview updates</button></a>
+						</div>
+						</div>
+					</div>
+				</div> -->
+			<div class="col-sm-4 col-xs-12 icon-buttons norightpad">
+				<div class="col-sm-6 col-xs-6 btn-clone-property">
+					<div class="btn-group full-width">
+						<a href="#!/shortlist" class="full-width" title="View shortlist">
+							<span class="btn btn-default btns-icon" aria-label="Left Align"><i
+								class="star-color glyphicon glyphicon-plus" aria-hidden="true"></i></span>
+							<button class="btn-default btn full-width btn-icon-text"
+								type="button" aria-label="Center Align">Clone property</button>
+						</a>
+					</div>
+
+				</div>
+
+				<div class="col-sm-6 col-xs-6 btn-clone-property norightpad">
+					<div class="btn-group full-width">
+						<a href="#!/shortlist" class="full-width" title="View shortlist">
+							<span type="button" class="btn btn-default btns-icon"
+							aria-label="Left Align"><i
+								class="star-color glyphicon glyphicon-search" aria-hidden="true"></i></span>
+							<button class="btn-default btn full-width btn-icon-text"
+								type="button" aria-label="Center Align">Preview updates</button>
+						</a>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="logo-border col-sm-12"></div>
+			<div class="clearout"></div>
+			<div class="clearout"></div>
+			<div class="form-start">
+
+				<ul class="nav nav-tabs screen-wizard">
+					<li ng-repeat="step in steps"
+						ng-class="{active: $index==getCurrentStepIndex()}"><a
+						ng-click="goToStep($index)"><span
+							class="badge">{{step.badge}}</span>&nbsp;&nbsp;&nbsp;{{step.title | translate}}</a>
+						<div class="arrow-up"></div></li>
+				</ul>
+
+				<div ng-switch on="selection.title">
+
+					<!-- First Step -->
+					<div ng-switch-when="PROPERTY DETAILS">
+						<div class="col-sm-12 col-xs-12 form-wizard ">
+
+							<div class="section-form eq-heights">
+								<div class="col-sm-6 col-xs-12 section-bg form-address">
+									<div class="col-sm-12 col-xs-12 ">
+										<h4 class="col-sm-4 col-xs-9 nopadding">Address<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="10" value="0">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+										<div class="contactinput">
+											<div class="form-group">
+												<input type="text" class="form-control"
+													placeholder="Lot number" ng-model="address.lotNumber"
+													required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="Street"
+													ng-model="address.street" required>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="Suburb"
+													ng-model="address.suburb" required>
+											</div>
+											<div class="form-group">
+												<select class="form-control noleftpad"
+													ng-model="address.state"
+													style="padding-left: 0px !important;">
+													<option value="" disabled selected>State</option>
+													<option label="State1">State1</option>
+													<option label="State2">State2</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control"
+													placeholder="Post code" ng-model="address.postcode" required="">
+											</div>
+											<div class="form-group">
+												<select class="form-control" ng-model="address.country"
+													style="padding-left: 0px !important;">
+													<option value="" disabled selected>Country</option>
+													<option label="Country1">Country1</option>
+													<option label="Country2">Country2</option>
+												</select>
+											</div>
+											
+
+										</div>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-xs-12 form-physical-attributes section-bg">
+									<div class="col-sm-12 col-xs-12">
+										<h4 class="col-sm-6 col-xs-9 nopadding">Physical
+											attributes<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="10" value="0">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+										<div class="contactinput">
+											<div class="form-group">
+												<input type="text" class="form-control"
+													placeholder="Property name"
+													ng-model="physicalAttributes.propertyName" required="">
+											</div>
+											<div class="form-group">
+												<select class="form-control" ng-model="physicalAttributes.type"
+													style="padding-left: 0px !important;">
+													<option value="" disabled selected>Type</option>
+													<option>Residential</option>
+													<option>Commercial</option>
+													<option>Office</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control"
+													placeholder="House size1(m&sup2;)"
+													ng-model="physicalAttributes.houseSize" required="">
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control"
+													placeholder="Land size1(m&sup2;)"
+													ng-model="physicalAttributes.landSize" required="">
+											</div>
+
+											<div class="form-group">
+												<input type="text" class="form-control"
+													placeholder="Bedrooms" ng-model="physicalAttributes.bedrooms"
+													required="">
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control"
+													placeholder="Bathrooms" ng-model="physicalAttributes.bathrooms"
+													required="">
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="Cars"
+													ng-model="physicalAttributes.cars" required="">
+											</div>
+											
+											<div class="clearout"></div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-sm-12 col-xs-12 section-form eq-heights">
+								<div
+									class="col-sm-6  col-xs-12 section-bg form-property-sale-price">
+									<div class="col-sm-12 ">
+										<h4 class="col-sm-7 col-xs-9 nopadding">Property
+											for-sale-price<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="20" value="0">
+											<b>20%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+										<div class="quoted-division col-sm-12">
+											<p>The properties listed on CPx do not include a real
+												estate agent 'selling-fee'. This is indicated by the use of
+												the following labels</p>
+											<ul>
+
+												<li><b>Listed price:</b> means the property
+													for-sale-price inclusive of the real estate agents
+													'selling-fee'.</li>
+
+												<li><b> CPx price:</b> means the property
+													for-sale-price less the 'selling-fee'.</li>
+
+												<li><b> Savings:</b> means the real estate agent
+													'selling-fee' where applicable.</li>
+
+											</ul>
+											<p>Also, please note:</p>
+											<ul>
+
+												<li>It is illegal in Australia to list/advertise a
+													property with different prices.</li>
+
+												<li>Buyer will be advised that they are able to secure
+													the property at the CPx price.</li>
+
+												<li>In case of 'Selling-fee' not applicable, hence 0
+													only the CPx price will be display against the property.</li>
+
+												<li>If a false 'Selling-fee' is declared CPx has right
+													to take your property 'Offline'. No refund is payable.</li>
+											</ul>
+										</div>
+										
+										
+
+										 <div class="form-group noleftpad col-sm-12"
+											style=" padding-top: 15px;">
+											<label class="form-label"> Does your property for-sale-price include 'Selling-fee' (inclusive of project marketing fee)?</label><br/> <label
+												class="radio-inline form-label"> <input
+												class="cpx-radioinput" ng-model="propertyForSale.includefee" ng-init="propertyForSale.includefee='Yes'" value="Yes" type="radio" name="optradio" selected>Yes
+											</label> <label class="radio-inline form-label">
+												<input class="cpx-radioinput" ng-model="propertyForSale.includefee" value="No" type="radio" name="optradio">No
+											</label>
+										</div> 
+										<div ng-show="propertyForSale.includefee=='Yes'">
+											<div class="form-group">
+												<input type="text" class="form-control"
+													placeholder="Listed price (AUD)"
+													ng-model="propertyForSale.listedPrice" required="">
+											</div>
+											<div class="form-group noleftpad col-sm-4 col-xs-4">
+											  <select class="form-control noleftpad"
+												ng-model="propertyForSale.currency"
+												ng-init="propertyForSale.currency='&#36;'" >
+												<!-- <option style="display:none;" value=""></option> -->
+												<option selected>&#36;</option>
+												<option>&#x20B9;</option>
+												<option>&#163;</option>
+												<option>&#128;</option>
+												<option>&#165;</option>
+											</select>
+												 <!-- <select class="form-control"
+													ng-options="option.name for option in propertyForSale.availableOptions track by option.id"
+													ng-model="propertyForSale.selectedOption">
+												</select>	 -->
+																							
+												
+											</div>
+											<div class="form-group col-sm-8 col-xs-8"
+												style="padding-right: 0px">
+												<input type="text" class="form-control"
+													placeholder="Selling-fees (AUD)"
+													ng-model="propertyForSale.sellingFees" required="">
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control"
+													placeholder="CPx administration/ listing support fees (AUD)"
+													ng-model="propertyForSale.listingFees" required="">
+											</div>
+											<div class="form-group">
+											<label class="form-label">Will be displayed as shown below</label>
+												<textarea disabled rows='3' type="text"
+													class="form-control text-area-custom"
+													ng-model="propertyForSale.summaryOfpricing"
+													ng-init='propertyForSale.summaryOfpricing="Listed price (AUD)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$375,000
+CPx price (AUD)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $362,875
+Saving (AUD)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $12,125"'></textarea>
+											</div>
+										</div>
+										<div ng-show="propertyForSale.includefee=='No'" class="form-group">
+											<input type="text" class="form-control"
+												placeholder="CPx price (AUD)"
+												ng-model="propertyForSale.cpxPrice" required="">
+										</div>
+										<div class="clearout"></div>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-xs-12 form-rental-lease section-bg">
+									<div class="col-sm-12 ">
+										<h4 class="col-sm-4 col-xs-9 nopadding">Rental / Lease<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="10" value="10">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+										<div class="form-group">
+											<input type="text" class="form-control"
+												placeholder="Weekly rental / lease"
+												ng-model="rentalLease.rentalOrlease" required="">
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-sm-12 col-xs-12 section-form eq-heights">
+								<div class="col-sm-6 form-property-images section-bg" style="">
+									<div class="col-sm-12 ">
+										<h4 class="col-sm-6 col-xs-9 nopadding">Property images<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="partial" animate="false" max="10"
+												value="10">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+
+
+
+										<div ng-show="uploader.isHTML5" class="col-sm-12"
+											style="padding: 0px;">
+											<!-- Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
+											<div nv-file-drop="" uploader="uploader"
+												options="{ url: '/foo' }">
+												<div nv-file-over="" uploader="uploader"
+													over-class="another0px-file-over-class"
+													class="well my-drop-zone">
+													<h4>Drop your files here</h4>
+													<div class="clearout"></div>
+													<button class="fileUpload addimages">
+														<span><span class="glyphicon glyphicon-plus"></span>&nbsp;Add
+															images</span>
+														<!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
+														<input type="file" class="upload" nv-file-select=""
+															uploader="uploader" multiple /><br />
+													</button>
+													<div class="clearout"></div>
+													<div class="input-group">
+														<input type="url" class="form-control"
+															placeholder="or enter url of file to upload"
+															uploader="uploader"> <span
+															class="input-group-btn">
+															<button ng-show="uploader.url"
+																class="btn btn-default addimages btn-height"
+																type="button">Upload</button>
+														</span>
+													</div>
+													<!-- /input-group -->
+													<div class="clearout"></div>
+													<ul class="list-style">
+
+														<li><b>You can upload multiple images.</b></li>
+
+														<li><b>The maximum file size for the uploads is
+																5MB.</b></li>
+
+														<li><b>Only files (JPG,GIF,PNG,JPEG) are allowed.</b></li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 nopadding">
+											<!-- <p>Images uploaded: {{ uploader.queue.length }}</p> -->
+
+											<table class="table">
+
+												<tbody>
+													<tr class="col-sm-4 image-container"
+														ng-repeat="item in uploader.queue">
+														<td>
+															<!-- Image preview --> <!--auto height--> <!--<div ng-thumb="{ file: item.file, width: 100 }"></div>-->
+															<!--auto width--> <!-- {{$index}} -->
+															<div ng-show="uploader.isHTML5"
+																ng-thumb="{ file: item._file, height: 100, index: $index}">
+																<br />
+															</div> <!--fixed width and height --> <!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+														</td>
+														<!-- <td nowrap>
+					                                 <strong>{{ item.file.name }}</strong>| {{ item.file.size/1024/1024|number:2 }} MB<br/><br/> 
+					                                <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+					                                       <span class="glyphicon glyphicon-trash"></span> Remove
+					                                </button>
+					                                </td>-->
+														<!-- <td class="text-center">
+					                                    <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+					                                    <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+					                                    <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+					                                </td> -->
+
+													</tr>
+												</tbody>
+											</table>
+
+
+											<!--  <div>
+					                        <div>
+					                            Queue progress:
+					                            <div class="progress" style="">
+					                                <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
+					                            </div>
+					                        </div>
+					                        <button type="button" class="btn btn-success btn-s" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">
+					                            <span class="glyphicon glyphicon-upload"></span> Upload all
+					                        </button>          
+					                        <button type="button" class="btn btn-danger btn-s" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length">
+					                            <span class="glyphicon glyphicon-trash"></span> Remove all
+					                        </button>
+					                    </div> -->
+
+										</div>
+
+
+									</div>
+								</div>
+
+
+
+								<div class="col-sm-6 col-xs-12 form-floor-plans section-bg">
+									<div class="col-sm-12">
+										<h4 class="col-sm-4 col-xs-9 nopadding">Floor plans<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="10" value="0">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+
+										<div ng-show="uploader2.isHTML5" class="col-sm-12 nopadding">
+											<!-- Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
+											<div nv-file-drop="" uploader="uploader2"
+												options="{ url: '/foo' }">
+												<div nv-file-over="" uploader="uploader2"
+													over-class="another-file-over-class"
+													class="well my-drop-zone">
+													<h4>Drop your files here</h4>
+													<div class="clearout"></div>
+													<button class="fileUpload addimages">
+														<span><span class="glyphicon glyphicon-plus"></span>&nbsp;Add
+															files</span>
+														<!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
+														<input type="file" class="upload" nv-file-select=""
+															uploader="uploader2" multiple /><br />
+													</button>
+													<div class="clearout"></div>
+													<div class="input-group">
+														<input type="url" class="form-control"
+															placeholder="or enter url of file to upload"
+															uploader="uploader2"> <span
+															class="input-group-btn">
+															<button ng-show="uploader2.url"
+																class="btn btn-default addimages btn-height"
+																type="button" style="border-radius: 0px;">Upload</button>
+														</span>
+													</div>
+													<!-- /input-group -->
+													<div class="clearout"></div>
+													<ul class="list-style">
+
+														<li><b>You can upload multiple images.</b></li>
+
+														<li><b>The maximum file size for the uploads is
+																5MB.</b></li>
+
+														<li><b>Only files (JPG,GIF,PNG,PDF,DOC,XLS) are
+																allowed.</b></li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 nopadding">
+											<!--  <p>Files uploaded: {{ uploader2.queue.length }}</p> -->
+
+											<table class="table uploads-table">
+
+												<tbody>
+													<tr class="item-bg" ng-repeat="item in uploader2.queue">
+														<td class="file-container"><strong>{{
+																item.file.name }}</strong> <!-- Image preview --> <!--auto height-->
+															<!--<div ng-thumb="{ file: item.file, width: 100 }"></div>-->
+															<!--auto width-->
+															<div ng-show="uploader2.isHTML5"
+																ngthumb="{ file: item._file, height: 100 }"></div> <!--fixed width and height -->
+															<!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+														</td>
+														<!-- <td class="text-center" style="padding:8px !important;">
+					                                    <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+					                                    <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+					                                    <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+					                                </td> -->
+														<td class="file-container" nowrap>{{
+															item.file.size/1024/1024|number:2 }} MB</td>
+														<td class="file-container" nowrap
+															style="text-align: right;">
+															<button type="button" class="btn btn-orange btn-xs"
+																ng-click="item.remove()">
+																<span class="glyphicon glyphicon-trash"></span>
+															</button>
+														</td>
+
+													</tr>
+												</tbody>
+											</table>
+
+
+
+											<!-- 					                    <div>
+					                        <div>
+					                            Queue progress:
+					                            <div class="progress" style="">
+					                                <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader2.progress + '%' }"></div>
+					                            </div>
+					                        </div>
+					                        <button type="button" class="btn btn-success btn-s" ng-click="uploader2.uploadAll()" ng-disabled="!uploader2.getNotUploadedItems().length">
+					                            <span class="glyphicon glyphicon-upload"></span> Upload all
+					                        </button>          
+					                        <button type="button" class="btn btn-danger btn-s" ng-click="uploader2.clearQueue()" ng-disabled="!uploader2.queue.length">
+					                            <span class="glyphicon glyphicon-trash"></span> Remove all
+					                        </button>
+					                    </div> -->
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="col-sm-12 col-xs-12 section-form eq-heights">
+								<div
+									class="col-sm-6 col-xs-12 form-supporting-information section-bg">
+									<div class="col-sm-12">
+										<h4 class="col-sm-7 col-xs-9 nopadding">Supporting
+											information</h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="10" value="10">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+
+										<div ng-show="uploader3.isHTML5" class="col-sm-12 nopadding">
+											<!-- Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
+											<div nv-file-drop="" uploader="uploader3"
+												options="{ url: '/foo' }">
+												<div nv-file-over="" uploader="uploader3"
+													over-class="another-file-over-class"
+													class="well my-drop-zone">
+													<h4>Drop your files here</h4>
+													<div class="clearout"></div>
+													<button class="fileUpload addimages">
+														<span><span class="glyphicon glyphicon-plus"></span>&nbsp;Add
+															files</span>
+														<!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
+														<input type="file" class="upload" nv-file-select=""
+															uploader="uploader3" multiple /><br />
+													</button>
+													<div class="clearout"></div>
+													<div class="input-group">
+														<input type="url" class="form-control"
+															placeholder="or enter url of file to upload"
+															uploader="uploader3"> <span
+															class="input-group-btn">
+															<button ng-show="uploader3.url"
+																class="btn btn-default addimages btn-height"
+																type="button" style="border-radius: 0px;">Upload</button>
+														</span>
+													</div>
+													<!-- /input-group -->
+													<div class="clearout"></div>
+													<ul class="list-style">
+
+														<li><b>You can upload multiple images.</b></li>
+
+														<li><b>The maximum file size for the uploads is
+																5MB.</b></li>
+
+														<li><b>Only files (JPG,GIF,PNG,PDF,DOC,XLS) are
+																allowed.</b></li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 nopadding">
+											<!--  <p>Files uploaded: {{ uploader3.queue.length }}</p> -->
+
+											<table class="table uploads-table">
+
+												<tbody>
+													<tr class="item-bg" ng-repeat="item in uploader3.queue">
+														<td class="file-container"><strong>{{
+																item.file.name }}</strong> <!-- Image preview --> <!--auto height-->
+															<!--<div ng-thumb="{ file: item.file, width: 100 }"></div>-->
+															<!--auto width-->
+															<div ng-show="uploader3.isHTML5"
+																ngthumb="{ file: item._file, height: 100 }"></div> <!--fixed width and height -->
+															<!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+														</td>
+														<!-- <td class="text-center" style="padding:8px !important;">
+					                                    <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+					                                    <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+					                                    <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+					                                </td> -->
+														<td class="file-container" nowrap>{{
+															item.file.size/1024/1024|number:2 }} MB</td>
+														<td class="file-container" nowrap
+															style="text-align: right;">
+															<button type="button" class="btn btn-orange btn-xs"
+																ng-click="item.remove()">
+																<span class="glyphicon glyphicon-trash"></span>
+															</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+
+
+
+											<!-- 					                    <div>
+					                        <div>
+					                            Queue progress:
+					                            <div class="progress" style="">
+					                                <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader3.progress + '%' }"></div>
+					                            </div>
+					                        </div>
+					                        <button type="button" class="btn btn-success btn-s" ng-click="uploader3.uploadAll()" ng-disabled="!uploader3.getNotUploadedItems().length">
+					                            <span class="glyphicon glyphicon-upload"></span> Upload all
+					                        </button>          
+					                        <button type="button" class="btn btn-danger btn-s" ng-click="uploader3.clearQueue()" ng-disabled="!uploader3.queue.length">
+					                            <span class="glyphicon glyphicon-trash"></span> Remove all
+					                        </button>
+					                    </div> -->
+
+										</div>
+
+									</div>
+								</div>
+
+
+								<div class="col-sm-6 col-xs-12 form-contract-of-sale section-bg">
+									<div class="col-sm-12">
+										<h4 class="col-sm-5 col-xs-9 nopadding">Contract of sale<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="20" value="0">
+											<b>20%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+
+
+										<div class="contract-quote col-sm-12">
+											<p>
+												<b>CPx governance:</b> a copy of the complete
+												contract-of-sale or contract-of-sale summary is included in
+												the available property information.
+											</p>
+										</div>
+
+										<div class="clearout"></div>
+										
+										<h6><b>A copy of the complete contract-of-sale<b/></h6>
+										<div ng-show="uploader4.isHTML5" class="col-sm-12 nopadding">
+											<!-- Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
+											<div nv-file-drop="" uploader="uploader4"
+												options="{ url: '/foo' }">
+												<div nv-file-over="" uploader="uploader4"
+													over-class="another-file-over-class"
+													class="well my-drop-zone">
+													<h4>Drop your files here</h4>
+													<div class="clearout"></div>
+													<button class="fileUpload addimages">
+														<span><span class="glyphicon glyphicon-plus"></span>&nbsp;Add
+															files</span>
+														<!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
+														<input type="file" class="upload" nv-file-select=""
+															uploader="uploader4" multiple /><br />
+													</button>
+													<div class="clearout"></div>
+
+													<div class="input-group">
+														<input type="url" class="form-control"
+															placeholder="or enter url of file to upload"
+															uploader="uploader4"> <span
+															class="input-group-btn">
+															<button ng-show="uploader4.url"
+																class="btn btn-default addimages btn-height"
+																type="button" style="border-radius: 0px;">Upload</button>
+														</span>
+													</div>
+													<!-- /input-group -->
+
+													<div class="input-group" style="padding-top: 15px;">
+														<input type="url" class="form-control"
+															placeholder="http://www.centralpropertyexchange.com.au/#!/blog"
+															uploader="uploader4"> <span
+															class="input-group-btn">
+															<button ng-show="uploader4.url"
+																class="btn btn-default addimages btn-height"
+																type="button" style="border-radius: 0px;">Add
+																link</button>
+														</span>
+													</div>
+													<!-- /input-group -->
+
+													<div class="clearout"></div>
+													<ul class="list-style">
+
+														<li><b>You can upload multiple images.</b></li>
+
+														<li><b>The maximum file size for the uploads is
+																5MB.</b></li>
+
+														<li><b>Only files (JPG,GIF,PNG,PDF,DOC,XLS) are
+																allowed.</b></li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 nopadding" style="padding: 0px;">
+											<!--  <p>Files uploaded: {{ uploader4.queue.length }}</p> -->
+
+											<table class="table uploads-table">
+
+												<tbody>
+													<tr class="item-bg" ng-repeat="item in uploader4.queue">
+														<td class="file-container"><strong>{{
+																item.file.name }}</strong> <!-- Image preview --> <!--auto height-->
+															<!--<div ng-thumb="{ file: item.file, width: 100 }"></div>-->
+															<!--auto width-->
+															<div ng-show="uploader4.isHTML5"
+																ngthumb="{ file: item._file, height: 100 }"></div> <!--fixed width and height -->
+															<!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+														</td>
+														<!-- <td class="text-center" style="padding:8px !important;">
+					                                    <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+					                                    <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+					                                    <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+					                                </td> -->
+														<td class="file-container" nowrap>{{
+															item.file.size/1024/1024|number:2 }} MB</td>
+														<td class="file-container" nowrap
+															style="text-align: right;">
+															<button type="button" class="btn btn-orange btn-xs"
+																ng-click="item.remove()">
+																<span class="glyphicon glyphicon-trash"></span>
+															</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+
+
+
+											<!-- <div>
+					                        <div>
+					                            Queue progress:
+					                            <div class="progress" style="">
+					                                <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader4.progress + '%' }"></div>
+					                            </div>
+					                        </div>
+					                        <button type="button" class="btn btn-success btn-s" ng-click="uploader4.uploadAll()" ng-disabled="!uploader4.getNotUploadedItems().length">
+					                            <span class="glyphicon glyphicon-upload"></span> Upload all
+					                        </button>          
+					                        <button type="button" class="btn btn-danger btn-s" ng-click="uploader4.clearQueue()" ng-disabled="!uploader4.queue.length">
+					                            <span class="glyphicon glyphicon-trash"></span> Remove all
+					                        </button>
+					                    </div> -->
+
+										</div>
+										<div class="col-sm-12 nopadding">
+											<h5>
+												<b>Contract of sale summary:</b>
+											</h5>
+											<label class="form-label">Would
+												you prefer to display a contract-of-sale summary against
+												your property? If so please click here to include in this
+												order &nbsp;&nbsp;<span><input type="checkbox"></span>
+											</label>
+											<div class="clearout"></div>
+											<h5>
+												<b>Construction:</b>
+											</h5>
+										
+											<label class="form-label">Does
+												your property have a title Or is it off-the-plan?</label><br/> <label
+												class="radio-inline form-label"> <input
+												class="cpx-radioinput"ng-model="contractofsale.titleradio" value="My property has a title" type="radio" name="optradio1">
+												My property has a title
+											</label> <label class="radio-inline form-label">
+												<input class="cpx-radioinput" ng-model="contractofsale.titleradio" value="My property is off-the-plan" ng-init="contractofsale.titleradio='My property is off-the-plan'" type="radio" name="optradio1" checked>
+												My property is off-the-plan
+											</label>
+											<div class="clearout"></div>
+											<div class="input-group col-sm-8 col-xs-12">
+												<input type="text" required ng-model="item.data"
+													placeholder="Estimated completion date"
+													date-disabled="disabled(date, mode)" class="form-control"
+													datepicker-popup="dd-MMMM-yyyy" is-open="datePicker2" /> <span
+													class="input-group-btn calender-btn">
+													<button type="button" class="btn btn-primary star-color"
+														ng-click="openPicker($event, 'datePicker2')">
+														<i class="fa fa-calendar"></i>
+													</button>
+												</span>
+											</div>											
+											<div class="clearout"></div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+
+					<!-- Second Step -->
+					<div ng-switch-when="CONTACT/INQUIRY DETAILS">
+						<div class="col-sm-12 form-wizard"
+							style="border-left: 1px solid gainsboro; border-right: 1px solid gainsboro; padding-top: 25px;">
+
+
+							<div class="col-sm-12" style="padding: 0px;">
+								<div class="col-sm-10 nopadding">
+									<span style="font-weight: 600;">Are you seller of the
+										property?</span> <label class="radio-inline "
+										style="font-size: 12px;"> <input
+										class="cpx-radioinput" type="radio" ng-model="contacts.propertyseller"
+										value="yes">Yes
+									</label> <label class="radio-inline " style="font-size: 12px;">
+										<input class="cpx-radioinput" type="radio"
+										ng-model="contacts.propertyseller" value="no">No
+									</label>
+								</div>
+								<div  class="col-sm-2"><!-- ng-hide="showInquiryForm" -->
+									<button class="border-btn add-btn" type="button" ng-click="showFormAfterAdd();">Add
+										more</button>
+								</div>
+
+								<div ng-show="contacts.propertyseller=='yes'" class=""
+									style="padding-top: 15px;">
+									<span style="font-weight: 600;">Are you primary contact
+										of inquires ?</span> <label class="radio-inline "
+										style="font-size: 12px;"> <input
+										class="cpx-radioinput" type="radio" ng-model="contacts.inquire"
+										value="yes">Yes
+									</label> <label class="radio-inline " style="font-size: 12px;">
+										<input class="cpx-radioinput" type="radio" ng-model="contacts.inquire"
+										value="no">No
+									</label>
+								</div>
+
+								<div class="clearout"></div>
+
+								<div ng-show="propertyseller=='no'">
+									<alert type="info" close="closeAlert($index)">Please
+									select your role below</alert>
+								</div>
+								<div class="clearout"></div>
+
+								
+								<div class="col-sm-12 nopadding">
+								
+								<label class="col-sm-2 form-label" for="email">Email</label>
+								<label class="col-sm-2 form-label" for="email">Mobile</label>
+								<label class="col-sm-2 form-label" for="email">Include mobile in inquiry form:</label>
+								<label class="col-sm-1 form-label" for="email">Role:</label>
+								<label class="col-sm-2 form-label" for="email">Primary contact:</label>
+								<label class="col-sm-1 form-label" for="email">Include as:</label>
+								
+								
+									
+								</div>
+								
+								
+								<form ng-show= "showInquiryForm" action="">
+									<div class="row">
+										<div class="form-group form-label norightpad col-sm-2 col-xs-4">
+											
+											<!-- <label class="form-label" for="email">Email:</label><br />  -->
+												<input type="email"
+												class="form-control" ng-model="inquiryinput.email" id="email"
+												placeholder="Enter email">
+												
+												
+
+										</div>
+
+
+										<div class="form-group norightpad form-label col-sm-2 col-xs-4">
+											
+											<!-- <label class="form-label" for="phone">Mobile</label><br />  -->
+											<input type="phone"
+												class="form-control" ng-model="inquiryinput.mobile" id="mobno"
+												placeholder="Enter mobile no.">
+										</div>
+
+
+										<div class="form-group form-label col-sm-2 col-xs-4 aligncenter">
+											
+											<!-- <label style="margin-top: -10px;" for="checkbox">Include
+												mobile on inquiry form</label><br />  -->
+												<input class="" ng-model="inquiryinput.includemobile" type="checkbox"style="margin: 4px 18px 0;">
+										</div>
+
+										<div class="form-group form-label nopadding norightpad col-sm-1 col-xs-4">
+											
+											<!-- <label class="form-label" for="role">Role</label><br />  -->
+											<select class="form-control" ng-model="inquiryinput.role">
+												<option value="" disabled="">Select role</option>
+												<option value="Seller" ng-selected="contacts.propertyseller=='yes'">Seller</option>
+												<option value="Agent">Agent</option>
+												<option value="Broker">Broker</option>
+												<option value="Manager">Manager</option>
+												<option value="Solicitor">Solicitor/ Conveyancer</option>
+												<option value="Administrator">Administrator</option>
+												<option value="Other">Other</option>
+											</select>
+										</div>
+
+										<div class="form-group form-label aligncenter norightpad col-sm-2">
+											
+											<!-- <label class="form-label" for="contact">Primary contact</label><br /> -->
+											 <input class="cpx-" ng-model="inquiryinput.primarycontact"ng-selected="contacts.inquire=='yes'"
+												type="radio" value="primary">
+										</div>
+
+										<div class="form-group nopadding form-label col-sm-1">
+											
+											<!-- <label class="form-label" for="">Include as</label><br />  -->
+											<select class="form-control" ng-model="inquiryinput.includeas">
+											<option value="To">To</option>												
+												<option value="CC">CC</option>
+												<option value=BCC>BCC</option>
+												<option value="None">None</option>
+											</select>
+										</div>
+										<div class="form-group form-label col-sm-2">
+											<!-- <label class="form-label" for="contact"></label><br /> -->
+											<button type="button" class="btn btn-success btn-sm"
+													ng-click="addcontact(inquiryinput);showForm();">
+														<span class="glyphicon glyphicon-save"></span>Save
+												</button> 
+												
+											
+											
+										</div>
+									</div>
+								</form>
+								
+								<table class="table table-hover table-striped  col-sm-12">
+										<!-- <tr>
+											<th class="form-label col-sm-2">Email
+											</th>
+											<th class="form-label col-sm-2">Mobile
+											</th>
+											<th class="form-label col-sm-2">Include mobile in inquiry form
+											</th>
+											<th class="form-label col-sm-1">Role
+											</th>
+											<th class="form-label col-sm-2">Primary contact
+											</th>
+											<th class="form-label col-sm-1">Include as
+											</th>
+											<th class="form-label">										
+											</th>
+										</tr> -->
+										<tr ng-repeat="inquiry in inquiries track by $index">
+											<td class="col-sm-2">{{inquiry.email}}
+											</td>
+											<td class="col-sm-2">{{inquiry.mobile}}
+											</td>
+											<td class="col-sm-2 aligncenter">{{inquiry.includemobile}}
+											</td>
+											<td class="col-sm-1">{{inquiry.role}}
+											</td>
+											<td class="aligncenter col-sm-2">{{inquiry.primarycontact}}
+											</td>
+											<td class="col-sm-1">{{inquiry.includeas}}
+											</td>
+											<td class="col-sm-2" style="padding-left: 23px;">
+												<button type="button" class="btn btn-info btn-xs"
+													ng-click="showFormAfterAdd();editcontact($index,inquiry)">
+														<span class="glyphicon glyphicon-edit"></span>Edit
+												</button> 
+												<button type="button" class="btn btn-danger btn-xs"
+													ng-click="removecontact($index)">
+														<span class="glyphicon glyphicon-trash"></span>Delete
+												</button>
+												 
+											</td>
+											
+										</tr>
+									</table>
+								
+								<div class="clearout"></div>
+
+
+								<div class="inspection-details nopadding">
+
+									<label class="form-label" >Inspection
+										details</label> <label class="radio-inline " style="font-size: 13px;">
+										<input class="cpx-radioinput" type="radio"
+										ng-model="inspection" name="optradio2" value="appointment">By
+										appointment
+									</label> <label class="radio-inline form-label" style="font-size: 13px;">
+										<input class="cpx-radioinput" type="radio"
+										ng-model="inspection" name="optradio2" value="specific">Specify
+										date and time
+									</label>
+
+									<div class="clearout"></div>
+
+									<div ng-show="inspection=='specific'">
+										<div class="date-time-picker col-sm-9 col-xs-12">
+
+											
+												<datepicker class="col-sm-6 datepick"
+													ng-model="item.startDate" class="form-control"
+													ng-change="setEndDate()" min-date="minDate"
+													show-weeks="true" class="well well-sm"
+													custom-class="getDayClass(date, mode)"></datepicker>
+												
+											<div class="col-sm-3">
+												<timepicker class="timepick-one col-sm-5 col-xs-5"
+													ng-model="item.startDate" show-meridian="false"></timepicker>
+													
+											</div>	
+											
+												
+											
+											<div class="col-sm-3 noleftpad">
+												<timepicker
+													class="timepick-two col-sm-5   col-xs-5 col-xs-push-2"
+													ng-model="item.endDate" show-meridian="false"></timepicker>
+											</div>		
+
+											
+
+										</div>
+
+
+										<div class="col-sm-3 col-xs-12">
+											<pre class="alert alert-info">start is: {{item.startDate | date:'yyyy-MM-dd HH:mm' }}<br />end is:   {{item.endDate | date:'yyyy-MM-dd HH:mm' }}<br />Duration: {{item.duration() | number:2}}</pre>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- Third Step -->
+					<div ng-switch-when="CONFIRM DETAILS">
+						
+						<div class="col-sm-12 cl-xs-12 form-wizard">
+						
+							<div class="section-form eq-heights">
+								<div class="col-sm-6 col-xs-12 section-bg form-address">
+									<div class="col-sm-12 col-xs-12 ">
+										<h4 class="col-sm-4 col-xs-9 nopadding">Address<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="10" value="0">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+										<div class="contactinput">
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">Lot number</label>
+												<p class="col-sm-6">{{address.lotNumber}}</p>
+											</div>
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">Street</label>
+												<p class="col-sm-6">{{address.street}}</p>
+													
+											</div>
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">Suburb</label>
+												<p class="col-sm-6">{{address.suburb}}</p>
+											</div>
+											<div class="form-group col-sm-12 noleftpad ">
+												<label class="col-sm-6 form-label noleftpad">State</label>
+												<p class="col-sm-6">{{address.state}}</p>
+											</div>
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">Post code</label>
+												<p class="col-sm-6">{{address.postcode}}</p>
+												
+											</div>
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">Country</label>
+												<p class="col-sm-6">{{address.country}}</p>
+											</div>
+											
+
+										</div>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-xs-12 form-physical-attributes section-bg">
+									<div class="col-sm-12 col-xs-12">
+										<h4 class="col-sm-6 col-xs-9 nopadding">Physical
+											attributes<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="10" value="0">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+										<div class="contactinput">
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">Property name</label>
+												<p class="col-sm-6">{{physicalAttributes.propertyName}}</p>
+											</div>
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">Type</label>
+												<p class="col-sm-6">{{physicalAttributes.type}}</p>
+													
+											</div>
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">House size</label>
+												<p class="col-sm-6">{{physicalAttributes.houseSize}}</p>
+											</div>
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">Land size</label>
+												<p class="col-sm-6">{{physicalAttributes.landSize}}</p>
+											</div>
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">Bed rooms</label>
+												<p class="col-sm-6">{{physicalAttributes.bedrooms}}</p>
+												
+											</div>
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">Bath rooms</label>
+												<p class="col-sm-6">{{physicalAttributes.bathrooms}}</p>
+											</div>
+											<div class="form-group col-sm-12 noleftpad">
+												<label class="col-sm-6 form-label noleftpad">Cars</label>
+												<p class="col-sm-6">{{physicalAttributes.cars}}</p>	
+											</div>
+											<div class="clearout"></div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							
+							
+							<div class="col-sm-12 col-xs-12 section-form eq-heights">
+								<div
+									class="col-sm-6  col-xs-12 section-bg form-property-sale-price">
+									<div class="col-sm-12 ">
+										<h4 class="col-sm-7 col-xs-9 nopadding">Property
+											for-sale-price<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="20" value="0">
+											<b>20%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+
+
+										<div class="form-group col-sm-12 noleftpad">											
+											<label class="radio-inline form-label noleftpad" style="font-weight:600;">Does your property
+												for-sale-price include 'selling-fee' (inclusive of project
+												marketing fee)?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="cpx-radioinput" type="radio" name="optradio" checked disabled><span style="font-weight:300;">&nbsp;{{propertyForSale.includefee}}</span></label>																				
+										</div>
+										<div class="form-group col-sm-12 noleftpad">											
+											<label class="form-label col-sm-6 noleftpad">Listed price</label>
+											<p class="col-sm-6">{{propertyForSale.listedPrice}}</p>	
+												
+										</div>
+										<div class="form-group col-sm-12 noleftpad">											
+											<label class="form-label col-sm-6 noleftpad">Savings</label>
+											<p class="col-sm-6"> {{propertyForSale.selectedOption.name}}{{propertyForSale.sellingFees}}</p>	
+												
+										</div>
+										<div class="form-group col-sm-12 noleftpad">											
+											<label class="form-label col-sm-6 noleftpad">CPx price</label>
+											<p class="col-sm-6">{{propertyForSale.listingFees}}</p>	
+												
+										</div>									
+										<div class="form-group">
+											<textarea disabled rows='3' type="text"
+												class="form-control text-area-custom"
+												ng-model="searchcriteria.summaryOfpricing"
+												ng-init='searchcriteria.summaryOfpricing="Listed price (AUD)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$375,000
+CPx price (AUD)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$362,875
+Saving (AUD)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$12,125"'></textarea>
+										</div>
+										<div class="clearout"></div>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-xs-12 form-rental-lease section-bg">
+									<div class="col-sm-12 ">
+										<h4 class="col-sm-4 col-xs-9 nopadding">Rental/Lease<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="10" value="10">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+										
+										<div class="form-group col-sm-12 noleftpad">											
+											<label class="form-label col-sm-6 noleftpad">Rental/Lease</label>
+											<p class="col-sm-6">{{rentalLease.rentalOrlease}}</p>										
+										</div>	
+
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-xs-12 section-form eq-heights">
+								<div class="col-sm-6 form-property-images section-bg" style="">
+									<div class="col-sm-12 ">
+										<h4 class="col-sm-6 col-xs-9 nopadding">Property images<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="partial" animate="false" max="10"
+												value="10">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+										<div class="col-sm-12 nopadding">
+											<table class="table">
+												<tbody>
+													<tr class="col-sm-4 image-container"
+														ng-repeat="item in uploader.queue">
+														<td>																														
+															<div ng-show="uploader.isHTML5"
+																ng-thumb="{ file: item._file, height: 100, index: $index}">
+																<br />
+															</div> 
+														</td>																										</tr>
+												</tbody>
+											</table>
+
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-xs-12 form-floor-plans section-bg">
+									<div class="col-sm-12">
+										<h4 class="col-sm-4 col-xs-9 nopadding">Floor plans<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="10" value="0">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+										<div class="col-sm-12 nopadding">											
+											<table class="table uploads-table">
+												<tbody>
+													<tr class="item-bg" ng-repeat="item in uploader2.queue">
+														<td class="file-container"><strong>{{
+																item.file.name }}</strong> <!-- Image preview --> <!--auto height-->
+															<!--<div ng-thumb="{ file: item.file, width: 100 }"></div>-->
+															<!--auto width-->
+															<div ng-show="uploader2.isHTML5"
+																ngthumb="{ file: item._file, height: 100 }"></div> <!--fixed width and height -->															
+														</td>														
+														<td class="file-container" nowrap>{{
+															item.file.size/1024/1024|number:2 }} MB</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>							
+						
+							<div class="col-sm-12 col-xs-12 section-form eq-heights">
+								<div
+									class="col-sm-6 col-xs-12 form-supporting-information section-bg">
+									<div class="col-sm-12">
+										<h4 class="col-sm-7 col-xs-9 nopadding">Supporting
+											information</h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="10" value="10">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+
+										<div class="col-sm-12 nopadding">
+											<!--  <p>Files uploaded: {{ uploader3.queue.length }}</p> -->
+											<table class="table uploads-table">
+												<tbody>
+													<tr class="item-bg" ng-repeat="item in uploader3.queue">
+														<td class="file-container"><strong>{{
+																item.file.name }}</strong> <!-- Image preview --> <!--auto height-->
+															<!--<div ng-thumb="{ file: item.file, width: 100 }"></div>-->
+															<!--auto width-->
+															<div ng-show="uploader3.isHTML5"
+																ngthumb="{ file: item._file, height: 100 }"></div> <!--fixed width and height -->
+														</td>
+														<td class="file-container" nowrap>{{
+															item.file.size/1024/1024|number:2 }} MB</td>														
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-sm-6 col-xs-12 form-contract-of-sale section-bg">
+									<div class="col-sm-12">
+										<h4 class="col-sm-5 col-xs-9 nopadding">Contract of sale<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="20" value="0">
+											<b>20%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+									    <div class="clearout"></div>
+
+										<div class="col-sm-12 nopadding" style="padding: 0px;">
+											<table class="table uploads-table">
+
+												<tbody>
+													<tr class="item-bg" ng-repeat="item in uploader4.queue">
+														<td class="file-container"><strong>{{
+																item.file.name }}</strong> 
+															<div ng-show="uploader4.isHTML5"
+																ngthumb="{ file: item._file, height: 100 }"></div> <!--fixed width and height -->
+															<!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+														</td>														
+														<td class="file-container" nowrap>{{
+															item.file.size/1024/1024|number:2 }} MB</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="col-sm-12 nopadding">
+											<h5>
+												<b>Contract for sale summary:</b>
+											</h5>
+											
+											<div class="form-group col-sm-12 noleftpad">											
+												<label class="radio-inline form-label noleftpad" style="font-weight:600;">Would
+												you prefer to display a contract-of-sale summary against
+												your property? If so please click here to include in this
+												order&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="cpx-radioinput" type="checkbox" checked disabled><span style="font-weight:300;">&nbsp;{{propertyForSale.includefee}}</span></label>																				
+											</div>											
+											
+											<div class="clearout"></div>
+											<h5>
+												<b>Construction:</b>
+											</h5>
+											
+											<div class="form-group col-sm-12 noleftpad">											
+											<label class="radio-inline form-label noleftpad" style="font-weight:600;">>Does
+												your property have a title Or is it off-the-plan?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="cpx-radioinput" type="radio" name="optradio" checked disabled><span style="font-weight:300;">&nbsp;{{propertyForSale.includefee}}</span></label>																				
+											</div>
+																						
+											<div class="clearout"></div>
+											<!-- <div class="input-group col-sm-8 col-xs-12">
+												<input type="text" required ng-model="item.data"
+													placeholder="Estimated completion date"
+													date-disabled="disabled(date, mode)" class="form-control"
+													datepicker-popup="dd-MMMM-yyyy" is-open="datePicker" /> <span
+													class="input-group-btn calender-btn">
+													<button type="button" class="btn btn-primary star-color"
+														ng-click="openPicker($event, 'datePicker')">
+														<i class="fa fa-calendar"></i>
+													</button>
+												</span>
+											</div>			 -->								
+											<div class="clearout"></div>
+										</div>
+									</div>
+								</div>
+						</div>						
+
+
+						<div class="col-sm-12 col-xs-12 section-form eq-heights">
+								<div
+									class="col-sm-6 col-xs-12 form-supporting-information section-bg">
+									<div class="col-sm-12">
+										<h4 class="col-sm-7 col-xs-9 nopadding">Contact/Inquiry details</h4>
+										<div class="col-sm-3 col-xs-3 bar-align pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="10" value="10">
+											<b>10%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<table class="table table-hover table-striped  col-sm-12">
+										<tr>
+											<th class="form-label col-sm-2">Email
+											</th>
+											<th class="form-label col-sm-2">Mobile
+											</th>
+											<th class="form-label col-sm-2">Include mobile in inquiry form
+											</th>
+											<th class="form-label col-sm-1">Role
+											</th>
+											<th class="form-label col-sm-2">Primary contact
+											</th>
+											<th class="form-label col-sm-1">Include as
+											</th>
+											<th class="form-label">										
+											</th>
+										</tr> 
+										<tr ng-repeat="inquiry in inquiries track by $index">
+											<td class="col-sm-2">{{inquiry.email}}
+											</td>
+											<td class="col-sm-2">{{inquiry.mobile}}
+											</td>
+											<td class="col-sm-2 aligncenter">{{inquiry.includemobile}}
+											</td>
+											<td class="col-sm-2">{{inquiry.role}}
+											</td>
+											<td class="aligncenter col-sm-2">{{inquiry.primarycontact}}
+											</td>
+											<td class="col-sm-2">{{inquiry.includeas}}
+											</td>
+										</tr>
+									</table>
+										
+										<div class="clearout"></div>
+
+										
+									</div>
+								</div>
+
+
+								<div class="col-sm-6 col-xs-12 form-contract-of-sale section-bg">
+									<div class="col-sm-12">
+										<h4 class="col-sm-5 col-xs-9 nopadding">Inspection details<i class="required-text asterisk">*</i></h4>
+										<div class="col-sm-3 col-xs-3 bar-align  pull-right nopadding">
+											<progressbar class="section-progress-bar" animate="false"
+												max="20" value="0">
+											<b>20%</b></progressbar>
+										</div>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+									    <div class="clearout"></div>
+
+
+
+									</div>
+								</div>
+						</div>						
+
+
+
+								
+
+
+						
+						</div>
+					</div>
+
+
+					<!-- Fourth Step -->
+					<div ng-switch-when="MAKE PAYMENT">
+						<div class="form-wizard col-sm-12 col-xs-12">
+						
+							<div class="col-sm-12 col-xs-12 section-bg form-address">
+									<div class="col-sm-12 col-xs-12 ">
+										<h4 class="col-sm-4 col-xs-9 nopadding">Select payment method<i class="required-text asterisk">*</i></h4>
+										<p>Empowering industry professionals to serve property sellers and buyers, with a genuine respect for equal civil rights</p>
+										<div class="col-sm-12 col-xs-12 logo-border"></div>
+										<div class="clearout"></div>
+										<div class="col-sm-12" style="background:#FFF;">
+											<div class="clearout"></div>
+											<table class="table  col-sm-12">
+												<thead>
+											      <tr>
+											        <th class="col-sm-3">Your cash via Poli</th>
+											        <th class="col-sm-5">Your cash via Manual EFT</th>
+											        <th class="col-sm-4">Credit card via PayPal</th>											        	
+											      </tr>
+											    </thead>
+											    <tbody>
+											      <tr>
+											        <td>
+											        	<h5>Payment terms:</h5>
+											        	<p>Use Poli to make payment for the reports purchased. Poli is an auto EFT system; 
+											        	where monies can be transferred from your account directly to Landlord Central 
+											        	Pty Ltd account</p>
+											        	
+											        	<button class="col-sm-12 btn btn-default" >Continue</button>
+											        </td>
+											        
+											        <td>
+											        <form class="form-inline">
+														<div class="form-group">
+													    	<label class="form-label" for="paymentreference">Payment Reference:</label>
+													    	<input type="text" class="form-control"  ng-model="">
+  														</div>												        	
+											        </form>
+											        <div class="clearout"></div>
+											        <div class="col-sm-12">
+											        	<h4>Direct transfer</h4>
+											        	<p class="col-sm-6">Account name:</p>
+											        	<p class="col-sm-6">Landlord Central Pty Ltd</p>
+											        	
+											        	<p class="col-sm-6">Account number / IBAN:</p>
+											        	<p class="col-sm-6">490 169 182</p>
+											        	
+											        	<p class="col-sm-6">Bank name:</p>
+											        	<p class="col-sm-6">ANZ bank</p>
+											        	
+											        	<p class="col-sm-6">Branch number / BSB:</p>
+											        	<p class="col-sm-6">016-267</p>
+											        	
+											        	<p class="col-sm-6">SWIFT / BIC Code:</p>
+											        	<p class="col-sm-6">swift4323</p>
+											        	
+											        	<p class="col-sm-6">Branch address:</p>
+											        	<p class="col-sm-6">Campsiel</p>
+											        	
+											        	<p class="col-sm-6">Country:</p>
+											        	<p class="col-sm-6">Australia</p>
+											        	
+											        	
+											        </div>
+											        
+											        <p class="col-sm-12">Your order will be processed upon receipt of payment.</p>
+											        
+											        <button class="col-sm-12 btn btn-default" >Submit</button>
+											        
+											        </td>
+											        <td>
+											        	<h5>Payment terms:</h5>
+											        	<p>You will be redirected to PayPal to make payment. Payments will be made to
+											        	 Landlord Central Pty Ltd account.</p>
+											        	 <button class="col-sm-12 btn btn-default" >Pay now</button>
+											        </td>
+											        
+											      </tr>
+											    </tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+						
+						</div>
+					</div>
+
+
+
+
+					<!--  <ul class="pager pull-left">
+			    <li class="" ng-class="{disabled: !hasPreviousStep()}">
+			      <a href="javascript:void(0);" ng-click="decrementStep()">&larr;Back</a>
+			    </li>
+			    <li class="" >
+			      <a href="javascript:void(0);" ng-click="incrementStep()">Next Step &rarr;</a>
+			    </li>
+			  </ul>
+			   -->
+
+					<div class="col-sm-12 col-xs-12"
+						style="text-align: right; border: 1px solid gainsboro; border-top: 0px;">
+						<button class="btn form-btn">CANCEL</button>
+
+						<button class="btn form-btn">SAVE & FINISH LATER</button>
+
+						<button ng-class="{disabled: !hasNextStep()}" class="btn form-btn continue-btn">
+							<a href="javascript:void(0);" ng-click="incrementStep()">SAVE
+								& CONTINUE</a>
+						</button>
+
+						<div class="clearout"></div>
+
+					</div>
+
+
+				</div>
+
+
+			</div>
+		</div>
+
+	</div>
+</div>
+<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
